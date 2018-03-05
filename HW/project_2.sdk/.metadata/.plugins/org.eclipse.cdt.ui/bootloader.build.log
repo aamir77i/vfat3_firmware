@@ -1,0 +1,14 @@
+08:36:53 **** Incremental Build of configuration Debug for project bootloader ****
+make all 
+Building target: bootloader.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bootloader_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "bootloader.elf"  ./src/bootloader.o ./src/platform.o ./src/srec.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.4/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/lib/bs/m/mh/le\libxil.a(print.o): In function `print':
+(.text+0x20): undefined reference to `outbyte'
+./src/bootloader.o: In function `display_progress':
+F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\HW\project_2.sdk\bootloader\Debug/../src/bootloader.c:147: undefined reference to `outbyte'
+collect2.exe: error: ld returned 1 exit status
+make: *** [bootloader.elf] Error 1
+
+08:36:53 Build Finished (took 235ms)
+

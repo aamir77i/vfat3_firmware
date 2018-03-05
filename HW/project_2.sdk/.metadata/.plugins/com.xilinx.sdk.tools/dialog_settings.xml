@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="mb_subsystem_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="false" key="mb_subsystem_wrapper_hw_platform_0-blankCheck"/>
+	<item value="" key="mb_subsystem_wrapper_hw_platform_0-fsblFile"/>
+	<item value="Auto Detect" key="mb_subsystem_wrapper_hw_platform_0-device"/>
+	<item value="0x00200000" key="mb_subsystem_wrapper_hw_platform_0-offSet"/>
+	<item value="28f00am29ew-bpi-x16" key="mb_subsystem_wrapper_hw_platform_0-flashType"/>
+	<item value="true" key="mb_subsystem_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\HW\project_2.sdk\vfat3_sdk\Debug\vfat3_sdk.elf" key="mb_subsystem_wrapper_hw_platform_0-imgFile"/>
+	<item value="Local" key="mb_subsystem_wrapper_hw_platform_0-target"/>
+</section>
