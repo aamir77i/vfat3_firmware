@@ -1,4 +1,4 @@
-08:24:36 **** Incremental Build of configuration Release for project vfat3_sdk ****
+19:06:12 **** Incremental Build of configuration Release for project vfat3_sdk ****
 make all 
 Building file: ../src/echo.c
 Invoking: MicroBlaze gcc compiler
@@ -55,34 +55,34 @@ In file included from ../src/echo.c:45:0:
  void Initialize_everything()
       ^~~~~~~~~~~~~~~~~~~~~
 ../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
+../src/echo.c:880:7: warning: unused variable 'Error' [-Wunused-variable]
    int Error;
        ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:879:7: warning: unused variable 'i' [-Wunused-variable]
    int i;
        ^
 ../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
+../src/echo.c:939:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
   unsigned length=0;
            ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
+../src/echo.c:918:6: warning: unused variable 'Status' [-Wunused-variable]
   int Status;
       ^~~~~~
 ../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+../src/echo.c:1006:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
   int Error;
       ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1005:6: warning: unused variable 'i' [-Wunused-variable]
   int i;
       ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
+../src/echo.c:1002:18: warning: unused variable 'Config' [-Wunused-variable]
   XLlFifo_Config *Config;
                   ^~~~~~
 ../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
+../src/echo.c:1115:6: warning: unused variable 'j' [-Wunused-variable]
   u32 j;
       ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1114:6: warning: unused variable 'i' [-Wunused-variable]
   u32 i;
       ^
 In file included from ../src/echo.c:45:0:
@@ -90,133 +90,142 @@ In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
  #define XST_FAILURE                     1L
                                          ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
+../src/echo.c:1210:10: note: in expansion of macro 'XST_FAILURE'
    return XST_FAILURE;
           ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
+../src/echo.c:1183:6: note: declared here
  void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
       ^~~~~~~~~~
 In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
  #define XST_SUCCESS                     0L
                                          ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
+../src/echo.c:1216:9: note: in expansion of macro 'XST_SUCCESS'
   return XST_SUCCESS;
          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
+../src/echo.c:1183:6: note: declared here
  void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
       ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1186:5: warning: unused variable 'i' [-Wunused-variable]
  u32 i;
      ^
 ../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
+../src/echo.c:1249:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
  extern  crc_ok;
          ^~~~~~
 ../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+../src/echo.c:1800:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
                            crc_calculated= crc16(rcv_arr,k+1);
                                                  ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
  unsigned int crc16(char *data_p, unsigned short length)
               ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
+../src/echo.c:1377:4: warning: unused variable 'type_id' [-Wunused-variable]
  u8 type_id=0xaa;
     ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
+../src/echo.c:1335:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
   u8 hdlc_control = 0xff;
      ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
+../src/echo.c:1334:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
   u8 hdlc_address = 0xff;
      ^~~~~~~~~~~~
 ../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+../src/echo.c:1900:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
    ut1.crc=crc16(hdlc_tx, length);
                  ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
  unsigned int crc16(char *data_p, unsigned short length)
               ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/echo.c:2022:26: warning: array subscript has type 'char' [-Wchar-subscripts]
     ZeroInsertion_location[j]=i+1;
                           ^
 In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
  #define XST_FAILURE                     1L
                                          ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
+../src/echo.c:2075:11: note: in expansion of macro 'XST_FAILURE'
     return XST_FAILURE;
            ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
+../src/echo.c:1847:6: note: declared here
  void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
       ^~~~~~~
 ../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2126:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
   unsigned  status;
             ^~~~~~
 ../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2289:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
    printf("%x ,  %f mv\r\n",register_data, imon_adc);
             ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2305:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
   printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
                  ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2311:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
   SendReply(sd,LUT_CAL_DAC,6);
                ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
 ../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2416:42: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
+                                          ^
+../src/echo.c:2416:61: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
+                                                             ^
+../src/echo.c:2476:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
       SendReply(sd,LUT_CAL_DAC,i*2);
                    ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
-../src/echo.c:2297:12: warning: unused variable 'adc_1' [-Wunused-variable]
+../src/echo.c:2327:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
   u32 adc_0,adc_1;
             ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2327:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
   u32 adc_0,adc_1;
       ^~~~~
 ../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2663:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
       SendReply(sd,BV,2);
                    ^~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
+../src/echo.c:2664:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,index*2);
                    ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
+../src/echo.c:2571:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:2571:23: warning: variable 'base_voltage' set but not used [-Wunused-but-set-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:2571:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
 ../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
+../src/echo.c:2679:5: warning: unused variable 'p' [-Wunused-variable]
  u64 p=9;
      ^
 ../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+../src/echo.c:2990:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
   u8 PKT_LEN=22;
      ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
+../src/echo.c:2988:5: warning: unused variable 'loop' [-Wunused-variable]
   u8 loop;
      ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
+../src/echo.c:2987:5: warning: unused variable 'Header' [-Wunused-variable]
   u8 Header;
      ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2985:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
   u32 i,j;
       ^
 ../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:3187:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
     sys_thread_new("echos", process_echo_request,
                             ^~~~~~~~~~~~~~~~~~~~
 In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
@@ -234,19 +243,19 @@ Finished building target: vfat3_sdk.elf
 Invoking: MicroBlaze Print Size
 mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 203261	   1824	2929627	3134712	 2fd4f8	vfat3_sdk.elf
+ 203905	   1824	2929631	3135360	 2fd780	vfat3_sdk.elf
 Finished building: vfat3_sdk.elf.size
  
 
-08:24:38 Build Finished (took 2s.536ms)
+19:06:13 Build Finished (took 876ms)
 
-08:24:38 **** Incremental Build of configuration Debug for project vfat3_sdk ****
+19:06:13 **** Incremental Build of configuration Debug for project vfat3_sdk ****
 make all 
 make: Nothing to be done for `all'.
-08:26:55 **** Incremental Build of configuration Debug for project vfat3_sdk ****
+19:06:32 **** Incremental Build of configuration Debug for project vfat3_sdk ****
 make all 
 make: Nothing to be done for `all'.
-08:39:13 **** Auto Build of configuration Debug for project vfat3_sdk ****
+19:07:51 **** Auto Build of configuration Debug for project vfat3_sdk ****
 make all 
 Building file: ../src/echo.c
 Invoking: MicroBlaze gcc compiler
@@ -303,34 +312,34 @@ In file included from ../src/echo.c:45:0:
  void Initialize_everything()
       ^~~~~~~~~~~~~~~~~~~~~
 ../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
+../src/echo.c:880:7: warning: unused variable 'Error' [-Wunused-variable]
    int Error;
        ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:879:7: warning: unused variable 'i' [-Wunused-variable]
    int i;
        ^
 ../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
+../src/echo.c:939:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
   unsigned length=0;
            ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
+../src/echo.c:918:6: warning: unused variable 'Status' [-Wunused-variable]
   int Status;
       ^~~~~~
 ../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+../src/echo.c:1006:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
   int Error;
       ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1005:6: warning: unused variable 'i' [-Wunused-variable]
   int i;
       ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
+../src/echo.c:1002:18: warning: unused variable 'Config' [-Wunused-variable]
   XLlFifo_Config *Config;
                   ^~~~~~
 ../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
+../src/echo.c:1115:6: warning: unused variable 'j' [-Wunused-variable]
   u32 j;
       ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1114:6: warning: unused variable 'i' [-Wunused-variable]
   u32 i;
       ^
 In file included from ../src/echo.c:45:0:
@@ -338,1591 +347,142 @@ In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
  #define XST_FAILURE                     1L
                                          ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
+../src/echo.c:1210:10: note: in expansion of macro 'XST_FAILURE'
    return XST_FAILURE;
           ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
+../src/echo.c:1183:6: note: declared here
  void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
       ^~~~~~~~~~
 In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
  #define XST_SUCCESS                     0L
                                          ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
+../src/echo.c:1216:9: note: in expansion of macro 'XST_SUCCESS'
   return XST_SUCCESS;
          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
+../src/echo.c:1183:6: note: declared here
  void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
       ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1186:5: warning: unused variable 'i' [-Wunused-variable]
  u32 i;
      ^
 ../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
+../src/echo.c:1249:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
  extern  crc_ok;
          ^~~~~~
 ../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+../src/echo.c:1800:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
                            crc_calculated= crc16(rcv_arr,k+1);
                                                  ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
  unsigned int crc16(char *data_p, unsigned short length)
               ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
+../src/echo.c:1377:4: warning: unused variable 'type_id' [-Wunused-variable]
  u8 type_id=0xaa;
     ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
+../src/echo.c:1335:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
   u8 hdlc_control = 0xff;
      ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
+../src/echo.c:1334:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
   u8 hdlc_address = 0xff;
      ^~~~~~~~~~~~
 ../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+../src/echo.c:1900:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
    ut1.crc=crc16(hdlc_tx, length);
                  ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
  unsigned int crc16(char *data_p, unsigned short length)
               ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/echo.c:2022:26: warning: array subscript has type 'char' [-Wchar-subscripts]
     ZeroInsertion_location[j]=i+1;
                           ^
 In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
  #define XST_FAILURE                     1L
                                          ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
+../src/echo.c:2075:11: note: in expansion of macro 'XST_FAILURE'
     return XST_FAILURE;
            ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
+../src/echo.c:1847:6: note: declared here
  void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
       ^~~~~~~
 ../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2126:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
   unsigned  status;
             ^~~~~~
 ../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2289:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
    printf("%x ,  %f mv\r\n",register_data, imon_adc);
             ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2305:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
   printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
                  ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2311:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
   SendReply(sd,LUT_CAL_DAC,6);
                ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
 ../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,i*2);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-            ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-      ^~~~~
-../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,BV,2);
-                   ^~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
- u64 p=9;
-     ^
-../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
-    sys_thread_new("echos", process_echo_request,
-                            ^~~~~~~~~~~~~~~~~~~~
-In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
-                 from ../src/echo.c:37:
-../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
- sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
-              ^~~~~~~~~~~~~~
-Finished building: ../src/echo.c
- 
-Building target: vfat3_sdk.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: vfat3_sdk.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 212621	   1824	2929627	3144072	 2ff988	vfat3_sdk.elf
-Finished building: vfat3_sdk.elf.size
- 
-08:39:19 **** Incremental Build of configuration Debug for project vfat3_sdk ****
-make all 
-make: Nothing to be done for `all'.
-08:41:41 **** Auto Build of configuration Debug for project vfat3_sdk ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'send_sync_command':
-../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-     usleep(1000);usleep(1000);usleep(1000);
-     ^~~~~~
-../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-    int Error;
-        ^~~~~
-../src/echo.c: In function 'Receive_fast_command':
-../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
-  u8 indexx;
-     ^~~~~~
-../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
-  u32 i,j;
-        ^
-../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'send_Calpulse_LV1As':
-../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'Initialize_everything':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
-   int Error;
-       ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
-   int i;
-       ^
-../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
-  unsigned length=0;
-           ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
-  int Status;
-      ^~~~~~
-../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-  int Error;
-      ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
-  int i;
-      ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
-  XLlFifo_Config *Config;
-                  ^~~~~~
-../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
-  u32 j;
-      ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'check_fifo':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
-   return XST_FAILURE;
-          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
- u32 i;
-     ^
-../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
- extern  crc_ok;
-         ^~~~~~
-../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-                           crc_calculated= crc16(rcv_arr,k+1);
-                                                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
- u8 type_id=0xaa;
-    ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
-  u8 hdlc_control = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
-  u8 hdlc_address = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-   ut1.crc=crc16(hdlc_tx, length);
-                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
-    ZeroInsertion_location[j]=i+1;
-                          ^
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
- void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
-      ^~~~~~~
-../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  unsigned  status;
-            ^~~~~~
-../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-   printf("%x ,  %f mv\r\n",register_data, imon_adc);
-            ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
-                 ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-  SendReply(sd,LUT_CAL_DAC,6);
-               ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,i*2);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-            ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-      ^~~~~
-../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,BV,2);
-                   ^~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
- u64 p=9;
-     ^
-../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
-    sys_thread_new("echos", process_echo_request,
-                            ^~~~~~~~~~~~~~~~~~~~
-In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
-                 from ../src/echo.c:37:
-../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
- sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
-              ^~~~~~~~~~~~~~
-Finished building: ../src/echo.c
- 
-Building target: vfat3_sdk.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: vfat3_sdk.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 212617	   1824	2929631	3144072	 2ff988	vfat3_sdk.elf
-Finished building: vfat3_sdk.elf.size
- 
-08:41:46 **** Incremental Build of configuration Debug for project vfat3_sdk ****
-make all 
-make: Nothing to be done for `all'.
-08:43:48 **** Auto Build of configuration Debug for project vfat3_sdk ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'send_sync_command':
-../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-     usleep(1000);usleep(1000);usleep(1000);
-     ^~~~~~
-../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-    int Error;
-        ^~~~~
-../src/echo.c: In function 'Receive_fast_command':
-../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
-  u8 indexx;
-     ^~~~~~
-../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
-  u32 i,j;
-        ^
-../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'send_Calpulse_LV1As':
-../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'Initialize_everything':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
-   int Error;
-       ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
-   int i;
-       ^
-../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
-  unsigned length=0;
-           ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
-  int Status;
-      ^~~~~~
-../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-  int Error;
-      ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
-  int i;
-      ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
-  XLlFifo_Config *Config;
-                  ^~~~~~
-../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
-  u32 j;
-      ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'check_fifo':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
-   return XST_FAILURE;
-          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
- u32 i;
-     ^
-../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
- extern  crc_ok;
-         ^~~~~~
-../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-                           crc_calculated= crc16(rcv_arr,k+1);
-                                                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
- u8 type_id=0xaa;
-    ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
-  u8 hdlc_control = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
-  u8 hdlc_address = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-   ut1.crc=crc16(hdlc_tx, length);
-                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
-    ZeroInsertion_location[j]=i+1;
-                          ^
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
- void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
-      ^~~~~~~
-../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  unsigned  status;
-            ^~~~~~
-../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-   printf("%x ,  %f mv\r\n",register_data, imon_adc);
-            ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
-                 ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-  SendReply(sd,LUT_CAL_DAC,6);
-               ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,i*2);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-            ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-      ^~~~~
-../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,BV,2);
-                   ^~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
- u64 p=9;
-     ^
-../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
-    sys_thread_new("echos", process_echo_request,
-                            ^~~~~~~~~~~~~~~~~~~~
-In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
-                 from ../src/echo.c:37:
-../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
- sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
-              ^~~~~~~~~~~~~~
-Finished building: ../src/echo.c
- 
-Building target: vfat3_sdk.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: vfat3_sdk.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 212889	   1824	2929631	3144344	 2ffa98	vfat3_sdk.elf
-Finished building: vfat3_sdk.elf.size
- 
-08:43:54 **** Incremental Build of configuration Debug for project vfat3_sdk ****
-make all 
-make: Nothing to be done for `all'.
-08:50:06 **** Auto Build of configuration Debug for project vfat3_sdk ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'send_sync_command':
-../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-     usleep(1000);usleep(1000);usleep(1000);
-     ^~~~~~
-../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-    int Error;
-        ^~~~~
-../src/echo.c: In function 'Receive_fast_command':
-../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
-  u8 indexx;
-     ^~~~~~
-../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
-  u32 i,j;
-        ^
-../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'send_Calpulse_LV1As':
-../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'Initialize_everything':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
-   int Error;
-       ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
-   int i;
-       ^
-../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
-  unsigned length=0;
-           ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
-  int Status;
-      ^~~~~~
-../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-  int Error;
-      ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
-  int i;
-      ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
-  XLlFifo_Config *Config;
-                  ^~~~~~
-../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
-  u32 j;
-      ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'check_fifo':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
-   return XST_FAILURE;
-          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
- u32 i;
-     ^
-../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
- extern  crc_ok;
-         ^~~~~~
-../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-                           crc_calculated= crc16(rcv_arr,k+1);
-                                                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
- u8 type_id=0xaa;
-    ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
-  u8 hdlc_control = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
-  u8 hdlc_address = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-   ut1.crc=crc16(hdlc_tx, length);
-                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
-    ZeroInsertion_location[j]=i+1;
-                          ^
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
- void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
-      ^~~~~~~
-../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  unsigned  status;
-            ^~~~~~
-../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-   printf("%x ,  %f mv\r\n",register_data, imon_adc);
-            ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
-                 ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-  SendReply(sd,LUT_CAL_DAC,6);
-               ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,i*2);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-            ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-      ^~~~~
-../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,BV,2);
-                   ^~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
- u64 p=9;
-     ^
-../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
-    sys_thread_new("echos", process_echo_request,
-                            ^~~~~~~~~~~~~~~~~~~~
-In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
-                 from ../src/echo.c:37:
-../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
- sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
-              ^~~~~~~~~~~~~~
-Finished building: ../src/echo.c
- 
-Building target: vfat3_sdk.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: vfat3_sdk.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 212997	   1824	2929627	3144448	 2ffb00	vfat3_sdk.elf
-Finished building: vfat3_sdk.elf.size
- 
-08:50:13 **** Incremental Build of configuration Debug for project vfat3_sdk ****
-make all 
-make: Nothing to be done for `all'.
-08:52:44 **** Auto Build of configuration Debug for project vfat3_sdk ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'send_sync_command':
-../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-     usleep(1000);usleep(1000);usleep(1000);
-     ^~~~~~
-../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-    int Error;
-        ^~~~~
-../src/echo.c: In function 'Receive_fast_command':
-../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
-  u8 indexx;
-     ^~~~~~
-../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
-  u32 i,j;
-        ^
-../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'send_Calpulse_LV1As':
-../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'Initialize_everything':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
-   int Error;
-       ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
-   int i;
-       ^
-../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
-  unsigned length=0;
-           ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
-  int Status;
-      ^~~~~~
-../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-  int Error;
-      ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
-  int i;
-      ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
-  XLlFifo_Config *Config;
-                  ^~~~~~
-../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
-  u32 j;
-      ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'check_fifo':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
-   return XST_FAILURE;
-          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
- u32 i;
-     ^
-../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
- extern  crc_ok;
-         ^~~~~~
-../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-                           crc_calculated= crc16(rcv_arr,k+1);
-                                                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
- u8 type_id=0xaa;
-    ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
-  u8 hdlc_control = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
-  u8 hdlc_address = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-   ut1.crc=crc16(hdlc_tx, length);
-                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
-    ZeroInsertion_location[j]=i+1;
-                          ^
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
- void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
-      ^~~~~~~
-../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  unsigned  status;
-            ^~~~~~
-../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-   printf("%x ,  %f mv\r\n",register_data, imon_adc);
-            ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
-                 ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-  SendReply(sd,LUT_CAL_DAC,6);
-               ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,i*2);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-            ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-      ^~~~~
-../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,BV,2);
-                   ^~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
- u64 p=9;
-     ^
-../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
-    sys_thread_new("echos", process_echo_request,
-                            ^~~~~~~~~~~~~~~~~~~~
-In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
-                 from ../src/echo.c:37:
-../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
- sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
-              ^~~~~~~~~~~~~~
-Finished building: ../src/echo.c
- 
-Building target: vfat3_sdk.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: vfat3_sdk.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 212997	   1824	2929627	3144448	 2ffb00	vfat3_sdk.elf
-Finished building: vfat3_sdk.elf.size
- 
-08:52:51 **** Incremental Build of configuration Debug for project vfat3_sdk ****
-make all 
-make: Nothing to be done for `all'.
-08:56:40 **** Auto Build of configuration Debug for project vfat3_sdk ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'send_sync_command':
-../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-     usleep(1000);usleep(1000);usleep(1000);
-     ^~~~~~
-../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-    int Error;
-        ^~~~~
-../src/echo.c: In function 'Receive_fast_command':
-../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
-  u8 indexx;
-     ^~~~~~
-../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
-  u32 i,j;
-        ^
-../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'send_Calpulse_LV1As':
-../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'Initialize_everything':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
-   int Error;
-       ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
-   int i;
-       ^
-../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
-  unsigned length=0;
-           ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
-  int Status;
-      ^~~~~~
-../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-  int Error;
-      ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
-  int i;
-      ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
-  XLlFifo_Config *Config;
-                  ^~~~~~
-../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
-  u32 j;
-      ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'check_fifo':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
-   return XST_FAILURE;
-          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
- u32 i;
-     ^
-../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
- extern  crc_ok;
-         ^~~~~~
-../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-                           crc_calculated= crc16(rcv_arr,k+1);
-                                                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
- u8 type_id=0xaa;
-    ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
-  u8 hdlc_control = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
-  u8 hdlc_address = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-   ut1.crc=crc16(hdlc_tx, length);
-                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
-    ZeroInsertion_location[j]=i+1;
-                          ^
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
- void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
-      ^~~~~~~
-../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  unsigned  status;
-            ^~~~~~
-../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-   printf("%x ,  %f mv\r\n",register_data, imon_adc);
-            ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
-                 ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-  SendReply(sd,LUT_CAL_DAC,6);
-               ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,i*2);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-            ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
-  u32 adc_0,adc_1;
-      ^~~~~
-../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,BV,2);
-                   ^~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
-                   ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
- u64 p=9;
-     ^
-../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
-    sys_thread_new("echos", process_echo_request,
-                            ^~~~~~~~~~~~~~~~~~~~
-In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
-                 from ../src/echo.c:37:
-../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
- sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
-              ^~~~~~~~~~~~~~
-Finished building: ../src/echo.c
- 
-Building target: vfat3_sdk.elf
-Invoking: MicroBlaze gcc linker
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-Finished building target: vfat3_sdk.elf
- 
-Invoking: MicroBlaze Print Size
-mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 212929	   1824	2929631	3144384	 2ffac0	vfat3_sdk.elf
-Finished building: vfat3_sdk.elf.size
- 
-08:56:45 **** Incremental Build of configuration Debug for project vfat3_sdk ****
-make all 
-make: Nothing to be done for `all'.
-09:01:31 **** Auto Build of configuration Debug for project vfat3_sdk ****
-make all 
-Building file: ../src/echo.c
-Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
-../src/echo.c: In function 'send_sync_command':
-../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-     usleep(1000);usleep(1000);usleep(1000);
-     ^~~~~~
-../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-    int Error;
-        ^~~~~
-../src/echo.c: In function 'Receive_fast_command':
-../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
-  u8 PKT_LEN=22;
-     ^~~~~~~
-../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
-  u8 indexx;
-     ^~~~~~
-../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
-  u8 loop;
-     ^~~~
-../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
-  u8 Header;
-     ^~~~~~
-../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
-  u32 i,j;
-        ^
-../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i,j;
-      ^
-../src/echo.c: In function 'send_Calpulse_LV1As':
-../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'Initialize_everything':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:587:6: note: declared here
- void Initialize_everything()
-      ^~~~~~~~~~~~~~~~~~~~~
-../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
-   int Error;
-       ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
-   int i;
-       ^
-../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
-  unsigned length=0;
-           ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
-  int Status;
-      ^~~~~~
-../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
-  int Error;
-      ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
-  int i;
-      ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
-  XLlFifo_Config *Config;
-                  ^~~~~~
-../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
-  u32 j;
-      ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
-  u32 i;
-      ^
-In file included from ../src/echo.c:45:0:
-../src/echo.c: In function 'check_fifo':
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
-   return XST_FAILURE;
-          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
- #define XST_SUCCESS                     0L
-                                         ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
-  return XST_SUCCESS;
-         ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
- void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
-      ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
- u32 i;
-     ^
-../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
- extern  crc_ok;
-         ^~~~~~
-../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-                           crc_calculated= crc16(rcv_arr,k+1);
-                                                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
- u8 type_id=0xaa;
-    ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
-  u8 hdlc_control = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
-  u8 hdlc_address = 0xff;
-     ^~~~~~~~~~~~
-../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
-   ut1.crc=crc16(hdlc_tx, length);
-                 ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
- unsigned int crc16(char *data_p, unsigned short length)
-              ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
-    ZeroInsertion_location[j]=i+1;
-                          ^
-In file included from ../src/echo.c:45:0:
-../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
- #define XST_FAILURE                     1L
-                                         ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
-    return XST_FAILURE;
-           ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
- void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
-      ^~~~~~~
-../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  unsigned  status;
-            ^~~~~~
-../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-   printf("%x ,  %f mv\r\n",register_data, imon_adc);
-            ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
-                 ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-  SendReply(sd,LUT_CAL_DAC,6);
-               ^~~~~~~~~~~
-../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
- void SendReply(int sd,u32 *Buffer, u32 length);
-      ^~~~~~~~~
-../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2386:42: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2416:42: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
      printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
                                           ^
-../src/echo.c:2386:61: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2416:61: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
      printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
                                                              ^
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2476:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
       SendReply(sd,LUT_CAL_DAC,i*2);
                    ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2327:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
   u32 adc_0,adc_1;
             ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2327:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
   u32 adc_0,adc_1;
       ^~~~~
 ../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2663:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
       SendReply(sd,BV,2);
                    ^~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
+../src/echo.c:2664:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,index*2);
                    ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
+../src/echo.c:2571:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:2571:23: warning: variable 'base_voltage' set but not used [-Wunused-but-set-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:2571:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
 ../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
+../src/echo.c:2679:5: warning: unused variable 'p' [-Wunused-variable]
  u64 p=9;
      ^
 ../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+../src/echo.c:2990:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
   u8 PKT_LEN=22;
      ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
+../src/echo.c:2988:5: warning: unused variable 'loop' [-Wunused-variable]
   u8 loop;
      ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
+../src/echo.c:2987:5: warning: unused variable 'Header' [-Wunused-variable]
   u8 Header;
      ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2985:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
   u32 i,j;
       ^
 ../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:3187:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
     sys_thread_new("echos", process_echo_request,
                             ^~~~~~~~~~~~~~~~~~~~
 In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
@@ -1940,13 +500,13 @@ Finished building target: vfat3_sdk.elf
 Invoking: MicroBlaze Print Size
 mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 213021	   1824	2929627	3144472	 2ffb18	vfat3_sdk.elf
+ 213577	   1824	2929631	3145032	 2ffd48	vfat3_sdk.elf
 Finished building: vfat3_sdk.elf.size
  
-09:01:37 **** Incremental Build of configuration Debug for project vfat3_sdk ****
+19:08:00 **** Incremental Build of configuration Debug for project vfat3_sdk ****
 make all 
 make: Nothing to be done for `all'.
-15:17:04 **** Auto Build of configuration Debug for project vfat3_sdk ****
+22:02:36 **** Auto Build of configuration Debug for project vfat3_sdk ****
 make all 
 Building file: ../src/echo.c
 Invoking: MicroBlaze gcc compiler
@@ -2003,34 +563,34 @@ In file included from ../src/echo.c:45:0:
  void Initialize_everything()
       ^~~~~~~~~~~~~~~~~~~~~
 ../src/echo.c: In function 'Initialize_fifo':
-../src/echo.c:851:7: warning: unused variable 'Error' [-Wunused-variable]
+../src/echo.c:880:7: warning: unused variable 'Error' [-Wunused-variable]
    int Error;
        ^~~~~
-../src/echo.c:850:7: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:879:7: warning: unused variable 'i' [-Wunused-variable]
    int i;
        ^
 ../src/echo.c: In function 'RxReceive':
-../src/echo.c:910:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
+../src/echo.c:939:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
   unsigned length=0;
            ^~~~~~
-../src/echo.c:889:6: warning: unused variable 'Status' [-Wunused-variable]
+../src/echo.c:918:6: warning: unused variable 'Status' [-Wunused-variable]
   int Status;
       ^~~~~~
 ../src/echo.c: In function 'XLlFifoPollingExample':
-../src/echo.c:977:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+../src/echo.c:1006:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
   int Error;
       ^~~~~
-../src/echo.c:976:6: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1005:6: warning: unused variable 'i' [-Wunused-variable]
   int i;
       ^
-../src/echo.c:973:18: warning: unused variable 'Config' [-Wunused-variable]
+../src/echo.c:1002:18: warning: unused variable 'Config' [-Wunused-variable]
   XLlFifo_Config *Config;
                   ^~~~~~
 ../src/echo.c: In function 'TxSend':
-../src/echo.c:1086:6: warning: unused variable 'j' [-Wunused-variable]
+../src/echo.c:1115:6: warning: unused variable 'j' [-Wunused-variable]
   u32 j;
       ^
-../src/echo.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1114:6: warning: unused variable 'i' [-Wunused-variable]
   u32 i;
       ^
 In file included from ../src/echo.c:45:0:
@@ -2038,139 +598,142 @@ In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
  #define XST_FAILURE                     1L
                                          ^
-../src/echo.c:1181:10: note: in expansion of macro 'XST_FAILURE'
+../src/echo.c:1210:10: note: in expansion of macro 'XST_FAILURE'
    return XST_FAILURE;
           ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
+../src/echo.c:1183:6: note: declared here
  void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
       ^~~~~~~~~~
 In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
  #define XST_SUCCESS                     0L
                                          ^
-../src/echo.c:1187:9: note: in expansion of macro 'XST_SUCCESS'
+../src/echo.c:1216:9: note: in expansion of macro 'XST_SUCCESS'
   return XST_SUCCESS;
          ^~~~~~~~~~~
-../src/echo.c:1154:6: note: declared here
+../src/echo.c:1183:6: note: declared here
  void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
       ^~~~~~~~~~
-../src/echo.c:1157:5: warning: unused variable 'i' [-Wunused-variable]
+../src/echo.c:1186:5: warning: unused variable 'i' [-Wunused-variable]
  u32 i;
      ^
 ../src/echo.c: At top level:
-../src/echo.c:1220:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
+../src/echo.c:1249:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
  extern  crc_ok;
          ^~~~~~
 ../src/echo.c: In function 'HDLC_Rx':
-../src/echo.c:1770:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+../src/echo.c:1800:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
                            crc_calculated= crc16(rcv_arr,k+1);
                                                  ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
  unsigned int crc16(char *data_p, unsigned short length)
               ^~~~~
-../src/echo.c:1348:4: warning: unused variable 'type_id' [-Wunused-variable]
+../src/echo.c:1377:4: warning: unused variable 'type_id' [-Wunused-variable]
  u8 type_id=0xaa;
     ^~~~~~~
-../src/echo.c:1306:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
+../src/echo.c:1335:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
   u8 hdlc_control = 0xff;
      ^~~~~~~~~~~~
-../src/echo.c:1305:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
+../src/echo.c:1334:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
   u8 hdlc_address = 0xff;
      ^~~~~~~~~~~~
 ../src/echo.c: In function 'HDLC_Tx':
-../src/echo.c:1870:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+../src/echo.c:1900:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
    ut1.crc=crc16(hdlc_tx, length);
                  ^~~~~~~
-../src/echo.c:1268:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
  unsigned int crc16(char *data_p, unsigned short length)
               ^~~~~
-../src/echo.c:1992:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+../src/echo.c:2022:26: warning: array subscript has type 'char' [-Wchar-subscripts]
     ZeroInsertion_location[j]=i+1;
                           ^
 In file included from ../src/echo.c:45:0:
 ../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
  #define XST_FAILURE                     1L
                                          ^
-../src/echo.c:2045:11: note: in expansion of macro 'XST_FAILURE'
+../src/echo.c:2075:11: note: in expansion of macro 'XST_FAILURE'
     return XST_FAILURE;
            ^~~~~~~~~~~
-../src/echo.c:1817:6: note: declared here
+../src/echo.c:1847:6: note: declared here
  void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
       ^~~~~~~
 ../src/echo.c: In function 'ReadADC':
-../src/echo.c:2096:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2126:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
   unsigned  status;
             ^~~~~~
 ../src/echo.c: In function 'AdjustIref':
-../src/echo.c:2259:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2289:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
    printf("%x ,  %f mv\r\n",register_data, imon_adc);
             ^
-../src/echo.c:2275:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2305:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
   printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
                  ^
-../src/echo.c:2281:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2311:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
   SendReply(sd,LUT_CAL_DAC,6);
                ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
 ../src/echo.c: In function 'CalibrateADC':
-../src/echo.c:2386:42: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2416:42: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
      printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
                                           ^
-../src/echo.c:2386:61: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/echo.c:2416:61: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
      printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
                                                              ^
-../src/echo.c:2446:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2476:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
       SendReply(sd,LUT_CAL_DAC,i*2);
                    ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
-../src/echo.c:2297:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2327:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
   u32 adc_0,adc_1;
             ^~~~~
-../src/echo.c:2297:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2327:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
   u32 adc_0,adc_1;
       ^~~~~
 ../src/echo.c: In function 'CalibrateCAL_DAC':
-../src/echo.c:2621:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                         ^
-../src/echo.c:2621:45: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
-       printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
-                                             ^
-../src/echo.c:2631:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:2663:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
       SendReply(sd,BV,2);
                    ^~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
-../src/echo.c:2632:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
-      SendReply(sd,LUT_CAL_DAC,512);
+../src/echo.c:2664:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,index*2);
                    ^~~~~~~~~~~
 ../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
  void SendReply(int sd,u32 *Buffer, u32 length);
       ^~~~~~~~~
+../src/echo.c:2571:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:2571:23: warning: unused variable 'base_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:2571:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
 ../src/echo.c: In function 'Scurve':
-../src/echo.c:2647:5: warning: unused variable 'p' [-Wunused-variable]
+../src/echo.c:2679:5: warning: unused variable 'p' [-Wunused-variable]
  u64 p=9;
      ^
 ../src/echo.c: In function 'DecodeDataPacket':
-../src/echo.c:2958:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+../src/echo.c:2990:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
   u8 PKT_LEN=22;
      ^~~~~~~
-../src/echo.c:2956:5: warning: unused variable 'loop' [-Wunused-variable]
+../src/echo.c:2988:5: warning: unused variable 'loop' [-Wunused-variable]
   u8 loop;
      ^~~~
-../src/echo.c:2955:5: warning: unused variable 'Header' [-Wunused-variable]
+../src/echo.c:2987:5: warning: unused variable 'Header' [-Wunused-variable]
   u8 Header;
      ^~~~~~
-../src/echo.c:2953:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+../src/echo.c:2985:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
   u32 i,j;
       ^
 ../src/echo.c: In function 'echo_application_thread':
-../src/echo.c:3155:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
+../src/echo.c:3187:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
     sys_thread_new("echos", process_echo_request,
                             ^~~~~~~~~~~~~~~~~~~~
 In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
@@ -2188,6 +751,514 @@ Finished building target: vfat3_sdk.elf
 Invoking: MicroBlaze Print Size
 mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 213025	   1824	2929631	3144480	 2ffb20	vfat3_sdk.elf
+ 213445	   1824	2929627	3144896	 2ffcc0	vfat3_sdk.elf
 Finished building: vfat3_sdk.elf.size
  
+23:32:28 **** Auto Build of configuration Debug for project vfat3_sdk ****
+make all 
+Building file: ../src/echo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'send_sync_command':
+../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1000);usleep(1000);usleep(1000);
+     ^~~~~~
+../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+    int Error;
+        ^~~~~
+../src/echo.c: In function 'Receive_fast_command':
+../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+  u8 PKT_LEN=22;
+     ^~~~~~~
+../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
+  u8 indexx;
+     ^~~~~~
+../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
+  u8 loop;
+     ^~~~
+../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
+  u8 Header;
+     ^~~~~~
+../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
+  u32 i,j;
+        ^
+../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i,j;
+      ^
+../src/echo.c: In function 'send_Calpulse_LV1As':
+../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i;
+      ^
+In file included from ../src/echo.c:45:0:
+../src/echo.c: In function 'Initialize_everything':
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/echo.c:587:6: note: declared here
+ void Initialize_everything()
+      ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
+ #define XST_SUCCESS                     0L
+                                         ^
+../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
+  return XST_SUCCESS;
+         ^~~~~~~~~~~
+../src/echo.c:587:6: note: declared here
+ void Initialize_everything()
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/echo.c: In function 'Initialize_fifo':
+../src/echo.c:880:7: warning: unused variable 'Error' [-Wunused-variable]
+   int Error;
+       ^~~~~
+../src/echo.c:879:7: warning: unused variable 'i' [-Wunused-variable]
+   int i;
+       ^
+../src/echo.c: In function 'RxReceive':
+../src/echo.c:939:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
+  unsigned length=0;
+           ^~~~~~
+../src/echo.c:918:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/echo.c: In function 'XLlFifoPollingExample':
+../src/echo.c:1006:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+  int Error;
+      ^~~~~
+../src/echo.c:1005:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/echo.c:1002:18: warning: unused variable 'Config' [-Wunused-variable]
+  XLlFifo_Config *Config;
+                  ^~~~~~
+../src/echo.c: In function 'TxSend':
+../src/echo.c:1115:6: warning: unused variable 'j' [-Wunused-variable]
+  u32 j;
+      ^
+../src/echo.c:1114:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i;
+      ^
+In file included from ../src/echo.c:45:0:
+../src/echo.c: In function 'check_fifo':
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:1210:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/echo.c:1183:6: note: declared here
+ void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
+      ^~~~~~~~~~
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
+ #define XST_SUCCESS                     0L
+                                         ^
+../src/echo.c:1216:9: note: in expansion of macro 'XST_SUCCESS'
+  return XST_SUCCESS;
+         ^~~~~~~~~~~
+../src/echo.c:1183:6: note: declared here
+ void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
+      ^~~~~~~~~~
+../src/echo.c:1186:5: warning: unused variable 'i' [-Wunused-variable]
+ u32 i;
+     ^
+../src/echo.c: At top level:
+../src/echo.c:1249:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
+ extern  crc_ok;
+         ^~~~~~
+../src/echo.c: In function 'HDLC_Rx':
+../src/echo.c:1800:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+                           crc_calculated= crc16(rcv_arr,k+1);
+                                                 ^~~~~~~
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:1377:4: warning: unused variable 'type_id' [-Wunused-variable]
+ u8 type_id=0xaa;
+    ^~~~~~~
+../src/echo.c:1335:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
+  u8 hdlc_control = 0xff;
+     ^~~~~~~~~~~~
+../src/echo.c:1334:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
+  u8 hdlc_address = 0xff;
+     ^~~~~~~~~~~~
+../src/echo.c: In function 'HDLC_Tx':
+../src/echo.c:1900:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+   ut1.crc=crc16(hdlc_tx, length);
+                 ^~~~~~~
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:2022:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+    ZeroInsertion_location[j]=i+1;
+                          ^
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:2075:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/echo.c:1847:6: note: declared here
+ void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
+      ^~~~~~~
+../src/echo.c: In function 'ReadADC':
+../src/echo.c:2126:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  unsigned  status;
+            ^~~~~~
+../src/echo.c: In function 'AdjustIref':
+../src/echo.c:2289:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+   printf("%x ,  %f mv\r\n",register_data, imon_adc);
+            ^
+../src/echo.c:2305:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
+                 ^
+../src/echo.c:2311:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+  SendReply(sd,LUT_CAL_DAC,6);
+               ^~~~~~~~~~~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c: In function 'CalibrateADC':
+../src/echo.c:2416:42: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
+                                          ^
+../src/echo.c:2416:61: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
+                                                             ^
+../src/echo.c:2476:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,i*2);
+                   ^~~~~~~~~~~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2327:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
+  u32 adc_0,adc_1;
+            ^~~~~
+../src/echo.c:2327:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
+  u32 adc_0,adc_1;
+      ^~~~~
+../src/echo.c: In function 'CalibrateCAL_DAC':
+../src/echo.c:2663:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,BV,2);
+                   ^~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2664:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,index*2);
+                   ^~~~~~~~~~~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2571:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:2571:23: warning: unused variable 'base_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:2571:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
+../src/echo.c: In function 'Scurve':
+../src/echo.c:2679:5: warning: unused variable 'p' [-Wunused-variable]
+ u64 p=9;
+     ^
+../src/echo.c: In function 'DecodeDataPacket':
+../src/echo.c:3046:33: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+             u16 chk_sum = crc16(datapacket, 20);
+                                 ^~~~~~~~~~
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:2990:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+  u8 PKT_LEN=22;
+     ^~~~~~~
+../src/echo.c:2988:5: warning: unused variable 'loop' [-Wunused-variable]
+  u8 loop;
+     ^~~~
+../src/echo.c:2987:5: warning: unused variable 'Header' [-Wunused-variable]
+  u8 Header;
+     ^~~~~~
+../src/echo.c: In function 'echo_application_thread':
+../src/echo.c:3187:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
+    sys_thread_new("echos", process_echo_request,
+                            ^~~~~~~~~~~~~~~~~~~~
+In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
+                 from ../src/echo.c:37:
+../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
+ sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
+              ^~~~~~~~~~~~~~
+Finished building: ../src/echo.c
+ 
+Building target: vfat3_sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: vfat3_sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 214145	   1824	2929631	3145600	 2fff80	vfat3_sdk.elf
+Finished building: vfat3_sdk.elf.size
+ 
+23:34:45 **** Auto Build of configuration Debug for project vfat3_sdk ****
+make all 
+Building file: ../src/echo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'send_sync_command':
+../src/echo.c:281:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1000);usleep(1000);usleep(1000);
+     ^~~~~~
+../src/echo.c:250:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+    int Error;
+        ^~~~~
+../src/echo.c: In function 'Receive_fast_command':
+../src/echo.c:447:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+  u8 PKT_LEN=22;
+     ^~~~~~~
+../src/echo.c:446:5: warning: unused variable 'indexx' [-Wunused-variable]
+  u8 indexx;
+     ^~~~~~
+../src/echo.c:445:5: warning: unused variable 'loop' [-Wunused-variable]
+  u8 loop;
+     ^~~~
+../src/echo.c:444:5: warning: unused variable 'Header' [-Wunused-variable]
+  u8 Header;
+     ^~~~~~
+../src/echo.c:442:8: warning: unused variable 'j' [-Wunused-variable]
+  u32 i,j;
+        ^
+../src/echo.c:442:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i,j;
+      ^
+../src/echo.c: In function 'send_Calpulse_LV1As':
+../src/echo.c:501:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i;
+      ^
+In file included from ../src/echo.c:45:0:
+../src/echo.c: In function 'Initialize_everything':
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:601:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/echo.c:587:6: note: declared here
+ void Initialize_everything()
+      ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
+ #define XST_SUCCESS                     0L
+                                         ^
+../src/echo.c:687:9: note: in expansion of macro 'XST_SUCCESS'
+  return XST_SUCCESS;
+         ^~~~~~~~~~~
+../src/echo.c:587:6: note: declared here
+ void Initialize_everything()
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/echo.c: In function 'Initialize_fifo':
+../src/echo.c:880:7: warning: unused variable 'Error' [-Wunused-variable]
+   int Error;
+       ^~~~~
+../src/echo.c:879:7: warning: unused variable 'i' [-Wunused-variable]
+   int i;
+       ^
+../src/echo.c: In function 'RxReceive':
+../src/echo.c:939:11: warning: variable 'length' set but not used [-Wunused-but-set-variable]
+  unsigned length=0;
+           ^~~~~~
+../src/echo.c:918:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/echo.c: In function 'XLlFifoPollingExample':
+../src/echo.c:1006:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+  int Error;
+      ^~~~~
+../src/echo.c:1005:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/echo.c:1002:18: warning: unused variable 'Config' [-Wunused-variable]
+  XLlFifo_Config *Config;
+                  ^~~~~~
+../src/echo.c: In function 'TxSend':
+../src/echo.c:1115:6: warning: unused variable 'j' [-Wunused-variable]
+  u32 j;
+      ^
+../src/echo.c:1114:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i;
+      ^
+In file included from ../src/echo.c:45:0:
+../src/echo.c: In function 'check_fifo':
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:1210:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/echo.c:1183:6: note: declared here
+ void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
+      ^~~~~~~~~~
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
+ #define XST_SUCCESS                     0L
+                                         ^
+../src/echo.c:1216:9: note: in expansion of macro 'XST_SUCCESS'
+  return XST_SUCCESS;
+         ^~~~~~~~~~~
+../src/echo.c:1183:6: note: declared here
+ void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
+      ^~~~~~~~~~
+../src/echo.c:1186:5: warning: unused variable 'i' [-Wunused-variable]
+ u32 i;
+     ^
+../src/echo.c: At top level:
+../src/echo.c:1249:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
+ extern  crc_ok;
+         ^~~~~~
+../src/echo.c: In function 'HDLC_Rx':
+../src/echo.c:1800:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+                           crc_calculated= crc16(rcv_arr,k+1);
+                                                 ^~~~~~~
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:1377:4: warning: unused variable 'type_id' [-Wunused-variable]
+ u8 type_id=0xaa;
+    ^~~~~~~
+../src/echo.c:1335:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
+  u8 hdlc_control = 0xff;
+     ^~~~~~~~~~~~
+../src/echo.c:1334:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
+  u8 hdlc_address = 0xff;
+     ^~~~~~~~~~~~
+../src/echo.c: In function 'HDLC_Tx':
+../src/echo.c:1900:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+   ut1.crc=crc16(hdlc_tx, length);
+                 ^~~~~~~
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:2022:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+    ZeroInsertion_location[j]=i+1;
+                          ^
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:2075:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/echo.c:1847:6: note: declared here
+ void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
+      ^~~~~~~
+../src/echo.c: In function 'ReadADC':
+../src/echo.c:2126:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  unsigned  status;
+            ^~~~~~
+../src/echo.c: In function 'AdjustIref':
+../src/echo.c:2289:12: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+   printf("%x ,  %f mv\r\n",register_data, imon_adc);
+            ^
+../src/echo.c:2305:17: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
+                 ^
+../src/echo.c:2311:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+  SendReply(sd,LUT_CAL_DAC,6);
+               ^~~~~~~~~~~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c: In function 'CalibrateADC':
+../src/echo.c:2416:42: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
+                                          ^
+../src/echo.c:2416:61: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'u32 {aka long unsigned int}' [-Wformat=]
+     printf("GBL_CFG_CTR_4 write_value = %X ,  read_value = %X, %d\r\n",register_data,read_data,register_data==read_data);
+                                                             ^
+../src/echo.c:2476:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,i*2);
+                   ^~~~~~~~~~~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2327:12: warning: variable 'adc_1' set but not used [-Wunused-but-set-variable]
+  u32 adc_0,adc_1;
+            ^~~~~
+../src/echo.c:2327:6: warning: variable 'adc_0' set but not used [-Wunused-but-set-variable]
+  u32 adc_0,adc_1;
+      ^~~~~
+../src/echo.c: In function 'CalibrateCAL_DAC':
+../src/echo.c:2663:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,BV,2);
+                   ^~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2664:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,index*2);
+                   ^~~~~~~~~~~
+../src/echo.c:135:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2571:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:2571:23: warning: unused variable 'base_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:2571:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
+../src/echo.c: In function 'Scurve':
+../src/echo.c:2679:5: warning: unused variable 'p' [-Wunused-variable]
+ u64 p=9;
+     ^
+../src/echo.c: In function 'DecodeDataPacket':
+../src/echo.c:3046:33: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+             u16 chk_sum = crc16(datapacket, 20);
+                                 ^~~~~~~~~~
+../src/echo.c:1297:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:2990:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+  u8 PKT_LEN=22;
+     ^~~~~~~
+../src/echo.c:2988:5: warning: unused variable 'loop' [-Wunused-variable]
+  u8 loop;
+     ^~~~
+../src/echo.c:2987:5: warning: unused variable 'Header' [-Wunused-variable]
+  u8 Header;
+     ^~~~~~
+../src/echo.c: In function 'echo_application_thread':
+../src/echo.c:3187:28: warning: passing argument 2 of 'sys_thread_new' from incompatible pointer type [-Wincompatible-pointer-types]
+    sys_thread_new("echos", process_echo_request,
+                            ^~~~~~~~~~~~~~~~~~~~
+In file included from ../../vfat3_sdk_bsp/microblaze_0/include/netif/xadapter.h:46:0,
+                 from ../src/echo.c:37:
+../../vfat3_sdk_bsp/microblaze_0/include/lwip/sys.h:230:14: note: expected 'lwip_thread_fn {aka void (*)(void *)}' but argument is of type 'void (*)(void *, XLlFifo *) {aka void (*)(void *, struct XLlFifo *)}'
+ sys_thread_t sys_thread_new(const char *name, lwip_thread_fn thread, void *arg, int stacksize, int prio);
+              ^~~~~~~~~~~~~~
+Finished building: ../src/echo.c
+ 
+Building target: vfat3_sdk.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vfat3_sdk_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vfat3_sdk.elf"  ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: vfat3_sdk.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size vfat3_sdk.elf  |tee "vfat3_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 214269	   1824	2929627	3145720	 2ffff8	vfat3_sdk.elf
+Finished building: vfat3_sdk.elf.size
+ 
+23:34:54 **** Incremental Build of configuration Debug for project vfat3_sdk ****
+make all 
+make: Nothing to be done for `all'.
+08:37:07 **** Incremental Build of configuration Debug for project vfat3_sdk ****
+make all 
+make: Nothing to be done for `all'.
