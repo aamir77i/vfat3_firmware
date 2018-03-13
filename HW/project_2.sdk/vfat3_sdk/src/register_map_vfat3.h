@@ -219,15 +219,15 @@
 #define PRE_I_BLCC			25
 #define PRE_VREF			86
 /////////////////GBL_CFG_BIAS 3 ////////////////////////
-#define SH_I_BDIFF			150
-#define SH_I_BFCAS 			250
+#define SH_I_BDIFF			80
+#define SH_I_BFCAS 			130
 
 /////////////////////////GBL_CFG_BIAS 4 ////////////////
 #define SH_I_BFAMP			1
-#define SD_I_BDIFF 			255
+#define SD_I_BDIFF 			140
 //////////////////GBL_CFG_BIAS 5 ///////////////
 #define SD_I_BSF 			15
-#define SD_I_BFCAS 			255
+#define SD_I_BFCAS 			135
 
 
 
