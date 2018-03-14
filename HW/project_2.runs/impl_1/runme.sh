@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.runs/impl_1'
+HD_PWD='F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1062,29 +1062,38 @@ proc create_root_design { parentCell } {
   # Create instance: microblaze_0, and set properties
   set microblaze_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0 ]
   set_property -dict [ list \
-   CONFIG.C_ADDR_TAG_BITS {15} \
-   CONFIG.C_CACHE_BYTE_SIZE {65536} \
-   CONFIG.C_DCACHE_ADDR_TAG {15} \
-   CONFIG.C_DCACHE_BYTE_SIZE {65536} \
-   CONFIG.C_DCACHE_LINE_LEN {8} \
-   CONFIG.C_DCACHE_USE_WRITEBACK {1} \
-   CONFIG.C_DCACHE_VICTIMS {4} \
+   CONFIG.C_ADDR_TAG_BITS {19} \
+   CONFIG.C_AREA_OPTIMIZED {2} \
+   CONFIG.C_CACHE_BYTE_SIZE {4096} \
+   CONFIG.C_DCACHE_ADDR_TAG {19} \
+   CONFIG.C_DCACHE_BYTE_SIZE {4096} \
+   CONFIG.C_DCACHE_LINE_LEN {4} \
+   CONFIG.C_DCACHE_USE_WRITEBACK {0} \
+   CONFIG.C_DCACHE_VICTIMS {0} \
+   CONFIG.C_DEBUG_ENABLED {1} \
    CONFIG.C_D_AXI {1} \
-   CONFIG.C_ICACHE_LINE_LEN {8} \
-   CONFIG.C_ICACHE_STREAMS {1} \
-   CONFIG.C_ICACHE_VICTIMS {4} \
+   CONFIG.C_ENABLE_DISCRETE_PORTS {0} \
+   CONFIG.C_FSL_LINKS {1} \
+   CONFIG.C_ICACHE_LINE_LEN {4} \
+   CONFIG.C_ICACHE_STREAMS {0} \
+   CONFIG.C_ICACHE_VICTIMS {0} \
+   CONFIG.C_I_AXI {0} \
+   CONFIG.C_MMU_DTLB_SIZE {2} \
+   CONFIG.C_MMU_ITLB_SIZE {1} \
    CONFIG.C_MMU_ZONES {2} \
    CONFIG.C_USE_BARREL {1} \
    CONFIG.C_USE_BRANCH_TARGET_CACHE {1} \
    CONFIG.C_USE_DCACHE {1} \
    CONFIG.C_USE_DIV {1} \
+   CONFIG.C_USE_EXTENDED_FSL_INSTR {1} \
    CONFIG.C_USE_FPU {2} \
    CONFIG.C_USE_HW_MUL {2} \
    CONFIG.C_USE_ICACHE {1} \
    CONFIG.C_USE_MMU {3} \
    CONFIG.C_USE_MSR_INSTR {1} \
    CONFIG.C_USE_PCMP_INSTR {1} \
-   CONFIG.G_TEMPLATE_LIST {2} \
+   CONFIG.G_TEMPLATE_LIST {3} \
+   CONFIG.G_USE_EXCEPTIONS {0} \
  ] $microblaze_0
 
   # Create instance: microblaze_0_axi_intc, and set properties
@@ -1164,6 +1173,7 @@ proc create_root_design { parentCell } {
 
   # Create interface connections
   connect_bd_intf_net -intf_net Receiver_logic_M_AXIS [get_bd_intf_pins FIFO/AXI_STR_RXD] [get_bd_intf_pins axis_clock_converter_0/M_AXIS]
+  connect_bd_intf_net -intf_net S01_AXI_1 [get_bd_intf_pins axi_mem_intercon/S01_AXI] [get_bd_intf_pins microblaze_0/M_AXI_IC]
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_bram_porta [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_bram_portb [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTB]
   connect_bd_intf_net -intf_net axi_clock_converter_0_M_AXI [get_bd_intf_pins axi_clock_converter_0/M_AXI] [get_bd_intf_pins bit_slip/S_AXI]
@@ -1180,6 +1190,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_mem_intercon_m00_axi [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins mig_7series_0/S_AXI]
   connect_bd_intf_net -intf_net axi_mem_intercon_m01_axi [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_mem_intercon/M01_AXI]
   connect_bd_intf_net -intf_net axi_uartlite_0_uart [get_bd_intf_ports rs232_uart] [get_bd_intf_pins axi_uartlite_0/UART]
+  connect_bd_intf_net -intf_net mdm_1_MBDEBUG_0 [get_bd_intf_pins mdm_1/MBDEBUG_0] [get_bd_intf_pins microblaze_0/DEBUG]
+  connect_bd_intf_net -intf_net microblaze_0_M_AXI_DC [get_bd_intf_pins axi_mem_intercon/S00_AXI] [get_bd_intf_pins microblaze_0/M_AXI_DC]
   connect_bd_intf_net -intf_net microblaze_0_axi_dp [get_bd_intf_pins microblaze_0/M_AXI_DP] [get_bd_intf_pins microblaze_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M05_AXI [get_bd_intf_pins FIFO/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M05_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M06_AXI [get_bd_intf_pins microblaze_0_axi_periph/M06_AXI] [get_bd_intf_pins success/S_AXI]
@@ -1193,13 +1205,10 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_m02_axi [get_bd_intf_pins axi_uartlite_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M02_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_m03_axi [get_bd_intf_pins axi_ethernet_0_dma/S_AXI_LITE] [get_bd_intf_pins microblaze_0_axi_periph/M03_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_m04_axi [get_bd_intf_pins axi_ethernet_0/s_axi] [get_bd_intf_pins microblaze_0_axi_periph/M04_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_debug [get_bd_intf_pins mdm_1/MBDEBUG_0] [get_bd_intf_pins microblaze_0/DEBUG]
   connect_bd_intf_net -intf_net microblaze_0_dlmb [get_bd_intf_pins microblaze_0/DLMB] [get_bd_intf_pins microblaze_0_local_memory/DLMB]
   connect_bd_intf_net -intf_net microblaze_0_ilmb [get_bd_intf_pins microblaze_0/ILMB] [get_bd_intf_pins microblaze_0_local_memory/ILMB]
   connect_bd_intf_net -intf_net microblaze_0_intc_axi [get_bd_intf_pins microblaze_0_axi_intc/s_axi] [get_bd_intf_pins microblaze_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net microblaze_0_interrupt [get_bd_intf_pins microblaze_0/INTERRUPT] [get_bd_intf_pins microblaze_0_axi_intc/interrupt]
-  connect_bd_intf_net -intf_net microblaze_0_m_axi_dc [get_bd_intf_pins axi_mem_intercon/S00_AXI] [get_bd_intf_pins microblaze_0/M_AXI_DC]
-  connect_bd_intf_net -intf_net microblaze_0_m_axi_ic [get_bd_intf_pins axi_mem_intercon/S01_AXI] [get_bd_intf_pins microblaze_0/M_AXI_IC]
   connect_bd_intf_net -intf_net mig_7series_0_ddr3 [get_bd_intf_ports DDR3] [get_bd_intf_pins mig_7series_0/DDR3]
   connect_bd_intf_net -intf_net output_fifo_AXI_STR_TXD [get_bd_intf_pins FIFO/AXI_STR_TXD] [get_bd_intf_pins axis_clock_converter_1/S_AXIS]
 

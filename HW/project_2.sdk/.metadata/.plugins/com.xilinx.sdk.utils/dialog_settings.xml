@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\HW\project_2.runs\impl_1" key="program_fpga_view_bit_bmm_browse_key"/>
+	<item value="F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_2.runs\impl_1" key="debug_bit_tcl_folder_selection"/>
+	<item value="F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_2.runs\impl_1" key="program_fpga_view_bit_bmm_browse_key"/>
 	<item value="F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\HW\project_2.sdk\vfat3_sdk\Debug" key="zynq_flash_files_selection"/>
-	<item value="F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\HW\project_2.runs\impl_1" key="last_stored_selection"/>
+	<item value="F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_2.runs\impl_1" key="last_stored_selection"/>
 </section>

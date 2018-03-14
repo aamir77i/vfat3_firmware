@@ -71,19 +71,19 @@ set rc [catch {
   set_property board_part xilinx.com:kc705:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.cache/wt [current_project]
-  set_property parent.project_path F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.xpr [current_project]
+  set_property webtalk.parent_dir F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.cache/wt [current_project]
+  set_property parent.project_path F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.xpr [current_project]
   set_property ip_cache_permissions disable [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.runs/synth_1/mb_subsystem_wrapper.dcp
+  add_files -quiet F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.runs/synth_1/mb_subsystem_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd
+  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd
   set_param project.isImplRun false
-  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.sdk/vfat3_sdk/Debug/vfat3_sdk.elf
-  set_property SCOPED_TO_REF mb_subsystem [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.sdk/vfat3_sdk/Debug/vfat3_sdk.elf]
-  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.sdk/vfat3_sdk/Debug/vfat3_sdk.elf]
-  read_xdc F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/HW/project_2.srcs/constrs_1/new/system.xdc
+  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk/Debug/vfat3_sdk.elf
+  set_property SCOPED_TO_REF mb_subsystem [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk/Debug/vfat3_sdk.elf]
+  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk/Debug/vfat3_sdk.elf]
+  read_xdc F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/constrs_1/new/system.xdc
   set_param project.isImplRun true
   link_design -top mb_subsystem_wrapper -part xc7k325tffg900-2
   set_param project.isImplRun false

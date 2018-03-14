@@ -1,3 +1,15 @@
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.bss=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.data=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.rodata=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.sbss=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.sbss2=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.sdata=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.sdata2=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:.text=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:heap=microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:heap-size=1024
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:stack=microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+com.xilinx.sdk.linkgen.prefs.VFAT3_TB\:stack-size=1024
 com.xilinx.sdk.linkgen.prefs.hello_world\:.bss=mig_7series_0_memaddr
 com.xilinx.sdk.linkgen.prefs.hello_world\:.data=mig_7series_0_memaddr
 com.xilinx.sdk.linkgen.prefs.hello_world\:.rodata=mig_7series_0_memaddr

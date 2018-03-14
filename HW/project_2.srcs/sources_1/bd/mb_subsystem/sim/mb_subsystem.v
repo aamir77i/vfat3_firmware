@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Tue Feb 20 07:06:24 2018
+//Date        : Wed Mar 14 11:10:02 2018
 //Host        : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target mb_subsystem.bd
 //Design      : mb_subsystem
@@ -3479,6 +3479,21 @@ module mb_subsystem
   wire [0:0]Receiver_logic_gpio_io_o1;
   wire [0:0]Receiver_logic_gpio_io_o2;
   wire Receiver_logic_success;
+  wire [31:0]S01_AXI_1_ARADDR;
+  wire [1:0]S01_AXI_1_ARBURST;
+  wire [3:0]S01_AXI_1_ARCACHE;
+  wire [7:0]S01_AXI_1_ARLEN;
+  wire S01_AXI_1_ARLOCK;
+  wire [2:0]S01_AXI_1_ARPROT;
+  wire [3:0]S01_AXI_1_ARQOS;
+  wire S01_AXI_1_ARREADY;
+  wire [2:0]S01_AXI_1_ARSIZE;
+  wire S01_AXI_1_ARVALID;
+  wire [31:0]S01_AXI_1_RDATA;
+  wire S01_AXI_1_RLAST;
+  wire S01_AXI_1_RREADY;
+  wire [1:0]S01_AXI_1_RRESP;
+  wire S01_AXI_1_RVALID;
   wire S_to_diff_0_out_n;
   wire S_to_diff_0_out_p;
   wire S_to_diff_1_out_n;
@@ -3707,8 +3722,50 @@ module mb_subsystem
   wire clk_wiz_1_clk_out1;
   wire clk_wiz_1_clk_out2;
   wire [7:0]inverse_reverse_TX_data_out;
+  wire mdm_1_MBDEBUG_0_CAPTURE;
+  wire mdm_1_MBDEBUG_0_CLK;
+  wire mdm_1_MBDEBUG_0_DISABLE;
+  wire [0:7]mdm_1_MBDEBUG_0_REG_EN;
+  wire mdm_1_MBDEBUG_0_RST;
+  wire mdm_1_MBDEBUG_0_SHIFT;
+  wire mdm_1_MBDEBUG_0_TDI;
+  wire mdm_1_MBDEBUG_0_TDO;
+  wire mdm_1_MBDEBUG_0_UPDATE;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
+  wire [31:0]microblaze_0_M_AXI_DC_ARADDR;
+  wire [1:0]microblaze_0_M_AXI_DC_ARBURST;
+  wire [3:0]microblaze_0_M_AXI_DC_ARCACHE;
+  wire [7:0]microblaze_0_M_AXI_DC_ARLEN;
+  wire microblaze_0_M_AXI_DC_ARLOCK;
+  wire [2:0]microblaze_0_M_AXI_DC_ARPROT;
+  wire [3:0]microblaze_0_M_AXI_DC_ARQOS;
+  wire microblaze_0_M_AXI_DC_ARREADY;
+  wire [2:0]microblaze_0_M_AXI_DC_ARSIZE;
+  wire microblaze_0_M_AXI_DC_ARVALID;
+  wire [31:0]microblaze_0_M_AXI_DC_AWADDR;
+  wire [1:0]microblaze_0_M_AXI_DC_AWBURST;
+  wire [3:0]microblaze_0_M_AXI_DC_AWCACHE;
+  wire [7:0]microblaze_0_M_AXI_DC_AWLEN;
+  wire microblaze_0_M_AXI_DC_AWLOCK;
+  wire [2:0]microblaze_0_M_AXI_DC_AWPROT;
+  wire [3:0]microblaze_0_M_AXI_DC_AWQOS;
+  wire microblaze_0_M_AXI_DC_AWREADY;
+  wire [2:0]microblaze_0_M_AXI_DC_AWSIZE;
+  wire microblaze_0_M_AXI_DC_AWVALID;
+  wire microblaze_0_M_AXI_DC_BREADY;
+  wire [1:0]microblaze_0_M_AXI_DC_BRESP;
+  wire microblaze_0_M_AXI_DC_BVALID;
+  wire [31:0]microblaze_0_M_AXI_DC_RDATA;
+  wire microblaze_0_M_AXI_DC_RLAST;
+  wire microblaze_0_M_AXI_DC_RREADY;
+  wire [1:0]microblaze_0_M_AXI_DC_RRESP;
+  wire microblaze_0_M_AXI_DC_RVALID;
+  wire [31:0]microblaze_0_M_AXI_DC_WDATA;
+  wire microblaze_0_M_AXI_DC_WLAST;
+  wire microblaze_0_M_AXI_DC_WREADY;
+  wire [3:0]microblaze_0_M_AXI_DC_WSTRB;
+  wire microblaze_0_M_AXI_DC_WVALID;
   wire [31:0]microblaze_0_axi_dp_ARADDR;
   wire [2:0]microblaze_0_axi_dp_ARPROT;
   wire [0:0]microblaze_0_axi_dp_ARREADY;
@@ -3941,15 +3998,6 @@ module mb_subsystem
   wire microblaze_0_axi_periph_m04_axi_WREADY;
   wire [3:0]microblaze_0_axi_periph_m04_axi_WSTRB;
   wire [0:0]microblaze_0_axi_periph_m04_axi_WVALID;
-  wire microblaze_0_debug_CAPTURE;
-  wire microblaze_0_debug_CLK;
-  wire microblaze_0_debug_DISABLE;
-  wire [0:7]microblaze_0_debug_REG_EN;
-  wire microblaze_0_debug_RST;
-  wire microblaze_0_debug_SHIFT;
-  wire microblaze_0_debug_TDI;
-  wire microblaze_0_debug_TDO;
-  wire microblaze_0_debug_UPDATE;
   wire [0:31]microblaze_0_dlmb_ABUS;
   wire microblaze_0_dlmb_ADDRSTROBE;
   wire [0:3]microblaze_0_dlmb_BE;
@@ -3990,54 +4038,6 @@ module mb_subsystem
   wire [31:0]microblaze_0_interrupt_ADDRESS;
   wire microblaze_0_interrupt_INTERRUPT;
   wire [5:0]microblaze_0_intr;
-  wire [31:0]microblaze_0_m_axi_dc_ARADDR;
-  wire [1:0]microblaze_0_m_axi_dc_ARBURST;
-  wire [3:0]microblaze_0_m_axi_dc_ARCACHE;
-  wire [7:0]microblaze_0_m_axi_dc_ARLEN;
-  wire microblaze_0_m_axi_dc_ARLOCK;
-  wire [2:0]microblaze_0_m_axi_dc_ARPROT;
-  wire [3:0]microblaze_0_m_axi_dc_ARQOS;
-  wire microblaze_0_m_axi_dc_ARREADY;
-  wire [2:0]microblaze_0_m_axi_dc_ARSIZE;
-  wire microblaze_0_m_axi_dc_ARVALID;
-  wire [31:0]microblaze_0_m_axi_dc_AWADDR;
-  wire [1:0]microblaze_0_m_axi_dc_AWBURST;
-  wire [3:0]microblaze_0_m_axi_dc_AWCACHE;
-  wire [7:0]microblaze_0_m_axi_dc_AWLEN;
-  wire microblaze_0_m_axi_dc_AWLOCK;
-  wire [2:0]microblaze_0_m_axi_dc_AWPROT;
-  wire [3:0]microblaze_0_m_axi_dc_AWQOS;
-  wire microblaze_0_m_axi_dc_AWREADY;
-  wire [2:0]microblaze_0_m_axi_dc_AWSIZE;
-  wire microblaze_0_m_axi_dc_AWVALID;
-  wire microblaze_0_m_axi_dc_BREADY;
-  wire [1:0]microblaze_0_m_axi_dc_BRESP;
-  wire microblaze_0_m_axi_dc_BVALID;
-  wire [31:0]microblaze_0_m_axi_dc_RDATA;
-  wire microblaze_0_m_axi_dc_RLAST;
-  wire microblaze_0_m_axi_dc_RREADY;
-  wire [1:0]microblaze_0_m_axi_dc_RRESP;
-  wire microblaze_0_m_axi_dc_RVALID;
-  wire [31:0]microblaze_0_m_axi_dc_WDATA;
-  wire microblaze_0_m_axi_dc_WLAST;
-  wire microblaze_0_m_axi_dc_WREADY;
-  wire [3:0]microblaze_0_m_axi_dc_WSTRB;
-  wire microblaze_0_m_axi_dc_WVALID;
-  wire [31:0]microblaze_0_m_axi_ic_ARADDR;
-  wire [1:0]microblaze_0_m_axi_ic_ARBURST;
-  wire [3:0]microblaze_0_m_axi_ic_ARCACHE;
-  wire [7:0]microblaze_0_m_axi_ic_ARLEN;
-  wire microblaze_0_m_axi_ic_ARLOCK;
-  wire [2:0]microblaze_0_m_axi_ic_ARPROT;
-  wire [3:0]microblaze_0_m_axi_ic_ARQOS;
-  wire microblaze_0_m_axi_ic_ARREADY;
-  wire [2:0]microblaze_0_m_axi_ic_ARSIZE;
-  wire microblaze_0_m_axi_ic_ARVALID;
-  wire [31:0]microblaze_0_m_axi_ic_RDATA;
-  wire microblaze_0_m_axi_ic_RLAST;
-  wire microblaze_0_m_axi_ic_RREADY;
-  wire [1:0]microblaze_0_m_axi_ic_RRESP;
-  wire microblaze_0_m_axi_ic_RVALID;
   wire [13:0]mig_7series_0_ddr3_ADDR;
   wire [2:0]mig_7series_0_ddr3_BA;
   wire mig_7series_0_ddr3_CAS_N;
@@ -4598,56 +4598,56 @@ module mb_subsystem
         .M01_AXI_wvalid(axi_mem_intercon_m01_axi_WVALID),
         .S00_ACLK(microblaze_0_Clk),
         .S00_ARESETN(proc_sys_reset_1_peripheral_aresetn),
-        .S00_AXI_araddr(microblaze_0_m_axi_dc_ARADDR),
-        .S00_AXI_arburst(microblaze_0_m_axi_dc_ARBURST),
-        .S00_AXI_arcache(microblaze_0_m_axi_dc_ARCACHE),
-        .S00_AXI_arlen(microblaze_0_m_axi_dc_ARLEN),
-        .S00_AXI_arlock(microblaze_0_m_axi_dc_ARLOCK),
-        .S00_AXI_arprot(microblaze_0_m_axi_dc_ARPROT),
-        .S00_AXI_arqos(microblaze_0_m_axi_dc_ARQOS),
-        .S00_AXI_arready(microblaze_0_m_axi_dc_ARREADY),
-        .S00_AXI_arsize(microblaze_0_m_axi_dc_ARSIZE),
-        .S00_AXI_arvalid(microblaze_0_m_axi_dc_ARVALID),
-        .S00_AXI_awaddr(microblaze_0_m_axi_dc_AWADDR),
-        .S00_AXI_awburst(microblaze_0_m_axi_dc_AWBURST),
-        .S00_AXI_awcache(microblaze_0_m_axi_dc_AWCACHE),
-        .S00_AXI_awlen(microblaze_0_m_axi_dc_AWLEN),
-        .S00_AXI_awlock(microblaze_0_m_axi_dc_AWLOCK),
-        .S00_AXI_awprot(microblaze_0_m_axi_dc_AWPROT),
-        .S00_AXI_awqos(microblaze_0_m_axi_dc_AWQOS),
-        .S00_AXI_awready(microblaze_0_m_axi_dc_AWREADY),
-        .S00_AXI_awsize(microblaze_0_m_axi_dc_AWSIZE),
-        .S00_AXI_awvalid(microblaze_0_m_axi_dc_AWVALID),
-        .S00_AXI_bready(microblaze_0_m_axi_dc_BREADY),
-        .S00_AXI_bresp(microblaze_0_m_axi_dc_BRESP),
-        .S00_AXI_bvalid(microblaze_0_m_axi_dc_BVALID),
-        .S00_AXI_rdata(microblaze_0_m_axi_dc_RDATA),
-        .S00_AXI_rlast(microblaze_0_m_axi_dc_RLAST),
-        .S00_AXI_rready(microblaze_0_m_axi_dc_RREADY),
-        .S00_AXI_rresp(microblaze_0_m_axi_dc_RRESP),
-        .S00_AXI_rvalid(microblaze_0_m_axi_dc_RVALID),
-        .S00_AXI_wdata(microblaze_0_m_axi_dc_WDATA),
-        .S00_AXI_wlast(microblaze_0_m_axi_dc_WLAST),
-        .S00_AXI_wready(microblaze_0_m_axi_dc_WREADY),
-        .S00_AXI_wstrb(microblaze_0_m_axi_dc_WSTRB),
-        .S00_AXI_wvalid(microblaze_0_m_axi_dc_WVALID),
+        .S00_AXI_araddr(microblaze_0_M_AXI_DC_ARADDR),
+        .S00_AXI_arburst(microblaze_0_M_AXI_DC_ARBURST),
+        .S00_AXI_arcache(microblaze_0_M_AXI_DC_ARCACHE),
+        .S00_AXI_arlen(microblaze_0_M_AXI_DC_ARLEN),
+        .S00_AXI_arlock(microblaze_0_M_AXI_DC_ARLOCK),
+        .S00_AXI_arprot(microblaze_0_M_AXI_DC_ARPROT),
+        .S00_AXI_arqos(microblaze_0_M_AXI_DC_ARQOS),
+        .S00_AXI_arready(microblaze_0_M_AXI_DC_ARREADY),
+        .S00_AXI_arsize(microblaze_0_M_AXI_DC_ARSIZE),
+        .S00_AXI_arvalid(microblaze_0_M_AXI_DC_ARVALID),
+        .S00_AXI_awaddr(microblaze_0_M_AXI_DC_AWADDR),
+        .S00_AXI_awburst(microblaze_0_M_AXI_DC_AWBURST),
+        .S00_AXI_awcache(microblaze_0_M_AXI_DC_AWCACHE),
+        .S00_AXI_awlen(microblaze_0_M_AXI_DC_AWLEN),
+        .S00_AXI_awlock(microblaze_0_M_AXI_DC_AWLOCK),
+        .S00_AXI_awprot(microblaze_0_M_AXI_DC_AWPROT),
+        .S00_AXI_awqos(microblaze_0_M_AXI_DC_AWQOS),
+        .S00_AXI_awready(microblaze_0_M_AXI_DC_AWREADY),
+        .S00_AXI_awsize(microblaze_0_M_AXI_DC_AWSIZE),
+        .S00_AXI_awvalid(microblaze_0_M_AXI_DC_AWVALID),
+        .S00_AXI_bready(microblaze_0_M_AXI_DC_BREADY),
+        .S00_AXI_bresp(microblaze_0_M_AXI_DC_BRESP),
+        .S00_AXI_bvalid(microblaze_0_M_AXI_DC_BVALID),
+        .S00_AXI_rdata(microblaze_0_M_AXI_DC_RDATA),
+        .S00_AXI_rlast(microblaze_0_M_AXI_DC_RLAST),
+        .S00_AXI_rready(microblaze_0_M_AXI_DC_RREADY),
+        .S00_AXI_rresp(microblaze_0_M_AXI_DC_RRESP),
+        .S00_AXI_rvalid(microblaze_0_M_AXI_DC_RVALID),
+        .S00_AXI_wdata(microblaze_0_M_AXI_DC_WDATA),
+        .S00_AXI_wlast(microblaze_0_M_AXI_DC_WLAST),
+        .S00_AXI_wready(microblaze_0_M_AXI_DC_WREADY),
+        .S00_AXI_wstrb(microblaze_0_M_AXI_DC_WSTRB),
+        .S00_AXI_wvalid(microblaze_0_M_AXI_DC_WVALID),
         .S01_ACLK(microblaze_0_Clk),
         .S01_ARESETN(proc_sys_reset_1_peripheral_aresetn),
-        .S01_AXI_araddr(microblaze_0_m_axi_ic_ARADDR),
-        .S01_AXI_arburst(microblaze_0_m_axi_ic_ARBURST),
-        .S01_AXI_arcache(microblaze_0_m_axi_ic_ARCACHE),
-        .S01_AXI_arlen(microblaze_0_m_axi_ic_ARLEN),
-        .S01_AXI_arlock(microblaze_0_m_axi_ic_ARLOCK),
-        .S01_AXI_arprot(microblaze_0_m_axi_ic_ARPROT),
-        .S01_AXI_arqos(microblaze_0_m_axi_ic_ARQOS),
-        .S01_AXI_arready(microblaze_0_m_axi_ic_ARREADY),
-        .S01_AXI_arsize(microblaze_0_m_axi_ic_ARSIZE),
-        .S01_AXI_arvalid(microblaze_0_m_axi_ic_ARVALID),
-        .S01_AXI_rdata(microblaze_0_m_axi_ic_RDATA),
-        .S01_AXI_rlast(microblaze_0_m_axi_ic_RLAST),
-        .S01_AXI_rready(microblaze_0_m_axi_ic_RREADY),
-        .S01_AXI_rresp(microblaze_0_m_axi_ic_RRESP),
-        .S01_AXI_rvalid(microblaze_0_m_axi_ic_RVALID),
+        .S01_AXI_araddr(S01_AXI_1_ARADDR),
+        .S01_AXI_arburst(S01_AXI_1_ARBURST),
+        .S01_AXI_arcache(S01_AXI_1_ARCACHE),
+        .S01_AXI_arlen(S01_AXI_1_ARLEN),
+        .S01_AXI_arlock(S01_AXI_1_ARLOCK),
+        .S01_AXI_arprot(S01_AXI_1_ARPROT),
+        .S01_AXI_arqos(S01_AXI_1_ARQOS),
+        .S01_AXI_arready(S01_AXI_1_ARREADY),
+        .S01_AXI_arsize(S01_AXI_1_ARSIZE),
+        .S01_AXI_arvalid(S01_AXI_1_ARVALID),
+        .S01_AXI_rdata(S01_AXI_1_RDATA),
+        .S01_AXI_rlast(S01_AXI_1_RLAST),
+        .S01_AXI_rready(S01_AXI_1_RREADY),
+        .S01_AXI_rresp(S01_AXI_1_RRESP),
+        .S01_AXI_rvalid(S01_AXI_1_RVALID),
         .S02_ACLK(microblaze_0_Clk),
         .S02_ARESETN(proc_sys_reset_1_peripheral_aresetn),
         .S02_AXI_araddr(axi_ethernet_0_dma_m_axi_sg_ARADDR),
@@ -4857,15 +4857,15 @@ module mb_subsystem
         .reverse(TX_reverse_gpio_io_o),
         .rst_n(proc_sys_reset_1_peripheral_aresetn));
   mb_subsystem_mdm_1_0 mdm_1
-       (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
-        .Dbg_Clk_0(microblaze_0_debug_CLK),
-        .Dbg_Disable_0(microblaze_0_debug_DISABLE),
-        .Dbg_Reg_En_0(microblaze_0_debug_REG_EN),
-        .Dbg_Rst_0(microblaze_0_debug_RST),
-        .Dbg_Shift_0(microblaze_0_debug_SHIFT),
-        .Dbg_TDI_0(microblaze_0_debug_TDI),
-        .Dbg_TDO_0(microblaze_0_debug_TDO),
-        .Dbg_Update_0(microblaze_0_debug_UPDATE),
+       (.Dbg_Capture_0(mdm_1_MBDEBUG_0_CAPTURE),
+        .Dbg_Clk_0(mdm_1_MBDEBUG_0_CLK),
+        .Dbg_Disable_0(mdm_1_MBDEBUG_0_DISABLE),
+        .Dbg_Reg_En_0(mdm_1_MBDEBUG_0_REG_EN),
+        .Dbg_Rst_0(mdm_1_MBDEBUG_0_RST),
+        .Dbg_Shift_0(mdm_1_MBDEBUG_0_SHIFT),
+        .Dbg_TDI_0(mdm_1_MBDEBUG_0_TDI),
+        .Dbg_TDO_0(mdm_1_MBDEBUG_0_TDO),
+        .Dbg_Update_0(mdm_1_MBDEBUG_0_UPDATE),
         .Debug_SYS_Rst(mdm_1_debug_sys_rst));
   (* BMM_INFO_PROCESSOR = "microblaze-le > mb_subsystem microblaze_0_local_memory/dlmb_bram_if_cntlr mb_subsystem axi_bram_ctrl_0" *) 
   (* KEEP_HIERARCHY = "yes" *) 
@@ -4880,15 +4880,15 @@ module mb_subsystem
         .Data_Addr(microblaze_0_dlmb_ABUS),
         .Data_Read(microblaze_0_dlmb_READDBUS),
         .Data_Write(microblaze_0_dlmb_WRITEDBUS),
-        .Dbg_Capture(microblaze_0_debug_CAPTURE),
-        .Dbg_Clk(microblaze_0_debug_CLK),
-        .Dbg_Disable(microblaze_0_debug_DISABLE),
-        .Dbg_Reg_En(microblaze_0_debug_REG_EN),
-        .Dbg_Shift(microblaze_0_debug_SHIFT),
-        .Dbg_TDI(microblaze_0_debug_TDI),
-        .Dbg_TDO(microblaze_0_debug_TDO),
-        .Dbg_Update(microblaze_0_debug_UPDATE),
-        .Debug_Rst(microblaze_0_debug_RST),
+        .Dbg_Capture(mdm_1_MBDEBUG_0_CAPTURE),
+        .Dbg_Clk(mdm_1_MBDEBUG_0_CLK),
+        .Dbg_Disable(mdm_1_MBDEBUG_0_DISABLE),
+        .Dbg_Reg_En(mdm_1_MBDEBUG_0_REG_EN),
+        .Dbg_Shift(mdm_1_MBDEBUG_0_SHIFT),
+        .Dbg_TDI(mdm_1_MBDEBUG_0_TDI),
+        .Dbg_TDO(mdm_1_MBDEBUG_0_TDO),
+        .Dbg_Update(mdm_1_MBDEBUG_0_UPDATE),
+        .Debug_Rst(mdm_1_MBDEBUG_0_RST),
         .ICE(microblaze_0_ilmb_CE),
         .IFetch(microblaze_0_ilmb_READSTROBE),
         .IReady(microblaze_0_ilmb_READY),
@@ -4900,41 +4900,42 @@ module mb_subsystem
         .Interrupt(microblaze_0_interrupt_INTERRUPT),
         .Interrupt_Ack(microblaze_0_interrupt_ACK),
         .Interrupt_Address({microblaze_0_interrupt_ADDRESS[31],microblaze_0_interrupt_ADDRESS[30],microblaze_0_interrupt_ADDRESS[29],microblaze_0_interrupt_ADDRESS[28],microblaze_0_interrupt_ADDRESS[27],microblaze_0_interrupt_ADDRESS[26],microblaze_0_interrupt_ADDRESS[25],microblaze_0_interrupt_ADDRESS[24],microblaze_0_interrupt_ADDRESS[23],microblaze_0_interrupt_ADDRESS[22],microblaze_0_interrupt_ADDRESS[21],microblaze_0_interrupt_ADDRESS[20],microblaze_0_interrupt_ADDRESS[19],microblaze_0_interrupt_ADDRESS[18],microblaze_0_interrupt_ADDRESS[17],microblaze_0_interrupt_ADDRESS[16],microblaze_0_interrupt_ADDRESS[15],microblaze_0_interrupt_ADDRESS[14],microblaze_0_interrupt_ADDRESS[13],microblaze_0_interrupt_ADDRESS[12],microblaze_0_interrupt_ADDRESS[11],microblaze_0_interrupt_ADDRESS[10],microblaze_0_interrupt_ADDRESS[9],microblaze_0_interrupt_ADDRESS[8],microblaze_0_interrupt_ADDRESS[7],microblaze_0_interrupt_ADDRESS[6],microblaze_0_interrupt_ADDRESS[5],microblaze_0_interrupt_ADDRESS[4],microblaze_0_interrupt_ADDRESS[3],microblaze_0_interrupt_ADDRESS[2],microblaze_0_interrupt_ADDRESS[1],microblaze_0_interrupt_ADDRESS[0]}),
-        .M_AXI_DC_ARADDR(microblaze_0_m_axi_dc_ARADDR),
-        .M_AXI_DC_ARBURST(microblaze_0_m_axi_dc_ARBURST),
-        .M_AXI_DC_ARCACHE(microblaze_0_m_axi_dc_ARCACHE),
-        .M_AXI_DC_ARLEN(microblaze_0_m_axi_dc_ARLEN),
-        .M_AXI_DC_ARLOCK(microblaze_0_m_axi_dc_ARLOCK),
-        .M_AXI_DC_ARPROT(microblaze_0_m_axi_dc_ARPROT),
-        .M_AXI_DC_ARQOS(microblaze_0_m_axi_dc_ARQOS),
-        .M_AXI_DC_ARREADY(microblaze_0_m_axi_dc_ARREADY),
-        .M_AXI_DC_ARSIZE(microblaze_0_m_axi_dc_ARSIZE),
-        .M_AXI_DC_ARVALID(microblaze_0_m_axi_dc_ARVALID),
-        .M_AXI_DC_AWADDR(microblaze_0_m_axi_dc_AWADDR),
-        .M_AXI_DC_AWBURST(microblaze_0_m_axi_dc_AWBURST),
-        .M_AXI_DC_AWCACHE(microblaze_0_m_axi_dc_AWCACHE),
-        .M_AXI_DC_AWLEN(microblaze_0_m_axi_dc_AWLEN),
-        .M_AXI_DC_AWLOCK(microblaze_0_m_axi_dc_AWLOCK),
-        .M_AXI_DC_AWPROT(microblaze_0_m_axi_dc_AWPROT),
-        .M_AXI_DC_AWQOS(microblaze_0_m_axi_dc_AWQOS),
-        .M_AXI_DC_AWREADY(microblaze_0_m_axi_dc_AWREADY),
-        .M_AXI_DC_AWSIZE(microblaze_0_m_axi_dc_AWSIZE),
-        .M_AXI_DC_AWVALID(microblaze_0_m_axi_dc_AWVALID),
+        .M0_AXIS_TREADY(1'b1),
+        .M_AXI_DC_ARADDR(microblaze_0_M_AXI_DC_ARADDR),
+        .M_AXI_DC_ARBURST(microblaze_0_M_AXI_DC_ARBURST),
+        .M_AXI_DC_ARCACHE(microblaze_0_M_AXI_DC_ARCACHE),
+        .M_AXI_DC_ARLEN(microblaze_0_M_AXI_DC_ARLEN),
+        .M_AXI_DC_ARLOCK(microblaze_0_M_AXI_DC_ARLOCK),
+        .M_AXI_DC_ARPROT(microblaze_0_M_AXI_DC_ARPROT),
+        .M_AXI_DC_ARQOS(microblaze_0_M_AXI_DC_ARQOS),
+        .M_AXI_DC_ARREADY(microblaze_0_M_AXI_DC_ARREADY),
+        .M_AXI_DC_ARSIZE(microblaze_0_M_AXI_DC_ARSIZE),
+        .M_AXI_DC_ARVALID(microblaze_0_M_AXI_DC_ARVALID),
+        .M_AXI_DC_AWADDR(microblaze_0_M_AXI_DC_AWADDR),
+        .M_AXI_DC_AWBURST(microblaze_0_M_AXI_DC_AWBURST),
+        .M_AXI_DC_AWCACHE(microblaze_0_M_AXI_DC_AWCACHE),
+        .M_AXI_DC_AWLEN(microblaze_0_M_AXI_DC_AWLEN),
+        .M_AXI_DC_AWLOCK(microblaze_0_M_AXI_DC_AWLOCK),
+        .M_AXI_DC_AWPROT(microblaze_0_M_AXI_DC_AWPROT),
+        .M_AXI_DC_AWQOS(microblaze_0_M_AXI_DC_AWQOS),
+        .M_AXI_DC_AWREADY(microblaze_0_M_AXI_DC_AWREADY),
+        .M_AXI_DC_AWSIZE(microblaze_0_M_AXI_DC_AWSIZE),
+        .M_AXI_DC_AWVALID(microblaze_0_M_AXI_DC_AWVALID),
         .M_AXI_DC_BID(1'b0),
-        .M_AXI_DC_BREADY(microblaze_0_m_axi_dc_BREADY),
-        .M_AXI_DC_BRESP(microblaze_0_m_axi_dc_BRESP),
-        .M_AXI_DC_BVALID(microblaze_0_m_axi_dc_BVALID),
-        .M_AXI_DC_RDATA(microblaze_0_m_axi_dc_RDATA),
+        .M_AXI_DC_BREADY(microblaze_0_M_AXI_DC_BREADY),
+        .M_AXI_DC_BRESP(microblaze_0_M_AXI_DC_BRESP),
+        .M_AXI_DC_BVALID(microblaze_0_M_AXI_DC_BVALID),
+        .M_AXI_DC_RDATA(microblaze_0_M_AXI_DC_RDATA),
         .M_AXI_DC_RID(1'b0),
-        .M_AXI_DC_RLAST(microblaze_0_m_axi_dc_RLAST),
-        .M_AXI_DC_RREADY(microblaze_0_m_axi_dc_RREADY),
-        .M_AXI_DC_RRESP(microblaze_0_m_axi_dc_RRESP),
-        .M_AXI_DC_RVALID(microblaze_0_m_axi_dc_RVALID),
-        .M_AXI_DC_WDATA(microblaze_0_m_axi_dc_WDATA),
-        .M_AXI_DC_WLAST(microblaze_0_m_axi_dc_WLAST),
-        .M_AXI_DC_WREADY(microblaze_0_m_axi_dc_WREADY),
-        .M_AXI_DC_WSTRB(microblaze_0_m_axi_dc_WSTRB),
-        .M_AXI_DC_WVALID(microblaze_0_m_axi_dc_WVALID),
+        .M_AXI_DC_RLAST(microblaze_0_M_AXI_DC_RLAST),
+        .M_AXI_DC_RREADY(microblaze_0_M_AXI_DC_RREADY),
+        .M_AXI_DC_RRESP(microblaze_0_M_AXI_DC_RRESP),
+        .M_AXI_DC_RVALID(microblaze_0_M_AXI_DC_RVALID),
+        .M_AXI_DC_WDATA(microblaze_0_M_AXI_DC_WDATA),
+        .M_AXI_DC_WLAST(microblaze_0_M_AXI_DC_WLAST),
+        .M_AXI_DC_WREADY(microblaze_0_M_AXI_DC_WREADY),
+        .M_AXI_DC_WSTRB(microblaze_0_M_AXI_DC_WSTRB),
+        .M_AXI_DC_WVALID(microblaze_0_M_AXI_DC_WVALID),
         .M_AXI_DP_ARADDR(microblaze_0_axi_dp_ARADDR),
         .M_AXI_DP_ARPROT(microblaze_0_axi_dp_ARPROT),
         .M_AXI_DP_ARREADY(microblaze_0_axi_dp_ARREADY),
@@ -4954,29 +4955,32 @@ module mb_subsystem
         .M_AXI_DP_WREADY(microblaze_0_axi_dp_WREADY),
         .M_AXI_DP_WSTRB(microblaze_0_axi_dp_WSTRB),
         .M_AXI_DP_WVALID(microblaze_0_axi_dp_WVALID),
-        .M_AXI_IC_ARADDR(microblaze_0_m_axi_ic_ARADDR),
-        .M_AXI_IC_ARBURST(microblaze_0_m_axi_ic_ARBURST),
-        .M_AXI_IC_ARCACHE(microblaze_0_m_axi_ic_ARCACHE),
-        .M_AXI_IC_ARLEN(microblaze_0_m_axi_ic_ARLEN),
-        .M_AXI_IC_ARLOCK(microblaze_0_m_axi_ic_ARLOCK),
-        .M_AXI_IC_ARPROT(microblaze_0_m_axi_ic_ARPROT),
-        .M_AXI_IC_ARQOS(microblaze_0_m_axi_ic_ARQOS),
-        .M_AXI_IC_ARREADY(microblaze_0_m_axi_ic_ARREADY),
-        .M_AXI_IC_ARSIZE(microblaze_0_m_axi_ic_ARSIZE),
-        .M_AXI_IC_ARVALID(microblaze_0_m_axi_ic_ARVALID),
+        .M_AXI_IC_ARADDR(S01_AXI_1_ARADDR),
+        .M_AXI_IC_ARBURST(S01_AXI_1_ARBURST),
+        .M_AXI_IC_ARCACHE(S01_AXI_1_ARCACHE),
+        .M_AXI_IC_ARLEN(S01_AXI_1_ARLEN),
+        .M_AXI_IC_ARLOCK(S01_AXI_1_ARLOCK),
+        .M_AXI_IC_ARPROT(S01_AXI_1_ARPROT),
+        .M_AXI_IC_ARQOS(S01_AXI_1_ARQOS),
+        .M_AXI_IC_ARREADY(S01_AXI_1_ARREADY),
+        .M_AXI_IC_ARSIZE(S01_AXI_1_ARSIZE),
+        .M_AXI_IC_ARVALID(S01_AXI_1_ARVALID),
         .M_AXI_IC_AWREADY(1'b0),
         .M_AXI_IC_BID(1'b0),
         .M_AXI_IC_BRESP({1'b0,1'b0}),
         .M_AXI_IC_BVALID(1'b0),
-        .M_AXI_IC_RDATA(microblaze_0_m_axi_ic_RDATA),
+        .M_AXI_IC_RDATA(S01_AXI_1_RDATA),
         .M_AXI_IC_RID(1'b0),
-        .M_AXI_IC_RLAST(microblaze_0_m_axi_ic_RLAST),
-        .M_AXI_IC_RREADY(microblaze_0_m_axi_ic_RREADY),
-        .M_AXI_IC_RRESP(microblaze_0_m_axi_ic_RRESP),
-        .M_AXI_IC_RVALID(microblaze_0_m_axi_ic_RVALID),
+        .M_AXI_IC_RLAST(S01_AXI_1_RLAST),
+        .M_AXI_IC_RREADY(S01_AXI_1_RREADY),
+        .M_AXI_IC_RRESP(S01_AXI_1_RRESP),
+        .M_AXI_IC_RVALID(S01_AXI_1_RVALID),
         .M_AXI_IC_WREADY(1'b0),
         .Read_Strobe(microblaze_0_dlmb_READSTROBE),
         .Reset(proc_sys_reset_1_mb_reset),
+        .S0_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S0_AXIS_TLAST(1'b0),
+        .S0_AXIS_TVALID(1'b0),
         .Write_Strobe(microblaze_0_dlmb_WRITESTROBE));
   mb_subsystem_microblaze_0_axi_intc_0 microblaze_0_axi_intc
        (.interrupt_address(microblaze_0_interrupt_ADDRESS),

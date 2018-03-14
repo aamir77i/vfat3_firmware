@@ -127,8 +127,9 @@ signed configureADC(u8 channel);
 //signed short ReadADC();
 signed short ReadADC(u8 channel);
 u32 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd);
+void Initialize_Calpulse_LV1As(u32  *SourceAddr,u16 data_len, u8 CAL_DAC,u16 Latency,u16 num_of_triggers);
 int send_Calpulse_LV1As(u32  *SourceAddr,u16 data_len,u8 channel,u8 CAL_DAC,u16 Latency,u16 num_of_triggers,u8 verbose_mode);//
-int Scurve(u32 *SourceAddr,u32 *DestinationBuffer,u16 Latency, u16 num_of_triggers,u8 calibration_mode);
+int Scurve(u32 *SourceAddr,u32 *DestinationBuffer,u8 start_channel,u8 stop_channel, u8 step_channel,u8 start_CALDAC,u8 stop_CALDAC,u8 step_CALDAC,u16 Latency, u16 num_of_triggers,int sd);
 int DecodeDataPacket(u8 channel, u8 CAL_DAC,u16 Latency,u16 num_of_triggers,u8 verbose_mode);
 int Transmit_fast_command(XLlFifo *InstancePtr, u32  *SourceAddr,u16 data_len,u8 verbose_mode);
 int Receive_fast_command(XLlFifo *InstancePtr, u8 verbose_mode);
@@ -138,6 +139,7 @@ void Print_Buffer( u32 *Buffer,int length ,char * string);
 //int send_sync_command(XLlFifo *InstancePtr_tx);
 
 u32 SourceBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
+u32 FastBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
 u32 DestinationBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
 u32 ReceiveLength;
 u32 MON_SEL_BITS	=	0;
@@ -153,6 +155,7 @@ u32 DATA_GBL_CFG_CAL_0;
 XLlFifo_Config *Config;
 char TYPE_ID;
 short LUT_CAL_DAC[512*3];
+u8 scurve_arr[256];
 
 //int sd;
 #define RECV_BUF_SIZE  2048
@@ -200,7 +203,7 @@ int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd
 	u32 i;
 	u8 success;
 	u32 Rcv_len=0;
-	u32 data_len=60;
+	u32 data_len=3;
 //u8 verbose_mode
 
 
@@ -492,93 +495,64 @@ for(int i=0 ; i<length; i++)
 
 }
 
+void Initialize_Calpulse_LV1As(u32  *SourceAddr,u16 data_len, u8 CAL_DAC,u16 Latency,u16 num_of_triggers)
+{
+
+	u32 i,j;
+	////////////fill the tx buffer with cal pulse and lv1as
+
+
+				for(i=0;i<num_of_triggers;i++)
+							{
+							for(j=0;j<data_len;j++)
+											{
+												//	if(j==0)
+												//	*(SourceAddr + j) = RUN_MODE;//FAST COMMAND
+												 if(j==0)
+													*(SourceAddr + j + i*(Latency+2))  = CAL_PULSE;//FAST COMMAND
+
+												else if(j==6)
+													*(SourceAddr + j+ i*(Latency+2)) = LV1A;
+
+												else if (j % 2==0)
+													*(SourceAddr + j+i*(Latency+2)) = 0x00;
+
+												else
+													*(SourceAddr + j+i*(Latency+2))  = 0xff;
+
+										//	xil_printf("j= %d, i= %d, index=%d SourceBuffer=%x\r\n",j,i,(j + i*(Latency+2)),*((SourceAddr + j) + i*(Latency+2)) );
+
+											}
+							}
+
+
+
+
+}
+
+
 
 int send_Calpulse_LV1As(u32  *SourceAddr,u16 data_len,u8 channel, u8 CAL_DAC,u16 Latency,u16 num_of_triggers, u8 verbose_mode)//
 
 {
 	int Status;
-	//XLlFifo_Config *Config;
-	u32 i;
-//	u8 success;
-//	u32 Rcv_len=0;
-	//u32 data_len;
-//u8 verbose_mode
-
-u32 j;
-
-
-
-			//int Error;
-			Status = XST_SUCCESS;
+	Status = XST_SUCCESS;
 
 
 
 
 
-			////////////fill the tx buffer with cal pulse and lv1as
-			/*for(i=0;i<num_of_triggers;i++)
-			{
-			for(j=0;j<=(Latency+1);j++)
-							{
-								//	if(j==0)
-								//	*(SourceAddr + j) = RUN_MODE;//FAST COMMAND
-								 if(j==0)
-									*((SourceAddr + j) + i*(Latency+2)) = CAL_PULSE;//FAST COMMAND
 
-								else if(j==(Latency+1))
-									*((SourceAddr + j) + i*(Latency+2)) = LV1A;
-
-								else if (j % 2==0)
-									*((SourceAddr + j) + i*(Latency+2)) = 0x00;
-
-								else
-									*((SourceAddr + j) + i*(Latency+2)) = 0xff;
-
-							//xil_printf("index=%d SourceBuffer=%x\r\n",(j + i*(Latency+2)),*((SourceAddr + j) + i*(Latency+2)) );
-
-							}
-			}*/
-
-			for(i=0;i<num_of_triggers;i++)
-						{
-						for(j=0;j<data_len;j++)
-										{
-											//	if(j==0)
-											//	*(SourceAddr + j) = RUN_MODE;//FAST COMMAND
-											 if(j==0)
-												*(SourceAddr + j + i*(Latency+2))  = CAL_PULSE;//FAST COMMAND
-
-											else if(j==6)
-												*(SourceAddr + j+ i*(Latency+2)) = LV1A;
-
-											else if (j % 2==0)
-												*(SourceAddr + j+i*(Latency+2)) = 0x00;
-
-											else
-												*(SourceAddr + j+i*(Latency+2))  = 0xff;
-
-										xil_printf("j= %d, i= %d, index=%d SourceBuffer=%x\r\n",j,i,(j + i*(Latency+2)),*((SourceAddr + j) + i*(Latency+2)) );
-
-										}
-						}
-
-			//for(int loop=0;loop<num_of_triggers;loop++){
-
-			//}
-
-
-
-			//data_len = ( (Latency+2));//*num_of_triggers);
-		//	xil_printf("data tx length = %d \r\n",data_len);
 			/* Transmit the Data Stream */
 			Status = TxSend(&FifoInstance, SourceAddr,data_len*num_of_triggers,verbose_mode);
-			if (Status != XST_SUCCESS){
+			if (Status != XST_SUCCESS)
+			{
 				xil_printf("Transmisson of Data failed\n\r");
 				return XST_FAILURE;
 			}
 
 
-			DecodeDataPacket(channel,CAL_DAC,Latency,num_of_triggers,verbose_mode);
+
 
 		return XST_SUCCESS;
 
@@ -697,6 +671,8 @@ unsigned short swapBytes(unsigned short x)
 int decode_receive_packet(u8 *recv_buf,u32  *SourceAddr,int sd)
 {
 	u8 start, step,stop;
+	u8 start_channel,stop_channel,step_channel;
+	u8 start_CALDAC,stop_CALDAC,step_CALDAC;
 	u32 Error_code=0;
 	int Status;int i;
 	u8 verbose_mode=0;
@@ -755,6 +731,8 @@ if(*recv_buf==0xca){
 			     register_data    = 0X00000001;//SLEEP/RUN BIT=1;
 			     mode             = 1;//write transaction on hdlc slow control
 			     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+			     usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+			     usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 			     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
 			////////////////////////////////////////////////////////////////////
 
@@ -766,6 +744,8 @@ if(*recv_buf==0xca){
 		xil_printf("mode =%x\r\n",mode);
 		verbose_mode=1;
 		HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);
+		usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+		usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 		Read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);
 
 		RD = &Read_data;
@@ -851,11 +831,23 @@ if(*recv_buf==0xca){
 							//xil_printf("%c[2J",27);//clear terminal
 							//clrscr();
 							xil_printf("\n\rEntering in scurve routine\r\n");
+							start_channel = *(recv_buf+3);
+							stop_channel  = *(recv_buf+4);
+							step_channel  = *(recv_buf+5);
 
-							Latency = ( *(recv_buf+3) <<8) | *(recv_buf+4);
-							num_of_triggers = ( *(recv_buf+5) <<8) | *(recv_buf+6);
+							start_CALDAC = *(recv_buf+6);
+							stop_CALDAC  = *(recv_buf+7);
+							step_CALDAC  = *(recv_buf+8);
+
+							Latency = ( *(recv_buf+9) <<8) | *(recv_buf+10);
+
+							num_of_triggers = ( *(recv_buf+11) <<8) | *(recv_buf+12);
+
+							xil_printf("start_CH = %d :: stop_CH = %d :: step_CH = %d :: \r\n",start_channel,stop_channel,step_channel);
+							xil_printf("start_CALDAC = %d :: stop_CALDAC = %d :: step_CALDAC = %d :: \r\n",start_CALDAC,stop_CALDAC,step_CALDAC);
 							xil_printf("Latency= %d, Num_of_triggers LV1As = %d\r\n",Latency, num_of_triggers );
-							Scurve(SourceAddr,DestinationBuffer,Latency,num_of_triggers,0);
+							Scurve(SourceAddr,DestinationBuffer,start_channel,stop_channel,step_channel,start_CALDAC,stop_CALDAC,step_CALDAC,Latency,num_of_triggers,sd);
+							//Scurve(SourceAddr,DestinationBuffer,Latency,num_of_triggers,0);
 
 
 				}
@@ -919,50 +911,42 @@ u32 RxReceive (XLlFifo *InstancePtr, u32* DestinationAddr,u8 verbose_mode)
 	u32 RxWord;
 	u32 ReceiveLength;
 	//u8 verbose_mode=1;
+	static u32 frame_len;
+	//if(verbose_mode)xil_printf(" Receiving data ....\n\r");
+//usleep(50000);
+	 //while (XLlFifo_RxOccupancy(&FifoInstance)) {
+	                frame_len = XLlFifo_RxGetLen(&FifoInstance)/WORD_SIZE;
+	                //ReceiveLength=XLlFifo_RxOccupancy(&FifoInstance);
+	               // xil_printf(" frame_len=%d\n\r",frame_len);
+
+	              //  while (frame_len) {
+	                       // unsigned bytes = frame_len;//min(sizeof(DestinationAddr), frame_len);
+	                        XLlFifo_Read(&FifoInstance, DestinationAddr, frame_len*WORD_SIZE);
+	                 //       for (i=0;i< frame_len;i++)xil_printf("%x\r\n",*(DestinationAddr+i));
+
+
+
+
+	return frame_len;
+}
+
+/*
+u32 RxReceive (XLlFifo *InstancePtr, u32* DestinationAddr,u8 verbose_mode)
+{
+
+	int i;
+	int Status;
+	u32 RxWord1,RxWord2;
+	u32 ReceiveLength;
+	//u8 verbose_mode=1;
 	//static u32 frame_len;
 	//if(verbose_mode)xil_printf(" Receiving data ....\n\r");
 
-	/* while (XLlFifo_RxOccupancy(&InstancePtr)) {
-	                frame_len = XLlFifo_RxGetLen(&RxInstance);
-	                while (frame_len) {
-	                        unsigned bytes = min(sizeof(buffer), frame_len);
-	                        XLlFifo_Read(&InstancePtr, buffer, bytes);
-	                        // ********
-	                        // do something with buffer here
-	                        xil_printf(" Received data = %x \n\r",);
-	                        // ********
-	                        frame_len -= bytes;
-	                }
-	        }*/
 
 
 	unsigned length=0;
 
-	//usleep(1000);usleep(1000);usleep(1000);
-	//usleep(1000);usleep(1000);usleep(1000);
-	//usleep(1000);usleep(1000);usleep(1000);
-	//usleep(1000);usleep(1000);usleep(1000);
-/*
-	                ReceiveLength = (XLlFifo_iRxGetLen(InstancePtr))/WORD_SIZE;
-	                xil_printf("receive length =%d \r\n",ReceiveLength);
-	                length=ReceiveLength;
-	                unsigned bytes=ReceiveLength;
 
-	                //while (ReceiveLength) {
-	                        //unsigned bytes = min(sizeof(DestinationAddr), ReceiveLength);
-	                        XLlFifo_Read(InstancePtr, DestinationAddr, bytes);
-	                        // ********
-	                        // do something with buffer here
-	                        // ********
-	               //         ReceiveLength -= bytes;
-	               // }
-	       // }
-
-for(i=0;i<length;i++)
-xil_printf("data %d = %x \r\n ",i,*(DestinationAddr+i));
-
-
-*/
 
 
 
@@ -973,16 +957,16 @@ xil_printf("data %d = %x \r\n ",i,*(DestinationAddr+i));
 	//xil_printf("hdlc_rx :: receive length =%d \r\n",ReceiveLength);
 	 //Start Receiving
 	for ( i=0; i < ReceiveLength; i++){
-		RxWord = 0;
-		RxWord = XLlFifo_RxGetWord(&FifoInstance);
+		RxWord1 = 0;
+		RxWord1 = XLlFifo_RxGetWord(&FifoInstance);
 		//xil_printf("rxword1  =%x \r\n",RxWord);
-		if(XLlFifo_iRxOccupancy(&FifoInstance)){
-			RxWord = XLlFifo_RxGetWord(&FifoInstance);
-		//	xil_printf("rxword 2 =%x \r\n",RxWord);
-		}
-		*(DestinationAddr+i) = RxWord;
+	//	if(XLlFifo_iRxOccupancy(&FifoInstance)){
+		//	RxWord2 = XLlFifo_RxGetWord(&FifoInstance);
+		//	xil_printf("rxword1 %x ,, rxword2 %x  \r\n",RxWord1,RxWord2);
+		//}
+		*(DestinationAddr+i) = RxWord1;
 	}
-
+	 //for (i=0;i< 352;i++)xil_printf("%x\r\n",*(DestinationAddr+i));
 ///	if(verbose_mode){
 //	for(i=0;i<length;i++)
 		//if(i==(length-1))
@@ -993,10 +977,15 @@ xil_printf("data %d = %x \r\n ",i,*(DestinationAddr+i));
 	//	xil_printf("Failing in receive complete ... \r\n");
 	//return XST_FAILURE;
 //	}
-	XLlFifo_Reset(&FifoInstance);//added on 02-03-2018
+	//XLlFifo_Reset(&FifoInstance);//added on 02-03-2018
 
 	return ReceiveLength;
 }
+
+*/
+
+
+
 int XLlFifoPollingExample(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,u32 data_len,u8 verbose_mode)
 {
 	XLlFifo_Config *Config;
@@ -1113,37 +1102,14 @@ int TxSend(XLlFifo *InstancePtr, u32  *SourceAddr,u32 data_len,u8 verbose_mode)
 
 	u32 i;
 	u32 j;
-	//if(verbose_mode)xil_printf(" Transmitting Data in txsend... \r\n");
 
-	// Filling the buffer with data
-//	for (i=0;i<MAX_DATA_BUFFER_SIZE;i++)
-//	{
-//		if(i>=0 && i< 3){*(SourceAddr + i) = 0x17;}
-//		else if(i==(MAX_DATA_BUFFER_SIZE-1))*(SourceAddr + i) = 0xe8;
-//		else if( i % 2 == 0 )
-//		*(SourceAddr + i) = 0x00;//
-
-//		else
-//			*(SourceAddr + i) = 0xff;//
-
-//	}
-	/*for(i=0 ; i < data_len ; i++){
-
-			 Writing into the FIFO Transmit Port Buffer
-			if( XLlFifo_iTxVacancy(&FifoInstance) ){
-					//if(i<10)xil_printf("%x\n ", (u32)*(SourceAddr+(i*MAX_PACKET_LEN)+j));
-					XLlFifo_TxPutWord(&FifoInstance,*(SourceAddr+i));
-				}
-
-
-		}*/
 
 	if( XLlFifo_iTxVacancy(&FifoInstance)> data_len)
 	XLlFifo_Write
 		(
 			&FifoInstance,
 			SourceAddr,
-			data_len *WORD_SIZE
+			data_len * WORD_SIZE
 		);
 
 
@@ -1388,6 +1354,8 @@ u8 type_id=0xaa;
 //usleep(1000);
 //usleep(1000);
 	ReceiveLength = RxReceive(&FifoInstance, DestinationBuffer,verbose_mode);
+	//ReceiveLength=ReceiveLength/4;
+
 	//u8 verbose_mode=1;
 //if(verbose_mode)
 	//xil_printf("hdlc_rx::rcv_len=%d\r\n",ReceiveLength);
@@ -2674,7 +2642,7 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 
 }
 
-int Scurve(u32 *SourceAddr,u32 *DestinationBuffer,u16 Latency, u16 num_of_triggers,u8 calibration_mode)
+int Scurve(u32 *SourceAddr,u32 *DestinationBuffer, u8 start_channel,u8 stop_channel, u8 step_channel,u8 start_CALDAC,u8 stop_CALDAC,u8 step_CALDAC,u16 Latency, u16 num_of_triggers,int sd)
 {
 u64 p=9;
 /* This routine will get the scurves for all the channels
@@ -2827,34 +2795,7 @@ u64 p=9;
 	    	  	    	  HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
 	    	  	    	  xil_printf("PS sub register write  =%x\r\n",register_data);
 	    	  	    	  /////////////////////////////////////loop through all channels//////////////////////////////////////////////////////////////////////////////////////////////
-	    	  	    	/*//////////////fill buffer///////////////////////////
-	    	  	    	  for(int j=0;j<=(Latency+1);j++)
-	    	  	    								{
-	    	  	    									//	if(j==0)
-	    	  	    									//	*(SourceAddr + j) = RUN_MODE;//FAST COMMAND
-	    	  	    									 if(j==0)
-	    	  	    										*(SourceAddr + j)  = CAL_PULSE;//FAST COMMAND
 
-	    	  	    									else if(j==(Latency+1))
-	    	  	    										*(SourceAddr + j)  = LV1A;
-
-	    	  	    									else if (j % 2==0)
-	    	  	    										*(SourceAddr + j) = 0x00;
-
-	    	  	    									else
-	    	  	    										*(SourceAddr + j) = 0xff;
-
-	    	  	    							xil_printf("Trg Source buffer[%d]= %x\r\n",j,*(SourceAddr + j));
-
-	    	  	    								}
-
-
-
-	    	  	    	 xil_printf(" data_len=%d\r\n", data_len);
-
-
-
-	    	  	    	  ///////////////////////////////////////////////////////////////////////////////////////*/
 
 	    	  	    	u16  data_len = Latency+2;
 
@@ -2863,22 +2804,16 @@ u64 p=9;
 	    	  	    	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 	    	  	    	DATA_GBL_CFG_CAL_0    =    HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
 
-
-	    	  	    	  channel=0;
+	    	  	    	Initialize_Calpulse_LV1As(FastBuffer,data_len,CAL_DAC,Latency,num_of_triggers);
+//////////////////////////////start outer most loop for channels////////////////////////////////////
+	    	  	    	  channel=start_channel;
+	    	  	    	  u32 length_scurve = (stop_CALDAC - start_CALDAC)+1;
+	    	  	    	xil_printf("\r\nlength reply packet %d :",length_scurve);
 	    	  	    	  do{
-	    	  	    		  xil_printf("CHANNEL %d\r\n",channel);
-	    	  	    	  ///////////////////////////SET CHANNEL FOR CALIBRATION //////////////////////
-	    	  	    /*	register_address       = (u32) channel;//CH0
-	    	  	    	mode                =   0;//READ transaction on hdlc slow control
-	    	  	    	HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	read_data=HDLC_Rx(DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-	    	  	    	//xil_printf("channel register initial =%x\r\n",read_data);
+	    	  	    			  xil_printf("\r\nCHANNEL %03d :",channel);
 
-	    	  	    	register_data		   = (read_data & 0xFFFF7FFF) | 0X00008000;//cal =1-
-	    	  	    	mode                =  1;//write transaction on hdlc slow control
-	    	  	    	HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	HDLC_Rx(DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-	    	  	    	*/
+	    	  	    	  ///////////////////////////SET CHANNEL FOR CALIBRATION //////////////////////
+
 
 	    	  	    register_address       = channel;
 	    	  	    register_data		   = 0x8000;//cal =1-
@@ -2888,81 +2823,57 @@ u64 p=9;
 	    	  	    	//xil_printf("channel register write =%x\r\n",register_data);
 	    	  	    	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////loop through cal dac values/////////////////////////
-	    	  	    //	register_address 	= 	GBL_CFG_CAL_0;
-	    	  	    //	mode				=	0;
-	    	  	    //	 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    //	DATA_GBL_CFG_CAL_0    =    HDLC_Rx(DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
-	    	  	    	// xil_printf("Initial value cal dac  , READ_DATA = %x \r\n", read_data);
+	    	  	    ///////////START 2ND LOOP FOR CAL DAC VALUES///////////////////////////
 
-	    	  	    	 CAL_DAC          =   0;
+	    	  	    	 CAL_DAC          =   start_CALDAC;
 	    	  	    	register_address 	= 	GBL_CFG_CAL_0;// added this line
 	    	  	    	register_data		=	(u32)((DATA_GBL_CFG_CAL_0 & 0xc03) |(CAL_DAC<<2));
 	    	  	    	mode				=	1;
 
+	    	  	    	short index=0;
+	    	  	    	xil_printf("[\t");
 	    	  	    	do{
-	    	  	    		// xil_printf("CAL_DAC = %d,GBL_CFG_CAL_0= %02X\r\n", CAL_DAC,register_data);
-	    	  	    	 //register_address 	= 	GBL_CFG_CAL_0;
+
+
 	    	  	    	 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 	    	  	    	 HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
-   					 	// step_voltage = ReadADC()*0.0000625;//volts
-   					 	 //charge       = (step_voltage - base_voltage)*100;
-   					 	//printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC\r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge);
-
-
-   					 	/////////////////send calpulse +lv1as/////////////////
- 					 	//*SourceAddr =RUN_MODE;
- 					 	//Transmit_fast_command(&FifoInstance, FIFO_DEV_ID,SourceAddr,1,verbose_mode);
-   					//   xil_printf("Entering in send_calPulse\r\n");
-	    	  	    	//xil_printf("CAL_DAC %03d\t" ,CAL_DAC);
-
-	    	  	    	//for(int loop=0;loop<num_of_triggers;loop++)
-	    	  	    	// {
-	    	  	    	 send_Calpulse_LV1As(SourceAddr,data_len,channel, CAL_DAC,Latency,num_of_triggers,0);//send lv1as with latency
-	    	  	    	 //usleep(1000);usleep(1000);usleep(1000);
-	    	  	    	//xil_printf("data packet %d ", loop +1);
-	    	  	    	// DecodeDataPacket(channel,CAL_DAC,Latency,num_of_triggers,verbose_mode);//receive and decode data packets
-	    	  	    //	xil_printf("%02x%02x%02x%02x%02x%02x%02x%02x", datapacket[4],datapacket[5],datapacket[6],datapacket[7],datapacket[8],datapacket[9],datapacket[10],datapacket[11]);
-	    	  	    //	xil_printf("%02x%02x%02x%02x%02x%02x%02x%02x\t\t",datapacket[12],datapacket[13],datapacket[14],datapacket[15],datapacket[16],datapacket[17],datapacket[18],datapacket[19]);
-	    	  	    	//Hit_array[channel][CAL_DAC] += (datapacket [19-channel/8] & mask_array[channel & 0x7]) ? 1:0;
-
-	    	  	    	// }
-
-	    	  	    	//xil_printf("\r\n");
-	    	  	    	//xil_printf("\r\nHitArray[%d][%d]= %d:: HitArray[%d][%d]= %d \r\n",channel,CAL_DAC, Hit_array[channel][CAL_DAC],channel,CAL_DAC+1, Hit_array[channel][CAL_DAC+1]);
-	    	  	    	 ////////////////////////////unselect channel/////////////////
-
+	    	  	    	 //for (u16 inner_loop=0;inner_loop < num_of_triggers;inner_loop++)
+	    	  	    	 //{
+	    	  	    	 send_Calpulse_LV1As(FastBuffer,data_len,channel, CAL_DAC,Latency,num_of_triggers,0);//send lv1as with latency
+	    	  	    	 usleep(40);
+	    	  	   	     DecodeDataPacket(channel,CAL_DAC,Latency,num_of_triggers,verbose_mode);
+	    	  	    	 //}
+	    	  	   	     scurve_arr[index]=Hit_array[channel][CAL_DAC];
+	    	  	   	    xil_printf("%d\t",scurve_arr[index]);
+	    	  	   	     index++;
    						    	  	    	//////////////////////////////////////////////////////////////////////////////////////////
-   						    	  	   {
-   						    	  	   	    	  	    		 CAL_DAC+=1;if(CAL_DAC>255)CAL_DAC=255;
-   						    	  	      					 	     register_data		=	(u32)((DATA_GBL_CFG_CAL_0 & 0xc03) |(CAL_DAC << 2));
-   						    	  	    					 	 }
-   						    	//  	xil_printf("bottom cal dac loop\r\n");
-	    	  	    	}while(CAL_DAC<1);
+   						  CAL_DAC+=step_CALDAC;if(CAL_DAC>255)CAL_DAC=255;
+   						  register_data		=	(u32)((DATA_GBL_CFG_CAL_0 & 0xc03) |(CAL_DAC << 2));
 
+
+	    	  	    	}while(CAL_DAC<=stop_CALDAC);// END SECOND LOOP FOR CAL DAC VALUES
+	    	  	    	xil_printf("]\r\n");
 	    	  	    	 register_address       =  (u32)channel;//CH0
-	    	  	    	/* mode                =   0;//READ transaction on hdlc slow control
-	    	  	    	 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	 read_data=HDLC_Rx(DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-	    	  	    	 // 	xil_printf("channel register initial =%x\r\n",read_data);
 
-	    	  	    	 register_data		   = (read_data & 0xFFFF7FFF) | 0X00000000;//cal =0
-	    	  	    	 mode                =  1;//write transaction on hdlc slow control
-	    	  	    	 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	 HDLC_Rx(DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-	    	  	    	 //	xil_printf("channel register write = %x\r\n",register_data);
-*/
 
 	    	  	    	register_data		   = 0;//cal =0
 	    	  	    	mode                =  1;//write transaction on hdlc slow control
 	    	  	    	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 	    	  	    	HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-	    	  	    	  }while(++channel<1);//128);
+
+	    	  	    	for (int u=0;u<128;u++){
+	    	  	    		    	  	    		for(int v=0;v<256;v++)
+	    	  	    		    	  	    			Hit_array[u][v]=0;
+	    	  	    	}
+	    	  	    	 SendReply(sd,scurve_arr,length_scurve);
+	    	  	    	 channel+= step_channel;if(channel >127)channel=127;
+	    	  	    	  }while(channel<=stop_channel);//128);// END OUTER MOST LOOP FOR CHANNELS
 
 
 
 
 
-		 	 xil_printf("done s-curve calibration\r\n");
+		 	 xil_printf("\r\ndone s-curve calibration\r\n");
 
 
 
@@ -2988,16 +2899,10 @@ int DecodeDataPacket(u8 channel, u8 CAL_DAC,u16 Latency, u16 num_of_triggers,u8 
 	u8 loop;
 	u8 indexx;
 	u8 PKT_LEN=22;
-	//u32* Rcv;
-	//Rcv = (u32)xil_calloc(27000,sizeof(u32));
-	//if(Rcv==NULL){
-	//		xil_printf("memory allocation fail\r\n");
-	//		return 0;
-	//		}
 
-	xil_printf("ENTERING DECODE DATA PACKET\r\n");
+////	xil_printf("\r\nENTERING DECODE DATA PACKET\r\n");
 	Rcv_len = RxReceive(&FifoInstance, DestinationBuffer,verbose_mode);
-	xil_printf("Rcv_len=%d\r\n", Rcv_len);
+	//xil_printf("Rcv_len=%d\r\n", Rcv_len);
 	   							//	if (Status != XST_SUCCESS){
 	   							//		xil_printf("Receiving data failed");
 	   							//		return XST_FAILURE;
@@ -3025,7 +2930,7 @@ int DecodeDataPacket(u8 channel, u8 CAL_DAC,u16 Latency, u16 num_of_triggers,u8 
 	   								if(j>=Rcv_len)
 	   									{
 	   									 Error_Dpkt = 1;
-	   									 xil_printf("Error \r\n");
+	   									 xil_printf("Error while decoding datapacket, possible not enough data\r\n");
 	   									return 0;
    									}
 
@@ -3040,12 +2945,13 @@ int DecodeDataPacket(u8 channel, u8 CAL_DAC,u16 Latency, u16 num_of_triggers,u8 
 	   								//xil_printf("\r\nHeader = %02x\r\n",datapacket[0]);
 	   								//xil_printf("EC= %02x\r\n",datapacket[1]);
 	   								//xil_printf("BC= %04x\r\n",datapacket[2]<<8 | datapacket[3]  );
-	   								xil_printf("%02x%02x%02x%02x%02x%02x%02x%02x", datapacket[4],datapacket[5],datapacket[6],datapacket[7],datapacket[8],datapacket[9],datapacket[10],datapacket[11]);
-	   								xil_printf("%02x%02x%02x%02x%02x%02x%02x%02x\t\t",datapacket[12],datapacket[13],datapacket[14],datapacket[15],datapacket[16],datapacket[17],datapacket[18],datapacket[19]);
+	   					///			xil_printf("%02x%02x%02x%02x%02x%02x%02x%02x", datapacket[4],datapacket[5],datapacket[6],datapacket[7],datapacket[8],datapacket[9],datapacket[10],datapacket[11]);
+	   					///			xil_printf("%02x%02x%02x%02x%02x%02x%02x%02x\t\t",datapacket[12],datapacket[13],datapacket[14],datapacket[15],datapacket[16],datapacket[17],datapacket[18],datapacket[19]);
 	   								Hit_array[channel][CAL_DAC] += (datapacket [19-channel/8] & mask_array[channel & 0x7]) ? 1:0;
-
+	   								//Hit_array[channel][CAL_DAC] += (19-channel/8] & mask_array[channel & 0x7]) ? 1:0;
+	   								//scurve[i]+=(datapacket [19-channel/8] & mask_array[channel & 0x7]) ? 1:0;
 	   								//xil_printf("\r\nchecksum= %02x%02x\r\n",datapacket[20],datapacket[21]);
-	   								u16 chk_sum = crc16(datapacket, 20);
+	   								//u16 chk_sum = crc16(datapacket, 20);
   									   								//loop++;
 	   								//xil_printf("checksum calculated = %x\r\n",chk_sum);
 	   									   								//xil_printf("Loop= %d\r\n",loop);
@@ -3055,16 +2961,7 @@ int DecodeDataPacket(u8 channel, u8 CAL_DAC,u16 Latency, u16 num_of_triggers,u8 
 	   								}
 	   								Error_Dpkt=0;
 
-	   								xil_printf("\r\nHitArray[%d][%d]= %d:: HitArray[%d][%d]= %d \r\n",channel,CAL_DAC, Hit_array[channel][CAL_DAC],channel,CAL_DAC+1, Hit_array[channel][CAL_DAC+1]);
 
-
-
-	   								/////////////// print EC COUNTER/////////////////
-
-	   								/////////////////print BC counter///////////////
-
-	   								//u8 msb = *(DestinationBuffer+i);i++;
-	   								//u8 lsb = *(DestinationBuffer+i);i++;
 
 
 
@@ -3075,10 +2972,7 @@ int DecodeDataPacket(u8 channel, u8 CAL_DAC,u16 Latency, u16 num_of_triggers,u8 
 	   									XLlFifo_Reset(&FifoInstance);
 	   								}
 
-//for(i=0;i<Rcv_len;i++)
-	   				//			xil_printf("rcv length=%d :: data_packet[%d]=%x \r\n\t\t//////////////////////////////////////////\r\n ",Rcv_len,i,*(DestinationBuffer+i));
-	   								//XLlFifo_Reset(InstancePtr);
-//free (Rcv);
+
 
 return 0;
 }
