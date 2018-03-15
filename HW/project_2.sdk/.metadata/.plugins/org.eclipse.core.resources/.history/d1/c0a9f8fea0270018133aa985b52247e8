@@ -2866,7 +2866,7 @@ u64 p=9;
 	    	  	    		    	  	    			Hit_array[u][v]=0;
 	    	  	    	}
 	    	  	    	 SendReply(sd,scurve_arr,length_scurve);
-	    	  	    	 channel+= step_channel;//if(channel >127)channel=127;
+	    	  	    	 channel+= step_channel;if(channel >127)channel=127;
 	    	  	    	  }while(channel<=stop_channel);//128);// END OUTER MOST LOOP FOR CHANNELS
 
 

@@ -22228,3 +22228,24 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 
 !ENTRY com.xilinx.sdk.utils 0 0 2018-03-14 16:01:57.387
 !MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-14 17:01:48.044
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-14 17:01:48.050
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-14 17:01:48.051
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-14 17:01:48.054
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-14 17:01:48.056
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-14 17:01:48.058
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
