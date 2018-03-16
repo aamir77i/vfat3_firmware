@@ -183,6 +183,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mb_subsystem_xb
 # IP: bd/mb_subsystem/ip/mb_subsystem_xbar_0/mb_subsystem_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mb_subsystem_xbar_0 || ORIG_REF_NAME==mb_subsystem_xbar_0} -quiet] -quiet
 
+# IP: bd/mb_subsystem/ip/mb_subsystem_auto_pc_0/mb_subsystem_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mb_subsystem_auto_pc_0 || ORIG_REF_NAME==mb_subsystem_auto_pc_0} -quiet] -quiet
+
 # IP: bd/mb_subsystem/ip/mb_subsystem_m01_regslice_0/mb_subsystem_m01_regslice_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mb_subsystem_m01_regslice_0 || ORIG_REF_NAME==mb_subsystem_m01_regslice_0} -quiet] -quiet
 
@@ -461,6 +464,8 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/mb_subsystem/ip/mb_subsystem_xbar_1/mb_subsystem_xbar_1_ooc.xdc
 
 # XDC: bd/mb_subsystem/ip/mb_subsystem_xbar_0/mb_subsystem_xbar_0_ooc.xdc
+
+# XDC: bd/mb_subsystem/ip/mb_subsystem_auto_pc_0/mb_subsystem_auto_pc_0_ooc.xdc
 
 # XDC: bd/mb_subsystem/ip/mb_subsystem_m01_regslice_0/mb_subsystem_m01_regslice_0_ooc.xdc
 

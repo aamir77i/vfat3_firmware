@@ -35,7 +35,7 @@
 								<option id="xilinx.gnu.mb.compiler.inferred.usediv.207781162" superClass="xilinx.gnu.mb.compiler.inferred.usediv" value="true" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.fpu.206232582" superClass="xilinx.gnu.mb.compiler.inferred.fpu" value="xilinx.gnu.mb.compiler.inferred.fpu.full" valueType="enumerated"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.mul.651713153" superClass="xilinx.gnu.mb.compiler.inferred.mul" value="xilinx.gnu.mb.compiler.inferred.mul.64bit" valueType="enumerated"/>
-								<option id="xilinx.gnu.compiler.misc.other.1212009008" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency" valueType="string"/>
+								<option id="xilinx.gnu.compiler.misc.other.1212009008" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency -mxl-frequency" valueType="string"/>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.747002069" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../VFAT3_TB_bsp/microblaze_0/include"/>
 								</option>
@@ -144,7 +144,7 @@
 								<option id="xilinx.gnu.mb.compiler.inferred.usediv.1887436118" superClass="xilinx.gnu.mb.compiler.inferred.usediv" value="true" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.fpu.139373311" superClass="xilinx.gnu.mb.compiler.inferred.fpu" value="xilinx.gnu.mb.compiler.inferred.fpu.full" valueType="enumerated"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.mul.654305124" superClass="xilinx.gnu.mb.compiler.inferred.mul" value="xilinx.gnu.mb.compiler.inferred.mul.64bit" valueType="enumerated"/>
-								<option id="xilinx.gnu.compiler.misc.other.431768986" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency" valueType="string"/>
+								<option id="xilinx.gnu.compiler.misc.other.431768986" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency -mxl-frequency" valueType="string"/>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1704641107" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../VFAT3_TB_bsp/microblaze_0/include"/>
 								</option>

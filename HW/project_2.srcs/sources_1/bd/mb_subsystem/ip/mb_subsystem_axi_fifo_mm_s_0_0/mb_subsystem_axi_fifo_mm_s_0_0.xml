@@ -1472,7 +1472,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.FREQ_HZ">150150150</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1481,7 +1481,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ID_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.ID_WIDTH">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.ID_WIDTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1589,7 +1589,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_QOS</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_QOS">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_QOS">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1598,7 +1598,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_REGION</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_REGION">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_REGION">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1634,7 +1634,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.SUPPORTS_NARROW_BURST">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.SUPPORTS_NARROW_BURST">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1661,7 +1661,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>MAX_BURST_LENGTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.MAX_BURST_LENGTH">256</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.MAX_BURST_LENGTH">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1670,7 +1670,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.PHASE">0.000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.PHASE">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1679,7 +1679,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI_FULL.CLK_DOMAIN">mb_subsystem_mig_7series_0_0_ui_clk</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1726,7 +1726,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_FULL" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and (((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1)))">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_FULL" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and (((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1)))">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -2629,7 +2629,7 @@ If the number of packets received is one, then this register returns the value o
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9a4043f</spirit:value>
+            <spirit:value>7:2245e25d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2643,11 +2643,11 @@ If the number of packets received is one, then this register returns the value o
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 19 10:09:04 UTC 2018</spirit:value>
+            <spirit:value>Thu Mar 15 16:54:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9a4043f</spirit:value>
+            <spirit:value>7:2245e25d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2662,11 +2662,11 @@ If the number of packets received is one, then this register returns the value o
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 19 10:09:04 UTC 2018</spirit:value>
+            <spirit:value>Thu Mar 15 16:54:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9a4043f</spirit:value>
+            <spirit:value>7:2245e25d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2696,7 +2696,7 @@ If the number of packets received is one, then this register returns the value o
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:48efce34</spirit:value>
+            <spirit:value>7:8a9b6ef9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2711,11 +2711,11 @@ If the number of packets received is one, then this register returns the value o
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 19 10:09:04 UTC 2018</spirit:value>
+            <spirit:value>Thu Mar 15 16:54:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:48efce34</spirit:value>
+            <spirit:value>7:8a9b6ef9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3193,7 +3193,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3210,7 +3210,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3237,7 +3237,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awaddr" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awaddr" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3264,7 +3264,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awlen" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awlen" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3291,7 +3291,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awsize" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awsize" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3318,7 +3318,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awburst" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awburst" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3341,7 +3341,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awlock" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awlock" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3368,7 +3368,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awcache" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awcache" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3395,7 +3395,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awprot" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awprot" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3418,7 +3418,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3441,7 +3441,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_awready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3468,7 +3468,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wdata" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wdata" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3495,7 +3495,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wstrb" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wstrb" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3518,7 +3518,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wlast" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wlast" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3541,7 +3541,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3564,7 +3564,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_wready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3574,7 +3574,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3591,7 +3591,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3618,7 +3618,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bresp" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bresp" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3641,7 +3641,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3664,7 +3664,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_bready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_TX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3674,7 +3674,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3691,7 +3691,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3718,7 +3718,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_araddr" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_araddr" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3745,7 +3745,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arlen" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arlen" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3772,7 +3772,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arsize" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arsize" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3799,7 +3799,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arburst" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arburst" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3822,7 +3822,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arlock" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arlock" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3849,7 +3849,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arcache" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arcache" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3876,7 +3876,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arprot" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arprot" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3899,7 +3899,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3922,7 +3922,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_arready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3932,7 +3932,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)) - 1)">0</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3949,7 +3949,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1) and ((spirit:decode(id(&apos;PARAM_VALUE.C_S_AXI_ID_WIDTH&apos;)))>0))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3976,7 +3976,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rdata" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rdata" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4003,7 +4003,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rresp" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rresp" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4026,7 +4026,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rlast" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rlast" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4049,7 +4049,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rvalid" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4072,7 +4072,7 @@ If the number of packets received is one, then this register returns the value o
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axi4_rready" xilinx:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE&apos;)))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_RX_DATA&apos;)))=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -4848,7 +4848,7 @@ If the number of packets received is one, then this register returns the value o
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_S_AXI_ID_WIDTH</spirit:name>
         <spirit:displayName>Width of all ID signals across the interface</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_ID_WIDTH">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_ID_WIDTH">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_S_AXI_ADDR_WIDTH</spirit:name>
@@ -4868,17 +4868,17 @@ If the number of packets received is one, then this register returns the value o
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_FIFO_DEPTH</spirit:name>
         <spirit:displayName>Tx Fifo Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_FIFO_DEPTH">65536</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_FIFO_DEPTH">131072</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_FIFO_DEPTH</spirit:name>
         <spirit:displayName>Rx Fifo Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_DEPTH">65536</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_DEPTH">32768</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_FIFO_PF_THRESHOLD</spirit:name>
         <spirit:displayName>Tx PF Threshold</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_FIFO_PF_THRESHOLD" spirit:minimum="10" spirit:maximum="131067" spirit:rangeType="long">65000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_TX_FIFO_PF_THRESHOLD" spirit:minimum="10" spirit:maximum="131067" spirit:rangeType="long">130000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_FIFO_PE_THRESHOLD</spirit:name>
@@ -4888,7 +4888,7 @@ If the number of packets received is one, then this register returns the value o
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_FIFO_PF_THRESHOLD</spirit:name>
         <spirit:displayName>RX PF Threshold</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:minimum="10" spirit:maximum="131067" spirit:rangeType="long">65000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:minimum="10" spirit:maximum="131067" spirit:rangeType="long">32763</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_FIFO_PE_THRESHOLD</spirit:name>
@@ -4903,7 +4903,7 @@ If the number of packets received is one, then this register returns the value o
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DATA_INTERFACE_TYPE</spirit:name>
         <spirit:displayName>Enable AXI4 FULL Interface</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DATA_INTERFACE_TYPE">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector(31 downto 0)">
         <spirit:name>C_BASEADDR</spirit:name>
@@ -4918,12 +4918,12 @@ If the number of packets received is one, then this register returns the value o
       <spirit:modelParameter spirit:dataType="std_logic_vector(31 downto 0)">
         <spirit:name>C_AXI4_BASEADDR</spirit:name>
         <spirit:displayName>AXI4 Base Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_AXI4_BASEADDR" spirit:bitStringLength="32">0x80001000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_AXI4_BASEADDR" spirit:bitStringLength="32">0x44A10000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector(31 downto 0)">
         <spirit:name>C_AXI4_HIGHADDR</spirit:name>
         <spirit:displayName>AXI4 High Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_AXI4_HIGHADDR" spirit:bitStringLength="32">0x80002FFF</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_AXI4_HIGHADDR" spirit:bitStringLength="32">0x44A1FFFF</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_AXIS_TID</spirit:name>
@@ -5242,7 +5242,7 @@ If the number of packets received is one, then this register returns the value o
     <spirit:parameter>
       <spirit:name>C_S_AXI_ID_WIDTH</spirit:name>
       <spirit:displayName>Width of all ID signals across the interface</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ID_WIDTH" spirit:order="2200" spirit:configGroups="1 UnGrouped" spirit:minimum="0" spirit:maximum="16" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXI_ID_WIDTH" spirit:order="2200" spirit:configGroups="1 UnGrouped" spirit:minimum="0" spirit:maximum="16" spirit:rangeType="long">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_BASEADDR</spirit:name>
@@ -5257,37 +5257,37 @@ If the number of packets received is one, then this register returns the value o
     <spirit:parameter>
       <spirit:name>C_DATA_INTERFACE_TYPE</spirit:name>
       <spirit:displayName>Data Interface Options</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_INTERFACE_TYPE" spirit:choiceRef="choice_pairs_4621fdbb" spirit:order="1900">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_INTERFACE_TYPE" spirit:choiceRef="choice_pairs_4621fdbb" spirit:order="1900">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_RX_FIFO_PE_THRESHOLD</spirit:name>
       <spirit:displayName>Receive Fifo Programable Empty Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PE_THRESHOLD" spirit:order="1800" spirit:minimum="2" spirit:maximum="65526" spirit:rangeType="long">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PE_THRESHOLD" spirit:order="1800" spirit:minimum="2" spirit:maximum="32758" spirit:rangeType="long">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_RX_FIFO_PF_THRESHOLD</spirit:name>
       <spirit:displayName>Receive Fifo Programable Full Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:order="1700" spirit:minimum="10" spirit:maximum="65531" spirit:rangeType="long">65000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:order="1700" spirit:minimum="10" spirit:maximum="32763" spirit:rangeType="long">32763</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_TX_FIFO_PE_THRESHOLD</spirit:name>
       <spirit:displayName>Transmit Fifo Programable Empty Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_TX_FIFO_PE_THRESHOLD" spirit:order="1600" spirit:minimum="2" spirit:maximum="65526" spirit:rangeType="long">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_TX_FIFO_PE_THRESHOLD" spirit:order="1600" spirit:minimum="2" spirit:maximum="131062" spirit:rangeType="long">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_TX_FIFO_PF_THRESHOLD</spirit:name>
       <spirit:displayName>Transmit Fifo Programable Full Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_TX_FIFO_PF_THRESHOLD" spirit:order="1500" spirit:minimum="10" spirit:maximum="65531" spirit:rangeType="long">65000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_TX_FIFO_PF_THRESHOLD" spirit:order="1500" spirit:minimum="10" spirit:maximum="131067" spirit:rangeType="long">130000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_RX_FIFO_DEPTH</spirit:name>
       <spirit:displayName>Receive Fifo Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_DEPTH" spirit:choiceRef="choice_list_cb97c1b0" spirit:order="1400">65536</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_DEPTH" spirit:choiceRef="choice_list_cb97c1b0" spirit:order="1400">32768</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_TX_FIFO_DEPTH</spirit:name>
       <spirit:displayName>Transmit Fifo Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_TX_FIFO_DEPTH" spirit:choiceRef="choice_list_cb97c1b0" spirit:order="1300">65536</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_TX_FIFO_DEPTH" spirit:choiceRef="choice_list_cb97c1b0" spirit:order="1300">131072</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_HIGHADDR</spirit:name>
@@ -5308,13 +5308,13 @@ If the number of packets received is one, then this register returns the value o
     <spirit:parameter>
       <spirit:name>C_AXI4_BASEADDR</spirit:name>
       <spirit:displayName>AXI4 Base Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_AXI4_BASEADDR" spirit:order="1250" spirit:bitStringLength="32">0x80001000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_AXI4_BASEADDR" spirit:order="1250" spirit:bitStringLength="32">0x44A10000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_AXI4_HIGHADDR</spirit:name>
       <spirit:displayName>AXI4 High Address</spirit:displayName>
       <spirit:description>High address should be atleast 4k more than Base addess.</spirit:description>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_AXI4_HIGHADDR" spirit:order="1260" spirit:bitStringLength="32">0x80002FFF</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_AXI4_HIGHADDR" spirit:order="1260" spirit:bitStringLength="32">0x44A1FFFF</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_S_AXI_ADDR_WIDTH</spirit:name>
@@ -5410,13 +5410,13 @@ If the number of packets received is one, then this register returns the value o
       <xilinx:coreRevision>12</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_S_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_S_AXI.FREQ_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_S_AXI.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_S_AXI.PHASE" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.FREQ_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.HAS_TKEEP" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.HAS_TLAST" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.HAS_TREADY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.HAS_TREADY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.HAS_TSTRB" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.PHASE" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.TDATA_NUM_BYTES" xilinx:valuePermission="bd"/>
@@ -5424,7 +5424,7 @@ If the number of packets received is one, then this register returns the value o
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.TID_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_RXD.TUSER_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_TXD.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_TXD.FREQ_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_TXD.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_TXD.HAS_TKEEP" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_TXD.HAS_TLAST" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_STR_TXD.HAS_TREADY" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
@@ -5440,33 +5440,63 @@ If the number of packets received is one, then this register returns the value o
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.ADDR_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.DATA_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_BRESP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_BURST" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_CACHE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_LOCK" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_PROT" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_RRESP" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.HAS_WSTRB" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.ID_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.NUM_READ_OUTSTANDING" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.NUM_WRITE_OUTSTANDING" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.PHASE" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.PROTOCOL" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.READ_WRITE_MODE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.SUPPORTS_NARROW_BURST" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_FULL.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_AXI4_BASEADDR" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_AXI4_HIGHADDR" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_AXIS_TDEST_WIDTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_BASEADDR" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_DATA_INTERFACE_TYPE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_HAS_AXIS_TDEST" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_HIGHADDR" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_RX_FIFO_DEPTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_RX_FIFO_PE_THRESHOLD" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_S_AXI_ID_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TX_FIFO_DEPTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TX_FIFO_PE_THRESHOLD" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TX_FIFO_PF_THRESHOLD" xilinx:valueSource="user"/>

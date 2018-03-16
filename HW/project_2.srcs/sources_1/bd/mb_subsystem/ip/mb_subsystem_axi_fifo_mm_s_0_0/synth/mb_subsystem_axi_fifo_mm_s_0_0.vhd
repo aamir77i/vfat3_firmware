@@ -78,6 +78,41 @@ ENTITY mb_subsystem_axi_fifo_mm_s_0_0 IS
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
+    s_axi4_awid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    s_axi4_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axi4_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    s_axi4_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    s_axi4_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi4_awlock : IN STD_LOGIC;
+    s_axi4_awcache : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    s_axi4_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    s_axi4_awvalid : IN STD_LOGIC;
+    s_axi4_awready : OUT STD_LOGIC;
+    s_axi4_wdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axi4_wstrb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    s_axi4_wlast : IN STD_LOGIC;
+    s_axi4_wvalid : IN STD_LOGIC;
+    s_axi4_wready : OUT STD_LOGIC;
+    s_axi4_bid : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    s_axi4_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi4_bvalid : OUT STD_LOGIC;
+    s_axi4_bready : IN STD_LOGIC;
+    s_axi4_arid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    s_axi4_araddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axi4_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    s_axi4_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    s_axi4_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi4_arlock : IN STD_LOGIC;
+    s_axi4_arcache : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    s_axi4_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    s_axi4_arvalid : IN STD_LOGIC;
+    s_axi4_arready : OUT STD_LOGIC;
+    s_axi4_rid : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    s_axi4_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axi4_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi4_rlast : OUT STD_LOGIC;
+    s_axi4_rvalid : OUT STD_LOGIC;
+    s_axi4_rready : IN STD_LOGIC;
     mm2s_prmry_reset_out_n : OUT STD_LOGIC;
     axi_str_txd_tvalid : OUT STD_LOGIC;
     axi_str_txd_tready : IN STD_LOGIC;
@@ -147,7 +182,7 @@ ARCHITECTURE mb_subsystem_axi_fifo_mm_s_0_0_arch OF mb_subsystem_axi_fifo_mm_s_0
       s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_rvalid : OUT STD_LOGIC;
       s_axi_rready : IN STD_LOGIC;
-      s_axi4_awid : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      s_axi4_awid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axi4_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s_axi4_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi4_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -162,11 +197,11 @@ ARCHITECTURE mb_subsystem_axi_fifo_mm_s_0_0_arch OF mb_subsystem_axi_fifo_mm_s_0
       s_axi4_wlast : IN STD_LOGIC;
       s_axi4_wvalid : IN STD_LOGIC;
       s_axi4_wready : OUT STD_LOGIC;
-      s_axi4_bid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      s_axi4_bid : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axi4_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi4_bvalid : OUT STD_LOGIC;
       s_axi4_bready : IN STD_LOGIC;
-      s_axi4_arid : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      s_axi4_arid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axi4_araddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s_axi4_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi4_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -176,7 +211,7 @@ ARCHITECTURE mb_subsystem_axi_fifo_mm_s_0_0_arch OF mb_subsystem_axi_fifo_mm_s_0
       s_axi4_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi4_arvalid : IN STD_LOGIC;
       s_axi4_arready : OUT STD_LOGIC;
-      s_axi4_rid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      s_axi4_rid : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axi4_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       s_axi4_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi4_rlast : OUT STD_LOGIC;
@@ -219,8 +254,8 @@ ARCHITECTURE mb_subsystem_axi_fifo_mm_s_0_0_arch OF mb_subsystem_axi_fifo_mm_s_0
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF mb_subsystem_axi_fifo_mm_s_0_0_arch : ARCHITECTURE IS "mb_subsystem_axi_fifo_mm_s_0_0,axi_fifo_mm_s,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF mb_subsystem_axi_fifo_mm_s_0_0_arch: ARCHITECTURE IS "mb_subsystem_axi_fifo_mm_s_0_0,axi_fifo_mm_s,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_fifo_mm_s,x_ipVersion=4.1,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=kintex7,C_S_AXI_ID_WIDTH=4,C_S_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_S_AXI4_DATA_WIDTH=32,C_TX_FIFO_DEPTH=65536,C_RX_FIFO_DEPTH=65536,C_TX_FIFO_PF_THRESHOLD=65000,C_TX_FIFO_PE_THRESHOLD=2,C_RX_FIFO_PF_THRESHOLD=65000,C_RX_FIFO_PE_THRESHOLD=2,C_USE_TX_CUT_THROUGH=0,C_DATA_INTE" & 
-"RFACE_TYPE=0,C_BASEADDR=0x44A00000,C_HIGHADDR=0x44A0FFFF,C_AXI4_BASEADDR=0x80001000,C_AXI4_HIGHADDR=0x80002FFF,C_HAS_AXIS_TID=0,C_HAS_AXIS_TDEST=0,C_HAS_AXIS_TUSER=0,C_HAS_AXIS_TSTRB=0,C_HAS_AXIS_TKEEP=0,C_AXIS_TID_WIDTH=4,C_AXIS_TDEST_WIDTH=4,C_AXIS_TUSER_WIDTH=4,C_USE_RX_CUT_THROUGH=0,C_USE_TX_DATA=1,C_USE_TX_CTRL=0,C_USE_RX_DATA=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF mb_subsystem_axi_fifo_mm_s_0_0_arch: ARCHITECTURE IS "mb_subsystem_axi_fifo_mm_s_0_0,axi_fifo_mm_s,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_fifo_mm_s,x_ipVersion=4.1,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=kintex7,C_S_AXI_ID_WIDTH=1,C_S_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_S_AXI4_DATA_WIDTH=32,C_TX_FIFO_DEPTH=131072,C_RX_FIFO_DEPTH=32768,C_TX_FIFO_PF_THRESHOLD=130000,C_TX_FIFO_PE_THRESHOLD=2,C_RX_FIFO_PF_THRESHOLD=32763,C_RX_FIFO_PE_THRESHOLD=2,C_USE_TX_CUT_THROUGH=0,C_DATA_IN" & 
+"TERFACE_TYPE=1,C_BASEADDR=0x44A00000,C_HIGHADDR=0x44A0FFFF,C_AXI4_BASEADDR=0x44A10000,C_AXI4_HIGHADDR=0x44A1FFFF,C_HAS_AXIS_TID=0,C_HAS_AXIS_TDEST=0,C_HAS_AXIS_TUSER=0,C_HAS_AXIS_TSTRB=0,C_HAS_AXIS_TKEEP=0,C_AXIS_TID_WIDTH=4,C_AXIS_TDEST_WIDTH=4,C_AXIS_TUSER_WIDTH=4,C_USE_RX_CUT_THROUGH=0,C_USE_TX_DATA=1,C_USE_TX_CTRL=0,C_USE_RX_DATA=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF axi_str_rxd_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 AXI_STR_RXD TDATA";
@@ -237,6 +272,42 @@ ARCHITECTURE mb_subsystem_axi_fifo_mm_s_0_0_arch OF mb_subsystem_axi_fifo_mm_s_0
   ATTRIBUTE X_INTERFACE_INFO OF axi_str_txd_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 AXI_STR_TXD TVALID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF mm2s_prmry_reset_out_n: SIGNAL IS "XIL_INTERFACENAME rst_axi_str_txd, POLARITY ACTIVE_LOW";
   ATTRIBUTE X_INTERFACE_INFO OF mm2s_prmry_reset_out_n: SIGNAL IS "xilinx.com:signal:reset:1.0 rst_axi_str_txd RST";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL RREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL RVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_rlast: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL RLAST";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL RRESP";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_rdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL RDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_rid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL RID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARPROT";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arcache: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARCACHE";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arlock: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARLOCK";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arburst: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARBURST";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arsize: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARSIZE";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arlen: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARLEN";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARADDR";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_arid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL ARID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_bready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL BREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_bvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL BVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_bresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL BRESP";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_bid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL BID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_wready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL WREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_wvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL WVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_wlast: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL WLAST";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_wstrb: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL WSTRB";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_wdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL WDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWPROT";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awcache: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWCACHE";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awlock: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWLOCK";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awburst: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWBURST";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awsize: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWSIZE";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awlen: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWLEN";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWADDR";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi4_awid: SIGNAL IS "XIL_INTERFACENAME S_AXI_FULL, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 150150150, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN mb_subsystem_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axi4_awid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_FULL AWID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI RRESP";
@@ -265,22 +336,22 @@ BEGIN
   U0 : axi_fifo_mm_s
     GENERIC MAP (
       C_FAMILY => "kintex7",
-      C_S_AXI_ID_WIDTH => 4,
+      C_S_AXI_ID_WIDTH => 1,
       C_S_AXI_ADDR_WIDTH => 32,
       C_S_AXI_DATA_WIDTH => 32,
       C_S_AXI4_DATA_WIDTH => 32,
-      C_TX_FIFO_DEPTH => 65536,
-      C_RX_FIFO_DEPTH => 65536,
-      C_TX_FIFO_PF_THRESHOLD => 65000,
+      C_TX_FIFO_DEPTH => 131072,
+      C_RX_FIFO_DEPTH => 32768,
+      C_TX_FIFO_PF_THRESHOLD => 130000,
       C_TX_FIFO_PE_THRESHOLD => 2,
-      C_RX_FIFO_PF_THRESHOLD => 65000,
+      C_RX_FIFO_PF_THRESHOLD => 32763,
       C_RX_FIFO_PE_THRESHOLD => 2,
       C_USE_TX_CUT_THROUGH => 0,
-      C_DATA_INTERFACE_TYPE => 0,
+      C_DATA_INTERFACE_TYPE => 1,
       C_BASEADDR => X"44A00000",
       C_HIGHADDR => X"44A0FFFF",
-      C_AXI4_BASEADDR => X"80001000",
-      C_AXI4_HIGHADDR => X"80002FFF",
+      C_AXI4_BASEADDR => X"44A10000",
+      C_AXI4_HIGHADDR => X"44A1FFFF",
       C_HAS_AXIS_TID => 0,
       C_HAS_AXIS_TDEST => 0,
       C_HAS_AXIS_TUSER => 0,
@@ -315,30 +386,41 @@ BEGIN
       s_axi_rresp => s_axi_rresp,
       s_axi_rvalid => s_axi_rvalid,
       s_axi_rready => s_axi_rready,
-      s_axi4_awid => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      s_axi4_awaddr => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
-      s_axi4_awlen => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 8)),
-      s_axi4_awsize => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 3)),
-      s_axi4_awburst => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 2)),
-      s_axi4_awlock => '0',
-      s_axi4_awcache => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      s_axi4_awprot => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 3)),
-      s_axi4_awvalid => '0',
-      s_axi4_wdata => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
-      s_axi4_wstrb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      s_axi4_wlast => '0',
-      s_axi4_wvalid => '0',
-      s_axi4_bready => '0',
-      s_axi4_arid => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      s_axi4_araddr => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
-      s_axi4_arlen => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 8)),
-      s_axi4_arsize => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 3)),
-      s_axi4_arburst => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 2)),
-      s_axi4_arlock => '0',
-      s_axi4_arcache => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      s_axi4_arprot => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 3)),
-      s_axi4_arvalid => '0',
-      s_axi4_rready => '0',
+      s_axi4_awid => s_axi4_awid,
+      s_axi4_awaddr => s_axi4_awaddr,
+      s_axi4_awlen => s_axi4_awlen,
+      s_axi4_awsize => s_axi4_awsize,
+      s_axi4_awburst => s_axi4_awburst,
+      s_axi4_awlock => s_axi4_awlock,
+      s_axi4_awcache => s_axi4_awcache,
+      s_axi4_awprot => s_axi4_awprot,
+      s_axi4_awvalid => s_axi4_awvalid,
+      s_axi4_awready => s_axi4_awready,
+      s_axi4_wdata => s_axi4_wdata,
+      s_axi4_wstrb => s_axi4_wstrb,
+      s_axi4_wlast => s_axi4_wlast,
+      s_axi4_wvalid => s_axi4_wvalid,
+      s_axi4_wready => s_axi4_wready,
+      s_axi4_bid => s_axi4_bid,
+      s_axi4_bresp => s_axi4_bresp,
+      s_axi4_bvalid => s_axi4_bvalid,
+      s_axi4_bready => s_axi4_bready,
+      s_axi4_arid => s_axi4_arid,
+      s_axi4_araddr => s_axi4_araddr,
+      s_axi4_arlen => s_axi4_arlen,
+      s_axi4_arsize => s_axi4_arsize,
+      s_axi4_arburst => s_axi4_arburst,
+      s_axi4_arlock => s_axi4_arlock,
+      s_axi4_arcache => s_axi4_arcache,
+      s_axi4_arprot => s_axi4_arprot,
+      s_axi4_arvalid => s_axi4_arvalid,
+      s_axi4_arready => s_axi4_arready,
+      s_axi4_rid => s_axi4_rid,
+      s_axi4_rdata => s_axi4_rdata,
+      s_axi4_rresp => s_axi4_rresp,
+      s_axi4_rlast => s_axi4_rlast,
+      s_axi4_rvalid => s_axi4_rvalid,
+      s_axi4_rready => s_axi4_rready,
       mm2s_prmry_reset_out_n => mm2s_prmry_reset_out_n,
       axi_str_txd_tvalid => axi_str_txd_tvalid,
       axi_str_txd_tready => axi_str_txd_tready,

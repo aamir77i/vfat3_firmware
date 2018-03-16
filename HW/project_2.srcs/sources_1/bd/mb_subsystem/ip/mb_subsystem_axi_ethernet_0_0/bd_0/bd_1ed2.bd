@@ -42,7 +42,7 @@
             <spirit:value>150150150</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip"/>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -374,7 +374,7 @@
             <spirit:value>150150150</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip"/>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -490,7 +490,7 @@
             <spirit:value>150150150</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip"/>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -606,7 +606,7 @@
             <spirit:value>150150150</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip"/>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>
@@ -722,7 +722,7 @@
             <spirit:value>150150150</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="ip"/>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
               </bd:configElementInfos>
             </spirit:vendorExtensions>
           </spirit:parameter>

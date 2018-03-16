@@ -792,13 +792,14 @@ proc create_root_design { parentCell } {
   set FIFO [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.1 FIFO ]
   set_property -dict [ list \
    CONFIG.C_AXIS_TDEST_WIDTH {4} \
+   CONFIG.C_DATA_INTERFACE_TYPE {1} \
    CONFIG.C_HAS_AXIS_TDEST {false} \
-   CONFIG.C_RX_FIFO_DEPTH {65536} \
+   CONFIG.C_RX_FIFO_DEPTH {32768} \
    CONFIG.C_RX_FIFO_PE_THRESHOLD {2} \
-   CONFIG.C_RX_FIFO_PF_THRESHOLD {65000} \
-   CONFIG.C_TX_FIFO_DEPTH {65536} \
+   CONFIG.C_RX_FIFO_PF_THRESHOLD {32763} \
+   CONFIG.C_TX_FIFO_DEPTH {131072} \
    CONFIG.C_TX_FIFO_PE_THRESHOLD {2} \
-   CONFIG.C_TX_FIFO_PF_THRESHOLD {65000} \
+   CONFIG.C_TX_FIFO_PF_THRESHOLD {130000} \
    CONFIG.C_USE_TX_CTRL {0} \
    CONFIG.C_USE_TX_DATA {1} \
  ] $FIFO
@@ -1196,6 +1197,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M05_AXI [get_bd_intf_pins FIFO/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M05_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M06_AXI [get_bd_intf_pins microblaze_0_axi_periph/M06_AXI] [get_bd_intf_pins success/S_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M07_AXI [get_bd_intf_pins axi_iic_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M07_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M08_AXI [get_bd_intf_pins FIFO/S_AXI_FULL] [get_bd_intf_pins microblaze_0_axi_periph/M08_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M11_AXI [get_bd_intf_pins axi_clock_converter_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M11_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M12_AXI [get_bd_intf_pins Invert_RXD/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M12_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M13_AXI [get_bd_intf_pins microblaze_0_axi_periph/M13_AXI] [get_bd_intf_pins reverse_RXD/S_AXI]
@@ -1276,6 +1278,7 @@ proc create_root_design { parentCell } {
   create_bd_addr_seg -range 0x40000000 -offset 0x80000000 [get_bd_addr_spaces axi_ethernet_0_dma/Data_MM2S] [get_bd_addr_segs mig_7series_0/memmap/memaddr] SEG_mig_7series_0_memaddr
   create_bd_addr_seg -range 0x40000000 -offset 0x80000000 [get_bd_addr_spaces axi_ethernet_0_dma/Data_S2MM] [get_bd_addr_segs mig_7series_0/memmap/memaddr] SEG_mig_7series_0_memaddr
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs FIFO/S_AXI/Mem0] SEG_FIFO_Mem0
+  create_bd_addr_seg -range 0x00010000 -offset 0x44A10000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs FIFO/S_AXI_FULL/Mem1] SEG_FIFO_Mem1
   create_bd_addr_seg -range 0x00010000 -offset 0x40050000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs Invert_RXD/RX_INVERSE/S_AXI/Reg] SEG_RX_INVERSE_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x40060000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs reverse_RXD/RX_REVERSE/S_AXI/Reg] SEG_RX_REVERSE_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x40010000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs Invert_TXD/TX_invert/S_AXI/Reg] SEG_TX_invert_Reg
