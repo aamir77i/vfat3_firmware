@@ -682,7 +682,6 @@ int decode_receive_packet(u8 *recv_buf,u32  *SourceAddr,int sd)
 	int Status;int i;
 	u8 verbose_mode=0;
 	Status= XST_SUCCESS;
-	u32 mon_sel;
 	char data_crc[]={0x00,0x03,0x1f,0x06,0x01,0x20,0x81,0x00,0x00,0x00,0x07,0x20,0x00,0x00};
 	//char data_crc[]={0x00,0x03,0x0f,0x05,0x01,0x20,0x81,0x00,0x00,0x00};
 		unsigned int crc;
@@ -750,8 +749,8 @@ if(*recv_buf==0xca){
 		xil_printf("mode =%x\r\n",mode);
 		verbose_mode=1;
 		HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);
-		//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
-		//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+		usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+		usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 		Read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);
 
 		RD = &Read_data;
@@ -836,14 +835,12 @@ if(*recv_buf==0xca){
 								//clrscr();
 								xil_printf("\n\rEntering in DAC SCAN calibration routine\r\n");
 								//u32 register_address = *(recv_buf+7) | (*(recv_buf+6)<<8) | (*(recv_buf+5)<<16) | (*(recv_buf+4)<<24);
-								mon_sel =  *(recv_buf+9) | (*(recv_buf+8)<<8) | (*(recv_buf+7)<<16) | (*(recv_buf+6)<<24);
-								start = *(recv_buf+3);
+								 start = *(recv_buf+3);
 								step = *(recv_buf+4);
 								stop = *(recv_buf+5);
-
-								xil_printf("start = %d :: step_size = %d :: stop = %d :: Mon_sel = %d\r\n",start,step,stop,mon_sel);
+								xil_printf("start = %d :: step_size = %d :: stop = %d :: \r\n",start,step,stop);
 								if(  start >=0 &&  start < stop  && step<=(stop-start) &&  step  > 0    )
-								DAC_SCANS(SourceAddr,DestinationBuffer,sd,mon_sel,start,step,stop);
+								DAC_SCANS(SourceAddr,DestinationBuffer,sd,start,step,stop,0);
 								else
 								{
 									Error_code = -1;

@@ -5954,3 +5954,247 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2018-03-15 23:28:33.656
 !MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:33.361
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:33.372
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:33.373
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:33.375
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:33.377
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:33.379
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:39.532
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:39.537
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:39.539
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:39.541
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:39.543
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:39.545
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.127
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.133
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.134
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.137
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.270
+!MESSAGE XSCT Command: [::hsi::utils::lg_init F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.273
+!MESSAGE XSCT command with result: [::hsi::utils::lg_init F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, lg1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.274
+!MESSAGE XSCT Command: [::hsi::utils::lg_get_memories -json], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.276
+!MESSAGE XSCT command with result: [::hsi::utils::lg_get_memories -json], Result: [null, {"microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem": {"base_addr": "0x0",
+"size": "0x10000",
+},
+"mig_7series_0_memaddr": {"base_addr": "0x80000000",
+"size": "0x40000000",
+},
+"axi_bram_ctrl_0_Mem0": {"base_addr": "0xC0000000",
+"size": "0x10000",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.281
+!MESSAGE XSCT Command: [::hsi::utils::lg_get_sections -json], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:41:41.288
+!MESSAGE XSCT command with result: [::hsi::utils::lg_get_sections -json], Result: [null, {"code_sections": ".text:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0",
+"data_sections": ".rodata:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0 .sdata2:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0 .sbss2:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0 .data:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0 .sdata:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0 .sbss:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0 .bss:0x0::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0",
+"stack_section": "stack:0x400::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0",
+"heap_section": "heap:0x800::microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem:mig_7series_0_memaddr:axi_bram_ctrl_0_Mem0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.161
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .text -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.164
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .text -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.165
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .rodata -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.167
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .rodata -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.168
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .sdata2 -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.170
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .sdata2 -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.171
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .sbss2 -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.173
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .sbss2 -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.174
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .data -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.176
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .data -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.178
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .sdata -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.180
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .sdata -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.181
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .sbss -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.183
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .sbss -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.184
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec .bss -mem mig_7series_0_memaddr], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.186
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec .bss -mem mig_7series_0_memaddr], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.187
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec heap -mem microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem -size 16384], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.190
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec heap -mem microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem -size 16384], Result: [null, 16384]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.191
+!MESSAGE XSCT Command: [::hsi::utils::lg_set_section_memory -sec stack -mem microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem -size 16384], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.193
+!MESSAGE XSCT command with result: [::hsi::utils::lg_set_section_memory -sec stack -mem microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem -size 16384], Result: [null, 16384]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.195
+!MESSAGE XSCT Command: [::hsi::utils::lg_generate F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk/src/lscript.ld], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.202
+!MESSAGE XSCT command with result: [::hsi::utils::lg_generate F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk/src/lscript.ld], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.277
+!MESSAGE XSCT Command: [::hsi::utils::lg_delete], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:15.280
+!MESSAGE XSCT command with result: [::hsi::utils::lg_delete], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:20.073
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:20.076
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:20.077
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:20.080
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:20.081
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-16 09:42:20.083
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:16:09.832
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:16:09.960
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:16:09.961
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:16:10.001
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:16:10.003
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:16:10.006
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:36.195
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:36.203
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:36.206
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:36.211
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:36.212
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:36.214
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:42.736
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:42.741
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:42.742
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:42.749
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:42.750
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-19 17:37:42.753
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/vfat3_sdk_bsp/system.mss], Result: [null, ]. Thread: main

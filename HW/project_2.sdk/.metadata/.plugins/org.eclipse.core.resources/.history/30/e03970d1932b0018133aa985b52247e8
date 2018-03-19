@@ -836,7 +836,7 @@ if(*recv_buf==0xca){
 								//clrscr();
 								xil_printf("\n\rEntering in DAC SCAN calibration routine\r\n");
 								//u32 register_address = *(recv_buf+7) | (*(recv_buf+6)<<8) | (*(recv_buf+5)<<16) | (*(recv_buf+4)<<24);
-								mon_sel =  *(recv_buf+9) | (*(recv_buf+8)<<8) | (*(recv_buf+7)<<16) | (*(recv_buf+6)<<24);
+								mon_sel = register_address = *(recv_buf+9) | (*(recv_buf+8)<<8) | (*(recv_buf+7)<<16) | (*(recv_buf+6)<<24);
 								start = *(recv_buf+3);
 								step = *(recv_buf+4);
 								stop = *(recv_buf+5);

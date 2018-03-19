@@ -130,7 +130,6 @@ u32 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd);
 void Initialize_Calpulse_LV1As(u32  *SourceAddr,u16 data_len, u8 CAL_DAC,u16 Latency,u16 num_of_triggers);
 int send_Calpulse_LV1As(u32  *SourceAddr,u16 data_len,u8 channel,u8 CAL_DAC,u16 Latency,u16 num_of_triggers,u8 verbose_mode);//
 int Scurve(u32 *SourceAddr,u32 *DestinationBuffer,u8 start_channel,u8 stop_channel, u8 step_channel,u8 start_CALDAC,u8 stop_CALDAC,u8 step_CALDAC,u16 Latency, u16 num_of_triggers,int sd);
-int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 start,u8 step , u8 stop);
 int DecodeDataPacket(u8 channel, u8 CAL_DAC,u16 Latency,u16 num_of_triggers,u8 verbose_mode);
 int Transmit_fast_command(XLlFifo *InstancePtr, u32  *SourceAddr,u16 data_len,u8 verbose_mode);
 int Receive_fast_command(XLlFifo *InstancePtr, u8 verbose_mode);
@@ -682,7 +681,6 @@ int decode_receive_packet(u8 *recv_buf,u32  *SourceAddr,int sd)
 	int Status;int i;
 	u8 verbose_mode=0;
 	Status= XST_SUCCESS;
-	u32 mon_sel;
 	char data_crc[]={0x00,0x03,0x1f,0x06,0x01,0x20,0x81,0x00,0x00,0x00,0x07,0x20,0x00,0x00};
 	//char data_crc[]={0x00,0x03,0x0f,0x05,0x01,0x20,0x81,0x00,0x00,0x00};
 		unsigned int crc;
@@ -750,8 +748,8 @@ if(*recv_buf==0xca){
 		xil_printf("mode =%x\r\n",mode);
 		verbose_mode=1;
 		HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);
-		//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
-		//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+		usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+		usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 		Read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);
 
 		RD = &Read_data;
@@ -830,29 +828,6 @@ if(*recv_buf==0xca){
 
 				}
 
-
-	else if (*(recv_buf+1)==0x00 && *(recv_buf+2)==0x09){
-								//xil_printf("%c[2J",27);//clear terminal
-								//clrscr();
-								xil_printf("\n\rEntering in DAC SCAN calibration routine\r\n");
-								//u32 register_address = *(recv_buf+7) | (*(recv_buf+6)<<8) | (*(recv_buf+5)<<16) | (*(recv_buf+4)<<24);
-								mon_sel =  *(recv_buf+9) | (*(recv_buf+8)<<8) | (*(recv_buf+7)<<16) | (*(recv_buf+6)<<24);
-								start = *(recv_buf+3);
-								step = *(recv_buf+4);
-								stop = *(recv_buf+5);
-
-								xil_printf("start = %d :: step_size = %d :: stop = %d :: Mon_sel = %d\r\n",start,step,stop,mon_sel);
-								if(  start >=0 &&  start < stop  && step<=(stop-start) &&  step  > 0    )
-								DAC_SCANS(SourceAddr,DestinationBuffer,sd,mon_sel,start,step,stop);
-								else
-								{
-									Error_code = -1;
-									RD = &Error_code;
-									SendReply(sd, RD,1 * 4);
-									xil_printf("Error in setting of scan steps , Please adjust values\r\n");
-								}
-
-					}
 
 
 	else if (*(recv_buf+1)==0x00 && *(recv_buf+2)==0x08)
@@ -2683,15 +2658,12 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
  */
 	u32 register_address;
 	u32 register_data;
-	u32 dac_address;
-	u32 DAC;
+	u32 SELECTOR_ADDRESS;
 	u8 verbose_mode=0;
 	u8 mode=0;
-	u8 SHIFT=0;
 	u32 read_data;
 	//double imon_adc,vmon_adc;
 	double step_voltage, base_voltage,charge = 0;
-	int i = 0;
 
 	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
 	     register_address = GBL_CFG_RUN;
@@ -2705,118 +2677,87 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
 		{
 	     case IREF:
 	    	 	 dac_address =  GBL_CFG_CTR_5;
-	    	 	 SHIFT = 0;
 	    	 	 break;
 
 	     case CALIB_IDC:
-	    	 	 dac_address =  GBL_CFG_CAL_0;//????
-	    	 	 SHIFT = 2;
-	    	 	 break;
+	    	 dac_address =  GBL_CFG_CTR_5;
+	     	    break;
 	     case PREAMP_INP_TRAN:
-	    	 	 dac_address =  GBL_CFG_BIAS_1;
-	    	 	 SHIFT = 0;
-	    	 	 break;
+	    	 dac_address =  GBL_CFG_BIAS_1;
+	     	     	    break;
 	     case PREAMP_LC:
-	    	 	 dac_address =  GBL_CFG_BIAS_2;
-	    	 	 SHIFT = 8;
-	    	 	 break;
+	    	 dac_address =  GBL_CFG_BIAS_2;
+	     	     	    break;
 	     case PREAMP_SF:
-	    	 	 dac_address = GBL_CFG_BIAS_1;
-	    	 	 SHIFT = 8;
-	    	 	 break;
+	    	 dac_address = GBL_CFG_BIAS_1;
+	     	     	    break;
 	     case SHAP_FC:
-	    	 	 dac_address =  GBL_CFG_BIAS_3;
-	    	 	 SHIFT = 8;
-	    	 	 break;
+	    	 dac_address =  GBL_CFG_BIAS_3;
+	     	     	    break;
 	     case SHAP_INPAIR:
-	    	 	 dac_address =  GBL_CFG_BIAS_3;
-	    	 	 SHIFT = 0;
-	    	 	 break;
+	    	 dac_address =  GBL_CFG_BIAS_3;
+	     	     	    break;
 	     case SD_INPAIR:
-	    	 	 dac_address =  GBL_CFG_BIAS_4;
-	    	 	 SHIFT = 0;
+	    	 dac_address =  GBL_CFG_BIAS_4;
 	     	     	    break;
 
 	     case SD_FC:
-	    	 	 dac_address =  GBL_CFG_BIAS_5;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  GBL_CFG_BIAS_5;
+	     	     	    break;
 	     case SD_SF:
-	    	 	 dac_address =  GBL_CFG_BIAS_5;
-	    	 	 SHIFT = 8;
-	     	     break;
+	    	 dac_address =  GBL_CFG_BIAS_5;
+	     	     	    break;
 	     case CFD_BIAS_1:
-	    	 	 dac_address =  GBL_CFG_BIAS_0;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  GBL_CFG_BIAS_0;
+	     	     	    break;
 	     case CFD_BIAS_2:
-	    	 	 dac_address =  GBL_CFG_BIAS_0;
-	    	 	 SHIFT = 6;
-	     	     break;
+	    	 dac_address =  GBL_CFG_BIAS_0;
+	     	     	    break;
 	     case CFD_HYST:
-	    	 	 dac_address =  GBL_CFG_HYS;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  GBL_CFG_HYS;
+	     	     	    break;
 	     case CFD_IREF_LOCAL:
-	    	 	 dac_address =  IREF;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	    break;
 	     case CFD_TH_ARM:
-	    	 	 dac_address =  GBL_CFG_THR;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  GBL_CFG_THR;
+	     	     	    break;
 	     case CFD_TH_ZCC:
-	    	 	 dac_address = GBL_CFG_THR;
-	    	 	 SHIFT = 8;
-	     	     break;
+	    	 dac_address = GBL_CFG_THR;
+	     	     	    break;
 	     case SLVS_IBIAS:
-	    	 	 dac_address =  GBL_CFG_BIAS_6;
-	    	 	 SHIFT = 6;
-	     	     break;
+	    	 dac_address =  GBL_CFG_BIAS_6;
+	     	     	    break;
 	     case BGR:
-	    	 	 dac_address =  IREF;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	    break;
 	     case CALIB_V_STEP:
-	    	 	 dac_address =  GBL_CFG_CAL_0;
-	    	 	 SHIFT = 2;
-	    	 //SHIFT = 2;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	    break;
 	     case PRE_AMP_VREF:
-	    	 	 dac_address =  GBL_CFG_BIAS_2;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	    break;
 	     case V_TH_ARM:
-	    	 	 dac_address =  GBL_CFG_THR;
-	    	 	 SHIFT = 0;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	    break;
 	     case V_TH_ZCC:
-	    	 	 dac_address =  GBL_CFG_THR;
-	    	 	 SHIFT = 8;
-	     	     break;
-	   /*  case V_TSENS_INT:
-	    	 	 dac_address =  ???;
-	    	 	 SHIFT = 2;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	    break;
+	     case V_TSENS_INT:
+	    	 dac_address =  IREF;
+	     	     	    break;
 	     case V_TSENS_EXT:
-	    	 	 dac_address = ???;
-	    	 	 SHIFT = 2;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	    break;
 	     case ADC_VREF:
-	    	 	 dac_address =  ????;
-	    	 	 SHIFT = 2;
-	     	     break;
+	    	 dac_address =  IREF;
+	     	     	     	    break;
 	     case ADC_VIN_M:
-	    	 	 dac_address =  ?????;
-	    	 	 SHIFT = 2;
-	     	     break;*/
-	     case SLVS_VREF:
-	    	 	 dac_address =  GBL_CFG_BIAS_6;
-	    	 	 SHIFT = 0;
-	    	 	 break;
-	    default:
-	     		dac_address =  IREF;
-	     		SHIFT       =  0;
+	    	 dac_address =  IREF;
+	     	     	     	    break;
+
+	     	 default:
+	     	dac_address =  IREF;
 	     		break;
 
 		}
@@ -2834,60 +2775,79 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
 				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
 				//double vmon_adc=ReadADC()*0.0625;//read value from external ADC IN MILLIVOLTS
-				mode            = 0;//READ transaction on hdlc slow control
+				mode            = 0;//write transaction on hdlc slow control
 				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 				read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
 				xil_printf("cfg_ctr_4 set value , READ_DATA = %x \r\n", read_data);
 
+				////////////////set GBL_CFG_CAL_0 REGISTER SET CAL_SEL_POL =? ////////////////
 
-		///////loop through dac values /////////////
 
-				register_address = dac_address;//THIS VALUE COMES FROM SWITCH ABOVE
+				//register_address 	= 	GBL_CFG_CAL_0;
+				register_address 	= 	GBL_CFG_CAL_0;
+				register_data       =   0x00000001;//;0x00004001;//cal_sel_pol=1  cal mode 01 voltage pulse
+				mode                =   1;//write transaction on hdlc slow control
+				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+				//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+				u16 base_voltage_hex=ReadADC(0);
+				//xil_printf("base_voltage hex %04x",base_voltage_hex);
+
+				//base_voltage =  base_voltage_hex*0.0000625;//v
+
+				register_data       =   0x00000001;//cal_sel_pol=0  cal mode 01 voltage pulse
+				mode                =   1;//write transaction on hdlc slow control
+				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+
+
+
+		///////loop through cal_dac values /////////////
+
+
 				 mode				=	0;
 				 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 				 read_data    =    HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
 				 xil_printf("Initial value , READ_DATA = %x \r\n", read_data);
 
-				 DAC            =   start;
-				 register_data		=	(u32)(read_data |((u32)DAC<<SHIFT));
+				 CAL_DAC            =   start;
+				 register_data		=	(u32)(read_data |((u32)CAL_DAC<<2));
 				 mode				=	1;
-				 u16 indexx          =   0;
+				 u16 index          =   0;
 				 int points = (stop - start)/step +1;
-				 i=0;
 				 do{
 
-					 mode				=	1;
+					// mode				=	1;
 					//register_address 	= 	GBL_CFG_CAL_0;
 					 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 				 	 HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
 
 				 	//////////////////
-				 	////////////////read      internal  adcS/////////////
-				 	mode				=	0;
-				 	register_address 	= 	ADC_READ_0;
-				 	HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	LUT_CAL_DAC[i]=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
-				 	//adc_0=LUT_CAL_DAC[i];
+				 	 //mode				=	0;
+				 //	register_address 	= 	ADC_READ_1;
+				 ///	HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
+				 //	LUT_CAL_DAC[CAL_DAC]=(u16)HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
 
-				 	register_address 	= 	ADC_READ_1;
-				 	HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	LUT_CAL_DAC[i + 1]=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
-				 	//adc_1=LUT_CAL_DAC[i+2];
+				 	//////////////////
 
-				 	DAC+=step;
-				 	register_data		=		(u32)(read_data |((u32)DAC<<SHIFT));
 
-				 	indexx++;
-				 	i+=2;
+				 	LUT_CAL_DAC[index] = ReadADC(0);
+				///// 	step_voltage = LUT_CAL_DAC[index]*0.0000625;//volts
+				///// 	charge       = (step_voltage - base_voltage)*100;
+				////    printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
+				 	CAL_DAC+=step;
+				 	register_data		=		(u32)(read_data |((u32)CAL_DAC<<2));
 
-				 }while( indexx < points);
+				 	index++;
+
+				 }while( index < points);
 				 //	index++;
-				 //u16  *BV;
-				 //BV =&base_voltage_hex;
-				 //SendReply(sd,BV,2);
-				 SendReply(sd,LUT_CAL_DAC,i*2);
-				 xil_printf("index = %d points %d  i= %d  \r\n", indexx,points,i);
-				 	 xil_printf("done DAC SCAN   calibration\r\n");
+				 u16  *BV;
+				 BV =&base_voltage_hex;
+				 SendReply(sd,BV,2);
+				 SendReply(sd,LUT_CAL_DAC,index*2);
+				 xil_printf("index = %d points %d \r\n", index,points);
+				 	 xil_printf("done_CAL_DAC  calibration\r\n");
 
 
 

@@ -1,6 +1,6 @@
-23:28:42 **** Incremental Build of configuration Debug for project VFAT3_TB ****
+17:37:46 **** Incremental Build of configuration Debug for project VFAT3_TB ****
 make all 
 make: Nothing to be done for `all'.
 
-23:28:42 Build Finished (took 130ms)
+17:37:46 Build Finished (took 137ms)
 
