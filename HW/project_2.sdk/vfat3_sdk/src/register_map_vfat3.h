@@ -128,20 +128,20 @@
 #define GBL_CFG_CH_127 127
 #define GBL_CFG_CH_128 128
 /////////////////////////////////////////////////////////////////
-#define GBL_CFG_CTR_0  		0x00000081
-#define GBL_CFG_CTR_1  		0x00000082
-#define GBL_CFG_CTR_2  		0x00000083
-#define GBL_CFG_CTR_3  		0x00000084
-#define GBL_CFG_CTR_4  		0x00000085
-#define GBL_CFG_CTR_5  		0x00000086
+#define GBL_CFG_CTR_0  		0x81
+#define GBL_CFG_CTR_1  		0x82
+#define GBL_CFG_CTR_2  		0x83
+#define GBL_CFG_CTR_3  		0x84
+#define GBL_CFG_CTR_4  		0x85
+#define GBL_CFG_CTR_5  		0x86
 
 
-#define GBL_CFG_THR    		0x00000087
-#define GBL_CFG_HYS    		0x00000088
-#define GBL_CFG_LAT    		0x00000089
+#define GBL_CFG_THR    		0x87
+#define GBL_CFG_HYS    		0x88
+#define GBL_CFG_LAT    		0x89
 
-#define GBL_CFG_CAL_0  		0x0000008A
-#define GBL_CFG_CAL_1  		0x0000008B
+#define GBL_CFG_CAL_0  		0x8A
+#define GBL_CFG_CAL_1  		0x8B
 
 #define GBL_CFG_BIAS_0 		0x0000008C 
 #define GBL_CFG_BIAS_1 		0x0000008D
@@ -151,64 +151,64 @@
 #define GBL_CFG_BIAS_5 		0x00000091
 #define GBL_CFG_BIAS_6 		0x00000092
 
-#define GBL_CFG_RUN			0x0000ffff
+#define GBL_CFG_RUN			0xffff
 
-#define HW_ID_ID			0x00010000
-#define HW_ID_VER			0x00010001
+#define HW_ID_ID			0x10000
+#define HW_ID_VER			0x10001
 
 
-#define HW_RW_REG			0x00010002
+#define HW_RW_REG			0x10002
 
-#define HW_CHIP_ID			0x00010003
+#define HW_CHIP_ID			0x10003
 
-#define HW_PROG			    0x00010004
+#define HW_PROG			    0x10004
 
-#define ADC_READ_0			0x00020000
-#define ADC_READ_1			0x00020001
+#define ADC_READ_0			0x20000
+#define ADC_READ_1			0x20001
 
 ///////////////////////INDIVIDUAL BITS///////////////////////
 /////GBL_CFG_CTR_4 REGISTER BITS/////////////////
 
-#define VREF_ADC_0	0X00000000
-#define VREF_ADC_1	0X00000100
-#define VREF_ADC_2	0X00000200
-#define VREF_ADC_3	0X00000300
+#define VREF_ADC_0	0X0000
+#define VREF_ADC_1	0X0100
+#define VREF_ADC_2	0X0200
+#define VREF_ADC_3	0X0300
 
 
 
 
-#define MON_GAIN_1	0X00000000
-#define MON_GAIN_5  0X00000080
+#define MON_GAIN_1	0X0000
+#define MON_GAIN_5  0X0080
 
 
-#define IREF				0X00000000
-#define CALIB_IDC			0X00000001
-#define PREAMP_INP_TRAN		0X00000002
-#define PREAMP_LC    		0X00000003
-#define PREAMP_SF    		0X00000004
-#define SHAP_FC     		0X00000005
-#define SHAP_INPAIR   		0X00000006
-#define SD_INPAIR   		0X00000007
-#define SD_FC       		0X00000008
-#define SD_SF       		0X00000009
-#define CFD_BIAS_1  		0X0000000A
-#define CFD_BIAS_2  		0X0000000B
-#define CFD_HYST			0X0000000C
-#define CFD_IREF_LOCAL		0X0000000D
-#define CFD_TH_ARM			0X0000000E
-#define CFD_TH_ZCC			0X0000000F
-#define SLVS_IBIAS			0X00000010
+#define IREF				0X0000
+#define CALIB_IDC			0X0001
+#define PREAMP_INP_TRAN		0X0002
+#define PREAMP_LC    		0X0003
+#define PREAMP_SF    		0X0004
+#define SHAP_FC     		0X0005
+#define SHAP_INPAIR   		0X0006
+#define SD_INPAIR   		0X0007
+#define SD_FC       		0X0008
+#define SD_SF       		0X0009
+#define CFD_BIAS_1  		0X000A
+#define CFD_BIAS_2  		0X000B
+#define CFD_HYST			0X000C
+#define CFD_IREF_LOCAL		0X000D
+#define CFD_TH_ARM			0X000E
+#define CFD_TH_ZCC			0X000F
+#define SLVS_IBIAS			0X0010
 
-#define BGR					0X00000020
-#define CALIB_V_STEP		0X00000021
-#define PRE_AMP_VREF		0X00000022
-#define V_TH_ARM 			0X00000023
-#define V_TH_ZCC			0X00000024
-#define V_TSENS_INT			0X00000025
-#define V_TSENS_EXT			0X00000026
-#define ADC_VREF			0X00000027
-#define ADC_VIN_M			0X00000028
-#define SLVS_VREF			0X00000029
+#define BGR					0X0020
+#define CALIB_V_STEP		0X0021
+#define PRE_AMP_VREF		0X0022
+#define V_TH_ARM 			0X0023
+#define V_TH_ZCC			0X0024
+#define V_TSENS_INT			0X0025
+#define V_TSENS_EXT			0X0026
+#define ADC_VREF			0X0027
+#define ADC_VIN_M			0X0028
+#define SLVS_VREF			0X0029
 
 
 

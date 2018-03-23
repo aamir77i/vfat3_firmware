@@ -119,14 +119,14 @@ int Initialize_fifo(XLlFifo *InstancePtr, u16 DeviceId);
 void Initialize_everything();
 int decode_receive_packet(u8 *recv_buf,u32 *SourceAddr,int sd);
 unsigned int crc16(char *data_p, unsigned short length);
-void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode);
-u32 HDLC_Rx(XLlFifo *InstancePtr,u32* Destination_Addr,u32 rcv_len,u8 mode,u8 verbose_mode);
+void HDLC_Tx(u32 register_address, u16 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode);
+u32 HDLC_Rx(u32* Destination_Addr,u8 mode,u8 verbose_mode);
 int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 calibration_mode);
 int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step , u8 stop,u8 calibration_mode);
 signed configureADC(u8 channel);
 //signed short ReadADC();
 signed short ReadADC(u8 channel);
-u32 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd);
+u16 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd);
 void Initialize_Calpulse_LV1As(u32  *SourceAddr,u16 data_len, u8 CAL_DAC,u16 Latency,u16 num_of_triggers);
 int send_Calpulse_LV1As(u32  *SourceAddr,u16 data_len,u8 channel,u8 CAL_DAC,u16 Latency,u16 num_of_triggers,u8 verbose_mode);//
 int Scurve(u32 *SourceAddr,u32 *DestinationBuffer,u8 start_channel,u8 stop_channel, u8 step_channel,u8 start_CALDAC,u8 stop_CALDAC,u8 step_CALDAC,u16 Latency, u16 num_of_triggers,int sd,u8 arm_dac);
@@ -136,30 +136,34 @@ int Transmit_fast_command(XLlFifo *InstancePtr, u32  *SourceAddr,u16 data_len,u8
 int Receive_fast_command(XLlFifo *InstancePtr, u8 verbose_mode);
 void SendReply(int sd,u32 *Buffer, u32 length);
 void Print_Buffer( u32 *Buffer,int length ,char * string);
+void write_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
+u16 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
 /***************** Macros (Inline Functions) Definitions *********************/
 //int send_sync_command(XLlFifo *InstancePtr_tx);
 
-u32 SourceBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
-u32 FastBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
-u32 DestinationBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
-u32 ReceiveLength;
-u32 MON_SEL_BITS	=	0;
-u32 MON_GAIN_BITS	=	0;
-u32 VREF_ADC_BITS	=	0;
-u32 CAL_DAC;
+volatile u32 SourceBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
+volatile u32 FastBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
+volatile u32 DestinationBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
+ volatile u32 ReceiveLength;
+u16 MON_SEL_BITS	=	0;
+u16 MON_GAIN_BITS	=	0;
+u16 VREF_ADC_BITS	=	0;
+u16 CAL_DAC;
 u8 datapacket[27];
 u8 Error_Dpkt;
-u32 Hit_array[128][256]={0};
-u8 mask_array[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
+volatile u32 Hit_array[128][256]={0};
+volatile u8 mask_array[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
 u32 DATA_GBL_CFG_CAL_0;
 //XLlFifo *InstancePtr;
 XLlFifo_Config *Config;
 char TYPE_ID;
 short LUT_CAL_DAC[512*3];
-u8 scurve_arr[256];
+volatile u8 scurve_arr[256];
 static u32 frame_len;//USED IN RXRECEIVE FUNCTION
-char	h0,h1,h2,h3;
-
+volatile char	h0,h1,h2,h3;
+volatile u32 register_address;
+volatile u16 register_data;
+volatile u16 read_data;
 //int sd;
 #define RECV_BUF_SIZE  2048
 	u8 recv_buf[RECV_BUF_SIZE];
@@ -218,7 +222,7 @@ int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd
 		XGpio_WriteReg((XPAR_REVERSE_RXD_RX_REVERSE_BASEADDR),0, 1);
 
 		XGpio_WriteReg((XPAR_INVERT_RXD_RX_INVERSE_BASEADDR),4, 0);
-		XGpio_WriteReg((XPAR_INVERT_RXD_RX_INVERSE_BASEADDR),0, 0);
+		XGpio_WriteReg((XPAR_INVERT_RXD_RX_INVERSE_BASEADDR),0,0);
 
 		XGpio_WriteReg((XPAR_INVERT_TXD_TX_INVERT_BASEADDR),4, 0);
 		XGpio_WriteReg((XPAR_INVERT_TXD_TX_INVERT_BASEADDR),0, 0);
@@ -689,7 +693,7 @@ int decode_receive_packet(u8 *recv_buf,u32  *SourceAddr,int sd)
 		unsigned int crc;
 		signed short RESULT;
 		u16 Latency=6,num_of_triggers=100;
-		u32 Read_data;
+		u16 Read_data;
 		u32 *RD ;
 		u8 arm_dac;
 	//int RECV_BUF_SIZE = 2048;
@@ -738,10 +742,10 @@ if(*recv_buf==0xca){
 		/*	     register_address = GBL_CFG_RUN;
 			     register_data    = 0X00000001;//SLEEP/RUN BIT=1;
 			     mode             = 1;//write transaction on hdlc slow control
-			     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+			     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
 			     //usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 			     //usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
-			     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+			     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 			////////////////////////////////////////////////////////////////////*/
 
 		 register_address = *(recv_buf+7) | (*(recv_buf+6)<<8) | (*(recv_buf+5)<<16) | (*(recv_buf+4)<<24);
@@ -751,10 +755,10 @@ if(*recv_buf==0xca){
 		xil_printf("register_data=%x\r\n",register_data);
 		xil_printf("mode =%x\r\n",mode);
 		verbose_mode=0;
-		HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);
+		HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);
 		//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 		//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
-		Read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);
+		Read_data = HDLC_Rx(DestinationBuffer,mode,verbose_mode);
 
 		RD = &Read_data;
 		xil_printf("HDLC_ read_data= %x\r\n" ,Read_data),
@@ -780,7 +784,7 @@ if(*recv_buf==0xca){
 			RESULT=ReadADC(*(recv_buf+3));
 			Read_data = RESULT;
 			RD = &Read_data;
-			SendReply(sd, RD,1 * 4);
+			SendReply(sd, RD,2);
 				printf("Result = %f mv\r\n",(float)(RESULT*0.0625));
 				i++;
 			}while(i<1);
@@ -1329,7 +1333,7 @@ unsigned int crc16(char *data_p, unsigned short length)
 }
 
 
-u32 HDLC_Rx(XLlFifo *InstancePtr,u32* DestinationAddr,u32 rcv_len,u8 mode,u8 verbose_mode)
+u32 HDLC_Rx(u32* DestinationAddr,u8 mode,u8 verbose_mode)
 {
 
 	u8 fcs          = 0xff;
@@ -1829,12 +1833,30 @@ else
 return read_data;
 
 }
-void HDLC_Tx(XLlFifo *InstancePtr,u32 register_address, u32 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
-{
-	// IPBUS Transaction types
 
-	//	u8 verbose_mode=0;
-		//u8* p;
+
+
+void write_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode )
+{
+	HDLC_Tx(address , data,1,SourceAddr,verbose_mode);           //transmit of sc data
+	HDLC_Rx(DestinationBuffer,1,verbose_mode);                   //receive acknowledge of sc data
+
+
+}
+
+u16 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode )
+{
+	u16 read_data;
+	HDLC_Tx(address , data,0,SourceAddr,verbose_mode);           //transmit of sc data
+read_data = HDLC_Rx(DestinationBuffer,0,verbose_mode);                   //receive acknowledge of sc data
+return read_data;
+
+}
+
+
+void HDLC_Tx(u32 register_address, u16 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
+{
+
 
 		int i;
 
@@ -1854,21 +1876,21 @@ u8 Status;
 								//HDLC_FS,
 								HDLC_ADDRESS,
 								HDLC_CONTROL,
-								IP_BUS_HEADER & 0X000000FF,
-								((IP_BUS_HEADER >>8)  & 0X000000FF),
-								((IP_BUS_HEADER >>16) & 0X000000FF),
-								((IP_BUS_HEADER >>24) & 0X000000FF),
+								IP_BUS_HEADER ,//& 0X000000FF,
+								((IP_BUS_HEADER >>8) ),// & 0X000000FF),
+								((IP_BUS_HEADER >>16) ),//& 0X000000FF),
+								((IP_BUS_HEADER >>24) ),//& 0X000000FF),
 
-								((register_address )    & 0X000000FF),
-								((register_address>>8)  & 0X000000FF),
-								((register_address>>16) & 0X000000FF),
-								((register_address>>24) &0X000000FF),
+								((register_address )   ),// & 0X000000FF),
+								((register_address>>8)  ),//& 0X000000FF),
+								((register_address>>16) ),//& 0X000000FF),
+								((register_address>>24) ),//& 0X000000FF),
 
 
-								((register_data ) &    0X000000FF),
-								((register_data>>8) &  0X000000FF),
-								((register_data>>16) & 0X000000FF),
-								((register_data>>24) & 0X000000FF)
+								((register_data ) ),//&    0X000000FF),
+								((register_data>>8) ),//&  0X000000FF),
+								0,//((register_data>>16) ),//& 0X000000FF),
+								0,//((register_data>>24) )//& 0X000000FF)
 
 								//(u8)ut1.st1.crc_lsb,
 								//(u8)ut1.st1.crc_msb
@@ -2231,88 +2253,51 @@ return (signed short)(RcvBuffer[0]<<8 |RcvBuffer[1]);
 
 
 
-u32 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd)
+u16 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd)
 {
 
 	u32 register_address;
-	u32 register_data;
+	u16 register_data;
 	u8 verbose_mode=0;
 	u8 mode=0;
-	u32 read_data;
-//for(u32 i=0;i<(MAX_DATA_BUFFER_SIZE * WORD_SIZE);i++)
-//	{
-//	*(SourceAddr+i)=0;
-//	*(DestinationBuffer+i)=0;
+	u16 read_data;
 
-	//}
-//u32* SourceAddr2 = calloc()
 	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
-	     register_address = GBL_CFG_RUN;
-	     mode             = 0;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
 
-	     register_data    = 0X00000001 | read_data;//SLEEP/RUN BIT=1;
-	     mode             = 1;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     read_data=read_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+	     register_data    = 0X00000001 | (read_data & 0xfffe);//SLEEP/RUN BIT=1;
 
-	     //xil_printf("GBL_CFG_RUN= %x,\r\n",read_data);
+	     write_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+
 	////////////////////////////////////////////////////////////////////
 	     //do{
 	/////////////read  GBL_CFG_CTR_4 register ////////////
-	     register_address = GBL_CFG_CTR_4;//imon
-	     //register_data    = 0X00000003;//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
-	     mode             = 0;//read transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-	     //xil_printf("\r\nInitial value of gbl_cfg_ctr_4 =%x\r\n",read_data);
-	     //////////////////write gbl_cfg_4 register//////////////////////////////////////////////////
-		 MON_GAIN_BITS = MON_GAIN_1;
-	     VREF_ADC_BITS =  VREF_ADC_3;
-	     MON_SEL_BITS  = IREF;
-	     register_data    = (u32)((read_data & 0xfffffc40) | VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
+	      read_data = read_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+	      register_data    = (u16)((read_data & 0xfc40) | VREF_ADC_3 | MON_GAIN_1 | IREF);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
 		 //register_data    = ((read_data & 0xfffffc40) | 0X00000300);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
-		 mode             = 1;//write transaction on hdlc slow control
-		 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-		 HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-		///////////////////re read to verify write /////////////////////////////////////////////////
-		//register_address = GBL_CFG_CTR_4;//imon
-				//register_data    = ((read_data & 0x0000002f) | 0X00000003);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
-		mode             = 0;//write transaction on hdlc slow control
-		HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-		read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-		////////////////////////////////////////////////////////////////////
-		//xil_printf("data written= %x, readback_data = %x, match = %d\r\n",register_data,read_data,register_data==read_data);
-		//}while(!(register_data==read_data));
 
-		//register_data    = 2;//iref
-		///////////////read IREF Value//////////////////
-		mode=0;
-		register_address = GBL_CFG_CTR_5;//IMON,  6 BIT REGISTER
-		HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-		register_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//read value in read mode or receive acknowledge of sc data in write mode
-		//printf("Initial _iref  = %x \r\n",register_data);
-		///////////////////////////////////////////////////////
+		 write_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
-		mode= 1;//write sc
+
+
+
+//////////////read iref initial value//////////////////////
+		read_data = read_SC( GBL_CFG_CTR_5, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+		register_data = read_data ;
+
+
 		double imon_adc;
 
 u8 set=0;
 short adc_value;
 //configureADC(1);//channel 1
 	do{
+		write_SC( GBL_CFG_CTR_5, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
-		HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-		HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-
-		//usleep(1000);usleep(1000);usleep(1000);
-		//usleep(1000);usleep(1000);usleep(1000);
-		//usleep(1000);usleep(1000);usleep(1000);
 		adc_value = ReadADC(1);
 		imon_adc=adc_value*0.0625;//read value from external ADC IN MILLIVOLTS
 
-		printf("%x ,  %f mv\r\n",register_data, imon_adc);
+		printf("%x ,  %f mv\r\n",register_data & 0x001f, imon_adc);
 
 		if(imon_adc>100){
 			if((imon_adc-100)>1.6)register_data--;
@@ -2330,11 +2315,11 @@ short adc_value;
 	}while(set!=1);
 	printf("Iref= %x , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
 	LUT_CAL_DAC[0] = register_data;
-	LUT_CAL_DAC[1] = register_data<<16;
-	LUT_CAL_DAC[2] = adc_value;
+	//LUT_CAL_DAC[1] = register_data<<16;
+	LUT_CAL_DAC[1] = adc_value;
 	//LUT_CAL_DAC[3] = adc_value<<8;
 
-	SendReply(sd,LUT_CAL_DAC,6);
+	SendReply(sd,LUT_CAL_DAC,4);
 
 	return register_data;// return iref register value
 
@@ -2345,123 +2330,66 @@ int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 calibration_mo
 {
 	int i=0;
 
-	u32 register_address;
-	u32 register_data;
+	//u32 register_address;
+	//u16 register_data;
 	u8 verbose_mode=0;
-	u8 mode=0;
-	u32 read_data;
-	u32 adc_0,adc_1;
+	//u8 mode=0;
+
+	u16 adc_0,adc_1;
 	//double imon_adc,vmon_adc;
 	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
-	mode             = 0;
-	register_address = GBL_CFG_RUN;
-	     //register_data    = 0X00000001;//SLEEP/RUN BIT=1;
-	     //mode             = 1;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
 
-	     //register_address = GBL_CFG_RUN;
-	    	     register_data    = 1 | (read_data & 0xfffe);//SLEEP/RUN BIT=1;
-	    	     mode             = 1;//write transaction on hdlc slow control
-	    	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    //register_address = GBL_CFG_RUN;
+	    read_data = read_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+	    register_data    = 1 | (read_data & 0xfffe);//SLEEP/RUN BIT=1;
+	    write_SC(GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
 
 	////////////////////////////////////////////////////////////////////
 
 	/////////////write to GBL_CFG_CTR_4 register ////////////
-		register_address = GBL_CFG_CTR_4;//vmon=adc)vref
-		//int loop=0;
-		//u32 MON_SEL_BITS=0;
-		//u32 MON_GAIN_BITS=0;
-		//u32 VREF_ADC_BITS=0;
+		//register_address = GBL_CFG_CTR_4;//vmon=adc)vref
+		read_data = read_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
-		MON_GAIN_BITS = MON_GAIN_1;
-		MON_SEL_BITS  = CALIB_V_STEP;//PREAMP_INP_TRAN;
-///AAMIR
-		////////////////set vref_adc=3////////////////
-		VREF_ADC_BITS =  VREF_ADC_3;
+		register_data    = (VREF_ADC_3 | MON_GAIN_1 | CALIB_V_STEP |  (read_data & 0xFC40) );//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
+		write_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
 
-				////set monitoring register to 2 imon = preamp inp trans
-		//		register_address = GBL_CFG_CTR_4;//imon = preamp inp trans
 
-				mode             = 0;//read transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-				//printf("GBL_CFG_CTR_4 read_data = %X\r\n",read_data);
-				//MON_SEL_BITS  = CALIB_V_STEP;//PREAMP_INP_TRAN;//select preamp_inp_trans dac imon = preamp_inp_trans
-				register_data    = (VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS |  (read_data & 0xFC40) );//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
-				//register_data    = (u32)(read_data | VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
-				mode             = 1;//write transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-
-
-		///////loop through different values of DAC Preamp_BiasInputTransistor/////////////
-				 register_address 	= 	GBL_CFG_CAL_0;
+		///////loop through different values of cal DAC /////////////
+				// register_address 	= 	GBL_CFG_CAL_0;
 				// register_data		=	0;
 				// mode				=	1;
 				 xil_printf("wait \r\n");
-				  mode             = 0;//read transaction on hdlc slow control
-								     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-								     read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-								   //  xil_printf("\r\nInitial value of gbl_cfg_bias_1 = %x\r\n",read_data);
-								     //////////////////write gbl_cfg_bias1 register//////////////////////////////////////////////////
-									// MON_GAIN_BITS = MON_GAIN_1;
-								    // VREF_ADC_BITS =  VREF_ADC_3;
-								    // MON_SEL_BITS  = PREAMP_INP_TRAN;
-								     register_data    = (read_data & 0xfc03);// | VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS;//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
-									 //register_data    = ((read_data & 0xfffffc40) | 0X00000300);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
-									 //mode             = 1;//write transaction on hdlc slow control
-									 //HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-									 //HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-									///////////////////re read to verify write /////////////////////////////////////////////////
+				 read_data = read_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				 register_data    = (read_data & 0xfc03);// | VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS;//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
+				////////////////re read to verify write /////////////////////////////////////////////////
 				 i=0;int loop=0;
 				 u8 DAC  = 0;
 				 do{
-					 mode				=	1;
-					 register_address 	= 	GBL_CFG_CAL_0;
-					 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	 HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
-				 	//usleep(1000);usleep(1000);
 
-                    /////////////Verify correct write by reading same data//////////////////////
-				 	 mode=0;
-				 	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
-				 	////read external adc/////////////
+					 //register_address 	= 	GBL_CFG_CAL_0;
+					 write_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
-				 	//imon_adc= (double)LUT_CAL_DAC[i]* 0.0625;//read external adc
-				 	////////////////read      internal  adc/////////////
-				 /*	for(u32 f=0;f<(MAX_DATA_BUFFER_SIZE * WORD_SIZE);f++)
-				 		{
-				 		*(SourceAddr+f)=0;
-				 		*(DestinationBuffer+f)=0;
 
-				 	}*/
-				 	 mode				=	0;
-				 	 register_address 	= 	ADC_READ_0;
-				 	 HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	//usleep(1000);usleep(1000);
-				 	 adc_0=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
-					LUT_CAL_DAC[i+1]=adc_0;
 
-					register_address 	= 	ADC_READ_1;
-				 	HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	adc_1=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
+
+
+					//register_address 	= 	ADC_READ_1;
+				 	adc_1= read_SC( ADC_READ_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	LUT_CAL_DAC[i+2] = adc_1;
 				 	//if(register_data % 10 == 0)
 					LUT_CAL_DAC[i]=	ReadADC(0);
-					xil_printf("i=%d,DAC VALUE(GBL_CFG_CAL_0) = %d, ext_adc = %d ADC_0= %d,ADC_1 =%d \r\n",i,read_data,LUT_CAL_DAC[i],LUT_CAL_DAC[i+1],LUT_CAL_DAC[i+2]);
+					adc_0= read_SC( ADC_READ_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+					LUT_CAL_DAC[i+1]=adc_0;
+					xil_printf("i=%d,DAC VALUE(GBL_CFG_CAL_0) = %x, ext_adc = %d ADC_0= %d,ADC_1 =%d \r\n",i,read_data,LUT_CAL_DAC[i],LUT_CAL_DAC[i+1],LUT_CAL_DAC[i+2]);
 				 	DAC++;
-				 	register_data		=	(u32)((read_data & 0xfc03) |((u32)DAC<<2));
+				 	read_data = read_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				 	register_data		= 	(u16)((read_data & 0xfc03) |((u16)DAC<<2));
 					//register_data+=1;
 				 	loop++;
 				 	i=i+3;
-				 	//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
-				 	//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
-				 	//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
+
 				 }while(loop<200);//256  ORIGINAL
 				 SendReply(sd,LUT_CAL_DAC,i*2);
 				 xil_printf("%d 16-bit values sent,\r\n",i);
@@ -2500,16 +2428,12 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 
 	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
 	     register_address = GBL_CFG_RUN;
-	    // register_data    = 0X00000001;//SLEEP/RUN BIT=1;
-	     mode             = 0;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
-
+	     read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 	     //register_address = GBL_CFG_RUN;
 	     	     register_data    = 0X00000001 | read_data;//SLEEP/RUN BIT=1;
 	     	     mode             = 1;//write transaction on hdlc slow control
-	     	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	     	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 	     ////////////////////////////////////////////////////////////////////
@@ -2524,14 +2448,14 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 				MON_GAIN_BITS 	= 		MON_GAIN_1;
 
 				mode            = 0;//read transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				read_data=HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 				register_data   = (u32)(VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS | (read_data & 0xFFFFFC40) );//MON SEL=CALIB VSTEP MON GAIN=0 VREF_ADC=3
 
 				mode            = 1;//write transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 				//double vmon_adc=ReadADC()*0.0625;//read value from external ADC IN MILLIVOLTS
 
 				//xil_printf("cfg_ctr_4 set value , READ_DATA = %x \r\n", read_data);
@@ -2543,8 +2467,8 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 				register_address 	= 	GBL_CFG_CAL_0;
 				register_data       =   0x00000001 | read_data;//;0x00004001;//cal_sel_pol=1  cal mode 01 voltage pulse
 				mode                =   1;//write transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 				//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 				u16 base_voltage_hex=ReadADC(0);
 				//xil_printf("base_voltage hex %04x",base_voltage_hex);
@@ -2553,8 +2477,8 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 
 				register_data       =   0x00000001;//cal_sel_pol=0  cal mode 01 voltage pulse
 				mode                =   1;//write transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 
@@ -2562,8 +2486,8 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 
 
 				 mode				=	0;
-				 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 read_data    =    HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
+				 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				 read_data    =    HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
 				 xil_printf("Initial value , READ_DATA = %x \r\n", read_data);
 
 				 CAL_DAC            =   start;
@@ -2575,14 +2499,14 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 
 					// mode				=	1;
 					//register_address 	= 	GBL_CFG_CAL_0;
-					 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	 HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
+					 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				 	 HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
 
 				 	//////////////////
 				 	 //mode				=	0;
 				 //	register_address 	= 	ADC_READ_1;
-				 ///	HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 //	LUT_CAL_DAC[CAL_DAC]=(u16)HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
+				 ///	HDLC_Tx(register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
+				 //	LUT_CAL_DAC[CAL_DAC]=(u16)HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
 
 				 	//////////////////
 
@@ -2636,8 +2560,8 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
 	     register_address = GBL_CFG_RUN;
 	     register_data    = 0X00000001;//SLEEP/RUN BIT=1;
 	     mode             = 1;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 	////////////////////////////////////////////////////////////////////
 
 	     switch(Mon_sel)
@@ -2770,22 +2694,19 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
 				MON_GAIN_BITS 	= 		MON_GAIN_1;
 				register_data   = (u32)(VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS);//MON SEL=CALIB VSTEP MON GAIN=0 VREF_ADC=3
 				mode            = 1;//write transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 				//double vmon_adc=ReadADC()*0.0625;//read value from external ADC IN MILLIVOLTS
-				mode            = 0;//READ transaction on hdlc slow control
-				HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+
+				read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				xil_printf("cfg_ctr_4 set value , READ_DATA = %x \r\n", read_data);
 
 
 		///////loop through dac values /////////////
 
 				register_address = dac_address;//THIS VALUE COMES FROM SWITCH ABOVE
-				 mode				=	0;
-				 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 read_data    =    HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
-				 xil_printf("Initial value , READ_DATA = %x \r\n", read_data);
+				read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				xil_printf("Initial value , READ_DATA = %x \r\n", read_data);
 
 				 DAC            =   start;
 				 register_data		=	(u32)(read_data |((u32)DAC<<SHIFT));
@@ -2797,20 +2718,18 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
 
 					 mode				=	1;
 					//register_address 	= 	GBL_CFG_CAL_0;
-					 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	 HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
+					 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				 	 HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
 
 				 	//////////////////
 				 	////////////////read      internal  adcS/////////////
-				 	mode				=	0;
-				 	register_address 	= 	ADC_READ_0;
-				 	HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	LUT_CAL_DAC[i]=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
+
+
+				 	LUT_CAL_DAC[i]= read_SC( ADC_READ_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	//adc_0=LUT_CAL_DAC[i];
 
-				 	register_address 	= 	ADC_READ_1;
-				 	HDLC_Tx(&FifoInstance,register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	LUT_CAL_DAC[i + 1]=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
+
+				 	LUT_CAL_DAC[i + 1]= read_SC( ADC_READ_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	//adc_1=LUT_CAL_DAC[i+2];
 
 				 	DAC+=step;
@@ -2860,15 +2779,15 @@ u64 p=9;
 	 	 	 register_address = GBL_CFG_RUN;
 		     register_data    = 0X00000001;//SLEEP/RUN BIT=1;
 		     mode             = 0;//write transaction on hdlc slow control
-		     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-		     read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+		     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+		     read_data = HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 	     //register_address = GBL_CFG_RUN;
 	     register_data    = 0X00000001 | (read_data & 0xfffe);//SLEEP/RUN BIT=1;
 	     mode             = 1;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 	////////////////////////////////////////////////////////////////////
 	     ///////////////send run mode fast command////////////////
 	     *SourceAddr =RUN_MODE;
@@ -2882,16 +2801,16 @@ u64 p=9;
 	     	 	 register_address 	 = 	 GBL_CFG_BIAS_2;
 	    	     register_data       =   (u32)(PRE_I_BLCC<<8 |PRE_VREF);//pre_i_blcc,pre_vref
 	    	     mode                =   1;//write transaction on hdlc slow control
-	    	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 
 	    	     register_address 	 = 	 GBL_CFG_BIAS_1;
 	    	     register_data       =   (u32)( (PRE_I_BSF<<8) |PRE_I_BIT);//,pre_i_bit,pre_i_bsf
 	    	     mode                =   1;//write transaction on hdlc slow control
-	    	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 	    	    /////NOMINAL VALUES FOR THE SHAPER ///////////////////////////////////
@@ -2899,27 +2818,27 @@ u64 p=9;
 	    	     register_address 	 = 	 GBL_CFG_BIAS_3;
 	    	     register_data       =   (u32)( (SH_I_BFCAS<<8) |SH_I_BDIFF);//SH_I_BFCAS, SH_I_BDIFF
 	    	     mode                =   1;//write transaction on hdlc slow control
-	    	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 	    	     /////NOMINAL VALUES FOR THE SD ///////////////////////////////////
 
 	    	     register_address 	 = 	 GBL_CFG_BIAS_4;
 	    	     mode=0;
-	    	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	     read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);
+	    	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	     read_data = HDLC_Rx(DestinationBuffer,mode,verbose_mode);
 
 
 	    	     register_data       =   (u32)( (read_data &  0xff00) | SD_I_BDIFF);//SD_I_BDIFF
 	    	     mode                =   1;//write transaction on hdlc slow control
-	    	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 	    	     register_address 	 = 	 GBL_CFG_BIAS_5;
 	    	     register_data       =   (u32)( (SD_I_BSF<<8) | SD_I_BFCAS);//SD_I_BSF , SD_I_BFCAS
   	    	     mode                =   1;//write transaction on hdlc slow control
-	    	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 
@@ -2930,34 +2849,33 @@ u64 p=9;
 	     register_address 	 = 	 GBL_CFG_CAL_0;
 	     register_data       =   0x00000001;//cal_sel_pol=1  cal mode 01 voltage pulse
 	     mode                =   1;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 	     ///////////set SEL COMP MODE TO 1  (GBL CFG CTR3 register)/////////////////////////////////////////////////////////
 
 	     register_address 	 = 	 GBL_CFG_CTR_3;
 	     mode                =   0;//READ transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	     read_data=HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 	     register_data       =  (read_data & 0xfffe) | 0x00000001;//SEL COMP MODE = 01 ARMING (CFD OUTPUT MODE =  ARMING)
 	     mode                =  1;//write transaction on hdlc slow control
-	     HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 	    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	    ///////////set ARM DAC to 100 /////////////////////////////////////////////////////////
 
 	     	 	register_address  =  GBL_CFG_THR;
 	     	    mode              =  0; //READ transaction on hdlc slow control
-	     	    HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     	    read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	     	    HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	     	    read_data=HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 	     	   register_data       =  (read_data & 0xff00) | arm_dac;//
-	     	   mode=1;
 
-	     	  HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);
+	     	  write_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+
 
 
 
@@ -2968,14 +2886,14 @@ u64 p=9;
 
 	    	  register_address 	 = 	 GBL_CFG_CAL_1;
 	    	  mode                =   0;//READ transaction on hdlc slow control
-	    	  HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  read_data=HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 	    	  xil_printf("cal dur sub register initial =%x\r\n",read_data);
 
 	    	  register_data       =  (read_data & 0xFE00) | 200;//200 CAL DUR
 	    	  mode                =  1;//write transaction on hdlc slow control
-	    	  HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 	    	    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	    	  ///////////////SET PS to 7//////////////
@@ -2984,14 +2902,14 @@ u64 p=9;
 
 	    	  	    	  register_address 	 = 	 GBL_CFG_CTR_0;
 	    	  	    	  mode                =   0;//READ transaction on hdlc slow control
-	    	  	    	  HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	  read_data=HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  	    	  HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    	  read_data=HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
                           xil_printf("PS sub register initial =%x\r\n",read_data);
 
 	    	  	    	  register_data       =  (read_data & 0x1FFF) | 0XE000;//PS =7
 	    	  	    	  mode                =  1;//write transaction on hdlc slow control
-	    	  	    	  HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	  HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  	    	  HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    	  HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 	    	  	    	  xil_printf("PS sub register write  =%x\r\n",register_data);
 	    	  	    	  /////////////////////////////////////loop through all channels//////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -3000,8 +2918,8 @@ u64 p=9;
 
 	    	  	    	register_address 	= 	GBL_CFG_CAL_0;
 	    	  	    	mode				=	0;
-	    	  	    	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	DATA_GBL_CFG_CAL_0    =    HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
+	    	  	    	HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    	DATA_GBL_CFG_CAL_0    =    HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
 
 	    	  	    	Initialize_Calpulse_LV1As(FastBuffer,data_len,CAL_DAC,Latency,num_of_triggers);
 //////////////////////////////start outer most loop for channels////////////////////////////////////
@@ -3016,14 +2934,14 @@ u64 p=9;
 
 	    	  	    register_address       = channel;
 	    	  	    mode                   =  0;//READ transaction on hdlc slow control
-	    	  	  	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	  	read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  	  	HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	  	read_data = HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 	    	  	    register_data		   =  (read_data & 0x7fff)| 0x8000;//cal =1-
 	    	  	    mode                =  1;//write transaction on hdlc slow control
-	    	  	    HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  	    HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 	    	  	    	//xil_printf("channel register write =%x\r\n",register_data);
 	    	  	    	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////loop through cal dac values/////////////////////////
@@ -3032,8 +2950,8 @@ u64 p=9;
 	    	  	    	 CAL_DAC          =   start_CALDAC;
 	    	  	    	register_address 	= 	GBL_CFG_CAL_0;// added this line
 	    	  	    	mode                   =  0;//READ transaction on hdlc slow control
-	    	  	    	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  	    	HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    	read_data = HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 
@@ -3045,8 +2963,8 @@ u64 p=9;
 	    	  	    	do{
 
 	    	  	    	mode =1;
-	    	  	    	 HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	 HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data}
+	    	  	    	 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    	 HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
 
 	    	  	    	 //for (u16 inner_loop=0;inner_loop < num_of_triggers;inner_loop++)
 	    	  	    	 //{
@@ -3062,8 +2980,8 @@ u64 p=9;
 
    						mode                   =  0;//READ transaction on hdlc slow control
    						register_address 	= 	GBL_CFG_CAL_0;
-   						HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-   						read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+   						HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+   						read_data = HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
    						  register_data		=	(u32)((read_data & 0xfc03) |(CAL_DAC << 2));
 
@@ -3075,14 +2993,14 @@ u64 p=9;
 
 	    	  	    	 register_address       = channel;
 	    	  	    	 mode                   =  0;//READ transaction on hdlc slow control
-	    	  	    	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	read_data = HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  	    	HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    	read_data = HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 
 	    	  	    	register_data		   =  (read_data & 0x7fff)| 0x0000;//cal =0
 	    	  	    	mode                =  1;//write transaction on hdlc slow control
-	    	  	    	HDLC_Tx(&FifoInstance,register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	    	  	    	HDLC_Rx(&FifoInstance,DestinationBuffer,ReceiveLength,mode,verbose_mode);//receive acknowledge of sc data
+	    	  	    	HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+	    	  	    	HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
 	    	  	    	for (int u=0;u<128;u++){
 	    	  	    		    	  	    		for(int v=0;v<256;v++)

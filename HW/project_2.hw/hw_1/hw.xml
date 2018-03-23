@@ -25,7 +25,7 @@
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/mb_subsystem_wrapper.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/mb_subsystem_wrapper.bit"/>
       <Properties Property="PROGRAM.HW_CFGMEM_PART" value=""/>
-      <Properties Property="SLR.COUNT" value="c:/Users/airshad/AppData/Roaming/Xilinx/Vivado/1"/>
+      <Properties Property="SLR.COUNT" value="C:/Users/airshad/AppData/Roaming/Xilinx/Vivado/1"/>
     </Object>
     <Object name="xc7k325t_0_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/mb_subsystem_wrapper.ltx"/>
@@ -57,8 +57,9 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="mb_subsystem_i/AP_Generator_0_data_out[7:0]" gui_info="Trigger Setup=0"/>
     <Object name="mb_subsystem_i/DATAVALID_TX_FIFO_CLOCK_CROSSING" gui_info=""/>
-    <Object name="mb_subsystem_i/F1_F2_IN[7:0]" gui_info="Trigger Setup=0"/>
+    <Object name="mb_subsystem_i/F1_F2_IN[7:0]" gui_info=""/>
     <Object name="mb_subsystem_i/Receiver_logic_gpio_io_o" gui_info="Trigger Setup=0"/>
     <Object name="mb_subsystem_i/Receiver_logic_gpio_io_o1" gui_info=""/>
     <Object name="mb_subsystem_i/Receiver_logic_success" gui_info=""/>
@@ -124,7 +125,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;h96"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -135,7 +136,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;h96"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>

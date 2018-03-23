@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1521455432">
-  <File Type="ROUTE-PWR" Name="mb_subsystem_wrapper_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="mb_subsystem_wrapper.tcl"/>
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1521789815">
   <File Type="PWROPT-DCP" Name="mb_subsystem_wrapper_pwropt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="mb_subsystem_wrapper_power_summary_routed.pb"/>
+  <File Type="PA-TCL" Name="mb_subsystem_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="mb_subsystem_wrapper_reports.tcl"/>
   <File Type="BG-DRC" Name="mb_subsystem_wrapper.drc"/>
-  <File Type="OPT-HWDEF" Name="mb_subsystem_wrapper.hwdef"/>
   <File Type="OPT-DCP" Name="mb_subsystem_wrapper_opt.dcp"/>
-  <File Type="OPT-DRC" Name="mb_subsystem_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="mb_subsystem_wrapper.hwdef"/>
   <File Type="PLACE-DCP" Name="mb_subsystem_wrapper_placed.dcp"/>
-  <File Type="PLACE-IO" Name="mb_subsystem_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="mb_subsystem_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="mb_subsystem_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="mb_subsystem_wrapper_control_sets_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="mb_subsystem_wrapper_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="mb_subsystem_wrapper_postplace_pwropt.dcp"/>
   <File Type="PHYSOPT-DCP" Name="mb_subsystem_wrapper_physopt.dcp"/>
@@ -21,23 +14,11 @@
   <File Type="ROUTE-ERROR-DCP" Name="mb_subsystem_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="mb_subsystem_wrapper_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="mb_subsystem_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="mb_subsystem_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="mb_subsystem_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="mb_subsystem_wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-MSK" Name="mb_subsystem_wrapper.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="mb_subsystem_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BG-BGN" Name="mb_subsystem_wrapper.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mb_subsystem_wrapper_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-RBT" Name="mb_subsystem_wrapper.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mb_subsystem_wrapper_methodology_drc_routed.pb"/>
   <File Type="BG-BIN" Name="mb_subsystem_wrapper.bin"/>
-  <File Type="ROUTE-PWR-RPX" Name="mb_subsystem_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="mb_subsystem_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="mb_subsystem_wrapper_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="mb_subsystem_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="mb_subsystem_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="mb_subsystem_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-CLK" Name="mb_subsystem_wrapper_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="mb_subsystem_wrapper.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="mb_subsystem_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mb_subsystem_wrapper_postroute_physopt_bb.dcp"/>
@@ -52,16 +33,8 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/mb_subsystem/mb_subsystem.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/DIFF_To_single.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../xilinx/ip_learning/mb_lite_slv_adders/mb_lite_slv_adders.srcs/sources_1/new/DIFF_To_single.v"/>
         <Attr Name="ImportTime" Val="1492179464"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -71,7 +44,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/AP_Generator.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../xilinx/ip_learning/mb_lite_slv_adders/mb_lite_slv_adders.srcs/sources_1/new/AP_Generator.v"/>
         <Attr Name="ImportTime" Val="1492618468"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -81,7 +53,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/bit_slip_Generator.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -89,7 +60,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/inverse_reverse.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -97,7 +67,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/S_to_diff.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -105,7 +74,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/bitslip/F1_F2_FILTER.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../simulation/bitslip/F1_F2_FILTER.v"/>
         <Attr Name="ImportTime" Val="1508528862"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -113,9 +81,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/mb_subsystem/mb_subsystem.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Mux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../xilinx/ip_learning/mb_lite_slv_adders/mb_lite_slv_adders.srcs/sources_1/new/Mux.v"/>
+        <Attr Name="ImportTime" Val="1492023824"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/mb_subsystem/hdl/mb_subsystem_wrapper.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -123,20 +106,9 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/rx_fifo_int.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../Firmwares/Firm_tb1_4/Firm_tb1_4.srcs/sources_1/new/rx_fifo_int.vhd"/>
         <Attr Name="ImportTime" Val="1497519401"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/Mux.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../xilinx/ip_learning/mb_lite_slv_adders/mb_lite_slv_adders.srcs/sources_1/new/Mux.v"/>
-        <Attr Name="ImportTime" Val="1492023824"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
