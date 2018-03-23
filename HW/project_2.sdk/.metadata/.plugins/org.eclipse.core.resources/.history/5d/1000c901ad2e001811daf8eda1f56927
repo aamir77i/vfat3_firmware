@@ -693,7 +693,7 @@ int decode_receive_packet(u8 *recv_buf,u32  *SourceAddr,int sd)
 		unsigned int crc;
 		signed short RESULT;
 		u16 Latency=6,num_of_triggers=100;
-		u32 Read_data;
+		u16 Read_data;
 		u32 *RD ;
 		u8 arm_dac;
 	//int RECV_BUF_SIZE = 2048;

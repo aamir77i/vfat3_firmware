@@ -137,7 +137,7 @@ int Receive_fast_command(XLlFifo *InstancePtr, u8 verbose_mode);
 void SendReply(int sd,u32 *Buffer, u32 length);
 void Print_Buffer( u32 *Buffer,int length ,char * string);
 void write_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
-u32 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
+u16 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
 /***************** Macros (Inline Functions) Definitions *********************/
 //int send_sync_command(XLlFifo *InstancePtr_tx);
 
@@ -693,7 +693,7 @@ int decode_receive_packet(u8 *recv_buf,u32  *SourceAddr,int sd)
 		unsigned int crc;
 		signed short RESULT;
 		u16 Latency=6,num_of_triggers=100;
-		u32 Read_data;
+		u16 Read_data;
 		u32 *RD ;
 		u8 arm_dac;
 	//int RECV_BUF_SIZE = 2048;

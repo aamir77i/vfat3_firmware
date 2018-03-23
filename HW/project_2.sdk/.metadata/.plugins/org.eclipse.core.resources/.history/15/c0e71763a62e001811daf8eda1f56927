@@ -121,7 +121,7 @@ int decode_receive_packet(u8 *recv_buf,u32 *SourceAddr,int sd);
 unsigned int crc16(char *data_p, unsigned short length);
 void HDLC_Tx(u32 register_address, u16 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode);
 u32 HDLC_Rx(u32* Destination_Addr,u8 mode,u8 verbose_mode);
-int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step , u8 stop,u8 calibration_mode);
+int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 calibration_mode);
 int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step , u8 stop,u8 calibration_mode);
 signed configureADC(u8 channel);
 //signed short ReadADC();
@@ -137,7 +137,7 @@ int Receive_fast_command(XLlFifo *InstancePtr, u8 verbose_mode);
 void SendReply(int sd,u32 *Buffer, u32 length);
 void Print_Buffer( u32 *Buffer,int length ,char * string);
 void write_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
-u32 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
+u16 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
 /***************** Macros (Inline Functions) Definitions *********************/
 //int send_sync_command(XLlFifo *InstancePtr_tx);
 
@@ -693,7 +693,7 @@ int decode_receive_packet(u8 *recv_buf,u32  *SourceAddr,int sd)
 		unsigned int crc;
 		signed short RESULT;
 		u16 Latency=6,num_of_triggers=100;
-		u32 Read_data;
+		u16 Read_data;
 		u32 *RD ;
 		u8 arm_dac;
 	//int RECV_BUF_SIZE = 2048;
@@ -811,20 +811,7 @@ if(*recv_buf==0xca){
 						xil_printf("%c[2J",27);//clear terminal
 						//clrscr();
 						xil_printf("\n\rEntering in INTERNAL ADC calibration routine\r\n");
-						 start = *(recv_buf+3);
-													step = *(recv_buf+4);
-													stop = *(recv_buf+5);
-													xil_printf("start = %d :: step_size = %d :: stop = %d :: \r\n",start,step,stop);
-													if(  start >=0 &&  start < stop  && step<=(stop-start) &&  step  > 0    )
-														CalibrateADC(SourceAddr,DestinationBuffer,sd,start,step , stop,0);
-													else
-													{
-														Error_code = -1;
-														RD = &Error_code;
-														SendReply(sd, RD,1 * 4);
-														xil_printf("Error in setting of scan steps , Please adjust values\r\n");
-													}
-
+						CalibrateADC(SourceAddr,DestinationBuffer,sd,0);
 
 
 			}
@@ -1839,7 +1826,7 @@ int ii,iii;
 	///////////////////crc calculation//////////////////
 									}//end if rcv_len
 if(mode==READ)
-	 read_data =  ((u32)rcv_arr[9]<<24) |  ((u32)rcv_arr[8]<<16)  | ((u32)rcv_arr[7]<<8)  |   (u32)rcv_arr[6];
+	 read_data = ((u32)rcv_arr[7]<<8)|(u32)rcv_arr[6];
 else
 	read_data  = h3<<24 | h2<<16 | h1<<8 | h0;
 
@@ -1857,9 +1844,9 @@ void write_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8
 
 }
 
-u32 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode )
+u16 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode )
 {
-	u32 read_data;
+	u16 read_data;
 	HDLC_Tx(address , data,0,SourceAddr,verbose_mode);           //transmit of sc data
 read_data = HDLC_Rx(DestinationBuffer,0,verbose_mode);                   //receive acknowledge of sc data
 return read_data;
@@ -2339,7 +2326,7 @@ short adc_value;
 }
 
 
-int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step , u8 stop,u8 calibration_mode)
+int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 calibration_mode)
 {
 	int i=0;
 
@@ -2378,8 +2365,7 @@ int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step 
 				 register_data    = (read_data & 0xFF00);// | VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS;//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
 				////////////////re read to verify write /////////////////////////////////////////////////
 				 i=0;int loop=0;
-				 u8 DAC  = start;
-				 int points = (stop - start)/step +1;
+				 u8 DAC  = 0;
 				 do{
 
 
@@ -2401,10 +2387,10 @@ int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step 
 				 	read_data = read_SC( GBL_CFG_BIAS_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	register_data		= 	(u16)((read_data & 0xFF00) |DAC);
 					//register_data+=1;
-				 	loop+=step;
+				 	loop++;
 				 	i=i+3;
 
-				 }while(loop<points);//256  ORIGINAL
+				 }while(loop<200);//256  ORIGINAL
 				 SendReply(sd,LUT_CAL_DAC,i*2);
 				 xil_printf("%d 16-bit values sent,\r\n",i);
 				 	 xil_printf("done_adc calibration\r\n");
