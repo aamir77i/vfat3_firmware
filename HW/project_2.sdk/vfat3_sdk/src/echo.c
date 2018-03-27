@@ -157,7 +157,7 @@ u32 DATA_GBL_CFG_CAL_0;
 //XLlFifo *InstancePtr;
 XLlFifo_Config *Config;
 char TYPE_ID;
-short LUT_CAL_DAC[512*3];
+short LUT_CAL_DAC[512*4];
 volatile u8 scurve_arr[256];
 static u32 frame_len;//USED IN RXRECEIVE FUNCTION
 volatile char	h0,h1,h2,h3;
@@ -2375,11 +2375,12 @@ int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step 
 				// mode				=	1;
 				 xil_printf("wait \r\n");
 				 read_data = read_SC( GBL_CFG_BIAS_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
-				 register_data    = (read_data & 0xFF00);// | VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS;//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
+				 u8 DAC  = start;
+				 register_data		= 	(u16)((read_data & 0xFF00) |DAC);// | VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS;//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
 				////////////////re read to verify write /////////////////////////////////////////////////
 				 i=0;int loop=0;
-				 u8 DAC  = start;
-				 int points = (stop - start)/step +1;
+
+				 int points = ((stop - start)/step) +1;
 				 do{
 
 
@@ -2390,19 +2391,26 @@ int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step 
 
 
 					//register_address 	= 	ADC_READ_1;
-				 	adc_1= read_SC( ADC_READ_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
-				 	LUT_CAL_DAC[i+2] = adc_1;
+
 				 	//if(register_data % 10 == 0)
-					LUT_CAL_DAC[i]=	ReadADC(0);
+				 	LUT_CAL_DAC[i] = DAC;
+
+					LUT_CAL_DAC[i+1]=	ReadADC(0);
+
 					adc_0= read_SC( ADC_READ_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
-					LUT_CAL_DAC[i+1]=adc_0;
-					xil_printf("i=%d,DAC VALUE(GBL_CFG_CAL_0) = %x, ext_adc = %d ADC_0= %d,ADC_1 =%d \r\n",i,read_data,LUT_CAL_DAC[i],LUT_CAL_DAC[i+1],LUT_CAL_DAC[i+2]);
-				 	DAC++;
+					LUT_CAL_DAC[i+2]=adc_0;
+
+					adc_1= read_SC( ADC_READ_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+					LUT_CAL_DAC[i+3] = adc_1;
+
+
+					//xil_printf("i=%d,DAC VALUE = %d, ext_adc = %d ADC_0 = %d,ADC_1 =%d \r\n",i,LUT_CAL_DAC[i],LUT_CAL_DAC[i+1],LUT_CAL_DAC[i+2],LUT_CAL_DAC[i+3]);
+				 	DAC+=step;
 				 	read_data = read_SC( GBL_CFG_BIAS_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	register_data		= 	(u16)((read_data & 0xFF00) |DAC);
 					//register_data+=1;
-				 	loop+=step;
-				 	i=i+3;
+				 	loop++;
+				 	i=i+4;
 
 				 }while(loop<points);//256  ORIGINAL
 				 SendReply(sd,LUT_CAL_DAC,i*2);
@@ -2432,114 +2440,106 @@ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 
 /* This routine will find fC values corresponding to the DAC values
  * of the CAL_DAC//////////////////////////////////
  */
-	u32 register_address;
-	u32 register_data;
+	//u32 register_address;
+	//u32 register_data;
 	u8 verbose_mode=0;
-	u8 mode=0;
+	//u8 mode=0;
 	u32 read_data;
 	//double imon_adc,vmon_adc;
 	double step_voltage, base_voltage,charge = 0;
 
 	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
-	     register_address = GBL_CFG_RUN;
-	     read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 	     //register_address = GBL_CFG_RUN;
-	     	     register_data    = 0X00000001 | read_data;//SLEEP/RUN BIT=1;
-	     	     mode             = 1;//write transaction on hdlc slow control
-	     	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
-
+	     read_data = read_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+	     //register_address = GBL_CFG_RUN;
+	     register_data    = 0X00000001 | read_data;//SLEEP/RUN BIT=1;
+	     write_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
 	     ////////////////////////////////////////////////////////////////////
 
 	/////////////write to GBL_CFG_CTR_4 register ////////////
 	     ////////////////set MONTORING REGISTER////////////////
-		register_address = GBL_CFG_CTR_4;//vmon=calib vstep
+		//register_address = GBL_CFG_CTR_4;//vmon=calib vstep
 
 
-				VREF_ADC_BITS 	=  	    VREF_ADC_3;
-				MON_SEL_BITS	=		CALIB_V_STEP;
-				MON_GAIN_BITS 	= 		MON_GAIN_1;
+				//VREF_ADC_BITS 	=  	    VREF_ADC_3;
+				//MON_SEL_BITS	=		CALIB_V_STEP;
+				//MON_GAIN_BITS 	= 		MON_GAIN_1;
 
-				mode            = 0;//read transaction on hdlc slow control
-				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				read_data=HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
+				//mode            = 0;//read transaction on hdlc slow control
+				//HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				//read_data=HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
 
-				register_data   = (u32)(VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS | (read_data & 0xFFFFFC40) );//MON SEL=CALIB VSTEP MON GAIN=0 VREF_ADC=3
+				read_data = read_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
-				mode            = 1;//write transaction on hdlc slow control
-				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
+				register_data   = (u32)(VREF_ADC_3 | CALIB_V_STEP | MON_GAIN_1 | (read_data & 0xFC40) );//MON SEL=CALIB VSTEP MON GAIN=0 VREF_ADC=3
+
+				write_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				//double vmon_adc=ReadADC()*0.0625;//read value from external ADC IN MILLIVOLTS
 
 				//xil_printf("cfg_ctr_4 set value , READ_DATA = %x \r\n", read_data);
 
-				////////////////set GBL_CFG_CAL_0 REGISTER SET CAL_SEL_POL =? ////////////////
+				////////////////set GBL_CFG_CAL_0 REGISTER SET CAL_SEL_POL =1 ////////////////
+
+				//CAL_DAC            =   start;
+
+				//read_data = read_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				//register_data       =   (0xFC03 & read_data) | (CAL_DAC<<2);
+				//write_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
 
-				//register_address 	= 	GBL_CFG_CAL_0;
-				register_address 	= 	GBL_CFG_CAL_0;
-				register_data       =   0x00000001 | read_data;//;0x00004001;//cal_sel_pol=1  cal mode 01 voltage pulse
-				mode                =   1;//write transaction on hdlc slow control
-				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
+
+				read_data = read_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				register_data       =   (0xBFFF & read_data) | 0x4000;
+				write_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+
 				//usleep(1000);usleep(1000);usleep(1000);usleep(1000);usleep(1000);
 				u16 base_voltage_hex=ReadADC(0);
 				//xil_printf("base_voltage hex %04x",base_voltage_hex);
 
 				//base_voltage =  base_voltage_hex*0.0000625;//v
-
-				register_data       =   0x00000001;//cal_sel_pol=0  cal mode 01 voltage pulse
-				mode                =   1;//write transaction on hdlc slow control
-				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
-
+                  /////////////SET CAL POL TO 0
+				read_data = read_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				register_data       =   (0xBFFF & read_data) | 0x0000;
+				write_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
 
-		///////loop through cal_dac values /////////////
+
+		///////SET CAL DAC TO 0 OR START VALUE /////////////
+				CAL_DAC            =   start;
+
+				read_data = read_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				register_data       =   (0xFC03 & read_data) | (CAL_DAC<<2);
+				write_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
 
-				 mode				=	0;
-				 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 read_data    =    HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
-				 xil_printf("Initial value , READ_DATA = %x \r\n", read_data);
 
-				 CAL_DAC            =   start;
-				 register_data		=	(u32)(read_data |((u32)CAL_DAC<<2));
-				 mode				=	1;
+				 //register_data		=	(u32)(read_data |((u32)CAL_DAC<<2));
+				 //mode				=	1;
 				 u16 index          =   0;
+				 u16 i=0;
 				 int points = (stop - start)/step +1;
 				 do{
 
-					// mode				=	1;
-					//register_address 	= 	GBL_CFG_CAL_0;
-					 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	 HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
 
-				 	//////////////////
-				 	 //mode				=	0;
-				 //	register_address 	= 	ADC_READ_1;
-				 ///	HDLC_Tx(register_address , 0,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 //	LUT_CAL_DAC[CAL_DAC]=(u16)HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}while(register_data<255);
+					 write_SC( GBL_CFG_CAL_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
-				 	//////////////////
-
-
-				 	LUT_CAL_DAC[index] = ReadADC(0);
+					LUT_CAL_DAC[i]   = CAL_DAC;
+				 	LUT_CAL_DAC[i+1] = ReadADC(0);
 				///// 	step_voltage = LUT_CAL_DAC[index]*0.0000625;//volts
 				///// 	charge       = (step_voltage - base_voltage)*100;
 				////    printf("CAL_DAC= %d , GBL_CFG_CAL_0= %x , step_voltage= %fmv, base_voltage= %fmv, charge= %ffC  LUT_CAL_DAC= %04x \r\n",CAL_DAC,register_data,step_voltage*1000,base_voltage*1000,charge,LUT_CAL_DAC[CAL_DAC]);
 				 	CAL_DAC+=step;
-				 	register_data		=		(u32)(read_data |((u32)CAL_DAC<<2));
+				 	register_data		=		(u32)(0xFC03 & read_data | ((u32)CAL_DAC<<2));
 
 				 	index++;
-
+				 	i+=2;
 				 }while( index < points);
 				 //	index++;
 				 u16  *BV;
 				 BV =&base_voltage_hex;
 				 SendReply(sd,BV,2);
-				 SendReply(sd,LUT_CAL_DAC,index*2);
+				 SendReply(sd,LUT_CAL_DAC,i*2);
 				 xil_printf("index = %d points %d \r\n", index,points);
 				 	 xil_printf("done_CAL_DAC  calibration\r\n");
 
@@ -2558,118 +2558,166 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
 /* This routine will find fC values corresponding to the DAC values
  * of the CAL_DAC//////////////////////////////////
  */
-	u32 register_address;
-	u32 register_data;
+	//u32 register_address;
+	//u32 register_data;
 	u32 dac_address;
-	u32 DAC;
+	u16 DAC;
 	u8 verbose_mode=0;
 	u8 mode=0;
 	u8 SHIFT=0;
-	u32 read_data;
+	u16 MASK;
+	u8 MAX;
+	u16 read_data;
 	//double imon_adc,vmon_adc;
 	double step_voltage, base_voltage,charge = 0;
 	int i = 0;
 
 	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
-	     register_address = GBL_CFG_RUN;
-	     register_data    = 0X00000001;//SLEEP/RUN BIT=1;
-	     mode             = 1;//write transaction on hdlc slow control
-	     HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-	     HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
-	////////////////////////////////////////////////////////////////////
+
+	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
+
+		     read_data=read_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+		     register_data    = 0X00000001 | (read_data & 0xfffe);//SLEEP/RUN BIT=1;
+
+		     write_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+	     ////////////////////////////////////////////////////////////////////
 
 	     switch(Mon_sel)
 		{
 	     case IREF:
 	    	 	 dac_address =  GBL_CFG_CTR_5;
 	    	 	 SHIFT = 0;
+	    	 	 MASK  = 0XFFC0;
+	    	 	 MAX = 63;
 	    	 	 break;
 
 	     case CALIB_IDC:
 	    	 	 dac_address =  GBL_CFG_CAL_0;//????
 	    	 	 SHIFT = 2;
+	    	 	MASK  = 0XFC03;
+	    	 	MAX = 255;
 	    	 	 break;
 	     case PREAMP_INP_TRAN:
 	    	 	 dac_address =  GBL_CFG_BIAS_1;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFF00;
+	    	 	MAX = 255;
 	    	 	 break;
 	     case PREAMP_LC:
 	    	 	 dac_address =  GBL_CFG_BIAS_2;
 	    	 	 SHIFT = 8;
+	    	 	MASK  = 0XC0FF;
+	    	 	MAX = 63;
 	    	 	 break;
 	     case PREAMP_SF:
 	    	 	 dac_address = GBL_CFG_BIAS_1;
 	    	 	 SHIFT = 8;
+	    	 	MASK  = 0XC0FF;
+	    	 	MAX = 63;
 	    	 	 break;
 	     case SHAP_FC:
 	    	 	 dac_address =  GBL_CFG_BIAS_3;
 	    	 	 SHIFT = 8;
+	    	 	MASK  = 0X00FF;
+	    	 	MAX = 255;
 	    	 	 break;
 	     case SHAP_INPAIR:
 	    	 	 dac_address =  GBL_CFG_BIAS_3;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFF00;
+	    	 	MAX = 255;
 	    	 	 break;
 	     case SD_INPAIR:
 	    	 	 dac_address =  GBL_CFG_BIAS_4;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFF00;
+	    	 	MAX = 255;
 	     	     	    break;
 
 	     case SD_FC:
 	    	 	 dac_address =  GBL_CFG_BIAS_5;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFF00;
+	    	 	MAX = 255;
 	     	     break;
 	     case SD_SF:
 	    	 	 dac_address =  GBL_CFG_BIAS_5;
 	    	 	 SHIFT = 8;
+	    	 	MASK  = 0XC0FF;
+	    	 	MAX = 63;
 	     	     break;
 	     case CFD_BIAS_1:
 	    	 	 dac_address =  GBL_CFG_BIAS_0;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFFC0;
+	    	 	MAX = 63;
 	     	     break;
 	     case CFD_BIAS_2:
 	    	 	 dac_address =  GBL_CFG_BIAS_0;
 	    	 	 SHIFT = 6;
+	    	 	MASK  = 0XF03F;
+	    	 	MAX = 63;
 	     	     break;
 	     case CFD_HYST:
 	    	 	 dac_address =  GBL_CFG_HYS;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFFC0;
+	    	 	MAX = 63;
 	     	     break;
 	     case CFD_IREF_LOCAL:
 	    	 	 dac_address =  IREF;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFFFF;
+	    	 	MAX = 63;
 	     	     break;
 	     case CFD_TH_ARM:
 	    	 	 dac_address =  GBL_CFG_THR;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFF00;
+	    	 	MAX = 255;
 	     	     break;
 	     case CFD_TH_ZCC:
 	    	 	 dac_address = GBL_CFG_THR;
 	    	 	 SHIFT = 8;
+	    	 	MASK  = 0X00FF;
+	    	 	MAX = 255;
 	     	     break;
 	     case SLVS_IBIAS:
 	    	 	 dac_address =  GBL_CFG_BIAS_6;
 	    	 	 SHIFT = 6;
+	    	 	MASK  = 0XF03F;
+	    	 	MAX = 63;
 	     	     break;
 	     case BGR:
 	    	 	 dac_address =  IREF;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFFFF;
+	    	 	MAX = 63;
 	     	     break;
 	     case CALIB_V_STEP:
 	    	 	 dac_address =  GBL_CFG_CAL_0;
 	    	 	 SHIFT = 2;
+	    	 	MASK  = 0XFC03;
+	    	 	MAX = 255;
 	    	 //SHIFT = 2;
 	     	     break;
 	     case PRE_AMP_VREF:
 	    	 	 dac_address =  GBL_CFG_BIAS_2;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFF00;
+	    	 	MAX = 255;
 	     	     break;
 	     case V_TH_ARM:
 	    	 	 dac_address =  GBL_CFG_THR;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFF00;
+	    	 	MAX = 255;
 	     	     break;
 	     case V_TH_ZCC:
 	    	 	 dac_address =  GBL_CFG_THR;
 	    	 	 SHIFT = 8;
+	    	 	MASK  = 0X00FF;
+	    	 	MAX = 255;
 	     	     break;
 	   /*  case V_TSENS_INT:
 	    	 	 dac_address =  ???;
@@ -2690,67 +2738,74 @@ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 star
 	     case SLVS_VREF:
 	    	 	 dac_address =  GBL_CFG_BIAS_6;
 	    	 	 SHIFT = 0;
+	    	 	MASK  = 0XFFC0;
+	    	 	MAX = 63;
 	    	 	 break;
 	    default:
 	     		dac_address =  IREF;
 	     		SHIFT       =  0;
+	     		MASK  = 0XFFFF;
+	     		MAX = 63;
 	     		break;
 
 		}
-
+xil_printf("dac_address  >> %X \r\n", dac_address);
 	/////////////write to GBL_CFG_CTR_4 register ////////////
 	     ////////////////set MONTORING REGISTER////////////////
 		register_address = GBL_CFG_CTR_4;//vmon=calib vstep
 
 
-				VREF_ADC_BITS 	=  	    VREF_ADC_3;
-				MON_SEL_BITS	=		Mon_sel;
-				MON_GAIN_BITS 	= 		MON_GAIN_1;
-				register_data   = (u32)(VREF_ADC_BITS | MON_GAIN_BITS | MON_SEL_BITS);//MON SEL=CALIB VSTEP MON GAIN=0 VREF_ADC=3
-				mode            = 1;//write transaction on hdlc slow control
-				HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data
-				//double vmon_adc=ReadADC()*0.0625;//read value from external ADC IN MILLIVOLTS
+				//VREF_ADC_BITS 	=  	    VREF_ADC_3;
+				//MON_SEL_BITS	=		Mon_sel;
+				//MON_GAIN_BITS 	= 		MON_GAIN_1;
+		/////////////read  GBL_CFG_CTR_4 register ////////////
+			      read_data = read_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+			      register_data    = (u16)((read_data & 0xfc40) | VREF_ADC_3 | MON_GAIN_1 | Mon_sel);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
+				 //register_data    = ((read_data & 0xfffffc40) | 0X00000300);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
 
-				read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
-				xil_printf("cfg_ctr_4 set value , READ_DATA = %x \r\n", read_data);
+				 write_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 
 
 		///////loop through dac values /////////////
 
 				register_address = dac_address;//THIS VALUE COMES FROM SWITCH ABOVE
 				read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
-				xil_printf("Initial value , READ_DATA = %x \r\n", read_data);
+				//xil_printf("Initial value , READ_DATA = %x \r\n", read_data);
 
 				 DAC            =   start;
-				 register_data		=	(u32)(read_data |((u32)DAC<<SHIFT));
-				 mode				=	1;
+				 register_data		=	(read_data & MASK) |(DAC<<SHIFT);
+				 //mode				=	1;
 				 u16 indexx          =   0;
-				 int points = (stop - start)/step +1;
+				 int points;
+				 if (stop <=  MAX)
+					 points = (stop - start)/step +1;
+				 else
+					 points = (MAX - start)/step +1;
+
 				 i=0;
 				 do{
 
-					 mode				=	1;
+					 //mode				=	1;
 					//register_address 	= 	GBL_CFG_CAL_0;
-					 HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
-				 	 HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
-
+					 //HDLC_Tx(register_address , register_data,mode,SourceAddr,verbose_mode);//transmit of sc data
+				 	 //HDLC_Rx(DestinationBuffer,mode,verbose_mode);//receive acknowledge of sc data}
+				 	write_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	//////////////////
 				 	////////////////read      internal  adcS/////////////
 
-
-				 	LUT_CAL_DAC[i]= read_SC( ADC_READ_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				 	LUT_CAL_DAC[i] = DAC;
+				 	LUT_CAL_DAC[i+1]= read_SC( ADC_READ_0, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	//adc_0=LUT_CAL_DAC[i];
 
 
-				 	LUT_CAL_DAC[i + 1]= read_SC( ADC_READ_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+				 	LUT_CAL_DAC[i + 2]= read_SC( ADC_READ_1, register_data, SourceAddr,DestinationBuffer,verbose_mode );
 				 	//adc_1=LUT_CAL_DAC[i+2];
 
 				 	DAC+=step;
-				 	register_data		=		(u32)(read_data |((u32)DAC<<SHIFT));
+				 	register_data		=		(read_data & MASK) |(DAC<<SHIFT);
 
 				 	indexx++;
-				 	i+=2;
+				 	i+=3;
 
 				 }while( indexx < points);
 				 //	index++;
