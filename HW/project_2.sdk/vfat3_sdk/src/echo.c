@@ -2274,6 +2274,108 @@ u16 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd)
 	u8 verbose_mode=0;
 	u8 mode=0;
 	u16 read_data;
+	u8 direction;
+	double imon_adc;
+	double new_difference;
+	double old_difference=1000;
+	short adc_value;
+	int i=0;
+
+
+u8 set=0;
+
+
+	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
+
+	     read_data=read_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+	     register_data    = 0X00000001 | (read_data & 0xfffe);//SLEEP/RUN BIT=1;
+
+	     write_SC( GBL_CFG_RUN, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+
+	////////////////////////////////////////////////////////////////////
+	     //do{
+	/////////////read  GBL_CFG_CTR_4 register ////////////
+	      read_data = read_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+	      register_data    = (u16)((read_data & 0xfc40) | VREF_ADC_3 | MON_GAIN_1 | IREF);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
+		 //register_data    = ((read_data & 0xfffffc40) | 0X00000300);//MON SEL=0(imon) MON GAIN=0 VREF_ADC=3
+
+		 write_SC( GBL_CFG_CTR_4, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+
+
+
+
+//////////////read iref initial value//////////////////////
+		read_data = read_SC( GBL_CFG_CTR_5, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+		register_data = read_data ;
+		adc_value = ReadADC(1);
+		imon_adc=adc_value*0.0625;//read value from external ADC IN MILLIVOLTS
+		if(imon_adc == 100) direction= 0;
+		else if(imon_adc < 100)direction = 1;//
+		else  if(imon_adc > 100)direction = 2;
+
+
+
+//configureADC(1);//channel 1
+	do{
+		write_SC( GBL_CFG_CTR_5, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+
+		adc_value = ReadADC(1);
+		imon_adc=adc_value*0.0625;//read value from external ADC IN MILLIVOLTS
+
+		printf("IREF = %d , imon =  %fmv ,   ADC = %x \r\n",register_data , imon_adc, adc_value);
+
+
+
+		new_difference = abs(100 - imon_adc);
+			if(new_difference < old_difference){if(direction ==1)register_data++;else if(direction ==2)register_data--;}
+			else
+				{set=1;if(direction ==1)register_data--;else if(direction ==2)register_data++;}
+
+
+		old_difference= new_difference;
+
+		//printf("%f\r\n",imon_adc-100);
+	}while(set==0 && i++ < 62);
+
+	if(i<62)
+	{
+		write_SC( GBL_CFG_CTR_5, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+		adc_value = ReadADC(1);
+		imon_adc=adc_value*0.0625;//read value from external ADC IN MILLIVOLTS
+	printf("selected Iref= %d , imon= %f mv  adc_value= %x\r\n",register_data, imon_adc,adc_value);
+	LUT_CAL_DAC[0] = register_data;
+	//LUT_CAL_DAC[1] = register_data<<16;
+	LUT_CAL_DAC[1] = adc_value;
+	//LUT_CAL_DAC[3] = adc_value<<8;
+
+	SendReply(sd,LUT_CAL_DAC,4);
+	}
+
+	else {
+		xil_printf("Iref not adjusted \r\n");
+		LUT_CAL_DAC[0]=0xff;
+		LUT_CAL_DAC[1]= 0xff;
+		LUT_CAL_DAC[2]=0xff;
+		LUT_CAL_DAC[3]= 0xff;
+
+		SendReply(sd,LUT_CAL_DAC,4);
+
+	}
+	return register_data;// return iref register value
+
+}
+
+
+
+/*
+u16 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd)
+{
+
+	u32 register_address;
+	u16 register_data;
+	u8 verbose_mode=0;
+	u8 mode=0;
+	u16 read_data;
 
 	/////////////write to GBL_CFG_RUN register for RUN bit=1////////////
 
@@ -2310,7 +2412,7 @@ short adc_value;
 		adc_value = ReadADC(1);
 		imon_adc=adc_value*0.0625;//read value from external ADC IN MILLIVOLTS
 
-		printf("%x ,  %f mv\r\n",register_data & 0x001f, imon_adc);
+		printf("%d ,  %f mv\r\n",register_data , imon_adc);
 
 		if(imon_adc>100){
 			if((imon_adc-100)>1.6)register_data--;
@@ -2337,6 +2439,8 @@ short adc_value;
 	return register_data;// return iref register value
 
 }
+*/
+
 
 
 int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step , u8 stop,u8 calibration_mode)
