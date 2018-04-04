@@ -17,13 +17,11 @@ vhdl xil_defaultlib  \
 "../../../bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_dma_0/sim/mb_subsystem_axi_ethernet_0_dma_0.vhd" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_axi_fifo_mm_s_0_0/sim/mb_subsystem_axi_fifo_mm_s_0_0.vhd" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_1/sim/mb_subsystem_axi_gpio_0_1.vhd" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_2/sim/mb_subsystem_axi_gpio_0_2.vhd" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_3/sim/mb_subsystem_axi_gpio_0_3.vhd" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_TX_invert_1/sim/mb_subsystem_TX_invert_1.vhd" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_TX_invert_0/sim/mb_subsystem_TX_invert_0.vhd" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_rst_clk_wiz_0_125M_0/sim/mb_subsystem_rst_clk_wiz_0_125M_0.vhd" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_0/sim/mb_subsystem_axi_gpio_0_0.vhd" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_axi_iic_0_0/sim/mb_subsystem_axi_iic_0_0.vhd" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_emc_0_0/sim/mb_subsystem_axi_emc_0_0.vhd" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_4/sim/mb_subsystem_axi_gpio_0_4.vhd" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_done_from_tx_controller_1/sim/mb_subsystem_done_from_tx_controller_1.vhd" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_done_from_tx_controller_0/sim/mb_subsystem_done_from_tx_controller_0.vhd" \
 
 nosort

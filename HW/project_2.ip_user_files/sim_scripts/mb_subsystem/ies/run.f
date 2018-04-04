@@ -366,25 +366,9 @@
   "../../../bd/mb_subsystem/ip/mb_subsystem_xlslice_0_0/sim/mb_subsystem_xlslice_0_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_bitslip_Generator_0_0/sim/mb_subsystem_bitslip_Generator_0_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_0/sim/mb_subsystem_inverse_reverse_0_0.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_2/sim/mb_subsystem_axi_gpio_0_2.vhd" \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_3/sim/mb_subsystem_axi_gpio_0_3.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_2/sim/mb_subsystem_axi_clock_converter_0_2.v" \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_1/sim/mb_subsystem_axi_clock_converter_0_1.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_1/sim/mb_subsystem_inverse_reverse_0_1.v" \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_4/sim/mb_subsystem_axi_clock_converter_0_4.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_TX_invert_1/sim/mb_subsystem_TX_invert_1.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_3/sim/mb_subsystem_axi_clock_converter_0_3.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_TX_invert_0/sim/mb_subsystem_TX_invert_0.vhd" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_rst_clk_wiz_0_125M_0/sim/mb_subsystem_rst_clk_wiz_0_125M_0.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
@@ -408,15 +392,6 @@
   "../../../bd/mb_subsystem/ip/mb_subsystem_blk_mem_gen_0_0/sim/mb_subsystem_blk_mem_gen_0_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_lmb_bram_1/sim/mb_subsystem_lmb_bram_1.v" \
 -endlib
--makelib ies_lib/emc_common_v3_0_5 \
-  "../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/d806/hdl/emc_common_v3_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/axi_emc_v3_0_15 \
-  "../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/187c/hdl/axi_emc_v3_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_emc_0_0/sim/mb_subsystem_axi_emc_0_0.vhd" \
--endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
@@ -432,6 +407,38 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/mb_subsystem/ip/mb_subsystem_xbar_1/sim/mb_subsystem_xbar_1.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_xbar_0/sim/mb_subsystem_xbar_0.v" \
+  "../../../bd/mb_subsystem/ipshared/9a89/AXI_TX_CONTROLLER_1.0/hdl/AXI_TX_CONTROLLER_v1_0_S00_AXI.v" \
+  "../../../bd/mb_subsystem/ipshared/9a89/edit_AXI_TX_CONTROLLER_v1_0.srcs/sources_1/new/counter_logic.v" \
+  "../../../bd/mb_subsystem/ipshared/9a89/AXI_TX_CONTROLLER_1.0/hdl/AXI_TX_CONTROLLER_v1_0.v" \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_TX_CONTROLLER_0_0/sim/mb_subsystem_TX_CONTROLLER_0_0.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_4/sim/mb_subsystem_axi_gpio_0_4.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_1_0/sim/mb_subsystem_axi_clock_converter_1_0.v" \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_1_2/sim/mb_subsystem_axi_clock_converter_1_2.v" \
+  "../../../bd/mb_subsystem/sim/mb_subsystem.v" \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_0/sim/mb_subsystem_xlconstant_1_0.v" \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_1/sim/mb_subsystem_xlconstant_1_1.v" \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_0/sim/mb_subsystem_xlconstant_3_0.v" \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_1/sim/mb_subsystem_xlconstant_3_1.v" \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_done_1/sim/mb_subsystem_axi_clock_converter_done_1.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_done_from_tx_controller_1/sim/mb_subsystem_done_from_tx_controller_1.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_done_0/sim/mb_subsystem_axi_clock_converter_done_0.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_done_from_tx_controller_0/sim/mb_subsystem_done_from_tx_controller_0.vhd" \
+-endlib
+-makelib ies_lib/axi_protocol_converter_v2_1_15 \
+  "../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ff69/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_subsystem/ip/mb_subsystem_auto_pc_0/sim/mb_subsystem_auto_pc_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_m01_regslice_0/sim/mb_subsystem_m01_regslice_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_m00_regslice_0/sim/mb_subsystem_m00_regslice_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_s04_regslice_0/sim/mb_subsystem_s04_regslice_0.v" \
@@ -444,7 +451,6 @@
   "../../../bd/mb_subsystem/ip/mb_subsystem_s01_data_fifo_0/sim/mb_subsystem_s01_data_fifo_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_s00_regslice_0/sim/mb_subsystem_s00_regslice_0.v" \
   "../../../bd/mb_subsystem/ip/mb_subsystem_s00_data_fifo_0/sim/mb_subsystem_s00_data_fifo_0.v" \
-  "../../../bd/mb_subsystem/sim/mb_subsystem.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

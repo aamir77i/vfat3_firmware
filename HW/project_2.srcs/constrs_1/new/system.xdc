@@ -44,6 +44,13 @@ set_property PACKAGE_PIN AD23 [get_ports iic_main_sda_io]
 
 set_property BITSTREAM.GENERAL.COMPRESS FALSE [current_design]
 
+
+set_property PACKAGE_PIN AF25 [get_ports BIST_OK]
+set_property PACKAGE_PIN AC22 [get_ports BIST_START]
+set_property IOSTANDARD LVCMOS25 [get_ports BIST_OK]
+set_property IOSTANDARD LVCMOS25 [get_ports BIST_START]
+set_property PACKAGE_PIN AC25 [get_ports BIST_END]
+set_property IOSTANDARD LVCMOS25 [get_ports BIST_END]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

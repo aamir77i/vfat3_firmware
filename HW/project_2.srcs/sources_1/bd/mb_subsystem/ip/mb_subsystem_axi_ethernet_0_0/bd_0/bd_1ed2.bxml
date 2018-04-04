@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="bd_1ed2" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1521132889"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1521132889"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1521132889"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1521132889"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1522826099"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1522826099"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1522826099"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1522826099"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\ip_0\bd_1ed2_eth_buf_0.xci" Type="IP">
         <Instance HierarchyPath="eth_buf"/>

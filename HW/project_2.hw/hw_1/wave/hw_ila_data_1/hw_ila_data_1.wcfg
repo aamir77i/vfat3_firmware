@@ -10,14 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="8871fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="286501fs"></ZoomEndTime>
+      <Cursor1Time time="48000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="282"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="357"></NameColumnWidth>
+      <ValueColumnWidth column_width="297"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="9" />
    <wave_markers>
    </wave_markers>
    <wvobject fp_name="mb_subsystem_i/AP_Generator_0_data_out" type="array">
@@ -25,6 +25,13 @@
       <obj_property name="ElementShortName">mb_subsystem_i/AP_Generator_0_data_out[7:0]</obj_property>
       <obj_property name="ObjectShortName">AP_Generator_0_data_out[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="mb_subsystem_i/BIST_END_0_1" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">mb_subsystem_i/BIST_END_0_1</obj_property>
+      <obj_property name="ObjectShortName">BIST_END_0_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -56,6 +63,20 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">mb_subsystem_i/Receiver_logic_dv</obj_property>
       <obj_property name="ObjectShortName">Receiver_logic_dv</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="mb_subsystem_i/tx_controller_hier_BIST_end_to_processor" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">mb_subsystem_i/tx_controller_hier_BIST_end_to_processor</obj_property>
+      <obj_property name="ObjectShortName">tx_controller_hier_BIST_end_to_processor</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="mb_subsystem_i/tx_controller_hier_BIST_START_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">mb_subsystem_i/tx_controller_hier_BIST_START_0</obj_property>
+      <obj_property name="ObjectShortName">tx_controller_hier_BIST_START_0</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

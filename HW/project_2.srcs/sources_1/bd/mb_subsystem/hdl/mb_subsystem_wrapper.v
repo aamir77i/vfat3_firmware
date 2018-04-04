@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Thu Mar 15 17:54:23 2018
+//Date        : Wed Apr  4 09:14:33 2018
 //Host        : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target mb_subsystem_wrapper.bd
 //Design      : mb_subsystem_wrapper
@@ -10,7 +10,10 @@
 `timescale 1 ps / 1 ps
 
 module mb_subsystem_wrapper
-   (DDR3_addr,
+   (BIST_END,
+    BIST_OK,
+    BIST_START,
+    DDR3_addr,
     DDR3_ba,
     DDR3_cas_n,
     DDR3_ck_n,
@@ -50,6 +53,9 @@ module mb_subsystem_wrapper
     sys_clk_p,
     txd_n,
     txd_p);
+  input BIST_END;
+  input BIST_OK;
+  output BIST_START;
   output [13:0]DDR3_addr;
   output [2:0]DDR3_ba;
   output DDR3_cas_n;
@@ -91,6 +97,9 @@ module mb_subsystem_wrapper
   output txd_n;
   output txd_p;
 
+  wire BIST_END;
+  wire BIST_OK;
+  wire BIST_START;
   wire [13:0]DDR3_addr;
   wire [2:0]DDR3_ba;
   wire DDR3_cas_n;
@@ -152,7 +161,10 @@ module mb_subsystem_wrapper
         .O(iic_main_sda_i),
         .T(iic_main_sda_t));
   mb_subsystem mb_subsystem_i
-       (.DDR3_addr(DDR3_addr),
+       (.BIST_END(BIST_END),
+        .BIST_OK(BIST_OK),
+        .BIST_START(BIST_START),
+        .DDR3_addr(DDR3_addr),
         .DDR3_ba(DDR3_ba),
         .DDR3_cas_n(DDR3_cas_n),
         .DDR3_ck_n(DDR3_ck_n),

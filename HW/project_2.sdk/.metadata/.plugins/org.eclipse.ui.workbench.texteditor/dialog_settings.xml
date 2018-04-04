@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="adc" key="selection"/>
+		<item value="BIST" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="ADC"/>
-			<item value="ADC_READ_0"/>
-			<item value="usleep"/>
-			<item value="DecodeDataPacket"/>
-			<item value="send_Calpulse_LV1As"/>
-			<item value="ReceiveLength"/>
-			<item value="XGpio_WriteReg((XPAR_INVERT_RXD_RX_INVERSE"/>
-			<item value="1C7D"/>
+			<item value="bist"/>
+			<item value="tx_controller"/>
+			<item value="BIST"/>
+			<item value="DATA_GBL_CFG_CAL_0"/>
+			<item value="scurve_arr"/>
+			<item value="data_len"/>
+			<item value="length reply"/>
+			<item value="controller"/>
 		</list>
 		<list key="replacehistory">
 		</list>

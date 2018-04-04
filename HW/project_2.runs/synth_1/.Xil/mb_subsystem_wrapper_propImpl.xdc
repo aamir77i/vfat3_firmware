@@ -11,31 +11,31 @@ set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tc
 set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:11 order:LATE scoped_inst:mb_subsystem_i/axis_clock_converter_0/inst/gen_fifo_gen_ck_conv.axis_data_fifo_0/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
 set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:12 order:LATE scoped_inst:mb_subsystem_i/axis_clock_converter_1/inst/gen_fifo_gen_ck_conv.axis_data_fifo_0/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
 set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:13 order:LATE scoped_inst:mb_subsystem_i/axis_clock_converter_1/inst/gen_fifo_gen_ck_conv.axis_data_fifo_0/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:14 order:LATE scoped_inst:mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:15 order:LATE scoped_inst:mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:16 order:LATE scoped_inst:mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:17 order:LATE scoped_inst:mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:18 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:19 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:20 order:LATE scoped_inst:mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:21 order:LATE scoped_inst:mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:22 order:LATE scoped_inst:mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:23 order:LATE scoped_inst:mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:24 order:LATE scoped_inst:mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:25 order:LATE scoped_inst:mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:26 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:27 order:LATE scoped_inst:mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:28 order:LATE scoped_inst:mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:29 order:LATE scoped_inst:mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:30 order:LATE scoped_inst:mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:31 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:32 order:LATE scoped_inst:mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:33 order:LATE scoped_inst:mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:34 order:LATE scoped_inst:mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:35 order:LATE scoped_inst:mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:36 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:37 order:LATE scoped_inst:mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:38 order:LATE scoped_inst:mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:14 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:15 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:16 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:17 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:18 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:19 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:20 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:21 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:22 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:23 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:24 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:25 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:26 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:27 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:28 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:29 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:30 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:31 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:32 order:LATE scoped_inst:mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:33 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:34 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:35 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:36 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:37 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:38 order:LATE scoped_inst:mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake unmanaged:yes} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_ip_msg_config -idlist { PDCN-1569 DPIP-1 DPOP-1 DPOP-2 CDC-1 CDC-4 CDC-7 TIMING-9 TIMING-10 }
 set_property src_info {type:SCOPED_XDC file:2 line:38 export:INPUT save:INPUT read:READ} [current_design]
@@ -474,13 +474,19 @@ set_property src_info {type:XDC file:7 line:41 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN AE24 [get_ports iic_main_scl_io]
 set_property src_info {type:XDC file:7 line:42 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AD23 [get_ports iic_main_sda_io]
-set_property src_info {type:XDC file:7 line:47 export:INPUT save:INPUT read:READ} [current_design]
-set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property src_info {type:XDC file:7 line:48 export:INPUT save:INPUT read:READ} [current_design]
-set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property PACKAGE_PIN AF25 [get_ports BIST_OK]
 set_property src_info {type:XDC file:7 line:49 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AC22 [get_ports BIST_START]
+set_property src_info {type:XDC file:7 line:52 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AC25 [get_ports BIST_END]
+set_property src_info {type:XDC file:7 line:54 export:INPUT save:INPUT read:READ} [current_design]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property src_info {type:XDC file:7 line:55 export:INPUT save:INPUT read:READ} [current_design]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property src_info {type:XDC file:7 line:56 export:INPUT save:INPUT read:READ} [current_design]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-set_property src_info {type:XDC file:7 line:50 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:7 line:57 export:INPUT save:INPUT read:READ} [current_design]
 connect_debug_port dbg_hub/clk [get_nets clk]
 set_property src_info {type:SCOPED_XDC file:8 line:46 export:INPUT save:INPUT read:READ} [current_design]
 set_max_delay  -from [get_cells {*TX_PAUSE_FRAME_CROSS_I/clk_a2b_bus_reg[*]}]   -to [get_cells  -hier -regexp {.*TX_PAUSE_FRAME_CROSS_I.*ClkBAxiEthBaEClkCrsBusOut_reg.*} -filter {IS_SEQUENTIAL=="1"}] 8 -datapath_only
@@ -514,102 +520,102 @@ current_instance mb_subsystem_i/axis_clock_converter_1/inst/gen_fifo_gen_ck_conv
 set_property src_info {type:SCOPED_XDC file:13 line:16 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_gray_ff_reg*] -to [get_cells {dest_graysync_ff_reg[0]*}] 6.667
 current_instance
-current_instance mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
+current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:14 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
+current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:15 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:16 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:17 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:18 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:19 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:20 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:21 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
+current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:22 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:23 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:24 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:25 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:26 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
+current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:27 line:19 export:INPUT save:NONE read:READ} [current_design]
-set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
+set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:28 line:19 export:INPUT save:NONE read:READ} [current_design]
-set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
+set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:29 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:30 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:31 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
+current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:32 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.b_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:33 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/Invert_RXD/RX_INVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:34 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/Invert_TXD/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:35 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/axi_clock_converter_0/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/done_LV1A/axi_clock_converter_done/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:36 line:19 export:INPUT save:NONE read:READ} [current_design]
 set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
 current_instance
-current_instance mb_subsystem_i/reverse_RXD/RX_REVERSE_CC/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:37 line:19 export:INPUT save:NONE read:READ} [current_design]
-set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
+set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998
 current_instance
-current_instance mb_subsystem_i/reverse_TXD/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.r_handshake/handshake
+current_instance mb_subsystem_i/tx_controller_hier/axi_clock_converter_1/inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:38 line:19 export:INPUT save:NONE read:READ} [current_design]
-set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 13.334
+set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 49.998

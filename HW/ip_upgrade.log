@@ -1,6 +1,152 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Apr  4 09:14:05 2018
+| Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_subsystem_TX_CONTROLLER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_subsystem_TX_CONTROLLER_0_0 (cern.ch:user:TX_CONTROLLER:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Apr  3 09:07:51 2018
+| Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_subsystem_TX_CONTROLLER_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_subsystem_TX_CONTROLLER_0_0 (cern.ch:user:TX_CONTROLLER:1.0) from (Rev. 16) to (Rev. 17)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_subsystem_TX_CONTROLLER_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'BIST_CYCLES_to_processor'
+
+-Upgrade has added port 'BIST_END'
+
+-Upgrade has added port 'BIST_OK'
+
+-Upgrade has added port 'BIST_START'
+
+-Upgrade has added port 'BIST_end_to_processor'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Fri Mar 30 10:23:10 2018
+| Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_subsystem_TX_CONTROLLER_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_subsystem_TX_CONTROLLER_0_0 (cern.ch:user:TX_CONTROLLER:1.0) from (Rev. 15) to (Rev. 16)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_subsystem_TX_CONTROLLER_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'start'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Mar 29 23:32:25 2018
+| Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_subsystem_TX_CONTROLLER_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mb_subsystem_TX_CONTROLLER_0_0 (cern.ch:user:TX_CONTROLLER:1.0) from (Rev. 14) to (Rev. 15)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mb_subsystem_TX_CONTROLLER_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'start'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Mar 29 18:30:17 2018
+| Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mb_subsystem_TX_CONTROLLER_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mb_subsystem_TX_CONTROLLER_0_0 (cern.ch:user:TX_CONTROLLER:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 | Date         : Mon Feb 19 11:08:11 2018
 | Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
 | Command      : upgrade_ip

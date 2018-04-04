@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="mb_subsystem" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1521132892"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1521132892"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1521132892"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1521132892"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1522826102"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1522826102"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1522826102"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1522826102"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\mb_subsystem_microblaze_0_0\mb_subsystem_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -56,6 +56,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\mb_subsystem_microblaze_0_axi_periph_0\mb_subsystem_microblaze_0_axi_periph_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="1410548961" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -254,72 +255,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\mb_subsystem_axi_gpio_0_2\mb_subsystem_axi_gpio_0_2.xci" Type="IP">
-        <Instance HierarchyPath="Invert_TXD/TX_invert"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\mb_subsystem_axi_gpio_0_3\mb_subsystem_axi_gpio_0_3.xci" Type="IP">
-        <Instance HierarchyPath="reverse_TXD/TX_reverse"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\mb_subsystem_axi_clock_converter_0_2\mb_subsystem_axi_clock_converter_0_2.xci" Type="IP">
-        <Instance HierarchyPath="reverse_TXD/axi_clock_converter_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\mb_subsystem_axi_clock_converter_0_1\mb_subsystem_axi_clock_converter_0_1.xci" Type="IP">
-        <Instance HierarchyPath="Invert_TXD/axi_clock_converter_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\mb_subsystem_inverse_reverse_0_1\mb_subsystem_inverse_reverse_0_1.xci" Type="IP">
         <Instance HierarchyPath="inverse_reverse_RX"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\mb_subsystem_axi_clock_converter_0_4\mb_subsystem_axi_clock_converter_0_4.xci" Type="IP">
-        <Instance HierarchyPath="reverse_RXD/RX_REVERSE_CC"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\mb_subsystem_TX_invert_1\mb_subsystem_TX_invert_1.xci" Type="IP">
-        <Instance HierarchyPath="reverse_RXD/RX_REVERSE"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\mb_subsystem_axi_clock_converter_0_3\mb_subsystem_axi_clock_converter_0_3.xci" Type="IP">
-        <Instance HierarchyPath="Invert_RXD/RX_INVERSE_CC"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\mb_subsystem_TX_invert_0\mb_subsystem_TX_invert_0.xci" Type="IP">
-        <Instance HierarchyPath="Invert_RXD/RX_INVERSE"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -383,6 +320,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\mb_subsystem_axi_mem_intercon_0\mb_subsystem_axi_mem_intercon_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_mem_intercon"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -421,6 +359,38 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip\mb_subsystem_TX_CONTROLLER_0_0\mb_subsystem_TX_CONTROLLER_0_0.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/TX_CONTROLLER_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_axi_gpio_0_4\mb_subsystem_axi_gpio_0_4.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/done_LV1A/done_from_tx_controller"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_axi_clock_converter_1_0\mb_subsystem_axi_clock_converter_1_0.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/done_LV1A/axi_clock_converter_done"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_axi_clock_converter_1_2\mb_subsystem_axi_clock_converter_1_2.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/axi_clock_converter_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="synth\mb_subsystem.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
@@ -430,6 +400,70 @@
       <File Name="sim\mb_subsystem.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_xlconstant_1_0\mb_subsystem_xlconstant_1_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconstant_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_xlconstant_1_1\mb_subsystem_xlconstant_1_1.xci" Type="IP">
+        <Instance HierarchyPath="xlconstant_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_xlconstant_3_0\mb_subsystem_xlconstant_3_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconstant_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_xlconstant_3_1\mb_subsystem_xlconstant_3_1.xci" Type="IP">
+        <Instance HierarchyPath="xlconstant_4"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_axi_clock_converter_done_1\mb_subsystem_axi_clock_converter_done_1.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_done_from_tx_controller_1\mb_subsystem_done_from_tx_controller_1.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/BIST_CYCLES/BIST_CYCLES_from_tx_controller"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_axi_clock_converter_done_0\mb_subsystem_axi_clock_converter_done_0.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/done_BIST/axi_clock_converter_BIST_END"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_subsystem_done_from_tx_controller_0\mb_subsystem_done_from_tx_controller_0.xci" Type="IP">
+        <Instance HierarchyPath="tx_controller_hier/done_BIST/BIST_END_from_tx_controller"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\mb_subsystem_auto_pc_0\mb_subsystem_auto_pc_0.xci" Type="IP">

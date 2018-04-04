@@ -25,7 +25,7 @@
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/mb_subsystem_wrapper.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/mb_subsystem_wrapper.bit"/>
       <Properties Property="PROGRAM.HW_CFGMEM_PART" value=""/>
-      <Properties Property="SLR.COUNT" value="C:/Users/airshad/AppData/Roaming/Xilinx/Vivado/1"/>
+      <Properties Property="SLR.COUNT" value="c:/Users/airshad/AppData/Roaming/Xilinx/Vivado/1"/>
     </Object>
     <Object name="xc7k325t_0_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/mb_subsystem_wrapper.ltx"/>
@@ -49,17 +49,19 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="mb_subsystem_i/ila_0" gui_info="">
-      <Properties Property="CONTROL.DATA_DEPTH" value="512"/>
-      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.DATA_DEPTH" value="1024"/>
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
       <Properties Property="CONTROL.TRIGGER_POSITION" value="10"/>
       <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
-    <Object name="mb_subsystem_i/AP_Generator_0_data_out[7:0]" gui_info="Trigger Setup=0"/>
+    <Object name="mb_subsystem_i/AP_Generator_0_data_out[7:0]" gui_info=""/>
+    <Object name="mb_subsystem_i/BIST_END_0_1" gui_info="Trigger Setup=1"/>
     <Object name="mb_subsystem_i/DATAVALID_TX_FIFO_CLOCK_CROSSING" gui_info=""/>
     <Object name="mb_subsystem_i/F1_F2_IN[7:0]" gui_info=""/>
+    <Object name="mb_subsystem_i/F1_F2_OUT[31:0]" gui_info=""/>
     <Object name="mb_subsystem_i/Receiver_logic_gpio_io_o" gui_info="Trigger Setup=0"/>
     <Object name="mb_subsystem_i/Receiver_logic_gpio_io_o1" gui_info=""/>
     <Object name="mb_subsystem_i/Receiver_logic_success" gui_info=""/>
@@ -68,6 +70,8 @@
     <Object name="mb_subsystem_i/Transmitter_logic_m_axis_tdata[31:0]" gui_info="Trigger Setup=0"/>
     <Object name="mb_subsystem_i/bitslip_signal" gui_info=""/>
     <Object name="mb_subsystem_i/inverse_reverse_TX_data_out[7:0]" gui_info=""/>
+    <Object name="mb_subsystem_i/tx_controller_hier_BIST_START_0" gui_info="Trigger Setup=0"/>
+    <Object name="mb_subsystem_i/tx_controller_hier_BIST_end_to_processor" gui_info=""/>
     <Object name="mb_subsystem_i/tx_inverse_reverse[7:0]" gui_info=""/>
   </ObjectList>
   <probeset name="hw project" active="false">
@@ -125,7 +129,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq8&apos;h96"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -136,7 +140,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;h96"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -172,6 +176,27 @@
         <net name="mb_subsystem_i/AP_gen_out[2]"/>
         <net name="mb_subsystem_i/AP_gen_out[1]"/>
         <net name="mb_subsystem_i/AP_gen_out[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/BIST_END_0_1"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -708,6 +733,48 @@
         <net name="mb_subsystem_i/inverse_reverse_TX_data_out[2]"/>
         <net name="mb_subsystem_i/inverse_reverse_TX_data_out[1]"/>
         <net name="mb_subsystem_i/inverse_reverse_TX_data_out[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/tx_controller_hier_BIST_START_0"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/tx_controller_hier_BIST_end_to_processor"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;VFAT3_TB_bsp&apos;" deleteContents="true" description="Delete resource &apos;VFAT3_TB_bsp&apos;" element1="/VFAT3_TB_bsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1522340011916"/>&#x0A;<refactoring comment="Delete resource &apos;VFAT3_TB&apos;" deleteContents="true" description="Delete resource &apos;VFAT3_TB&apos;" element1="/VFAT3_TB" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1522340021287"/>
+</session>

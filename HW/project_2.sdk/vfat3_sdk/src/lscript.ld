@@ -10,8 +10,8 @@
 /*                                                                 */
 /*******************************************************************/
 
-_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x4000;
-_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x4000;
+_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x800;
+_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x800;
 
 /* Define Memories in the system */
 
@@ -186,6 +186,12 @@ SECTIONS
    . = ALIGN(4);
    __bss_end = .;
 } > mig_7series_0_memaddr
+
+base_var_sec : {
+   __base_var_sec_start = .;
+   *(base_var_sec)
+   __base_var_sec_end = .;
+} > axi_bram_ctrl_0_Mem0
 
 _SDA_BASE_ = __sdata_start + ((__sbss_end - __sdata_start) / 2 );
 

@@ -53,12 +53,11 @@ vlib activehdl/axis_data_fifo_v1_1_16
 vlib activehdl/axis_clock_converter_v1_1_16
 vlib activehdl/xlslice_v1_0_1
 vlib activehdl/axi_iic_v2_0_18
-vlib activehdl/emc_common_v3_0_5
-vlib activehdl/axi_emc_v3_0_15
 vlib activehdl/generic_baseblocks_v2_1_0
 vlib activehdl/axi_register_slice_v2_1_15
 vlib activehdl/axi_data_fifo_v2_1_14
 vlib activehdl/axi_crossbar_v2_1_16
+vlib activehdl/axi_protocol_converter_v2_1_15
 
 vmap xil_defaultlib activehdl/xil_defaultlib
 vmap xpm activehdl/xpm
@@ -112,12 +111,11 @@ vmap axis_data_fifo_v1_1_16 activehdl/axis_data_fifo_v1_1_16
 vmap axis_clock_converter_v1_1_16 activehdl/axis_clock_converter_v1_1_16
 vmap xlslice_v1_0_1 activehdl/xlslice_v1_0_1
 vmap axi_iic_v2_0_18 activehdl/axi_iic_v2_0_18
-vmap emc_common_v3_0_5 activehdl/emc_common_v3_0_5
-vmap axi_emc_v3_0_15 activehdl/axi_emc_v3_0_15
 vmap generic_baseblocks_v2_1_0 activehdl/generic_baseblocks_v2_1_0
 vmap axi_register_slice_v2_1_15 activehdl/axi_register_slice_v2_1_15
 vmap axi_data_fifo_v2_1_14 activehdl/axi_data_fifo_v2_1_14
 vmap axi_crossbar_v2_1_16 activehdl/axi_crossbar_v2_1_16
+vmap axi_protocol_converter_v2_1_15 activehdl/axi_protocol_converter_v2_1_15
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
 "C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -487,25 +485,9 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/b
 "../../../bd/mb_subsystem/ip/mb_subsystem_xlslice_0_0/sim/mb_subsystem_xlslice_0_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_bitslip_Generator_0_0/sim/mb_subsystem_bitslip_Generator_0_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_0/sim/mb_subsystem_inverse_reverse_0_0.v" \
-
-vcom -work xil_defaultlib -93 \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_2/sim/mb_subsystem_axi_gpio_0_2.vhd" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_3/sim/mb_subsystem_axi_gpio_0_3.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_2/sim/mb_subsystem_axi_clock_converter_0_2.v" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_1/sim/mb_subsystem_axi_clock_converter_0_1.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_1/sim/mb_subsystem_inverse_reverse_0_1.v" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_4/sim/mb_subsystem_axi_clock_converter_0_4.v" \
 
 vcom -work xil_defaultlib -93 \
-"../../../bd/mb_subsystem/ip/mb_subsystem_TX_invert_1/sim/mb_subsystem_TX_invert_1.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_3/sim/mb_subsystem_axi_clock_converter_0_3.v" \
-
-vcom -work xil_defaultlib -93 \
-"../../../bd/mb_subsystem/ip/mb_subsystem_TX_invert_0/sim/mb_subsystem_TX_invert_0.vhd" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_rst_clk_wiz_0_125M_0/sim/mb_subsystem_rst_clk_wiz_0_125M_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
@@ -529,15 +511,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/b
 "../../../bd/mb_subsystem/ip/mb_subsystem_blk_mem_gen_0_0/sim/mb_subsystem_blk_mem_gen_0_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_lmb_bram_1/sim/mb_subsystem_lmb_bram_1.v" \
 
-vcom -work emc_common_v3_0_5 -93 \
-"../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/d806/hdl/emc_common_v3_0_vh_rfs.vhd" \
-
-vcom -work axi_emc_v3_0_15 -93 \
-"../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/187c/hdl/axi_emc_v3_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -93 \
-"../../../bd/mb_subsystem/ip/mb_subsystem_axi_emc_0_0/sim/mb_subsystem_axi_emc_0_0.vhd" \
-
 vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
 "../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
@@ -553,6 +526,38 @@ vlog -work axi_crossbar_v2_1_16  -v2k5 "+incdir+../../../../project_2.srcs/sourc
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_xbar_1/sim/mb_subsystem_xbar_1.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_xbar_0/sim/mb_subsystem_xbar_0.v" \
+"../../../bd/mb_subsystem/ipshared/9a89/AXI_TX_CONTROLLER_1.0/hdl/AXI_TX_CONTROLLER_v1_0_S00_AXI.v" \
+"../../../bd/mb_subsystem/ipshared/9a89/edit_AXI_TX_CONTROLLER_v1_0.srcs/sources_1/new/counter_logic.v" \
+"../../../bd/mb_subsystem/ipshared/9a89/AXI_TX_CONTROLLER_1.0/hdl/AXI_TX_CONTROLLER_v1_0.v" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_TX_CONTROLLER_0_0/sim/mb_subsystem_TX_CONTROLLER_0_0.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_4/sim/mb_subsystem_axi_gpio_0_4.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_1_0/sim/mb_subsystem_axi_clock_converter_1_0.v" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_1_2/sim/mb_subsystem_axi_clock_converter_1_2.v" \
+"../../../bd/mb_subsystem/sim/mb_subsystem.v" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_0/sim/mb_subsystem_xlconstant_1_0.v" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_1/sim/mb_subsystem_xlconstant_1_1.v" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_0/sim/mb_subsystem_xlconstant_3_0.v" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_1/sim/mb_subsystem_xlconstant_3_1.v" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_done_1/sim/mb_subsystem_axi_clock_converter_done_1.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb_subsystem/ip/mb_subsystem_done_from_tx_controller_1/sim/mb_subsystem_done_from_tx_controller_1.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_done_0/sim/mb_subsystem_axi_clock_converter_done_0.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/mb_subsystem/ip/mb_subsystem_done_from_tx_controller_0/sim/mb_subsystem_done_from_tx_controller_0.vhd" \
+
+vlog -work axi_protocol_converter_v2_1_15  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
+"../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ff69/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/4868" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/0ab1/hdl" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6180/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/a08d/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/6851/hdl/verilog" "+incdir+../../../../project_2.srcs/sources_1/bd/mb_subsystem/ipshared/82bb/hdl/verilog" \
+"../../../bd/mb_subsystem/ip/mb_subsystem_auto_pc_0/sim/mb_subsystem_auto_pc_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_m01_regslice_0/sim/mb_subsystem_m01_regslice_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_m00_regslice_0/sim/mb_subsystem_m00_regslice_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_s04_regslice_0/sim/mb_subsystem_s04_regslice_0.v" \
@@ -565,7 +570,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../project_2.srcs/sources_1/b
 "../../../bd/mb_subsystem/ip/mb_subsystem_s01_data_fifo_0/sim/mb_subsystem_s01_data_fifo_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_s00_regslice_0/sim/mb_subsystem_s00_regslice_0.v" \
 "../../../bd/mb_subsystem/ip/mb_subsystem_s00_data_fifo_0/sim/mb_subsystem_s00_data_fifo_0.v" \
-"../../../bd/mb_subsystem/sim/mb_subsystem.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

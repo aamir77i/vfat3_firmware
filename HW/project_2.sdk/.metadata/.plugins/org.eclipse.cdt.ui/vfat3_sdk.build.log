@@ -1,6 +1,6 @@
-15:09:30 **** Incremental Build of configuration Debug for project vfat3_sdk ****
+11:30:18 **** Incremental Build of configuration Debug for project vfat3_sdk ****
 make all 
 make: Nothing to be done for `all'.
 
-15:09:30 Build Finished (took 123ms)
+11:30:18 Build Finished (took 83ms)
 

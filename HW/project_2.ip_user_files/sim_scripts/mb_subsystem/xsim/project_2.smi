@@ -10,9 +10,9 @@
 
 <MemInfoSimulation Version="1" Minor="0">
   <Processor Endianness="Little" InstPath="mb_subsystem_i/microblaze_0">
-    <AddressSpace Name="mb_subsystem_i_microblaze_0.mb_subsystem_i_microblaze_0_local_memory_lmb_bram_ADDR_SPACE" ECC="NONE" Begin="0" End="65535">
+    <AddressSpace Name="mb_subsystem_i_microblaze_0.mb_subsystem_i_microblaze_0_local_memory_lmb_bram_64K_4_ADDR_SPACE" ECC="NONE" Begin="0" End="65535">
       <BusBlock>
-        <BitLane MemType="microblaze_0_local_memory_lmb_bram_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="65535">
+        <BitLane MemType="microblaze_0_local_memory_lmb_bram_64K_4_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="65535">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="16383"/>
           <Parity ON="false" NumBits="0"/>
@@ -20,9 +20,9 @@
         </BitLane>
       </BusBlock>
     </AddressSpace>
-    <AddressSpace Name="mb_subsystem_i_microblaze_0.mb_subsystem_i_blk_mem_gen_0_ADDR_SPACE" ECC="NONE" Begin="3221225472" End="3221291007">
+    <AddressSpace Name="mb_subsystem_i_microblaze_0.mb_subsystem_i_blk_mem_gen_0_64K_4_ADDR_SPACE" ECC="NONE" Begin="3221225472" End="3221291007">
       <BusBlock>
-        <BitLane MemType="blk_mem_gen_0_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="3221291007">
+        <BitLane MemType="blk_mem_gen_0_64K_4_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="3221291007">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="16383"/>
           <Parity ON="false" NumBits="0"/>
