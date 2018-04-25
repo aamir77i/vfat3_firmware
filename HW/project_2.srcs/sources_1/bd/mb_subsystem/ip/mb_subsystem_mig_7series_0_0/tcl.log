@@ -35512,3 +35512,7 @@ MIG: 09:14:58 : IGN:         <InputClkFreq>200.2</InputClkFreq> <==>         <In
 MIG: 09:14:58 : Running implementation.xit
 MIG: 09:14:58 : IGN:     <ModuleName>mb_subsystem_mig_7series_0_0</ModuleName> <==>     <ModuleName>mb_subsystem_mig_7series_0_0</ModuleName> 
 MIG: 09:14:58 : IGN:         <InputClkFreq>200.2</InputClkFreq> <==>         <InputClkFreq>200.2</InputClkFreq> 
+MIG: 16:51:41 : xml_input_file: mig_b.prj
+MIG: 16:51:41 : Absolute path of xml_input_file: f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mig_b.prj
+MIG: 16:51:41 : xml_input_file: mig_b.prj
+MIG: 16:51:41 : Absolute path of xml_input_file: f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mig_b.prj

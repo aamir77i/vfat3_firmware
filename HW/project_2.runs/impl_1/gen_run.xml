@@ -1,34 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1522826148">
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1524639013">
   <File Type="PWROPT-DCP" Name="mb_subsystem_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="mb_subsystem_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="mb_subsystem_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="mb_subsystem_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="mb_subsystem_wrapper_reports.tcl"/>
   <File Type="BG-DRC" Name="mb_subsystem_wrapper.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="mb_subsystem_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="mb_subsystem_wrapper_timing_summary_init.rpt"/>
-  <File Type="OPT-HWDEF" Name="mb_subsystem_wrapper.hwdef"/>
   <File Type="OPT-DCP" Name="mb_subsystem_wrapper_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="mb_subsystem_wrapper.hwdef"/>
   <File Type="OPT-DRC" Name="mb_subsystem_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="mb_subsystem_wrapper_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="mb_subsystem_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="mb_subsystem_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="mb_subsystem_wrapper_placed.dcp"/>
   <File Type="PLACE-IO" Name="mb_subsystem_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="mb_subsystem_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="mb_subsystem_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="mb_subsystem_wrapper_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="mb_subsystem_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="mb_subsystem_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="mb_subsystem_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="mb_subsystem_wrapper_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="mb_subsystem_wrapper_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="mb_subsystem_wrapper_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="mb_subsystem_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="mb_subsystem_wrapper_drc_physopted.rpt"/>
   <File Type="BG-BIT" Name="mb_subsystem_wrapper.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="mb_subsystem_wrapper_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="mb_subsystem_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="mb_subsystem_wrapper_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="mb_subsystem_wrapper_routed_bb.dcp"/>
@@ -48,7 +37,6 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="mb_subsystem_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="mb_subsystem_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="mb_subsystem_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="mb_subsystem_wrapper_incremental_reuse_routed.rpt"/>
   <File Type="RDI-RDI" Name="mb_subsystem_wrapper.vdi"/>
   <File Type="ROUTE-CLK" Name="mb_subsystem_wrapper_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="mb_subsystem_wrapper_postroute_physopt.dcp"/>
@@ -59,7 +47,6 @@
   <File Type="BITSTR-NKY" Name="mb_subsystem_wrapper.nky"/>
   <File Type="BITSTR-BMM" Name="mb_subsystem_wrapper_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="mb_subsystem_wrapper.mmi"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="mb_subsystem_wrapper.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="mb_subsystem_wrapper.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>

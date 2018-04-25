@@ -39,7 +39,7 @@
 									<listOptionValue builtIn="false" value="../../vfat3_sdk_bsp/microblaze_0/include"/>
 								</option>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.172259173" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
-								<option id="xilinx.gnu.compiler.misc.other.234794654" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency" valueType="string"/>
+								<option id="xilinx.gnu.compiler.misc.other.234794654" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency" valueType="string"/>
 								<option id="xilinx.gnu.compiler.option.profiling.enable.1854060045" name="Enable Profiling (-pg)" superClass="xilinx.gnu.compiler.option.profiling.enable" value="false" valueType="boolean"/>
 								<inputType id="xilinx.gnu.compiler.input.68972218" name="C source files" superClass="xilinx.gnu.compiler.input"/>
 							</tool>
@@ -152,7 +152,7 @@
 									<listOptionValue builtIn="false" value="../../vfat3_sdk_bsp/microblaze_0/include"/>
 								</option>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.flags.1015171703" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
-								<option id="xilinx.gnu.compiler.misc.other.663056202" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency" valueType="string"/>
+								<option id="xilinx.gnu.compiler.misc.other.663056202" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency -mxl-frequency" valueType="string"/>
 								<inputType id="xilinx.gnu.compiler.input.456947185" name="C source files" superClass="xilinx.gnu.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.mb.cxx.toolchain.compiler.release.1314977585" name="MicroBlaze g++ compiler" superClass="xilinx.gnu.mb.cxx.toolchain.compiler.release">

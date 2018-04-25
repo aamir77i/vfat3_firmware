@@ -12,21 +12,21 @@ source mb_subsystem_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
-add_files: Time (s): cpu = 00:00:13 ; elapsed = 00:00:53 . Memory (MB): peak = 380.316 ; gain = 140.613
+add_files: Time (s): cpu = 00:00:13 ; elapsed = 00:00:50 . Memory (MB): peak = 380.859 ; gain = 141.191
 Command: synth_design -top mb_subsystem_wrapper -part xc7k325tffg900-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-1223] The version limit for your license is '2018.04' and will expire in 26 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2018.04' and will expire in 14 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9148 
+INFO: Helper process launched with PID 8892 
 WARNING: [Synth 8-2611] redeclaration of ansi port RXD is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/imports/new/DIFF_To_single.v:29]
 WARNING: [Synth 8-2611] redeclaration of ansi port data_out is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/imports/new/AP_Generator.v:30]
 WARNING: [Synth 8-2611] redeclaration of ansi port out_p is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/imports/new/S_to_diff.v:29]
 WARNING: [Synth 8-2611] redeclaration of ansi port out_n is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/imports/new/S_to_diff.v:30]
 WARNING: [Synth 8-2611] redeclaration of ansi port BIST_end is not allowed [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ipshared/9a89/edit_AXI_TX_CONTROLLER_v1_0.srcs/sources_1/new/counter_logic.v:71]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 563.715 ; gain = 183.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 564.563 ; gain = 183.703
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function xpm_fifo_getmemtype does not always return a value [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ipshared/f10a/hdl/lib_fifo_v1_0_rfs.vhd:358]
 WARNING: [Synth 8-2048] function get_read_mode does not always return a value [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ipshared/f10a/hdl/lib_fifo_v1_0_rfs.vhd:375]
@@ -14982,7 +14982,7 @@ WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnec
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_awsize[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:19:02 ; elapsed = 00:19:10 . Memory (MB): peak = 2155.953 ; gain = 1775.637
+Finished RTL Elaboration : Time (s): cpu = 00:17:03 ; elapsed = 00:17:07 . Memory (MB): peak = 2156.152 ; gain = 1775.293
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -15093,7 +15093,7 @@ WARNING: [Synth 8-3295] tying undriven pin COMP_FIFO:axi_aw_prog_full_thresh[3] 
 WARNING: [Synth 8-3295] tying undriven pin COMP_FIFO:axi_aw_prog_full_thresh[2] to constant 0 [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ipshared/68a8/hdl/axi_fifo_mm_s_v4_1_rfs.vhd:2903]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:19:15 ; elapsed = 00:19:24 . Memory (MB): peak = 2155.953 ; gain = 1775.637
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:17:15 ; elapsed = 00:17:20 . Memory (MB): peak = 2156.152 ; gain = 1775.293
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 3794 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
@@ -15533,9 +15533,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 160 instances
   SRL16 => SRL16E: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2533.887 ; gain = 1.020
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2538.570 ; gain = 1.207
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:21:12 ; elapsed = 00:21:15 . Memory (MB): peak = 2537.770 ; gain = 2157.453
+Finished Constraint Validation : Time (s): cpu = 00:19:05 ; elapsed = 00:19:04 . Memory (MB): peak = 2542.453 ; gain = 2161.594
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -16904,7 +16904,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'src_state_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'dest_state_reg' using encoding 'sequential' in module 'axi_clock_converter_v2_1_14_lite_async__parameterized2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:22:44 ; elapsed = 00:22:54 . Memory (MB): peak = 2600.402 ; gain = 2220.086
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:20:25 ; elapsed = 00:20:32 . Memory (MB): peak = 2612.059 ; gain = 2231.199
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -17195,7 +17195,6 @@ WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[0].bank0/bank_
 WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[1].bank0/bank_compare0/rank_busy_r_reg[0]) is unused and will be removed from module mig_7series_v4_0_mc.
 WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[2].bank0/bank_compare0/rank_busy_r_reg[0]) is unused and will be removed from module mig_7series_v4_0_mc.
 WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[3].bank0/bank_compare0/rank_busy_r_reg[0]) is unused and will be removed from module mig_7series_v4_0_mc.
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5545] ROM "Using_TLBS.DTLB_I/TLBLO1" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "Using_TLBS.DTLB_I/TLBLO0" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-3917] design MicroBlaze_Core has port M1_AXIS_TLAST driven by constant 0
@@ -17412,7 +17411,7 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/b.b_pipe/m_payloa
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:25:25 ; elapsed = 00:25:36 . Memory (MB): peak = 2906.078 ; gain = 2525.762
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:22:51 ; elapsed = 00:22:58 . Memory (MB): peak = 2908.605 ; gain = 2527.746
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -17460,7 +17459,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'mb_subsystem_i/clk_wiz_0/
 INFO: [Synth 8-5578] Moved timing constraint from pin 'mb_subsystem_i/clk_wiz_1/inst/clk_in1' to pin 'u_ddr3_infrastructure/gen_ui_extra_clocks.u_bufg_ui_addn_clk_1/O'
 INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:25:49 ; elapsed = 00:26:00 . Memory (MB): peak = 3043.105 ; gain = 2662.789
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:23:13 ; elapsed = 00:23:21 . Memory (MB): peak = 3044.434 ; gain = 2663.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -17468,7 +17467,7 @@ Start Timing Optimization
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:26:32 ; elapsed = 00:26:43 . Memory (MB): peak = 3130.246 ; gain = 2749.930
+Finished Timing Optimization : Time (s): cpu = 00:23:53 ; elapsed = 00:24:01 . Memory (MB): peak = 3134.711 ; gain = 2753.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -17507,7 +17506,7 @@ Start Technology Mapping
 INFO: [Synth 8-4480] The timing for the instance mb_subsystem_i/microblaze_0/U0/MicroBlaze_Core_I/Frequency.Core/MMU_I1/Using_TLBS.UTLB_I/MMU_UTLB_RAM_I/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance mb_subsystem_i/microblaze_0/U0/MicroBlaze_Core_I/Frequency.Core/MMU_I1/Using_TLBS.UTLB_I/MMU_UTLB_RAM_I/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:27:27 ; elapsed = 00:27:41 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished Technology Mapping : Time (s): cpu = 00:24:42 ; elapsed = 00:24:52 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -17694,7 +17693,7 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:635]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:27:34 ; elapsed = 00:27:48 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished IO Insertion : Time (s): cpu = 00:24:48 ; elapsed = 00:24:58 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -17707,7 +17706,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:27:34 ; elapsed = 00:27:48 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished Renaming Generated Instances : Time (s): cpu = 00:24:49 ; elapsed = 00:24:59 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -17719,25 +17718,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:27:51 ; elapsed = 00:28:05 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:25:04 ; elapsed = 00:25:14 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:27:52 ; elapsed = 00:28:06 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished Renaming Generated Ports : Time (s): cpu = 00:25:05 ; elapsed = 00:25:15 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:27:54 ; elapsed = 00:28:09 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished Handling Custom Attributes : Time (s): cpu = 00:25:08 ; elapsed = 00:25:18 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:27:55 ; elapsed = 00:28:09 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished Renaming Generated Nets : Time (s): cpu = 00:25:08 ; elapsed = 00:25:18 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -17847,11 +17846,11 @@ Report Cell Usage:
 |92    |OBUFT                  |     8|
 +------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:27:55 ; elapsed = 00:28:09 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Finished Writing Synthesis Report : Time (s): cpu = 00:25:08 ; elapsed = 00:25:18 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 25779 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:06:54 ; elapsed = 00:26:32 . Memory (MB): peak = 3150.434 ; gain = 2388.301
-Synthesis Optimization Complete : Time (s): cpu = 00:27:55 ; elapsed = 00:28:10 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+Synthesis Optimization Runtime : Time (s): cpu = 00:06:14 ; elapsed = 00:23:47 . Memory (MB): peak = 3155.676 ; gain = 2388.516
+Synthesis Optimization Complete : Time (s): cpu = 00:25:08 ; elapsed = 00:25:19 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 6920 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
@@ -17890,13 +17889,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-3007 Infos, 797 Warnings, 1 Critical Warnings and 0 Errors encountered.
+3006 Infos, 797 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:28:38 ; elapsed = 00:29:04 . Memory (MB): peak = 3150.434 ; gain = 2770.117
+synth_design: Time (s): cpu = 00:25:47 ; elapsed = 00:26:07 . Memory (MB): peak = 3155.676 ; gain = 2774.816
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.runs/synth_1/mb_subsystem_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 3150.434 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 3155.676 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file mb_subsystem_wrapper_utilization_synth.rpt -pb mb_subsystem_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.823 . Memory (MB): peak = 3150.434 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  4 09:46:11 2018...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.746 . Memory (MB): peak = 3155.676 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 17 00:10:03 2018...
