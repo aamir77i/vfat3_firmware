@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Sun Apr 22 21:20:33 2018
+//Date        : Sat Apr 28 00:58:00 2018
 //Host        : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target mb_subsystem.bd
 //Design      : mb_subsystem
@@ -3735,6 +3735,7 @@ module mb_subsystem
   wire axi_uartlite_0_uart_TxD;
   wire [31:0]axis_clock_converter_0_m_axis_tdata;
   wire axis_clock_converter_0_m_axis_tvalid;
+  wire bitslip_Generator_0_busy;
   wire bitslip_signal;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_locked;
@@ -4856,6 +4857,7 @@ module mb_subsystem
   mb_subsystem_bitslip_Generator_0_0 bitslip_Generator_0
        (.bitslip(bitslip_signal),
         .bitslip_ena(Receiver_logic_gpio_io_o1),
+        .busy(bitslip_Generator_0_busy),
         .clk_40MHz(CLK_40mhZ),
         .data_in(F1_F2_IN),
         .rst_n(proc_sys_reset_1_peripheral_aresetn),
@@ -4890,6 +4892,11 @@ module mb_subsystem
        (.clk(CLK_40mhZ),
         .probe0(AP_Generator_0_data_out),
         .probe1(inverse_reverse_TX_data_out),
+        .probe10(bitslip_signal),
+        .probe11(Receiver_logic_gpio_io_o1),
+        .probe12(Receiver_logic_success),
+        .probe13(bitslip_Generator_0_busy),
+        .probe14(tx_controller_hier_EXT_RST),
         .probe2(F1_F2_OUT),
         .probe3(F1_F2_IN),
         .probe4(Receiver_logic_dv),

@@ -69,7 +69,7 @@ module bitslip_Generator(
           begin  //defaults
            
            busy<=1;
-           //success<=0;
+           ///success<=0;
            bitslip<=0;
            wait_cnt_en<=0;
            wait_cnt_rst<=0;
@@ -91,7 +91,7 @@ module bitslip_Generator(
                         Bitslip_cnt_rst<=1;
                       end       
                 CHECK : begin
-                    
+                    success<=0;
                    if ((data_in == 8'h7e && data_in_p == 8'h81) || ( data_in == 8'h81 && data_in_p == 8'h7e) )begin
                       state <= FINISH;
                       success<=1;end

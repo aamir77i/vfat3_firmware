@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 22 21:21:00 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Apr 28 00:58:29 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="xilinx.com:kc705:part0:1.0" DEVICE="7k325t" NAME="mb_subsystem" PACKAGE="ffg900" SPEEDGRADE="-2"/>
 
@@ -9294,6 +9294,7 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="bit_slip_gpio_io_o">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe11"/>
             <CONNECTION INSTANCE="bitslip_Generator_0" PORT="bitslip_ena"/>
           </CONNECTIONS>
         </PORT>
@@ -9392,15 +9393,21 @@
         <PORT DIR="O" NAME="bitslip" SIGIS="undef" SIGNAME="bitslip_Generator_0_bitslip">
           <CONNECTIONS>
             <CONNECTION INSTANCE="RX_deSERIALIZER" PORT="bitslip"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe10"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="success" SIGIS="undef" SIGNAME="bitslip_Generator_0_success">
           <CONNECTIONS>
             <CONNECTION INSTANCE="F1_F2_FILTER_0" PORT="bit_aligned"/>
             <CONNECTION INSTANCE="success" PORT="gpio_io_i"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe12"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="busy" SIGIS="undef"/>
+        <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="bitslip_Generator_0_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe13"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -10848,7 +10855,6 @@
         </PORT>
         <PORT CLKFREQUENCY="40000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="clk_40MHz"/>
             <CONNECTION INSTANCE="inverse_reverse_RX" PORT="clk"/>
             <CONNECTION INSTANCE="F1_F2_FILTER_0" PORT="clk40"/>
             <CONNECTION INSTANCE="AP_Generator_0" PORT="clk"/>
@@ -10860,15 +10866,16 @@
             <CONNECTION INSTANCE="axis_clock_converter_1" PORT="m_axis_aclk"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="TX_SERIALIZER" PORT="clk_div_in"/>
+            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="clk_40MHz"/>
             <CONNECTION INSTANCE="tx_controller_hier_axi_clock_converter_1" PORT="m_axi_aclk"/>
+            <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="clk_40MHz"/>
+            <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="tx_controller_hier_done_LV1A_done_from_tx_controller" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="tx_controller_hier_done_LV1A_axi_clock_converter_done" PORT="m_axi_aclk"/>
             <CONNECTION INSTANCE="tx_controller_hier_done_BIST_BIST_END_from_tx_controller" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="tx_controller_hier_done_BIST_axi_clock_converter_BIST_END" PORT="m_axi_aclk"/>
             <CONNECTION INSTANCE="tx_controller_hier_BIST_CYCLES_BIST_CYCLES_from_tx_controller" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="tx_controller_hier_BIST_CYCLES_axi_clock_converter_BIST_CYC" PORT="m_axi_aclk"/>
-            <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="clk_40MHz"/>
-            <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
@@ -10895,7 +10902,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="10"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="15"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2017"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="4"/>
@@ -14070,6 +14077,31 @@
             <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="INV_RX"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe10" RIGHT="0" SIGIS="undef" SIGNAME="bitslip_Generator_0_bitslip">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="bitslip"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe11" RIGHT="0" SIGIS="undef" SIGNAME="bit_slip_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bit_slip" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe12" RIGHT="0" SIGIS="undef" SIGNAME="bitslip_Generator_0_success">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="success"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe13" RIGHT="0" SIGIS="undef" SIGNAME="bitslip_Generator_0_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe14" RIGHT="0" SIGIS="undef" SIGNAME="tx_controller_hier_TX_CONTROLLER_0_EXT_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="EXT_RST"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -14087,9 +14119,9 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="inverse_reverse_RX_data_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="data_in"/>
             <CONNECTION INSTANCE="F1_F2_FILTER_0" PORT="d_in"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="40000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out3">
@@ -21473,7 +21505,6 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_intc" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="inverse_reverse_RX" PORT="rst_n"/>
             <CONNECTION INSTANCE="F1_F2_FILTER_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="AP_Generator_0" PORT="rst_n"/>
@@ -21494,6 +21525,7 @@
             <CONNECTION INSTANCE="axis_clock_converter_1" PORT="s_axis_aresetn"/>
             <CONNECTION INSTANCE="axis_clock_converter_1" PORT="m_axis_aresetn"/>
             <CONNECTION INSTANCE="mig_7series_0" PORT="aresetn"/>
+            <CONNECTION INSTANCE="bitslip_Generator_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S01_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="S02_ARESETN"/>
@@ -21518,6 +21550,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M13_ARESETN"/>
             <CONNECTION INSTANCE="tx_controller_hier_axi_clock_converter_1" PORT="m_axi_aresetn"/>
             <CONNECTION INSTANCE="tx_controller_hier_axi_clock_converter_1" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="tx_controller_hier_done_LV1A_done_from_tx_controller" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="tx_controller_hier_done_LV1A_axi_clock_converter_done" PORT="m_axi_aresetn"/>
             <CONNECTION INSTANCE="tx_controller_hier_done_LV1A_axi_clock_converter_done" PORT="s_axi_aresetn"/>
@@ -21527,7 +21560,6 @@
             <CONNECTION INSTANCE="tx_controller_hier_BIST_CYCLES_BIST_CYCLES_from_tx_controller" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="tx_controller_hier_BIST_CYCLES_axi_clock_converter_BIST_CYC" PORT="m_axi_aresetn"/>
             <CONNECTION INSTANCE="tx_controller_hier_BIST_CYCLES_axi_clock_converter_BIST_CYC" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="tx_controller_hier_TX_CONTROLLER_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -22725,6 +22757,7 @@
         <PORT DIR="O" NAME="EXT_RST" SIGIS="rst" SIGNAME="tx_controller_hier_TX_CONTROLLER_0_EXT_RST">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="EXT_RST"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe14"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="40000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out3">

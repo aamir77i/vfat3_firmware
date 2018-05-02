@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Apr 17 09:40:53 2018">
+<application name="pa" timeStamp="Thu Apr 26 15:01:51 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="5b32ef3744ee4288852c798501819c96" type="ProjectID"/>
 <property name="ProjectIteration" value="97" type="ProjectIteration"/>
@@ -50,9 +50,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="LaunchOpenTarget" value="3" type="JavaHandler"/>
 <property name="LaunchProgramFpga" value="47" type="JavaHandler"/>
 <property name="MakeRSBConnection" value="2" type="JavaHandler"/>
-<property name="NewExportHardware" value="88" type="JavaHandler"/>
+<property name="NewExportHardware" value="90" type="JavaHandler"/>
 <property name="NewFile" value="1" type="JavaHandler"/>
-<property name="NewLaunchHardware" value="91" type="JavaHandler"/>
+<property name="NewLaunchHardware" value="92" type="JavaHandler"/>
 <property name="NewProject" value="2" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="69" type="JavaHandler"/>
 <property name="OpenExample" value="1" type="JavaHandler"/>
@@ -105,7 +105,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ApplyRSBMultiAutomationDialog_CHECKBOX_TREE" value="1" type="GuiHandlerData"/>
 <property name="BaseDialog_CANCEL" value="22" type="GuiHandlerData"/>
 <property name="BaseDialog_NO" value="1" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="154" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="157" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="3" type="GuiHandlerData"/>
 <property name="BaseReportTab_RERUN" value="16" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OK" value="66" type="GuiHandlerData"/>
@@ -134,20 +134,20 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="LaunchPanel_GENERATE_SCRIPTS_ONLY" value="1" type="GuiHandlerData"/>
 <property name="LaunchPanel_LAUNCH_RUNS_ON_LOCAL_HOST" value="1" type="GuiHandlerData"/>
 <property name="MainMenuMgr_DESIGN_HUBS" value="2" type="GuiHandlerData"/>
-<property name="MainMenuMgr_EDIT" value="4" type="GuiHandlerData"/>
-<property name="MainMenuMgr_EXPORT" value="56" type="GuiHandlerData"/>
-<property name="MainMenuMgr_FILE" value="130" type="GuiHandlerData"/>
+<property name="MainMenuMgr_EDIT" value="6" type="GuiHandlerData"/>
+<property name="MainMenuMgr_EXPORT" value="60" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FILE" value="140" type="GuiHandlerData"/>
 <property name="MainMenuMgr_FLOW" value="6" type="GuiHandlerData"/>
 <property name="MainMenuMgr_HELP" value="4" type="GuiHandlerData"/>
 <property name="MainMenuMgr_IMPORT" value="23" type="GuiHandlerData"/>
-<property name="MainMenuMgr_OPEN_RECENT_FILE" value="54" type="GuiHandlerData"/>
-<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="70" type="GuiHandlerData"/>
+<property name="MainMenuMgr_OPEN_RECENT_FILE" value="57" type="GuiHandlerData"/>
+<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="77" type="GuiHandlerData"/>
 <property name="MainMenuMgr_REPORT" value="8" type="GuiHandlerData"/>
 <property name="MainMenuMgr_TOOLS" value="40" type="GuiHandlerData"/>
 <property name="MainMenuMgr_VIEW" value="6" type="GuiHandlerData"/>
 <property name="MainMenuMgr_WINDOW" value="28" type="GuiHandlerData"/>
 <property name="MainToolbarMgr_RUN" value="11" type="GuiHandlerData"/>
-<property name="MainWinMenuMgr_LAYOUT" value="21" type="GuiHandlerData"/>
+<property name="MainWinMenuMgr_LAYOUT" value="23" type="GuiHandlerData"/>
 <property name="Microblaze_Wizard_General_Settings_ENABLE_DISCRETE_PORTS" value="2" type="GuiHandlerData"/>
 <property name="Microblaze_Wizard_General_Settings_ENABLE_MICROBLAZE_DEBUG_MODULE_INTERFACE" value="1" type="GuiHandlerData"/>
 <property name="Microblaze_Wizard_General_Settings_SELECT_IMPLEMENTATION_TO_OPTIMIZE_AREA" value="5" type="GuiHandlerData"/>
@@ -155,7 +155,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="Microblaze_Wizard_General_Settings_USE_INSTRUCTION_AND_DATA_CACHES" value="5" type="GuiHandlerData"/>
 <property name="Microblaze_Wizard_General_Settings_USE_MEMORY_MANAGEMENT" value="3" type="GuiHandlerData"/>
 <property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="8" type="GuiHandlerData"/>
-<property name="NewExportHardwareDialog_INCLUDE_BITSTREAM" value="14" type="GuiHandlerData"/>
+<property name="NewExportHardwareDialog_INCLUDE_BITSTREAM" value="15" type="GuiHandlerData"/>
 <property name="NewIpWizard_IP_DEFINITION_SOURCE_LOCATION" value="1" type="GuiHandlerData"/>
 <property name="NewIpWizard_PACKAGE_SPECIFIED_DIRECTORY_CHOOSE" value="1" type="GuiHandlerData"/>
 <property name="OpenTargetWizard_CONNECT_TO" value="1" type="GuiHandlerData"/>
@@ -171,9 +171,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_CREATE_TOP_HDL" value="2" type="GuiHandlerData"/>
 <property name="PACommandNames_DISCONNECT_RSB_PIN" value="9" type="GuiHandlerData"/>
 <property name="PACommandNames_EDIT_IN_IP_PACKAGER" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_EXPORT_HARDWARE" value="19" type="GuiHandlerData"/>
+<property name="PACommandNames_EXPORT_HARDWARE" value="21" type="GuiHandlerData"/>
 <property name="PACommandNames_IP_PACKAGER_WIZARD" value="2" type="GuiHandlerData"/>
-<property name="PACommandNames_LAUNCH_HARDWARE" value="26" type="GuiHandlerData"/>
+<property name="PACommandNames_LAUNCH_HARDWARE" value="27" type="GuiHandlerData"/>
 <property name="PACommandNames_NEW_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_OPEN_PROJECT" value="4" type="GuiHandlerData"/>
 <property name="PACommandNames_OPEN_TARGET_WIZARD" value="1" type="GuiHandlerData"/>
@@ -228,8 +228,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY" value="5" type="GuiHandlerData"/>
 <property name="SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="SrcMenu_REFRESH_HIERARCHY" value="1" type="GuiHandlerData"/>
-<property name="StaleMoreAction_FORCE_UP_TO_DATE" value="11" type="GuiHandlerData"/>
-<property name="StaleMoreAction_OUT_OF_DATE_DETAILS" value="11" type="GuiHandlerData"/>
+<property name="StaleMoreAction_FORCE_UP_TO_DATE" value="12" type="GuiHandlerData"/>
+<property name="StaleMoreAction_OUT_OF_DATE_DETAILS" value="12" type="GuiHandlerData"/>
 <property name="StaleRunDialog_YES" value="1" type="GuiHandlerData"/>
 <property name="StateMonitor_RESET_RUN" value="1" type="GuiHandlerData"/>
 <property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="11" type="GuiHandlerData"/>
@@ -259,7 +259,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="XPG_IPSymbol_SHOW_DISABLED_PORTS" value="3" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="62" type="GuiMode"/>
+<property name="GuiMode" value="63" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="39" type="TclMode"/>
 </item>

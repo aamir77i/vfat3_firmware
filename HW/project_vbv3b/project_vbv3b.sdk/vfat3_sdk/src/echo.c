@@ -150,6 +150,8 @@ void write_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8
 u32 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
 void test_controller(void);
 int BIST(int sd);
+void ext_reset(u8 value,int sd);
+void assert_reset(void);
 /***************** Macros (Inline Functions) Definitions *********************/
 //int send_sync_command(XLlFifo *InstancePtr_tx);
 
@@ -296,47 +298,207 @@ int BIST(int sd)
 
 
 }
-
-int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd,u8 no_reply)// sends 03 sync commands to the chip hard sync
-
+void ext_reset(u8 value,int sd)
 {
-	int Status;
+	u32 ack;
+#ifdef 	XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR
 
-	u32 i;
-	u8 success;
-	u32 Rcv_len=0;
-	u32 data_len=3;
-//u8 verbose_mode
 
+		XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,28, value);//ext_rst is 0
+	ack = 0;
+
+
+#endif
+
+#ifndef 	XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR
+	ack = -1;
+
+#endif
+
+	SendReply(sd,DestinationBuffer,4);
+
+}
+
+
+void assert_reset(void)
+{
 
 #ifdef 	XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR
 
-		XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,24, 0x00);
+		XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,6*4, 0x00);//it should be zero its bits inverse signal for transceiver
 
-		XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,28, 0x00);//ext_rst is 0
+		XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,7*4, 1);//ext_rst is 1 active = RESET VFAT3
+
+
+		XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,7*4, 0);//ext_rst is 0
+		//XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,28, 1);//ext_rst is 1
+	//	usleep(10000);
+
+	//	usleep(10000);usleep(10000);usleep(10000);usleep(10000);usleep(10000);
+						//usleep(10000);usleep(10000);usleep(10000);usleep(10000);
+	//	usleep(10000);usleep(10000);usleep(10000);
+
+		//XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,28, 0x00);//ext_rst is 0
+
+
+
+
+
+
+		//
+
 
 		//XGpio_WriteReg((XPAR_REVERSE_TXD_TX_REVERSE_BASEADDR),0, 1);
 
 		xil_printf("\r\n transceiver direction reversed and inverted \r\n");
 
 #endif
+
+
+
+
+}
+
+int Initialize_FIFO(u16 DeviceId)
+
+{
+	int Status;
+xil_printf("\n\r--- Initializing FIFO ---\n\r");
+
+		Status = Initialize_fifo(&FifoInstance, FIFO_DEV_ID);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Axi Streaming TX FIFO Initialization failed\n\r");
+			xil_printf("--- Exiting main() ---\n\r");
+			return XST_FAILURE;
+		}
+
+		xil_printf("Successfully Initialized Axi Streaming FIFO \n\r");
+		//xil_printf("--- Exiting check_fifo() ---\n\r");
+
+		//return XST_SUCCESS;
+/* Initialize the Device Configuration Interface driver */
+Config = XLlFfio_LookupConfig(DeviceId);
+if (!Config) {
+	xil_printf("No config found for %d\r\n", DeviceId);
+	return XST_FAILURE;
+}
+
+
+
+/*
+ * This is where the virtual address would be used, this example
+ * uses physical address.
+ */
+Status = XLlFifo_CfgInitialize(&FifoInstance, Config, Config->BaseAddress);
+if (Status != XST_SUCCESS) {
+	xil_printf("Initialization failed\n\r");
+	return Status;
+}
+
+
+
+
+/* Check for the Reset value */
+Status = XLlFifo_Status(&FifoInstance);
+XLlFifo_IntClear(&FifoInstance,0xffffffff);
+Status = XLlFifo_Status(&FifoInstance);
+if(Status != 0x0) {
+	xil_printf("\n ERROR : Reset value of ISR0 : 0x%x\t"
+		    "Expected : 0x0\n\r",
+		    XLlFifo_Status(&FifoInstance));
+	return XST_FAILURE;
+}
+
+
+XLlFifo_Reset(&FifoInstance);
+
+//xil_printf("vacancy= %d\r\n",XLlFifo_iTxVacancy(&FifoInstance));
+
+}
+int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd,u8 no_reply)// sends 03 sync commands to the chip hard sync
+
+{
+	int Status;
+
+	u32 i=0;
+	u8 success;
+	u32 Rcv_len=0;
+	u32 data_len=3;
+//u8 verbose_mode
+/*
+
+#ifdef 	XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR
+
+		XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,6*4, 0x00);//it should be zero its bits inverse signal for transceiver
+
+		//XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,7*4, 1);//ext_rst is 1 active = RESET VFAT3
+
+
+	//	XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,7*4, 0);//ext_rst is 0
+		//XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,28, 1);//ext_rst is 1
+	//	usleep(10000);
+
+	//	usleep(10000);usleep(10000);usleep(10000);usleep(10000);usleep(10000);
+						//usleep(10000);usleep(10000);usleep(10000);usleep(10000);
+	//	usleep(10000);usleep(10000);usleep(10000);
+
+		//XGpio_WriteReg(XPAR_TX_CONTROLLER_HIER_TX_CONTROLLER_0_BASEADDR,28, 0x00);//ext_rst is 0
+
+
+
+
+
+
+		//
+
+
+		//XGpio_WriteReg((XPAR_REVERSE_TXD_TX_REVERSE_BASEADDR),0, 1);
+
+		xil_printf("\r\n transceiver direction reversed and inverted \r\n");
+
+#endif
+		*/
 //////////////////////end setting vbrad board reqirements////////////////////////
 
+/*
+#ifdef 		XPAR_BIT_SLIP_BASEADDR
+			#ifdef 		XPAR_SUCCESS_BASEADDR
+				//ch=!ch;
+			//xil_printf("\r\n Aligning bits . ");
+			XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),	4, 0);//set as OUTPUT
+						XGpio_WriteReg((XPAR_SUCCESS_BASEADDR),	4, 1);//set as INPUT
+			do{
 
 
+
+
+				//if(recv_buf[1]==0xaa)//bit slip pulse
+				{
+				XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),0, 0);//
+				XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),0, 1);//rising edge of bitslip signal from microblaze
+				XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),0, 0);//
+
+				xil_printf(".");
+				}
+						//xil_printf("Hi Henri i receive ur message\r\n %x,%x %x",recv_buf[0],recv_buf[1],recv_buf[2],recv_buf[3]);
+				usleep(1000);usleep(1000);usleep(1000);
+				//usleep(1000);usleep(1000);usleep(1000);
+
+				success = XGpio_ReadReg((XPAR_SUCCESS_BASEADDR),0);
+				//XLlFifo_Reset(&FifoInstance);
+				xil_printf(" success =%d, i= %d\n\r", success, i);
+			}while(success==0 && i++ <  50);
+
+		#endif
+	#endif
+
+*/
+
+	Initialize_FIFO(DeviceId);
 		xil_printf("\n\r--- Entering send_sync_command() ---\n\r");
 		//xil_printf("\n\r sourceBuffer  address = %p \n\r",(void*)SourceBuffer);
 		//xil_printf("\n\r source_address = %p \n\r",(void*)SourceAddr);
-		for (i=0;i<data_len;i++)
-				{
-					 *(SourceAddr + i) = 0x17;
-					//else if(i==(MAX_DATA_BUFFER_SIZE-1))*(SourceAddr + i) = 0xe8;
 
-			//if(i>=0 && i< 3){*(SourceAddr + i) = 0x17;}//sync
-			 //if (i>=500)
-		//	 {*(SourceAddr + i) = 0xe8;}// syncack
-			//else {*(SourceAddr + i) = 0xe8;}
-				}
 		//xil_printf("\n\r source address = %p \n\r",(void *)SourceAddr);
 		//XLlFifo_Config *Config;
 
@@ -355,18 +517,23 @@ int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd
 */
 
 
+
+
+
 #ifdef 		XPAR_BIT_SLIP_BASEADDR
 			#ifdef 		XPAR_SUCCESS_BASEADDR
 				//ch=!ch;
 			//xil_printf("\r\n Aligning bits . ");
+			XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),	4, 0);//set as OUTPUT
+						XGpio_WriteReg((XPAR_SUCCESS_BASEADDR),	4, 1);//set as INPUT
 			do{
 
 
-			XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),	4, 0);//set as OUTPUT
-			XGpio_WriteReg((XPAR_SUCCESS_BASEADDR),	4, 1);//set as INPUT
+
 
 				//if(recv_buf[1]==0xaa)//bit slip pulse
 				{
+				XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),0, 0);//
 				XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),0, 1);//rising edge of bitslip signal from microblaze
 				XGpio_WriteReg((XPAR_BIT_SLIP_BASEADDR),0, 0);//
 
@@ -374,63 +541,24 @@ int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd
 				}
 						//xil_printf("Hi Henri i receive ur message\r\n %x,%x %x",recv_buf[0],recv_buf[1],recv_buf[2],recv_buf[3]);
 				usleep(1000);usleep(1000);usleep(1000);
+				//usleep(1000);usleep(1000);usleep(1000);
 				success = XGpio_ReadReg((XPAR_SUCCESS_BASEADDR),0);
-				XLlFifo_Reset(&FifoInstance);
+				//XLlFifo_Reset(&FifoInstance);
+				xil_printf(" success =%d, i= %d\n\r", success, i);
 			}while(success==0 && i++ <  50);
 
 		#endif
 	#endif
-			xil_printf("\n\r--- Initializing fifo ---\n\r");
 
-					Status = Initialize_fifo(&FifoInstance, FIFO_DEV_ID);
-					if (Status != XST_SUCCESS) {
-						xil_printf("Axi Streaming TX FIFO Initialization failed\n\r");
-						xil_printf("--- Exiting main() ---\n\r");
-						return XST_FAILURE;
-					}
-
-					xil_printf("Successfully Initialized Axi Streaming FIFO \n\r");
-					//xil_printf("--- Exiting check_fifo() ---\n\r");
-
-					//return XST_SUCCESS;
-			/* Initialize the Device Configuration Interface driver */
-			Config = XLlFfio_LookupConfig(DeviceId);
-			if (!Config) {
-				xil_printf("No config found for %d\r\n", DeviceId);
-				return XST_FAILURE;
-			}
-
-
-
-			/*
-			 * This is where the virtual address would be used, this example
-			 * uses physical address.
-			 */
-			Status = XLlFifo_CfgInitialize(&FifoInstance, Config, Config->BaseAddress);
-			if (Status != XST_SUCCESS) {
-				xil_printf("Initialization failed\n\r");
-				return Status;
-			}
-
-
-
-
-			/* Check for the Reset value */
-			Status = XLlFifo_Status(&FifoInstance);
-			XLlFifo_IntClear(&FifoInstance,0xffffffff);
-			Status = XLlFifo_Status(&FifoInstance);
-			if(Status != 0x0) {
-				xil_printf("\n ERROR : Reset value of ISR0 : 0x%x\t"
-					    "Expected : 0x0\n\r",
-					    XLlFifo_Status(&FifoInstance));
-				return XST_FAILURE;
-			}
-
-
-			XLlFifo_Reset(&FifoInstance);
-
-			xil_printf("vacancy= %d\r\n",XLlFifo_iTxVacancy(&FifoInstance));
+			///XLlFifo_Reset(&FifoInstance);
 			/* Transmit the Data Stream */
+
+			for (i=0;i<data_len;i++)
+							{
+								 *(SourceAddr + i) = 0x17;
+
+							}
+			XLlFifo_Reset(&FifoInstance);
 			Status = TxSend(&FifoInstance, SourceAddr,data_len,0);
 			if (Status != XST_SUCCESS){
 				xil_printf("Transmisson of Data failed\n\r");
@@ -443,6 +571,11 @@ int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd
 
 			/* Revceive the Data Stream */
 			Rcv_len = RxReceive(&FifoInstance, DestinationBuffer,0);
+
+			for(i=0;i<Rcv_len;i++)
+				xil_printf("receive(%d)=%x \r\n", i,*(DestinationBuffer+i));
+
+
 			if (Status != XST_SUCCESS){
 				xil_printf("Receiving data failed");
 				return XST_FAILURE;
@@ -452,8 +585,9 @@ int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd
 			u16 sync_ok=0;
 			if(Rcv_len<MAX_DATA_BUFFER_SIZE)
 			{
+				xil_printf("receivelength = %d\r\n",Rcv_len);
 			for(i=0;i<Rcv_len;i++)
-				if((u8)*(DestinationBuffer+i)== 0x3a ) sync_ok=1; else sync_ok=0;
+				if((*(DestinationBuffer+i) & 0x000000ff)== 0x3a ) sync_ok=1; else sync_ok=0;
 			if(sync_ok==1)
 			xil_printf("Sync Ok\r\n ");
 			else
@@ -465,7 +599,7 @@ int send_sync_command(XLlFifo *InstancePtr, u16 DeviceId,u32  *SourceAddr,int sd
 				XLlFifo_Reset(&FifoInstance);
 			}
 			if(no_reply==0)
-			SendReply(sd,DestinationBuffer,Rcv_len);
+			SendReply(sd,DestinationBuffer,1);
 			/* handle request
 					if ((nwrote = write(sd, DestinationBuffer, Rcv_len)) < 0) {
 						xil_printf("%s: ERROR responding to client echo request. received = %d, written = %d\r\n",
@@ -910,7 +1044,7 @@ if(*recv_buf==0xca){
 		xil_printf("register_address=%x\r\n",register_address);
 		xil_printf("register_data=%x\r\n",register_data);
 		xil_printf("mode =%x\r\n",mode);
-		verbose_mode=1;
+		verbose_mode=0;
 		if(mode ==0)
 		Read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer, verbose_mode );
 		else if(mode ==1)	write_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
@@ -927,6 +1061,8 @@ if(*recv_buf==0xca){
 
 	else if (*(recv_buf+1)==0x00 && *(recv_buf+2)==0x02){
 			xil_printf("\n\rHard reset vfat3\r\n");
+			assert_reset();
+			send_sync_command(&FifoInstance, FIFO_DEV_ID,SourceAddr,sd,1);
 			send_sync_command(&FifoInstance, FIFO_DEV_ID,SourceAddr,sd,0);
 			//send_sync_command(&FifoInstance, FIFO_DEV_ID,SourceAddr,verbose_mode);
 			//send_sync_command(&FifoInstance, FIFO_DEV_ID,SourceAddr,verbose_mode);
@@ -950,12 +1086,11 @@ if(*recv_buf==0xca){
 		}
 
 	else if (*(recv_buf+1)==0x00 && *(recv_buf+2)==0x04){
-				xil_printf("\n\rEntering crc checking function\r\n");
+				xil_printf("\n\rEntering VFAT3 EXT-RESET\r\n");
+				xil_printf("\n\rreset >> %d\r\n", *(recv_buf+3));
+				ext_reset(*(recv_buf+3),sd);
 
-	crc=crc16(data_crc,sizeof(data_crc));
-	crc=swapBytes((unsigned short)crc);
-	xil_printf("crc=%04x, size= %d",crc,sizeof(data_crc));
-	}
+		}
 
 	else if (*(recv_buf+1)==0x00 && *(recv_buf+2)==0x05){
 					xil_printf("\n\rEntering in Iref adjustment mode function\r\n");

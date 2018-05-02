@@ -616,8 +616,10 @@ proc create_hier_cell_tx_controller_hier { parentCell nameHier } {
   set TX_CONTROLLER_0 [ create_bd_cell -type ip -vlnv cern.ch:user:TX_CONTROLLER:1.0 TX_CONTROLLER_0 ]
 
   set_property -dict [ list \
+   CONFIG.SUPPORTS_NARROW_BURST {0} \
    CONFIG.NUM_READ_OUTSTANDING {1} \
    CONFIG.NUM_WRITE_OUTSTANDING {1} \
+   CONFIG.MAX_BURST_LENGTH {1} \
  ] [get_bd_intf_pins /tx_controller_hier/TX_CONTROLLER_0/s00_axi]
 
   # Create instance: axi_clock_converter_1, and set properties
@@ -1069,7 +1071,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {10} \
+   CONFIG.C_NUM_OF_PROBES {15} \
    CONFIG.C_PROBE0_WIDTH {8} \
    CONFIG.C_PROBE1_WIDTH {8} \
    CONFIG.C_PROBE2_WIDTH {32} \
@@ -1283,8 +1285,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net RXD_P_1 [get_bd_ports RXD_P] [get_bd_pins DIFF_To_single_0/RXD_P]
   connect_bd_net -net Receiver_logic_data_in_to_device [get_bd_pins RX_deSERIALIZER/data_in_to_device] [get_bd_pins inverse_reverse_RX/data_in]
   connect_bd_net -net Receiver_logic_dv [get_bd_pins F1_F2_FILTER_0/dv] [get_bd_pins axis_clock_converter_0/s_axis_tvalid] [get_bd_pins ila_0/probe4]
-  connect_bd_net -net Receiver_logic_gpio_io_o1 [get_bd_pins bit_slip/gpio_io_o] [get_bd_pins bitslip_Generator_0/bitslip_ena]
-  connect_bd_net -net Receiver_logic_success [get_bd_pins F1_F2_FILTER_0/bit_aligned] [get_bd_pins bitslip_Generator_0/success] [get_bd_pins success/gpio_io_i]
+  connect_bd_net -net Receiver_logic_gpio_io_o1 [get_bd_pins bit_slip/gpio_io_o] [get_bd_pins bitslip_Generator_0/bitslip_ena] [get_bd_pins ila_0/probe11]
+  connect_bd_net -net Receiver_logic_success [get_bd_pins F1_F2_FILTER_0/bit_aligned] [get_bd_pins bitslip_Generator_0/success] [get_bd_pins ila_0/probe12] [get_bd_pins success/gpio_io_i]
   connect_bd_net -net S_to_diff_0_out_n [get_bd_ports txd_n] [get_bd_pins S_to_diff_0/out_n]
   connect_bd_net -net S_to_diff_0_out_p [get_bd_ports txd_p] [get_bd_pins S_to_diff_0/out_p]
   connect_bd_net -net S_to_diff_1_out_n [get_bd_ports rxclk_320_n] [get_bd_pins S_to_diff_1/out_n]
@@ -1304,7 +1306,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_uartlite_0_interrupt [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In3]
   connect_bd_net -net axis_clock_converter_0_m_axis_tdata [get_bd_pins axis_clock_converter_1/m_axis_tdata] [get_bd_pins xlslice_0/Din]
   connect_bd_net -net axis_clock_converter_0_m_axis_tvalid [get_bd_pins AP_Generator_0/datavalid] [get_bd_pins axis_clock_converter_1/m_axis_tvalid]
-  connect_bd_net -net bitslip_signal [get_bd_pins RX_deSERIALIZER/bitslip] [get_bd_pins bitslip_Generator_0/bitslip]
+  connect_bd_net -net bitslip_Generator_0_busy [get_bd_pins bitslip_Generator_0/busy] [get_bd_pins ila_0/probe13]
+  connect_bd_net -net bitslip_signal [get_bd_pins RX_deSERIALIZER/bitslip] [get_bd_pins bitslip_Generator_0/bitslip] [get_bd_pins ila_0/probe10]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_ethernet_0/gtx_clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins rst_clk_wiz_0_125M/slowest_sync_clk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_clk_wiz_0_125M/dcm_locked]
   connect_bd_net -net clk_wiz_1_clk_out1 [get_bd_pins RX_deSERIALIZER/clk_in] [get_bd_pins TX_SERIALIZER/clk_in] [get_bd_pins clk_wiz_1/clk_out1]
@@ -1327,7 +1330,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net tx_controller_hier_BIST_START_0 [get_bd_ports BIST_START] [get_bd_pins ila_0/probe6] [get_bd_pins tx_controller_hier/BIST_START_0]
   connect_bd_net -net tx_controller_hier_BIST_end_to_processor [get_bd_pins ila_0/probe5] [get_bd_pins tx_controller_hier/BIST_end_to_processor]
   connect_bd_net -net tx_controller_hier_CALIB_ADC_ADDR [get_bd_ports CALIB_ADC_ADDR] [get_bd_pins tx_controller_hier/CALIB_ADC_ADDR]
-  connect_bd_net -net tx_controller_hier_EXT_RST [get_bd_ports EXT_RST] [get_bd_pins tx_controller_hier/EXT_RST]
+  connect_bd_net -net tx_controller_hier_EXT_RST [get_bd_ports EXT_RST] [get_bd_pins ila_0/probe14] [get_bd_pins tx_controller_hier/EXT_RST]
   connect_bd_net -net tx_controller_hier_INV_RX [get_bd_pins ila_0/probe9] [get_bd_pins inverse_reverse_RX/invert] [get_bd_pins tx_controller_hier/INV_RX]
   connect_bd_net -net tx_controller_hier_INV_TX [get_bd_pins ila_0/probe8] [get_bd_pins inverse_reverse_TX/invert] [get_bd_pins tx_controller_hier/INV_TX]
   connect_bd_net -net tx_controller_hier_PS_ADC_ADDR [get_bd_ports PS_ADC_ADDR] [get_bd_pins tx_controller_hier/PS_ADC_ADDR]

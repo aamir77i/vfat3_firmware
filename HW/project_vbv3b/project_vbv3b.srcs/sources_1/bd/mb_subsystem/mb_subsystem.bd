@@ -414,17 +414,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>bitslip_Generator_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="bitslip_Generator" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mb_subsystem_bitslip_Generator_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">bitslip_Generator</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>inverse_reverse_RX</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="inverse_reverse" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -723,7 +712,7 @@
           <spirit:configurableElementValue spirit:referenceId="C_PROBE2_WIDTH">32</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_PROBE1_WIDTH">8</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_PROBE0_WIDTH">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">10</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">15</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -864,6 +853,17 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">mb_subsystem_xlconstant_3_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>bitslip_Generator_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="bitslip_Generator" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mb_subsystem_bitslip_Generator_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">bitslip_Generator</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1119,7 +1119,6 @@
         <spirit:name>proc_sys_reset_1_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="proc_sys_reset_1" spirit:portRef="peripheral_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="microblaze_0_axi_intc" spirit:portRef="s_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="inverse_reverse_RX" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="F1_F2_FILTER_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="AP_Generator_0" spirit:portRef="rst_n"/>
@@ -1140,6 +1139,7 @@
         <spirit:internalPortReference spirit:componentRef="axis_clock_converter_1" spirit:portRef="s_axis_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axis_clock_converter_1" spirit:portRef="m_axis_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="mig_7series_0" spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="rst_n"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S02_ARESETN"/>
@@ -1263,7 +1263,6 @@
       <spirit:adHocConnection>
         <spirit:name>CLK_40mhZ</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_1" spirit:portRef="clk_out3"/>
-        <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="clk_40MHz"/>
         <spirit:internalPortReference spirit:componentRef="inverse_reverse_RX" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="F1_F2_FILTER_0" spirit:portRef="clk40"/>
         <spirit:internalPortReference spirit:componentRef="AP_Generator_0" spirit:portRef="clk"/>
@@ -1275,6 +1274,7 @@
         <spirit:internalPortReference spirit:componentRef="axis_clock_converter_1" spirit:portRef="m_axis_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="TX_SERIALIZER" spirit:portRef="clk_div_in"/>
+        <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="clk_40MHz"/>
         <spirit:internalPortReference spirit:componentRef="tx_controller_hier" spirit:portRef="clk_40MHz"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -1302,10 +1302,12 @@
         <spirit:name>bitslip_signal</spirit:name>
         <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="bitslip"/>
         <spirit:internalPortReference spirit:componentRef="RX_deSERIALIZER" spirit:portRef="bitslip"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe10"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>Receiver_logic_gpio_io_o1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="bit_slip" spirit:portRef="gpio_io_o"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe11"/>
         <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="bitslip_ena"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -1313,6 +1315,7 @@
         <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="success"/>
         <spirit:internalPortReference spirit:componentRef="F1_F2_FILTER_0" spirit:portRef="bit_aligned"/>
         <spirit:internalPortReference spirit:componentRef="success" spirit:portRef="gpio_io_i"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe12"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_locked</spirit:name>
@@ -1342,9 +1345,9 @@
       <spirit:adHocConnection>
         <spirit:name>F1_F2_IN</spirit:name>
         <spirit:internalPortReference spirit:componentRef="inverse_reverse_RX" spirit:portRef="data_out"/>
-        <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="data_in"/>
         <spirit:internalPortReference spirit:componentRef="F1_F2_FILTER_0" spirit:portRef="d_in"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe3"/>
+        <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="data_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>F1_F2_OUT</spirit:name>
@@ -1477,6 +1480,12 @@
         <spirit:name>tx_controller_hier_EXT_RST</spirit:name>
         <spirit:internalPortReference spirit:componentRef="tx_controller_hier" spirit:portRef="EXT_RST"/>
         <spirit:externalPortReference spirit:portRef="EXT_RST"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe14"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bitslip_Generator_0_busy</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bitslip_Generator_0" spirit:portRef="busy"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe13"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -1747,20 +1756,20 @@
         <spirit:externalPortReference spirit:portRef="m_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_clock_converter_1" spirit:portRef="m_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_clock_converter_1" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="TX_CONTROLLER_0" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="done_LV1A" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="done_BIST" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="BIST_CYCLES" spirit:portRef="s_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="TX_CONTROLLER_0" spirit:portRef="s00_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>CLK_40mhZ</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk_40MHz"/>
         <spirit:internalPortReference spirit:componentRef="axi_clock_converter_1" spirit:portRef="m_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="TX_CONTROLLER_0" spirit:portRef="clk_40MHz"/>
+        <spirit:internalPortReference spirit:componentRef="TX_CONTROLLER_0" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="done_LV1A" spirit:portRef="s_axi_aclk1"/>
         <spirit:internalPortReference spirit:componentRef="done_BIST" spirit:portRef="s_axi_aclk1"/>
         <spirit:internalPortReference spirit:componentRef="BIST_CYCLES" spirit:portRef="s_axi_aclk1"/>
-        <spirit:internalPortReference spirit:componentRef="TX_CONTROLLER_0" spirit:portRef="clk_40MHz"/>
-        <spirit:internalPortReference spirit:componentRef="TX_CONTROLLER_0" spirit:portRef="s00_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>TX_CONTROLLER_0_data_out</spirit:name>

@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun Apr 22 21:21:12 2018
-# Process ID: 7552
+# Start of session at: Sat Apr 28 00:58:50 2018
+# Process ID: 15064
 # Current directory: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.runs/synth_1
 # Command line: vivado.exe -log mb_subsystem_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_subsystem_wrapper.tcl
 # Log file: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.runs/synth_1/mb_subsystem_wrapper.vds
@@ -13,21 +13,21 @@ source mb_subsystem_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
-add_files: Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 380.605 ; gain = 140.816
+add_files: Time (s): cpu = 00:00:13 ; elapsed = 00:00:53 . Memory (MB): peak = 380.586 ; gain = 140.789
 Command: synth_design -top mb_subsystem_wrapper -part xc7k325tffg900-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-1223] The version limit for your license is '2018.04' and will expire in 8 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2018.04' and will expire in 2 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7624 
+INFO: Helper process launched with PID 8020 
 WARNING: [Synth 8-2611] redeclaration of ansi port RXD is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/imports/new/DIFF_To_single.v:29]
 WARNING: [Synth 8-2611] redeclaration of ansi port data_out is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/imports/new/AP_Generator.v:30]
 WARNING: [Synth 8-2611] redeclaration of ansi port out_p is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/imports/new/S_to_diff.v:29]
 WARNING: [Synth 8-2611] redeclaration of ansi port out_n is not allowed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/imports/new/S_to_diff.v:30]
 WARNING: [Synth 8-2611] redeclaration of ansi port BIST_end is not allowed [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/2068/edit_AXI_TX_CONTROLLER_v1_0.srcs/sources_1/new/counter_logic.v:71]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 563.934 ; gain = 183.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 565.219 ; gain = 184.633
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function xpm_fifo_getmemtype does not always return a value [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/f10a/hdl/lib_fifo_v1_0_rfs.vhd:358]
 WARNING: [Synth 8-2048] function get_read_mode does not always return a value [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/f10a/hdl/lib_fifo_v1_0_rfs.vhd:375]
@@ -463,7 +463,7 @@ WARNING: [Synth 8-6014] Unused sequential element grxd.rx_partial_pkt_reg was re
 INFO: [Synth 8-256] done synthesizing module 'ipic2axi_s' (55#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/68a8/hdl/axi_fifo_mm_s_v4_1_rfs.vhd:3967]
 INFO: [Synth 8-256] done synthesizing module 'axi_fifo_mm_s' (56#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/68a8/hdl/axi_fifo_mm_s_v4_1_rfs.vhd:5100]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_fifo_mm_s_0_0' (57#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_fifo_mm_s_0_0/synth/mb_subsystem_axi_fifo_mm_s_0_0.vhd:129]
-WARNING: [Synth 8-350] instance 'FIFO' of module 'mb_subsystem_axi_fifo_mm_s_0_0' requires 65 connections, but only 60 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4199]
+WARNING: [Synth 8-350] instance 'FIFO' of module 'mb_subsystem_axi_fifo_mm_s_0_0' requires 65 connections, but only 60 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4200]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_TX_SERIALIZER_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_TX_SERIALIZER_0/mb_subsystem_TX_SERIALIZER_0.v:58]
 	Parameter SYS_W bound to: 1 - type: integer 
 	Parameter DEV_W bound to: 8 - type: integer 
@@ -1107,7 +1107,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [
 INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (87#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_14_axi_clock_converter' (88#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/445f/hdl/axi_clock_converter_v2_1_vl_rfs.v:650]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_clock_converter_0_0' (89#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_0_0/synth/mb_subsystem_axi_clock_converter_0_0.v:58]
-WARNING: [Synth 8-350] instance 'axi_clock_converter_0' of module 'mb_subsystem_axi_clock_converter_0_0' requires 42 connections, but only 40 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4335]
+WARNING: [Synth 8-350] instance 'axi_clock_converter_0' of module 'mb_subsystem_axi_clock_converter_0_0' requires 42 connections, but only 40 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4336]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_ethernet_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/synth/mb_subsystem_axi_ethernet_0_0.v:59]
 INFO: [Synth 8-638] synthesizing module 'bd_1ed2' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/bd_0/synth/bd_1ed2.v:10]
 INFO: [Synth 8-638] synthesizing module 'bd_1ed2_c_counter_binary_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/bd_0/ip/ip_3/synth/bd_1ed2_c_counter_binary_0_0.vhd:68]
@@ -1379,7 +1379,7 @@ INFO: [Synth 8-256] done synthesizing module 'xlconstant_v1_1_3_xlconstant' (190
 INFO: [Synth 8-256] done synthesizing module 'bd_1ed2_xlconstant_0_0' (191#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/bd_0/ip/ip_4/synth/bd_1ed2_xlconstant_0_0.v:57]
 INFO: [Synth 8-256] done synthesizing module 'bd_1ed2' (192#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/bd_0/synth/bd_1ed2.v:10]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_ethernet_0_0' (193#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/synth/mb_subsystem_axi_ethernet_0_0.v:59]
-WARNING: [Synth 8-350] instance 'axi_ethernet_0' of module 'mb_subsystem_axi_ethernet_0_0' requires 62 connections, but only 61 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4376]
+WARNING: [Synth 8-350] instance 'axi_ethernet_0' of module 'mb_subsystem_axi_ethernet_0_0' requires 62 connections, but only 61 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4377]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_ethernet_0_dma_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_dma_0/synth/mb_subsystem_axi_ethernet_0_dma_0.vhd:170]
 	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
@@ -3978,7 +3978,7 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM ge
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_ethernet_0_dma_0' (280#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_dma_0/synth/mb_subsystem_axi_ethernet_0_dma_0.vhd:170]
-WARNING: [Synth 8-350] instance 'axi_ethernet_0_dma' of module 'mb_subsystem_axi_ethernet_0_dma_0' requires 106 connections, but only 105 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4438]
+WARNING: [Synth 8-350] instance 'axi_ethernet_0_dma' of module 'mb_subsystem_axi_ethernet_0_dma_0' requires 106 connections, but only 105 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4439]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_iic_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_iic_0_0/synth/mb_subsystem_axi_iic_0_0.vhd:91]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -4337,8 +4337,8 @@ INFO: [Synth 8-256] done synthesizing module 'axi_iic_v2_0_18_SRL_FIFO__paramete
 INFO: [Synth 8-256] done synthesizing module 'iic' (292#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/4185/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
 INFO: [Synth 8-256] done synthesizing module 'axi_iic' (293#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/4185/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_iic_0_0' (294#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_iic_0_0/synth/mb_subsystem_axi_iic_0_0.vhd:91]
-WARNING: [Synth 8-350] instance 'axi_iic_0' of module 'mb_subsystem_axi_iic_0_0' requires 27 connections, but only 26 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4544]
-INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_mem_intercon_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5615]
+WARNING: [Synth 8-350] instance 'axi_iic_0' of module 'mb_subsystem_axi_iic_0_0' requires 27 connections, but only 26 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4545]
+INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_mem_intercon_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5622]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1GJPW6P' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:540]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_m00_regslice_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_m00_regslice_0/synth/mb_subsystem_m00_regslice_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_15_axi_register_slice' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:2300]
@@ -4970,7 +4970,7 @@ INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_15_axi_reg
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_m01_regslice_0' (299#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_m01_regslice_0/synth/mb_subsystem_m01_regslice_0.v:58]
 WARNING: [Synth 8-350] instance 'm01_regslice' of module 'mb_subsystem_m01_regslice_0' requires 80 connections, but only 76 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:1383]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1B903JL' (300#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:1072]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_18GFZZ6' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9501]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_18GFZZ6' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9508]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s00_data_fifo_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s00_data_fifo_0/synth/mb_subsystem_s00_data_fifo_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/9909/hdl/axi_data_fifo_v2_1_vl_rfs.v:1283]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -5003,7 +5003,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo' [f
 	Parameter P_READ_FIFO_DEPTH_LOG bound to: 9 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo' (302#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/9909/hdl/axi_data_fifo_v2_1_vl_rfs.v:1283]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s00_data_fifo_0' (303#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s00_data_fifo_0/synth/mb_subsystem_s00_data_fifo_0.v:58]
-WARNING: [Synth 8-350] instance 's00_data_fifo' of module 'mb_subsystem_s00_data_fifo_0' requires 72 connections, but only 70 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9819]
+WARNING: [Synth 8-350] instance 's00_data_fifo' of module 'mb_subsystem_s00_data_fifo_0' requires 72 connections, but only 70 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9826]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s00_regslice_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s00_regslice_0/synth/mb_subsystem_s00_regslice_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_15_axi_register_slice__parameterized1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:2300]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -5314,8 +5314,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__p
 INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized2' (303#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_15_axi_register_slice__parameterized1' (303#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:2300]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s00_regslice_0' (304#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s00_regslice_0/synth/mb_subsystem_s00_regslice_0.v:58]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_18GFZZ6' (305#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9501]
-INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1ESMO0Y' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10111]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_18GFZZ6' (305#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9508]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1ESMO0Y' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10118]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s01_data_fifo_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s01_data_fifo_0/synth/mb_subsystem_s01_data_fifo_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo__parameterized0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/9909/hdl/axi_data_fifo_v2_1_vl_rfs.v:1283]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -5348,7 +5348,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo__pa
 	Parameter P_READ_FIFO_DEPTH_LOG bound to: 9 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo__parameterized0' (305#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/9909/hdl/axi_data_fifo_v2_1_vl_rfs.v:1283]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s01_data_fifo_0' (306#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s01_data_fifo_0/synth/mb_subsystem_s01_data_fifo_0.v:58]
-WARNING: [Synth 8-350] instance 's01_data_fifo' of module 'mb_subsystem_s01_data_fifo_0' requires 34 connections, but only 33 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10266]
+WARNING: [Synth 8-350] instance 's01_data_fifo' of module 'mb_subsystem_s01_data_fifo_0' requires 34 connections, but only 33 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10273]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s01_regslice_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s01_regslice_0/synth/mb_subsystem_s01_regslice_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_15_axi_register_slice__parameterized2' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:2300]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -5478,15 +5478,15 @@ INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_15_axic_registe
 INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_15_axic_register_slice__parameterized8' (306#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_15_axi_register_slice__parameterized2' (306#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:2300]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s01_regslice_0' (307#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s01_regslice_0/synth/mb_subsystem_s01_regslice_0.v:58]
-INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1ESMO0Y' (308#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10111]
-INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_13IIEZM' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10337]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1ESMO0Y' (308#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10118]
+INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_13IIEZM' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10344]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s02_data_fifo_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s02_data_fifo_0/synth/mb_subsystem_s02_data_fifo_0.v:58]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s02_data_fifo_0' (309#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s02_data_fifo_0/synth/mb_subsystem_s02_data_fifo_0.v:58]
-WARNING: [Synth 8-350] instance 's02_data_fifo' of module 'mb_subsystem_s02_data_fifo_0' requires 72 connections, but only 70 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10639]
+WARNING: [Synth 8-350] instance 's02_data_fifo' of module 'mb_subsystem_s02_data_fifo_0' requires 72 connections, but only 70 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10646]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s02_regslice_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s02_regslice_0/synth/mb_subsystem_s02_regslice_0.v:58]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s02_regslice_0' (310#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s02_regslice_0/synth/mb_subsystem_s02_regslice_0.v:58]
-INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_13IIEZM' (311#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10337]
-INFO: [Synth 8-638] synthesizing module 's03_couplers_imp_16IT9CY' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10785]
+INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_13IIEZM' (311#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10344]
+INFO: [Synth 8-638] synthesizing module 's03_couplers_imp_16IT9CY' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10792]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s03_data_fifo_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s03_data_fifo_0/synth/mb_subsystem_s03_data_fifo_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo__parameterized1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/9909/hdl/axi_data_fifo_v2_1_vl_rfs.v:1283]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -5519,7 +5519,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo__pa
 	Parameter P_READ_FIFO_DEPTH_LOG bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'axi_data_fifo_v2_1_14_axi_data_fifo__parameterized1' (311#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/9909/hdl/axi_data_fifo_v2_1_vl_rfs.v:1283]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s03_data_fifo_0' (312#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s03_data_fifo_0/synth/mb_subsystem_s03_data_fifo_0.v:58]
-WARNING: [Synth 8-350] instance 's03_data_fifo' of module 'mb_subsystem_s03_data_fifo_0' requires 40 connections, but only 39 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10959]
+WARNING: [Synth 8-350] instance 's03_data_fifo' of module 'mb_subsystem_s03_data_fifo_0' requires 40 connections, but only 39 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10966]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s03_regslice_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s03_regslice_0/synth/mb_subsystem_s03_regslice_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_15_axi_register_slice__parameterized3' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:2300]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -5639,14 +5639,14 @@ INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_15_axic_registe
 INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_15_axic_register_slice__parameterized9' (312#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_15_axi_register_slice__parameterized3' (312#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:2300]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s03_regslice_0' (313#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s03_regslice_0/synth/mb_subsystem_s03_regslice_0.v:58]
-INFO: [Synth 8-256] done synthesizing module 's03_couplers_imp_16IT9CY' (314#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10785]
-INFO: [Synth 8-638] synthesizing module 's04_couplers_imp_1Y33GF6' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11042]
+INFO: [Synth 8-256] done synthesizing module 's03_couplers_imp_16IT9CY' (314#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:10792]
+INFO: [Synth 8-638] synthesizing module 's04_couplers_imp_1Y33GF6' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11049]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s04_data_fifo_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s04_data_fifo_0/synth/mb_subsystem_s04_data_fifo_0.v:58]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s04_data_fifo_0' (315#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s04_data_fifo_0/synth/mb_subsystem_s04_data_fifo_0.v:58]
-WARNING: [Synth 8-350] instance 's04_data_fifo' of module 'mb_subsystem_s04_data_fifo_0' requires 34 connections, but only 33 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11189]
+WARNING: [Synth 8-350] instance 's04_data_fifo' of module 'mb_subsystem_s04_data_fifo_0' requires 34 connections, but only 33 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11196]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_s04_regslice_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s04_regslice_0/synth/mb_subsystem_s04_regslice_0.v:58]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_s04_regslice_0' (316#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s04_regslice_0/synth/mb_subsystem_s04_regslice_0.v:58]
-INFO: [Synth 8-256] done synthesizing module 's04_couplers_imp_1Y33GF6' (317#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11042]
+INFO: [Synth 8-256] done synthesizing module 's04_couplers_imp_1Y33GF6' (317#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11049]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xbar_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xbar_0/synth/mb_subsystem_xbar_0.v:59]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_16_axi_crossbar' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c631/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -6701,12 +6701,12 @@ INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_16_addr_arbiter'
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_16_crossbar' (333#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c631/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_16_axi_crossbar' (334#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c631/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xbar_0' (335#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xbar_0/synth/mb_subsystem_xbar_0.v:59]
-WARNING: [Synth 8-689] width (4) of port connection 's_axi_awready' does not match port width (5) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7061]
-WARNING: [Synth 8-689] width (8) of port connection 's_axi_bresp' does not match port width (10) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7065]
-WARNING: [Synth 8-689] width (4) of port connection 's_axi_bvalid' does not match port width (5) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7066]
-WARNING: [Synth 8-689] width (4) of port connection 's_axi_wready' does not match port width (5) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7074]
-WARNING: [Synth 8-350] instance 'xbar' of module 'mb_subsystem_xbar_0' requires 78 connections, but only 76 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7000]
-INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_mem_intercon_0' (336#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5615]
+WARNING: [Synth 8-689] width (4) of port connection 's_axi_awready' does not match port width (5) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7068]
+WARNING: [Synth 8-689] width (8) of port connection 's_axi_bresp' does not match port width (10) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7072]
+WARNING: [Synth 8-689] width (4) of port connection 's_axi_bvalid' does not match port width (5) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7073]
+WARNING: [Synth 8-689] width (4) of port connection 's_axi_wready' does not match port width (5) of module 'mb_subsystem_xbar_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7081]
+WARNING: [Synth 8-350] instance 'xbar' of module 'mb_subsystem_xbar_0' requires 78 connections, but only 76 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7007]
+INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_mem_intercon_0' (336#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5622]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_timer_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_timer_0_0/synth/mb_subsystem_axi_timer_0_0.vhd:90]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_COUNT_WIDTH bound to: 32 - type: integer 
@@ -7163,7 +7163,7 @@ INFO: [Synth 8-256] done synthesizing module 'slave_attachment__parameterized3' 
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif__parameterized3' (342#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-256] done synthesizing module 'axi_timer' (343#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:2141]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_timer_0_0' (344#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_timer_0_0/synth/mb_subsystem_axi_timer_0_0.vhd:90]
-WARNING: [Synth 8-350] instance 'axi_timer_0' of module 'mb_subsystem_axi_timer_0_0' requires 26 connections, but only 23 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4766]
+WARNING: [Synth 8-350] instance 'axi_timer_0' of module 'mb_subsystem_axi_timer_0_0' requires 26 connections, but only 23 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4767]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_uartlite_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_uartlite_0_0/synth/mb_subsystem_axi_uartlite_0_0.vhd:86]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 150150150 - type: integer 
@@ -7519,7 +7519,7 @@ INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_gray' (355#1) [C:/Xilinx/V
 INFO: [Synth 8-256] done synthesizing module 'axis_data_fifo_v1_1_16_axis_data_fifo' (361#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/e3dd/hdl/axis_data_fifo_v1_1_vl_rfs.v:62]
 INFO: [Synth 8-256] done synthesizing module 'axis_clock_converter_v1_1_16_axis_clock_converter' (362#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3450/hdl/axis_clock_converter_v1_1_vl_rfs.v:492]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axis_clock_converter_0_0' (363#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axis_clock_converter_0_0/synth/mb_subsystem_axis_clock_converter_0_0.v:58]
-WARNING: [Synth 8-350] instance 'axis_clock_converter_0' of module 'mb_subsystem_axis_clock_converter_0_0' requires 10 connections, but only 9 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4813]
+WARNING: [Synth 8-350] instance 'axis_clock_converter_0' of module 'mb_subsystem_axis_clock_converter_0_0' requires 10 connections, but only 9 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4814]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axis_clock_converter_0_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axis_clock_converter_0_1/synth/mb_subsystem_axis_clock_converter_0_1.v:58]
 INFO: [Synth 8-638] synthesizing module 'axis_clock_converter_v1_1_16_axis_clock_converter__parameterized0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3450/hdl/axis_clock_converter_v1_1_vl_rfs.v:492]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -7639,7 +7639,7 @@ INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_v1_1_16_axis_data_fifo__
 INFO: [Synth 8-256] done synthesizing module 'axis_data_fifo_v1_1_16_axis_data_fifo__parameterized0' (363#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/e3dd/hdl/axis_data_fifo_v1_1_vl_rfs.v:62]
 INFO: [Synth 8-256] done synthesizing module 'axis_clock_converter_v1_1_16_axis_clock_converter__parameterized0' (363#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3450/hdl/axis_clock_converter_v1_1_vl_rfs.v:492]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axis_clock_converter_0_1' (364#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axis_clock_converter_0_1/synth/mb_subsystem_axis_clock_converter_0_1.v:58]
-WARNING: [Synth 8-350] instance 'axis_clock_converter_1' of module 'mb_subsystem_axis_clock_converter_0_1' requires 12 connections, but only 11 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4823]
+WARNING: [Synth 8-350] instance 'axis_clock_converter_1' of module 'mb_subsystem_axis_clock_converter_0_1' requires 12 connections, but only 11 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4824]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_gpio_0_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_1/synth/mb_subsystem_axi_gpio_0_1.vhd:84]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -7748,7 +7748,6 @@ INFO: [Synth 8-155] case statement is not full and has no default [F:/XAPP1026/K
 INFO: [Synth 8-4471] merging register 'Bitslip_cnt_en_reg' into 'bitslip_reg' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/new/bit_slip_Generator.v:64]
 INFO: [Synth 8-256] done synthesizing module 'bitslip_Generator' (368#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/new/bit_slip_Generator.v:23]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_bitslip_Generator_0_0' (369#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_bitslip_Generator_0_0/synth/mb_subsystem_bitslip_Generator_0_0.v:57]
-WARNING: [Synth 8-350] instance 'bitslip_Generator_0' of module 'mb_subsystem_bitslip_Generator_0_0' requires 7 connections, but only 6 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4856]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_blk_mem_gen_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_blk_mem_gen_0_0/synth/mb_subsystem_blk_mem_gen_0_0.vhd:78]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
@@ -7934,8 +7933,8 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV__parameterized0' [C:/Xilinx/
 INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV__parameterized0' (374#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:25757]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_clk_wiz_1_0_clk_wiz' (375#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_clk_wiz_1_0/mb_subsystem_clk_wiz_1_0_clk_wiz.v:70]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_clk_wiz_1_0' (376#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_clk_wiz_1_0/mb_subsystem_clk_wiz_1_0.v:72]
-WARNING: [Synth 8-350] instance 'clk_wiz_1' of module 'mb_subsystem_clk_wiz_1_0' requires 6 connections, but only 5 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4883]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4889]
+WARNING: [Synth 8-350] instance 'clk_wiz_1' of module 'mb_subsystem_clk_wiz_1_0' requires 6 connections, but only 5 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4885]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4891]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_ila_0_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ila_0_1/synth/mb_subsystem_ila_0_1.v:84]
 INFO: [Synth 8-638] synthesizing module 'CFGLUT5' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:998]
 INFO: [Synth 8-256] done synthesizing module 'CFGLUT5' (384#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:998]
@@ -7943,17 +7942,17 @@ INFO: [Synth 8-638] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2017.4/script
 INFO: [Synth 8-256] done synthesizing module 'CARRY4' (385#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:961]
 INFO: [Synth 8-638] synthesizing module 'SRLC16E' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50794]
 INFO: [Synth 8-256] done synthesizing module 'SRLC16E' (397#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:50794]
-WARNING: [Synth 8-350] instance 'inst' of module 'ila_v6_2_5_ila' requires 1033 connections, but only 1027 given [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ila_0_1/synth/mb_subsystem_ila_0_1.v:3227]
-WARNING: [Synth 8-3848] Net sl_iport0 in module/entity mb_subsystem_ila_0_1 does not have driver. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ila_0_1/synth/mb_subsystem_ila_0_1.v:116]
+WARNING: [Synth 8-350] instance 'inst' of module 'ila_v6_2_5_ila' requires 1033 connections, but only 1027 given [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ila_0_1/synth/mb_subsystem_ila_0_1.v:3237]
+WARNING: [Synth 8-3848] Net sl_iport0 in module/entity mb_subsystem_ila_0_1 does not have driver. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ila_0_1/synth/mb_subsystem_ila_0_1.v:126]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_ila_0_1' (419#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ila_0_1/synth/mb_subsystem_ila_0_1.v:84]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_inverse_reverse_0_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_1/synth/mb_subsystem_inverse_reverse_0_1.v:57]
 INFO: [Synth 8-638] synthesizing module 'inverse_reverse' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/new/inverse_reverse.v:23]
 INFO: [Synth 8-256] done synthesizing module 'inverse_reverse' (420#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/new/inverse_reverse.v:23]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_inverse_reverse_0_1' (421#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_1/synth/mb_subsystem_inverse_reverse_0_1.v:57]
-WARNING: [Synth 8-350] instance 'inverse_reverse_RX' of module 'mb_subsystem_inverse_reverse_0_1' requires 7 connections, but only 6 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4901]
+WARNING: [Synth 8-350] instance 'inverse_reverse_RX' of module 'mb_subsystem_inverse_reverse_0_1' requires 7 connections, but only 6 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4908]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_inverse_reverse_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_0/synth/mb_subsystem_inverse_reverse_0_0.v:57]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_inverse_reverse_0_0' (422#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_inverse_reverse_0_0/synth/mb_subsystem_inverse_reverse_0_0.v:57]
-WARNING: [Synth 8-350] instance 'inverse_reverse_TX' of module 'mb_subsystem_inverse_reverse_0_0' requires 7 connections, but only 6 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4908]
+WARNING: [Synth 8-350] instance 'inverse_reverse_TX' of module 'mb_subsystem_inverse_reverse_0_0' requires 7 connections, but only 6 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4915]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_mdm_1_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mdm_1_0/synth/mb_subsystem_mdm_1_0.vhd:74]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
@@ -8358,7 +8357,7 @@ INFO: [Synth 8-638] synthesizing module 'mb_subsystem_microblaze_0_0' [f:/XAPP10
 	Parameter C_M_AXI_DC_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXI_DC_BUSER_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_microblaze_0_0' (521#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_microblaze_0_0/synth/mb_subsystem_microblaze_0_0.vhd:198]
-WARNING: [Synth 8-350] instance 'microblaze_0' of module 'mb_subsystem_microblaze_0_0' requires 134 connections, but only 112 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4928]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'mb_subsystem_microblaze_0_0' requires 134 connections, but only 112 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4935]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_microblaze_0_axi_intc_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_microblaze_0_axi_intc_0/synth/mb_subsystem_microblaze_0_axi_intc_0.vhd:89]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_INSTANCE bound to: mb_subsystem_microblaze_0_axi_intc_0 - type: string 
@@ -8482,7 +8481,7 @@ INFO: [Synth 8-256] done synthesizing module 'slave_attachment__parameterized6' 
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif__parameterized6' (523#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-256] done synthesizing module 'axi_intc' (524#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/cf04/hdl/axi_intc_v4_1_vh_rfs.vhd:3769]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_microblaze_0_axi_intc_0' (525#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_microblaze_0_axi_intc_0/synth/mb_subsystem_microblaze_0_axi_intc_0.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'mb_subsystem_microblaze_0_axi_periph_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7079]
+INFO: [Synth 8-638] synthesizing module 'mb_subsystem_microblaze_0_axi_periph_0' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7086]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_RDG37U' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:940]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_RDG37U' (526#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:940]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_WMA45M' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:1462]
@@ -8541,8 +8540,8 @@ INFO: [Synth 8-638] synthesizing module 'm12_couplers_imp_1NSR8YM' [F:/XAPP1026/
 INFO: [Synth 8-256] done synthesizing module 'm12_couplers_imp_1NSR8YM' (540#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:3087]
 INFO: [Synth 8-638] synthesizing module 'm13_couplers_imp_1HGKKWU' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:3233]
 INFO: [Synth 8-256] done synthesizing module 'm13_couplers_imp_1HGKKWU' (541#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:3233]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_ZIFSM1' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9965]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_ZIFSM1' (542#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9965]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_ZIFSM1' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9972]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_ZIFSM1' (542#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9972]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xbar_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xbar_1/synth/mb_subsystem_xbar_1.v:60]
 INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_16_axi_crossbar__parameterized0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c631/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -8828,8 +8827,8 @@ INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc_
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_16_crossbar_sasd' (544#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c631/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
 INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_16_axi_crossbar__parameterized0' (544#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c631/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xbar_1' (545#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xbar_1/synth/mb_subsystem_xbar_1.v:60]
-INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_microblaze_0_axi_periph_0' (546#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7079]
-INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_14Y43Z9' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9267]
+INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_microblaze_0_axi_periph_0' (546#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:7086]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_14Y43Z9' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9274]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_dlmb_bram_if_cntlr_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_dlmb_bram_if_cntlr_0/synth/mb_subsystem_dlmb_bram_if_cntlr_0.vhd:84]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000001111111111111111 
@@ -8927,7 +8926,7 @@ INFO: [Synth 8-638] synthesizing module 'FDS' [C:/Xilinx/Vivado/2017.4/scripts/r
 INFO: [Synth 8-256] done synthesizing module 'FDS' (551#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:4087]
 INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (552#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_dlmb_v10_0' (553#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_dlmb_v10_0/synth/mb_subsystem_dlmb_v10_0.vhd:89]
-WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'mb_subsystem_dlmb_v10_0' requires 25 connections, but only 24 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9413]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'mb_subsystem_dlmb_v10_0' requires 25 connections, but only 24 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9420]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_ilmb_bram_if_cntlr_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ilmb_bram_if_cntlr_1/synth/mb_subsystem_ilmb_bram_if_cntlr_1.vhd:84]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000001111111111111111 
@@ -9016,7 +9015,7 @@ INFO: [Synth 8-638] synthesizing module 'mb_subsystem_ilmb_v10_1' [f:/XAPP1026/K
 	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_ilmb_v10_1' (555#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ilmb_v10_1/synth/mb_subsystem_ilmb_v10_1.vhd:89]
-WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'mb_subsystem_ilmb_v10_1' requires 25 connections, but only 24 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9459]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'mb_subsystem_ilmb_v10_1' requires 25 connections, but only 24 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9466]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_lmb_bram_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_lmb_bram_1/synth/mb_subsystem_lmb_bram_1.vhd:78]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
@@ -9092,7 +9091,7 @@ INFO: [Synth 8-638] synthesizing module 'mb_subsystem_lmb_bram_1' [f:/XAPP1026/K
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388000000000002 mW - type: string 
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_lmb_bram_1' (556#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_lmb_bram_1/synth/mb_subsystem_lmb_bram_1.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_14Y43Z9' (557#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9267]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_14Y43Z9' (557#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:9274]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_microblaze_0_xlconcat_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_microblaze_0_xlconcat_0/synth/mb_subsystem_microblaze_0_xlconcat_0.v:58]
 INFO: [Synth 8-638] synthesizing module 'xlconcat_v2_1_1_xlconcat' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -14266,7 +14265,7 @@ WARNING: [Synth 8-3848] Net clk_ref_p in module/entity mb_subsystem_mig_7series_
 WARNING: [Synth 8-3848] Net clk_ref_n in module/entity mb_subsystem_mig_7series_0_0_mig does not have driver. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mb_subsystem_mig_7series_0_0/user_design/rtl/mb_subsystem_mig_7series_0_0_mig.v:808]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_mig_7series_0_0_mig' (663#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mb_subsystem_mig_7series_0_0/user_design/rtl/mb_subsystem_mig_7series_0_0_mig.v:75]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_mig_7series_0_0' (664#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mb_subsystem_mig_7series_0_0/user_design/rtl/mb_subsystem_mig_7series_0_0.v:70]
-WARNING: [Synth 8-350] instance 'mig_7series_0' of module 'mb_subsystem_mig_7series_0_0' requires 69 connections, but only 60 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5410]
+WARNING: [Synth 8-350] instance 'mig_7series_0' of module 'mb_subsystem_mig_7series_0_0' requires 69 connections, but only 60 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5417]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_proc_sys_reset_1_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_proc_sys_reset_1_0/synth/mb_subsystem_proc_sys_reset_1_0.vhd:74]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -14337,7 +14336,7 @@ INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset_v5_0_12_upcnt_n' (6
 INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (668#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (669#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_proc_sys_reset_1_0' (670#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_proc_sys_reset_1_0/synth/mb_subsystem_proc_sys_reset_1_0.vhd:74]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_1' of module 'mb_subsystem_proc_sys_reset_1_0' requires 10 connections, but only 9 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5471]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_1' of module 'mb_subsystem_proc_sys_reset_1_0' requires 10 connections, but only 9 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5478]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_rst_clk_wiz_0_125M_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_rst_clk_wiz_0_125M_0/synth/mb_subsystem_rst_clk_wiz_0_125M_0.vhd:74]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -14349,7 +14348,7 @@ INFO: [Synth 8-638] synthesizing module 'mb_subsystem_rst_clk_wiz_0_125M_0' [f:/
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_rst_clk_wiz_0_125M_0' (671#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_rst_clk_wiz_0_125M_0/synth/mb_subsystem_rst_clk_wiz_0_125M_0.vhd:74]
-WARNING: [Synth 8-350] instance 'rst_clk_wiz_0_125M' of module 'mb_subsystem_rst_clk_wiz_0_125M_0' requires 10 connections, but only 6 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5481]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_0_125M' of module 'mb_subsystem_rst_clk_wiz_0_125M_0' requires 10 connections, but only 6 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5488]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_gpio_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_0/synth/mb_subsystem_axi_gpio_0_0.vhd:84]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -14403,7 +14402,7 @@ INFO: [Synth 8-226] default block is never used [f:/XAPP1026/KC705_AxiEth_150MHZ
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (671#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c450/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (671#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c450/hdl/axi_gpio_v2_0_vh_rfs.vhd:1358]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_gpio_0_0' (672#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_0/synth/mb_subsystem_axi_gpio_0_0.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'tx_controller_hier_imp_12VR7VN' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11260]
+INFO: [Synth 8-638] synthesizing module 'tx_controller_hier_imp_12VR7VN' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11267]
 INFO: [Synth 8-638] synthesizing module 'BIST_CYCLES_imp_MVOJYB' [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:12]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_done_from_tx_controller_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_done_from_tx_controller_1/synth/mb_subsystem_done_from_tx_controller_1.vhd:84]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
@@ -14842,25 +14841,25 @@ INFO: [Synth 8-638] synthesizing module 'mb_subsystem_axi_gpio_0_4' [f:/XAPP1026
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_axi_gpio_0_4' (685#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_gpio_0_4/synth/mb_subsystem_axi_gpio_0_4.vhd:84]
 INFO: [Synth 8-256] done synthesizing module 'done_LV1A_imp_PAAYBM' (686#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:364]
-INFO: [Synth 8-256] done synthesizing module 'tx_controller_hier_imp_12VR7VN' (687#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11260]
+INFO: [Synth 8-256] done synthesizing module 'tx_controller_hier_imp_12VR7VN' (687#1) [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:11267]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xlconstant_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_0_0/synth/mb_subsystem_xlconstant_0_0.v:57]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xlconstant_0_0' (688#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_0_0/synth/mb_subsystem_xlconstant_0_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xlconstant_1_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_0/synth/mb_subsystem_xlconstant_1_0.v:57]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xlconstant_1_0' (689#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_0/synth/mb_subsystem_xlconstant_1_0.v:57]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5604]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5611]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xlconstant_1_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_1/synth/mb_subsystem_xlconstant_1_1.v:57]
 INFO: [Synth 8-638] synthesizing module 'xlconstant_v1_1_3_xlconstant__parameterized0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/0750/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'xlconstant_v1_1_3_xlconstant__parameterized0' (689#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/0750/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xlconstant_1_1' (690#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_1_1/synth/mb_subsystem_xlconstant_1_1.v:57]
-WARNING: [Synth 8-350] instance 'xlconstant_2' of module 'mb_subsystem_xlconstant_1_1' requires 1 connections, but only 0 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5604]
+WARNING: [Synth 8-350] instance 'xlconstant_2' of module 'mb_subsystem_xlconstant_1_1' requires 1 connections, but only 0 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5611]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xlconstant_3_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_0/synth/mb_subsystem_xlconstant_3_0.v:57]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xlconstant_3_0' (691#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_0/synth/mb_subsystem_xlconstant_3_0.v:57]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5608]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5615]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xlconstant_3_1' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_1/synth/mb_subsystem_xlconstant_3_1.v:57]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xlconstant_3_1' (692#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlconstant_3_1/synth/mb_subsystem_xlconstant_3_1.v:57]
-WARNING: [Synth 8-350] instance 'xlconstant_4' of module 'mb_subsystem_xlconstant_3_1' requires 1 connections, but only 0 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5608]
+WARNING: [Synth 8-350] instance 'xlconstant_4' of module 'mb_subsystem_xlconstant_3_1' requires 1 connections, but only 0 given [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5615]
 INFO: [Synth 8-638] synthesizing module 'mb_subsystem_xlslice_0_0' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlslice_0_0/synth/mb_subsystem_xlslice_0_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'xlslice_v1_0_1_xlslice' [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
@@ -14868,15 +14867,18 @@ INFO: [Synth 8-638] synthesizing module 'xlslice_v1_0_1_xlslice' [f:/XAPP1026/KC
 	Parameter DIN_TO bound to: 0 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'xlslice_v1_0_1_xlslice' (693#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-256] done synthesizing module 'mb_subsystem_xlslice_0_0' (694#1) [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_xlslice_0_0/synth/mb_subsystem_xlslice_0_0.v:57]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AP_Generator_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4182]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tx_controller_hier'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5509]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4889]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inverse_reverse_TX'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4908]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TX_SERIALIZER'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4275]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'F1_F2_FILTER_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4192]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_clock_converter_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4813]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inverse_reverse_RX'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4901]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'bitslip_Generator_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4856]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AP_Generator_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4183]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tx_controller_hier'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5516]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4891]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inverse_reverse_TX'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4915]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TX_SERIALIZER'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4276]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'F1_F2_FILTER_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4193]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_clock_converter_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4814]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'inverse_reverse_RX'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4908]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'bitslip_Generator_0'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4857]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RX_deSERIALIZER'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4261]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'bit_slip'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:4836]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'success'. This will prevent further optimization [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v:5495]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
@@ -14987,7 +14989,7 @@ WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnec
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_awsize[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:18:50 ; elapsed = 00:18:57 . Memory (MB): peak = 2156.176 ; gain = 1775.570
+Finished RTL Elaboration : Time (s): cpu = 00:18:49 ; elapsed = 00:18:56 . Memory (MB): peak = 2159.730 ; gain = 1779.145
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -15098,9 +15100,9 @@ WARNING: [Synth 8-3295] tying undriven pin COMP_FIFO:axi_aw_prog_full_thresh[3] 
 WARNING: [Synth 8-3295] tying undriven pin COMP_FIFO:axi_aw_prog_full_thresh[2] to constant 0 [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/68a8/hdl/axi_fifo_mm_s_v4_1_rfs.vhd:2903]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:19:03 ; elapsed = 00:19:10 . Memory (MB): peak = 2156.176 ; gain = 1775.570
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:19:02 ; elapsed = 00:19:09 . Memory (MB): peak = 2159.730 ; gain = 1779.145
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 3813 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3848 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7k325tffg900-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -15517,10 +15519,10 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/mb_subsystem
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2493 instances were transformed.
+  A total of 2518 instances were transformed.
   BUFGMUX => BUFGCTRL (inverted pins: CE0): 1 instances
-  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 84 instances
-  CFGLUT5 => SRLC32E: 14 instances
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 104 instances
+  CFGLUT5 => SRLC32E: 19 instances
   FDC_1 => FDCE (inverted pins: C): 1 instances
   FDR => FDRE: 1034 instances
   FDRE_1 => FDRE (inverted pins: C): 1 instances
@@ -15538,9 +15540,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 160 instances
   SRL16 => SRL16E: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2534.949 ; gain = 0.820
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2542.324 ; gain = 0.805
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:21:03 ; elapsed = 00:21:05 . Memory (MB): peak = 2538.828 ; gain = 2158.223
+Finished Constraint Validation : Time (s): cpu = 00:21:01 ; elapsed = 00:21:02 . Memory (MB): peak = 2546.203 ; gain = 2165.617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -15548,7 +15550,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:21:03 ; elapsed = 00:21:05 . Memory (MB): peak = 2538.828 ; gain = 2158.223
+Finished Loading Part and Timing Information : Time (s): cpu = 00:21:01 ; elapsed = 00:21:02 . Memory (MB): peak = 2546.203 ; gain = 2165.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -15790,7 +15792,7 @@ Applied set_property DONT_TOUCH = true for mb_subsystem_i/xlconstant_3. (constra
 Applied set_property DONT_TOUCH = true for mb_subsystem_i/xlconstant_4. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mb_subsystem_i/xlslice_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:21:05 ; elapsed = 00:21:06 . Memory (MB): peak = 2538.828 ; gain = 2158.223
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:21:02 ; elapsed = 00:21:04 . Memory (MB): peak = 2546.203 ; gain = 2165.617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -16061,7 +16063,7 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/c631/hdl/axi_crossbar_v2_1_vl_rfs.v:3086]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/38c3/hdl/axi_timer_v2_0_vh_rfs.vhd:176]
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'bitslip_Generator'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized10'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized15'
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s'
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized0'
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized1'
@@ -16073,6 +16075,11 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized7'
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized8'
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized9'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized10'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized11'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized12'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized13'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized14'
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'MMU_UTLB'
 INFO: [Synth 8-5587] ROM size for "AddrSel" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5587] ROM size for "RDataBusy_D" is below threshold of ROM address width. It will be mapped to LUTs
@@ -17160,7 +17167,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'src_state_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'dest_state_reg' using encoding 'sequential' in module 'axi_clock_converter_v2_1_14_lite_async__parameterized2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:22:34 ; elapsed = 00:22:43 . Memory (MB): peak = 2610.945 ; gain = 2230.340
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:22:32 ; elapsed = 00:22:41 . Memory (MB): peak = 2617.453 ; gain = 2236.867
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -17179,11 +17186,11 @@ Report RTL Partitions:
 |6     |mb_subsystem_clk_wiz_0_2_clk_wiz__GC0                |           1|         3|
 |7     |mb_subsystem_clk_wiz_1_0_clk_wiz__GC0                |           1|         5|
 |8     |MicroBlaze_Core                                      |           1|     34991|
-|9     |reg__6487                                            |           1|      4096|
+|9     |reg__6522                                            |           1|      4096|
 |10    |mig_7series_v4_0_ddr_byte_lane__parameterized4__GC0  |           1|       498|
 |11    |mig_7series_v4_0_ddr_phy_4lanes__parameterized0__GC0 |           1|      2088|
 |12    |mig_7series_v4_0_ddr_mc_phy__GC0                     |           1|     10370|
-|13    |case__3961__GD                                       |           1|     49398|
+|13    |case__4000__GD                                       |           1|     49398|
 |14    |mig_7series_v4_0_ddr_mc_phy_wrapper__GCB2            |           1|      3326|
 |15    |mig_7series_v4_0_ddr_calib_top__GB0                  |           1|     32587|
 |16    |mig_7series_v4_0_ddr_calib_top__GB1                  |           1|     19213|
@@ -17192,9 +17199,9 @@ Report RTL Partitions:
 |19    |mig_7series_v4_0_mc                                  |           1|      4909|
 |20    |mig_7series_v4_0_memc_ui_top_axi__GC0                |           1|     18915|
 |21    |mb_subsystem_mig_7series_0_0_mig__GC0                |           1|       354|
-|22    |mb_subsystem__GCB0                                   |           1|     34853|
-|23    |mb_subsystem__GCB1                                   |           1|     34397|
-|24    |mb_subsystem__GCB2                                   |           1|     16295|
+|22    |mb_subsystem__GCB0                                   |           1|     34604|
+|23    |mb_subsystem__GCB1                                   |           1|     16476|
+|24    |mb_subsystem__GCB2                                   |           1|     36250|
 +------+-----------------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -17450,7 +17457,6 @@ WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[0].bank0/bank_
 WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[1].bank0/bank_compare0/rank_busy_r_reg[0]) is unused and will be removed from module mig_7series_v4_0_mc.
 WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[2].bank0/bank_compare0/rank_busy_r_reg[0]) is unused and will be removed from module mig_7series_v4_0_mc.
 WARNING: [Synth 8-3332] Sequential element (bank_mach0/bank_cntrl[3].bank0/bank_compare0/rank_busy_r_reg[0]) is unused and will be removed from module mig_7series_v4_0_mc.
-INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5545] ROM "Using_TLBS.DTLB_I/TLBLO1" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "Using_TLBS.DTLB_I/TLBLO0" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 INFO: [Synth 8-3917] design MicroBlaze_Core has port M1_AXIS_TLAST driven by constant 0
@@ -17635,14 +17641,23 @@ INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instan
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3936] Found unconnected internal register 'oclkdelay_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mb_subsystem_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_0_ddr_phy_init.v:1232]
 WARNING: [Synth 8-3936] Found unconnected internal register 'wrcal_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mb_subsystem_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_0_ddr_phy_init.v:1230]
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/71f3/hdl/axi_datamover_v5_1_vh_rfs.vhd:21587]
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "data_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/5c35/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:17208]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/5c35/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:10921]
 INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/5c35/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:17208]
 INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/5c35/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:10921]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "data_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/71f3/hdl/axi_datamover_v5_1_vh_rfs.vhd:21587]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -17656,17 +17671,9 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/3ed1/hdl/axi_register_slice_v2_1_vl_rfs.v:422]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/5c35/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:17208]
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ipshared/5c35/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:10921]
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:25:25 ; elapsed = 00:25:35 . Memory (MB): peak = 2911.352 ; gain = 2530.746
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:25:25 ; elapsed = 00:25:35 . Memory (MB): peak = 2915.313 ; gain = 2534.727
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -17683,11 +17690,11 @@ Report RTL Partitions:
 |6     |mb_subsystem_clk_wiz_0_2_clk_wiz__GC0                |           1|         3|
 |7     |mb_subsystem_clk_wiz_1_0_clk_wiz__GC0                |           1|         5|
 |8     |MicroBlaze_Core                                      |           1|     24467|
-|9     |reg__6487                                            |           1|      1590|
+|9     |reg__6522                                            |           1|      1590|
 |10    |mig_7series_v4_0_ddr_byte_lane__parameterized4__GC0  |           1|       243|
 |11    |mig_7series_v4_0_ddr_phy_4lanes__parameterized0__GC0 |           1|       770|
 |12    |mig_7series_v4_0_ddr_mc_phy__GC0                     |           1|      7424|
-|13    |case__3961__GD                                       |           1|       770|
+|13    |case__4000__GD                                       |           1|       770|
 |14    |mig_7series_v4_0_ddr_mc_phy_wrapper__GCB2            |           1|      1188|
 |15    |mig_7series_v4_0_ddr_calib_top__GB0                  |           1|     11315|
 |16    |mig_7series_v4_0_ddr_calib_top__GB1                  |           1|     12331|
@@ -17696,9 +17703,9 @@ Report RTL Partitions:
 |19    |mig_7series_v4_0_mc                                  |           1|      3563|
 |20    |mig_7series_v4_0_memc_ui_top_axi__GC0                |           1|     20398|
 |21    |mb_subsystem_mig_7series_0_0_mig__GC0                |           1|       349|
-|22    |mb_subsystem__GCB0                                   |           1|     20438|
-|23    |mb_subsystem__GCB1                                   |           1|     27087|
-|24    |mb_subsystem__GCB2                                   |           1|      9065|
+|22    |mb_subsystem__GCB0                                   |           1|     23517|
+|23    |mb_subsystem__GCB1                                   |           1|     13051|
+|24    |mb_subsystem__GCB2                                   |           1|     21900|
 +------+-----------------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -17713,7 +17720,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'mb_subsystem_i/clk_wiz_0/
 INFO: [Synth 8-5578] Moved timing constraint from pin 'mb_subsystem_i/clk_wiz_1/inst/clk_in1' to pin 'u_ddr3_infrastructure/gen_ui_extra_clocks.u_bufg_ui_addn_clk_1/O'
 INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:25:49 ; elapsed = 00:25:59 . Memory (MB): peak = 3045.309 ; gain = 2664.703
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:25:46 ; elapsed = 00:25:56 . Memory (MB): peak = 3049.891 ; gain = 2669.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -17721,7 +17728,7 @@ Start Timing Optimization
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:26:35 ; elapsed = 00:26:45 . Memory (MB): peak = 3140.629 ; gain = 2760.023
+Finished Timing Optimization : Time (s): cpu = 00:26:10 ; elapsed = 00:26:20 . Memory (MB): peak = 3092.590 ; gain = 2712.004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -17736,7 +17743,7 @@ Report RTL Partitions:
 |6     |mb_subsystem_clk_wiz_0_2_clk_wiz__GC0                |           1|         3|
 |7     |mb_subsystem_clk_wiz_1_0_clk_wiz__GC0                |           1|         5|
 |8     |MicroBlaze_Core                                      |           1|     24467|
-|9     |reg__6487                                            |           1|       581|
+|9     |reg__6522                                            |           1|       581|
 |10    |mig_7series_v4_0_ddr_byte_lane__parameterized4__GC0  |           1|       241|
 |11    |mig_7series_v4_0_ddr_phy_4lanes__parameterized0__GC0 |           1|       711|
 |12    |mig_7series_v4_0_ddr_mc_phy__GC0                     |           1|      6077|
@@ -17748,9 +17755,9 @@ Report RTL Partitions:
 |18    |mig_7series_v4_0_mc                                  |           1|      3519|
 |19    |mig_7series_v4_0_memc_ui_top_axi__GC0                |           1|     20392|
 |20    |mb_subsystem_mig_7series_0_0_mig__GC0                |           1|       349|
-|21    |mb_subsystem__GCB2                                   |           1|      9065|
-|22    |mb_subsystem_GT0                                     |           1|     47228|
-|23    |mb_subsystem_rst_clk_wiz_0_125M_0                    |           1|       113|
+|21    |mb_subsystem__GCB0                                   |           1|     23517|
+|22    |mb_subsystem__GCB1                                   |           1|     13051|
+|23    |mb_subsystem__GCB2                                   |           1|     21900|
 +------+-----------------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -17758,7 +17765,7 @@ Start Technology Mapping
 INFO: [Synth 8-4480] The timing for the instance mb_subsystem_i/microblaze_0/U0/MicroBlaze_Core_I/Frequency.Core/MMU_I1/Using_TLBS.UTLB_I/MMU_UTLB_RAM_I/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance mb_subsystem_i/microblaze_0/U0/MicroBlaze_Core_I/Frequency.Core/MMU_I1/Using_TLBS.UTLB_I/MMU_UTLB_RAM_I/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:27:30 ; elapsed = 00:27:42 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished Technology Mapping : Time (s): cpu = 00:27:14 ; elapsed = 00:27:27 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -17835,8 +17842,6 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 40 on net \u_mb_subsystem
 INFO: [Synth 8-4618] Found max_fanout attribute set to 50 on net \u_mb_subsystem_mig_7series_0_0_mig/u_memc_ui_top_axi/u_axi_mc/USE_UPSIZER.upsizer_d2/mi_register_slice_inst/r_pipe/state [0]. Fanout reduced from 527 to 48 by creating 10 replicas.
 INFO: [Synth 8-4618] Found max_fanout attribute set to 50 on net ui_clk_sync_rst. Fanout reduced from 1531 to 50 by creating 31 replicas.
 INFO: [Synth 8-4618] Found max_fanout attribute set to 50 on net init_calib_complete. Fanout reduced from 1364 to 49 by creating 28 replicas.
-INFO: [Synth 8-5365] Flop U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/sync_areset_n_reg is being inverted and renamed to U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/sync_areset_n_reg_inv.
-INFO: [Synth 8-5365] Flop U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/sync_areset_n_reg is being inverted and renamed to U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/sync_areset_n_reg_inv.
 INFO: [Synth 8-6064] Net \U0/COMP_IPIC2AXI_S/grxd.COMP_RX_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/p_19_out  is driving 132 big block pins (URAM, BRAM and DSP loads). Created 14 replicas of its driver. 
 INFO: [Synth 8-6064] Net \U0/COMP_IPIC2AXI_S/gtxd.COMP_TXD_FIFO/gfifo_gen.COMP_AXIS_FG_FIFO/COMP_FIFO/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/p_19_out  is driving 592 big block pins (URAM, BRAM and DSP loads). Created 60 replicas of its driver. 
 INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \U0/gaxif.COMP_AXI4/axi_rd_sm/axi_read_fsm/arready_int . Fanout reduced from 13 to 6 by creating 2 replicas.
@@ -17945,7 +17950,7 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:635]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:27:36 ; elapsed = 00:27:48 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished IO Insertion : Time (s): cpu = 00:27:21 ; elapsed = 00:27:33 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -17958,7 +17963,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:27:37 ; elapsed = 00:27:49 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished Renaming Generated Instances : Time (s): cpu = 00:27:21 ; elapsed = 00:27:34 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -17970,25 +17975,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:27:54 ; elapsed = 00:28:06 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:27:39 ; elapsed = 00:27:52 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:27:55 ; elapsed = 00:28:07 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished Renaming Generated Ports : Time (s): cpu = 00:27:40 ; elapsed = 00:27:53 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:27:57 ; elapsed = 00:28:09 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:27:42 ; elapsed = 00:27:55 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:27:58 ; elapsed = 00:28:10 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished Renaming Generated Nets : Time (s): cpu = 00:27:43 ; elapsed = 00:27:56 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -18011,8 +18016,8 @@ Report Cell Usage:
 |5     |BUFH                   |     1|
 |6     |BUFIO                  |     4|
 |7     |BUFR                   |     1|
-|8     |CARRY4                 |  1056|
-|9     |CFGLUT5                |    98|
+|8     |CARRY4                 |  1066|
+|9     |CFGLUT5                |   123|
 |10    |DSP48E1                |     1|
 |11    |DSP48E1_1              |     1|
 |12    |DSP48E1_2              |     1|
@@ -18026,19 +18031,19 @@ Report Cell Usage:
 |20    |IN_FIFO                |     8|
 |21    |ISERDESE2              |     1|
 |22    |ISERDESE2_1            |    64|
-|23    |LUT1                   |  1195|
-|24    |LUT2                   |  3730|
-|25    |LUT3                   |  7508|
-|26    |LUT4                   |  5858|
-|27    |LUT5                   |  7411|
-|28    |LUT6                   | 12428|
+|23    |LUT1                   |  1203|
+|24    |LUT2                   |  3708|
+|25    |LUT3                   |  7485|
+|26    |LUT4                   |  5900|
+|27    |LUT5                   |  7454|
+|28    |LUT6                   | 12585|
 |29    |LUT6_2                 |    59|
 |30    |MMCME2_ADV             |     3|
 |31    |MULT_AND               |    10|
 |32    |MUXCY                  |   493|
 |33    |MUXCY_L                |   736|
-|34    |MUXF7                  |   985|
-|35    |MUXF8                  |   178|
+|34    |MUXF7                  |  1018|
+|35    |MUXF8                  |   199|
 |36    |ODDR                   |     1|
 |37    |ODDR_1                 |    17|
 |38    |OR2L                   |     2|
@@ -18062,19 +18067,19 @@ Report Cell Usage:
 |56    |RAMB18E1_3             |     1|
 |57    |RAMB36E1               |    12|
 |58    |RAMB36E1_1             |     8|
-|59    |RAMB36E1_10            |    10|
-|60    |RAMB36E1_11            |     1|
-|61    |RAMB36E1_12            |     2|
-|62    |RAMB36E1_13            |     1|
-|63    |RAMB36E1_2             |     1|
-|64    |RAMB36E1_3             |     4|
-|65    |RAMB36E1_4             |     1|
-|66    |RAMB36E1_6             |    32|
-|67    |RAMB36E1_7             |     7|
-|68    |RAMB36E1_8             |   160|
-|69    |RAMB36E1_9             |    10|
+|59    |RAMB36E1_10            |    32|
+|60    |RAMB36E1_11            |     2|
+|61    |RAMB36E1_13            |     1|
+|62    |RAMB36E1_2             |     1|
+|63    |RAMB36E1_3             |     4|
+|64    |RAMB36E1_4             |     1|
+|65    |RAMB36E1_5             |   160|
+|66    |RAMB36E1_6             |    10|
+|67    |RAMB36E1_7             |    10|
+|68    |RAMB36E1_8             |     1|
+|69    |RAMB36E1_9             |     7|
 |70    |SRL16                  |     2|
-|71    |SRL16E                 |   894|
+|71    |SRL16E                 |   899|
 |72    |SRLC16E                |    10|
 |73    |SRLC32E                |   637|
 |74    |XADC                   |     1|
@@ -18083,10 +18088,10 @@ Report Cell Usage:
 |77    |FDC_1                  |     1|
 |78    |FDPE                   |   467|
 |79    |FDR                    |   587|
-|80    |FDRE                   | 39879|
+|80    |FDRE                   | 40124|
 |81    |FDRE_1                 |     1|
 |82    |FDS                    |     5|
-|83    |FDSE                   |  1066|
+|83    |FDSE                   |  1071|
 |84    |IBUF                   |    18|
 |85    |IBUFDS                 |     1|
 |86    |IBUFGDS                |     1|
@@ -18098,14 +18103,14 @@ Report Cell Usage:
 |92    |OBUFT                  |     8|
 +------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:27:58 ; elapsed = 00:28:10 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Finished Writing Synthesis Report : Time (s): cpu = 00:27:43 ; elapsed = 00:27:56 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 25679 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:07:07 ; elapsed = 00:26:30 . Memory (MB): peak = 3160.434 ; gain = 2397.176
-Synthesis Optimization Complete : Time (s): cpu = 00:27:58 ; elapsed = 00:28:11 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+Synthesis finished with 0 errors, 0 critical warnings and 25677 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:06:54 ; elapsed = 00:26:17 . Memory (MB): peak = 3147.793 ; gain = 2380.734
+Synthesis Optimization Complete : Time (s): cpu = 00:27:43 ; elapsed = 00:27:57 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 6923 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Netlist 29-17] Analyzing 7012 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-35] Removing redundant IBUF, mb_subsystem_i/RX_deSERIALIZER/inst/pins[0].ibuf_inst, from the path connected to top-level port: RXD_P 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
@@ -18118,11 +18123,11 @@ Resolution: The tool has removed redundant OBUF. To resolve this warning, check 
 INFO: [Chipscope 16-324] Core: mb_subsystem_i/ila_0 UUID: 1d50e8c8-73cc-55ac-866a-681d38e51743 
 INFO: [Opt 31-138] Pushed 9 inverter(s) to 65 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 3095 instances were transformed.
+  A total of 3120 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 377 instances
   BUFGMUX => BUFGCTRL (inverted pins: CE0): 1 instances
-  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 84 instances
-  CFGLUT5 => SRLC32E: 14 instances
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 104 instances
+  CFGLUT5 => SRLC32E: 19 instances
   FDC_1 => FDCE (inverted pins: C): 1 instances
   FDR => FDRE: 587 instances
   FDRE_1 => FDRE (inverted pins: C): 1 instances
@@ -18141,13 +18146,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-3008 Infos, 801 Warnings, 1 Critical Warnings and 0 Errors encountered.
+3014 Infos, 800 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:28:41 ; elapsed = 00:29:03 . Memory (MB): peak = 3160.434 ; gain = 2779.828
+synth_design: Time (s): cpu = 00:28:25 ; elapsed = 00:28:49 . Memory (MB): peak = 3147.793 ; gain = 2767.207
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.runs/synth_1/mb_subsystem_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 3160.434 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 3147.793 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file mb_subsystem_wrapper_utilization_synth.rpt -pb mb_subsystem_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.839 . Memory (MB): peak = 3160.434 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 22 21:51:34 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.816 . Memory (MB): peak = 3147.793 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 28 01:28:56 2018...

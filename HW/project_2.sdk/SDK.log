@@ -7626,3 +7626,6 @@ java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor 
 08:54:43 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
 08:54:43 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
 08:54:43 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:37 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

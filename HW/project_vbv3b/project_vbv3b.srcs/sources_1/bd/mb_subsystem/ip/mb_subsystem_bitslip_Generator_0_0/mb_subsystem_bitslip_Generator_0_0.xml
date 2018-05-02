@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <spirit:vendor>cern.ch</spirit:vendor>
+  <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>customized_ip</spirit:library>
   <spirit:name>mb_subsystem_bitslip_Generator_0_0</spirit:name>
   <spirit:version>1.0</spirit:version>
@@ -53,7 +53,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 17 07:52:54 UTC 2018</spirit:value>
+            <spirit:value>Fri Apr 27 19:05:40 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -84,7 +84,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 17 07:52:54 UTC 2018</spirit:value>
+            <spirit:value>Fri Apr 27 19:05:40 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -243,7 +243,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>cern.ch:module_ref:bitslip_Generator:1.0</spirit:description>
+  <spirit:description>xilinx.com:module_ref:bitslip_Generator:1.0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>IDLE</spirit:name>
@@ -281,7 +281,7 @@
       <xilinx:coreRevision>1</xilinx:coreRevision>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2017.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2017.4</xilinx:xilinxVersion>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

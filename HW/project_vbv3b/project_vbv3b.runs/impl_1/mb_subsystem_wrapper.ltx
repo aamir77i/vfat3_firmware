@@ -203,5 +203,80 @@
         <net name="mb_subsystem_i/tx_controller_hier_INV_RX"/>
       </nets>
     </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="1D50E8C873CC55AC866A681D38E51743"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="40001599"/>
+        <Option Id="HW_ILA" value="mb_subsystem_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="10"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/bitslip_signal"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="1D50E8C873CC55AC866A681D38E51743"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="40001599"/>
+        <Option Id="HW_ILA" value="mb_subsystem_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="11"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/Receiver_logic_gpio_io_o1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="1D50E8C873CC55AC866A681D38E51743"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="40001599"/>
+        <Option Id="HW_ILA" value="mb_subsystem_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="12"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/Receiver_logic_success"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="1D50E8C873CC55AC866A681D38E51743"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="40001599"/>
+        <Option Id="HW_ILA" value="mb_subsystem_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="13"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/bitslip_Generator_0_busy"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="1D50E8C873CC55AC866A681D38E51743"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="40001599"/>
+        <Option Id="HW_ILA" value="mb_subsystem_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="14"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="mb_subsystem_i/tx_controller_hier_EXT_RST"/>
+      </nets>
+    </probe>
   </probeset>
 </probeData>

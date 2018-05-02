@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1524427225">
-  <File Type="OPT-HWDEF" Name="mb_subsystem_wrapper.hwdef"/>
-  <File Type="PA-DCP" Name="mb_subsystem_wrapper.dcp"/>
-  <File Type="OPT-DCP" Name="mb_subsystem_wrapper_opt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1524869928">
+  <File Type="PWROPT-DCP" Name="mb_subsystem_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="mb_subsystem_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="mb_subsystem_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="mb_subsystem_wrapper_power_summary_routed.pb"/>
@@ -10,9 +8,10 @@
   <File Type="BG-DRC" Name="mb_subsystem_wrapper.drc"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="mb_subsystem_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="mb_subsystem_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="mb_subsystem_wrapper.hwdef"/>
+  <File Type="OPT-DCP" Name="mb_subsystem_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="mb_subsystem_wrapper_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="mb_subsystem_wrapper_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="mb_subsystem_wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="mb_subsystem_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="mb_subsystem_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="mb_subsystem_wrapper_placed.dcp"/>
