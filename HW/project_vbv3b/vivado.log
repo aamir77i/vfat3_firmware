@@ -1,0 +1,659 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue May 22 11:35:23 2018
+# Process ID: 11756
+# Current directory: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12056 F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_vbv3b\project_vbv3b.xpr
+# Log file: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/vivado.log
+# Journal file: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_clk_wiz_0_0/mb_subsystem_clk_wiz_0_0.upgrade_log'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/echo_server/Debug/echo_server.elf'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/hello_world/Debug/hello_world.elf'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/socket_apps/Debug/socket_apps.elf'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 953.293 ; gain = 229.465
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+update_compile_order -fileset sources_1
+save_project_as vbv3_hw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW -force
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+save_project_as: Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 988.328 ; gain = 18.383
+import_files
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+WARNING: [filemgmt 20-342] File / dir doesn't exist, skipping: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/hello_world/Debug/hello_world.elf
+WARNING: [filemgmt 20-342] File / dir doesn't exist, skipping: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/socket_apps/Debug/socket_apps.elf
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+WARNING: [filemgmt 20-342] File / dir doesn't exist, skipping: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_clk_wiz_0_0/mb_subsystem_clk_wiz_0_0.upgrade_log
+WARNING: [filemgmt 20-342] File / dir doesn't exist, skipping: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_2.sdk/echo_server/Debug/echo_server.elf
+open_bd_design {F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd}
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat
+Adding cell -- xilinx.com:module_ref:S_to_diff:1.0 - S_to_diff_0
+Adding cell -- xilinx.com:module_ref:S_to_diff:1.0 - S_to_diff_1
+Adding cell -- xilinx.com:module_ref:DIFF_To_single:1.0 - DIFF_To_single_0
+Adding cell -- xilinx.com:module_ref:inverse_reverse:1.0 - inverse_reverse_RX
+Adding cell -- xilinx.com:module_ref:F1_F2_FILTER:1.0 - F1_F2_FILTER_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding cell -- cern.ch:module_ref:AP_Generator:1.0 - AP_Generator_0
+Adding cell -- xilinx.com:module_ref:inverse_reverse:1.0 - inverse_reverse_TX
+Adding cell -- xilinx.com:ip:selectio_wiz:5.1 - RX_deSERIALIZER
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - axi_clock_converter_0
+Adding cell -- xilinx.com:ip:axi_ethernet:7.1 - axi_ethernet_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_ethernet_0_dma
+Adding cell -- xilinx.com:ip:axi_fifo_mm_s:4.1 - FIFO
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - success
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - bit_slip
+Adding cell -- xilinx.com:ip:axi_iic:2.0 - axi_iic_0
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:axis_clock_converter:1.1 - axis_clock_converter_0
+Adding cell -- xilinx.com:ip:axis_clock_converter:1.1 - axis_clock_converter_1
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_wiz_0
+Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_wiz_1
+Adding cell -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
+Adding cell -- xilinx.com:ip:mig_7series:4.0 - mig_7series_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_125M
+Adding cell -- xilinx.com:ip:selectio_wiz:5.1 - TX_SERIALIZER
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_4
+Adding cell -- xilinx.com:module_ref:bitslip_Generator:1.0 - bitslip_Generator_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_1/clk_out3(clk) and /F1_F2_FILTER_0/clk40(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_1/clk_out3(clk) and /RX_deSERIALIZER/clk_div_in(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_1/clk_out3(clk) and /TX_SERIALIZER/clk_div_in(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_1/clk_out3(clk) and /bitslip_Generator_0/clk_40MHz(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_1/clk_out2(clk) and /S_to_diff_1/sig_in(undef)
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - axi_clock_converter_1
+Adding cell -- cern.ch:user:TX_CONTROLLER:1.0 - TX_CONTROLLER_0
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - axi_clock_converter_BIST_CYC
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - BIST_CYCLES_from_tx_controller
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - axi_clock_converter_BIST_END
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - BIST_END_from_tx_controller
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - axi_clock_converter_done
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - done_from_tx_controller
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m01_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s04_regslice
+Adding cell -- xilinx.com:ip:axi_data_fifo:2.1 - s04_data_fifo
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s03_regslice
+Adding cell -- xilinx.com:ip:axi_data_fifo:2.1 - s03_data_fifo
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s02_regslice
+Adding cell -- xilinx.com:ip:axi_data_fifo:2.1 - s02_data_fifo
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s01_regslice
+Adding cell -- xilinx.com:ip:axi_data_fifo:2.1 - s01_data_fifo
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding cell -- xilinx.com:ip:axi_data_fifo:2.1 - s00_data_fifo
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+WARNING: [BD 41-1731] Type mismatch between connected pins: /ila_0/probe14(undef) and /tx_controller_hier/EXT_RST(rst)
+Successfully read diagram <mb_subsystem> from BD file <F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /c_counter_binary_0/THRESH0(data) and /c_shift_ram_0/CE(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy_rst_n(rst) and /c_shift_ram_0/Q(data)
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1039.816 ; gain = 44.746
+startgroup
+create_bd_cell -type ip -vlnv cern.ch:user:rx_controller:1.0 rx_controller_0
+endgroup
+set_property location {5 1527 2347} [get_bd_cells rx_controller_0]
+update_compile_order -fileset sim_1
+set_property location {5 1446 2076} [get_bd_cells rx_controller_0]
+update_compile_order -fileset sim_1
+connect_bd_net [get_bd_pins rx_controller_0/data_in] [get_bd_pins inverse_reverse_RX/data_out]
+disconnect_bd_net /F1_F2_IN [get_bd_pins F1_F2_FILTER_0/d_in]
+startgroup
+connect_bd_net [get_bd_pins rx_controller_0/data_out] [get_bd_pins F1_F2_FILTER_0/d_in]
+endgroup
+connect_bd_net [get_bd_pins rx_controller_0/s00_axi_aclk] [get_bd_pins clk_wiz_1/clk_out3]
+connect_bd_net [get_bd_pins rx_controller_0/s00_axi_aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_clock_converter:2.1 axi_clock_converter_1
+endgroup
+set_property location {4 1184 2136} [get_bd_cells axi_clock_converter_1]
+connect_bd_intf_net [get_bd_intf_pins axi_clock_converter_1/M_AXI] [get_bd_intf_pins rx_controller_0/S00_AXI]
+connect_bd_net [get_bd_pins axi_clock_converter_1/m_axi_aclk] [get_bd_pins clk_wiz_1/clk_out3]
+connect_bd_net [get_bd_pins axi_clock_converter_1/m_axi_aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {15}] [get_bd_cells microblaze_0_axi_periph]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins microblaze_0_axi_periph/M14_AXI] [get_bd_intf_pins axi_clock_converter_1/S_AXI]
+connect_bd_net [get_bd_pins axi_clock_converter_1/s_axi_aclk] [get_bd_pins microblaze_0_axi_periph/M14_ACLK]
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/M14_ACLK] [get_bd_pins mig_7series_0/ui_clk]
+connect_bd_net [get_bd_pins microblaze_0_axi_periph/M14_ARESETN] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_clock_converter_1/s_axi_aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+assign_bd_address
+</rx_controller_0/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A30000 [ 64K ]>
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.C_PROBE15_WIDTH {8} CONFIG.C_NUM_OF_PROBES {16}] [get_bd_cells ila_0]
+endgroup
+connect_bd_net [get_bd_pins ila_0/probe15] [get_bd_pins rx_controller_0/data_out]
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+set_property location {6.5 1965 2190} [get_bd_cells ila_0]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd> 
+Wrote  : <F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ui/bd_a65fb5c5.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [xilinx.com:ip:c_shift_ram:12.0-913] /c_shift_ram_0 Width has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_clock_converter_0/m_axi_aresetn (associated clock /axi_clock_converter_0/m_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /bit_slip/s_axi_aresetn (associated clock /bit_slip/s_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axis_clock_converter_0/s_axis_aresetn (associated clock /axis_clock_converter_0/s_axis_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axis_clock_converter_1/m_axis_aresetn (associated clock /axis_clock_converter_1/m_axis_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/axi_clock_converter_1/m_axi_aresetn (associated clock /tx_controller_hier/axi_clock_converter_1/m_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/done_LV1A/axi_clock_converter_done/m_axi_aresetn (associated clock /tx_controller_hier/done_LV1A/axi_clock_converter_done/m_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/done_LV1A/done_from_tx_controller/s_axi_aresetn (associated clock /tx_controller_hier/done_LV1A/done_from_tx_controller/s_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/m_axi_aresetn (associated clock /tx_controller_hier/done_BIST/axi_clock_converter_BIST_END/m_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/done_BIST/BIST_END_from_tx_controller/s_axi_aresetn (associated clock /tx_controller_hier/done_BIST/BIST_END_from_tx_controller/s_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/m_axi_aresetn (associated clock /tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC/m_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/BIST_CYCLES/BIST_CYCLES_from_tx_controller/s_axi_aresetn (associated clock /tx_controller_hier/BIST_CYCLES/BIST_CYCLES_from_tx_controller/s_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /tx_controller_hier/TX_CONTROLLER_0/s00_axi_aresetn (associated clock /tx_controller_hier/TX_CONTROLLER_0/s00_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /rx_controller_0/s00_axi_aresetn (associated clock /rx_controller_0/s00_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axi_clock_converter_1/m_axi_aresetn (associated clock /axi_clock_converter_1/m_axi_aclk) is connected to reset source /proc_sys_reset_1/peripheral_aresetn (synchronous to clock source /mig_7series_0/ui_clk).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz_1/clk_out3.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+INFO: [xilinx.com:ip:axi_intc:4.1-1] /microblaze_0_axi_intc: The AXI INTC core has been configured to operate with synchronous clocks.
+INFO: [xilinx.com:ip:microblaze:10.0-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0xFFFFFFFF.
+INFO: [xilinx.com:ip:microblaze:10.0-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0xFFFFFFFF.
+WARNING: [BD 41-926] Following properties on interface pin /axi_ethernet_0/s_axi have been updated from connected ip. They may not be synchronized with cell properties. You can set property on interface pin directly to confirm the value and resolve the warning.
+	SUPPORTS_NARROW_BURST=0
+	MAX_BURST_LENGTH=1
+
+WARNING: [BD 41-927] Following properties on pin /inverse_reverse_RX/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_1_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /AP_Generator_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_1_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /inverse_reverse_TX/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_1_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /axi_ethernet_0/s_axi_lite_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mb_subsystem_mig_7series_0_0_ui_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ethernet_0/axis_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mb_subsystem_mig_7series_0_0_ui_clk 
+WARNING: [BD 41-927] Following properties on pin /axi_ethernet_0/gtx_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /axi_ethernet_0/ref_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mb_subsystem_mig_7series_0_0_ui_clk 
+WARNING: [BD 41-927] Following properties on pin /tx_controller_hier/TX_CONTROLLER_0/s00_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_1_clk_out1 
+Wrote  : <F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_bram_porta_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_bram_portb_ADDR'(16) - Only lower order bits will be connected.
+VHDL Output written to : F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_bram_porta_ADDR'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_bram_portb_ADDR'(16) - Only lower order bits will be connected.
+VHDL Output written to : F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/sim/mb_subsystem.v
+VHDL Output written to : F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/hdl/mb_subsystem_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_intc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_xlconcat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+Exporting to file f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/bd_0/hw_handoff/mb_subsystem_axi_ethernet_0_0.hwh
+Generated Block Design Tcl file f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/bd_0/hw_handoff/mb_subsystem_axi_ethernet_0_0_bd.tcl
+Generated Hardware Definition File f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_ethernet_0_0/bd_0/synth/mb_subsystem_axi_ethernet_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ethernet_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ethernet_0_dma .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block TX_SERIALIZER .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block FIFO .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DIFF_To_single_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RX_deSERIALIZER .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block bit_slip .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_clock_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_clock_converter_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_clock_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AP_Generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block bitslip_Generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block inverse_reverse_TX .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block inverse_reverse_RX .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_125M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block S_to_diff_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block S_to_diff_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block F1_F2_FILTER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block success .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_ila_0_1/mb_subsystem_ila_0_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_iic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/TX_CONTROLLER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/done_LV1A/done_from_tx_controller .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/done_LV1A/axi_clock_converter_done .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/axi_clock_converter_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/BIST_CYCLES/axi_clock_converter_BIST_CYC .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/BIST_CYCLES/BIST_CYCLES_from_tx_controller .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/done_BIST/axi_clock_converter_BIST_END .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tx_controller_hier/done_BIST/BIST_END_from_tx_controller .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rx_controller_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_axi_clock_converter_1_1/mb_subsystem_axi_clock_converter_1_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_clock_converter_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_auto_pc_0/mb_subsystem_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/m08_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m01_couplers/m01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/s04_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s04_data_fifo_0/mb_subsystem_s04_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s04_couplers/s04_data_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/s03_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s03_data_fifo_0/mb_subsystem_s03_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/s03_data_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/s02_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s02_data_fifo_0/mb_subsystem_s02_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/s02_data_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/s01_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s01_data_fifo_0/mb_subsystem_s01_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/s01_data_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/s00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_s00_data_fifo_0/mb_subsystem_s00_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/s00_data_fifo .
+Exporting to file F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/hw_handoff/mb_subsystem.hwh
+Generated Block Design Tcl file F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/hw_handoff/mb_subsystem_bd.tcl
+Generated Hardware Definition File F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/synth/mb_subsystem.hwdef
+[Tue May 22 11:46:04 2018] Launched synth_1...
+Run output will be captured here: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/synth_1/runme.log
+[Tue May 22 11:46:04 2018] Launched impl_1...
+Run output will be captured here: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:32 ; elapsed = 00:01:15 . Memory (MB): peak = 1486.590 ; gain = 175.273
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 5095 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper_board.xdc]
+Finished Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper_board.xdc]
+Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mdm_1_0/mb_subsystem_mdm_1_0.xdc:50]
+INFO: [Timing 38-2] Deriving generated clocks [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mdm_1_0/mb_subsystem_mdm_1_0.xdc:50]
+get_clocks: Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2994.016 ; gain = 702.473
+INFO: [Timing 38-2] Deriving generated clocks [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_clk_wiz_0_2/mb_subsystem_clk_wiz_0_2.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_clk_wiz_1_0/mb_subsystem_clk_wiz_1_0.xdc:57]
+Finished Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper_early.xdc]
+Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'sys_clk_pin' completely overrides clock 'sys_clk_p'.
+New: create_clock -period 5.000 -name sys_clk_pin [get_ports sys_clk_p], [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:7]
+Previous: create_clock -period 4.995 [get_ports sys_clk_p], [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mb_subsystem_mig_7series_0_0/user_design/constraints/mb_subsystem_mig_7series_0_0.xdc:29]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_tx_en_obuf_reg [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_tx_er_obuf_reg [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[0] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[1] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[2] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[3] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[4] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[5] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[6] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/gmii_txd_obuf_reg[7] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rx_dv_to_mac_reg [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rx_er_to_mac_reg [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[0] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[1] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[2] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[3] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[4] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[5] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[6] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+WARNING: [Constraints 18-4570] A register has an IOB value of TRUE which conflicts with its Pblock assignment. The IOB property takes priority over the Pblock assignment. The register is mb_subsystem_i/axi_ethernet_0/inst/mac/inst/tri_mode_ethernet_mac_i/gmii_interface/rxd_to_mac_reg[7] [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc:10]
+INFO: [Timing 38-2] Deriving generated clocks [f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/impl_1/.Xil/Vivado-10048-PCMICVFAT3/dbg_hub_CV.0/out/xsdbm.xdc:10]
+Finished Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper.xdc]
+Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper_late.xdc]
+Finished Parsing XDC File [F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/.Xil/Vivado-11756-PCMICVFAT3/dcp0/mb_subsystem_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3043.336 ; gain = 3.742
+Restored from archive | CPU: 8.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3043.336 ; gain = 3.742
+Generating merged BMM file for the design top 'mb_subsystem_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/imports/Debug/vfat3_sdk.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2120 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 108 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT, IBUFDS_IBUFDISABLE_INT, INV, OBUFTDS_DCIEN, OBUFTDS_DCIEN): 8 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 64 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 50 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 542 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 952 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 352 instances
+  SRLC16E => SRL16E: 1 instances
+  SRLC32E => SRL16E: 7 instances
+
+open_run: Time (s): cpu = 00:01:39 ; elapsed = 00:01:20 . Memory (MB): peak = 3133.645 ; gain = 1615.164
+open_report: Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 3355.449 ; gain = 204.691
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+file copy -force F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/impl_1/mb_subsystem_wrapper.sysdef F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk/mb_subsystem_wrapper.hdf
+
+launch_sdk -workspace F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk/mb_subsystem_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk/mb_subsystem_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/impl_1/mb_subsystem_wrapper.sysdef F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk/mb_subsystem_wrapper.hdf
+
+launch_sdk -workspace F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk/mb_subsystem_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk/mb_subsystem_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd}
+ipx::edit_ip_in_project -upgrade true -name rx_controller_v1_0_project -directory F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.tmp/rx_controller_v1_0_project f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo/rx_controller_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project'
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 3570.883 ; gain = 5.527
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 3570.883 ; gain = 5.527
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    get_if_design_assist_can_be_applied Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    ::bd::board_utils::is_intf_pin Line 3
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running can_apply_rule TCL procedure: ERROR: [Common 17-39] 'get_bd_intf_pins' failed due to earlier errors.
+    get_if_design_assist_can_be_applied Line 3
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203A62FE3A
+set_property PROGRAM.FILE {F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/impl_1/mb_subsystem_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/impl_1/mb_subsystem_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/impl_1/mb_subsystem_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"mb_subsystem_i/ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+current_project vbv3_hw
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"mb_subsystem_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-May-22 13:41:37
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"mb_subsystem_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"mb_subsystem_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-May-22 13:41:37
+INFO: [Labtools 27-3304] ILA Waveform data saved to file F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+current_project rx_controller_v1_0_project
+close_project
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Tue May 22 13:42:47 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 54.383 ; gain = 1.379
+INFO: [Common 17-206] Exiting Webtalk at Tue May 22 13:42:47 2018...
+close_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 4162.898 ; gain = 0.000
+open_bd_design {F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd}
+ipx::edit_ip_in_project -upgrade true -name rx_controller_v1_0_project -directory F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.tmp/rx_controller_v1_0_project f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo/rx_controller_1.0/component.xml
+ERROR: [Project 1-161] Failed to remove the directory 'f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw'. The directory might be in use by some other process.
+ERROR: [Ipptcl 7-562] Cannot create project 'rx_controller_v1_0_project'.
+ipx::edit_ip_in_project -upgrade true -name rx_controller_v1_0_project -directory F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.tmp/rx_controller_v1_0_project f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo/rx_controller_1.0/component.xml
+ERROR: [Project 1-161] Failed to remove the directory 'f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw'. The directory might be in use by some other process.
+ERROR: [Ipptcl 7-562] Cannot create project 'rx_controller_v1_0_project'.
+regenerate_bd_layout
+ipx::edit_ip_in_project -upgrade true -name rx_controller_v1_0_project -directory F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.tmp/rx_controller_v1_0_project f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo/rx_controller_1.0/component.xml
+ERROR: [Project 1-161] Failed to remove the directory 'f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw'. The directory might be in use by some other process.
+ERROR: [Ipptcl 7-562] Cannot create project 'rx_controller_v1_0_project'.
+save_bd_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 22 13:45:43 2018...

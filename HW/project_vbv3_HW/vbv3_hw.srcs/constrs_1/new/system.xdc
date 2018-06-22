@@ -1,0 +1,66 @@
+#set_property LOC AD11 [ get_ports sys_clk_n]
+#set_property LOC AD12 [ get_ports sys_clk_p]
+set_property PACKAGE_PIN AB7 [get_ports reset]
+set_property IOSTANDARD LVCMOS15 [get_ports reset]
+# additional constraints
+#
+create_clock -period 5.000 -name sys_clk_pin [get_ports sys_clk_p]
+# Added for RevC board
+
+create_pblock pblock_i
+add_cells_to_pblock [get_pblocks pblock_i] [get_cells -quiet [list mb_subsystem_i]]
+resize_pblock [get_pblocks pblock_i] -add {CLOCKREGION_X0Y0:CLOCKREGION_X1Y3}
+
+#for vbrad
+#set_property PACKAGE_PIN AC29 [get_ports RXD_P]
+#for vbv3
+set_property PACKAGE_PIN AB29 [get_ports RXD_P]
+
+set_property IOSTANDARD LVDS_25 [get_ports RXD_P]
+set_property IOSTANDARD LVDS_25 [get_ports RXD_N]
+set_property IBUF_LOW_PWR FALSE [get_ports sys_clk_p]
+set_property IOSTANDARD LVDS [get_ports sys_clk_p]
+set_property IOSTANDARD LVDS [get_ports sys_clk_n]
+
+
+# FOR VBRAD
+#set_property PACKAGE_PIN AD29 [get_ports rxclk_320_p]
+# FOR VBV3
+set_property PACKAGE_PIN Y30 [get_ports rxclk_320_p]
+
+#FOR VBRAD
+#set_property PACKAGE_PIN AB29 [get_ports txd_p]
+# FOR VBV3 HYBRID
+set_property PACKAGE_PIN AC29 [get_ports txd_p]
+
+# FOR VBRAD
+#set_property PACKAGE_PIN AH20 [get_ports iic_main_scl_io]
+#set_property PACKAGE_PIN AG20 [get_ports iic_main_sda_io]
+
+#FOR VBV3 HYBRID
+set_property PACKAGE_PIN AG23 [get_ports iic_main_scl_io]
+set_property PACKAGE_PIN AF22 [get_ports iic_main_sda_io]
+
+
+set_property BITSTREAM.GENERAL.COMPRESS FALSE [current_design]
+
+
+set_property PACKAGE_PIN AF25 [get_ports BIST_OK]
+set_property PACKAGE_PIN AC22 [get_ports BIST_START]
+set_property IOSTANDARD LVCMOS25 [get_ports BIST_OK]
+set_property IOSTANDARD LVCMOS25 [get_ports BIST_START]
+set_property PACKAGE_PIN AC25 [get_ports BIST_END]
+set_property IOSTANDARD LVCMOS25 [get_ports BIST_END]
+
+set_property PACKAGE_PIN AF20 [get_ports PS_ADC_ADDR]
+set_property PACKAGE_PIN AF21 [get_ports CALIB_ADC_ADDR]
+set_property IOSTANDARD LVCMOS25 [get_ports PS_ADC_ADDR]
+set_property IOSTANDARD LVCMOS25 [get_ports CALIB_ADC_ADDR]
+
+
+set_property PACKAGE_PIN AD24 [get_ports EXT_RST]
+set_property IOSTANDARD LVCMOS25 [get_ports EXT_RST]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk]

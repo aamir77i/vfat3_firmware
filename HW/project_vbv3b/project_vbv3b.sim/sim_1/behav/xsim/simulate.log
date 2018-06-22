@@ -1,0 +1,32 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+XilinxAXIVIP: Found at Path: test_v1_0_tb.DUT.test_v1_0_bfm_1_i.master_0.inst
+Sequential write transfers example similar to  AXI BFM WRITE_BURST method starts
+Warning: [WR_BURST] (axi_vip_pkg.axi_transaction::set_cache) 1000.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 1 ns  Iteration: 0  Process: /axi_vip_pkg/axi_mst_agent(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::AXI4_WRITE_BURST_BLOCKING  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+Warning: [WR_BURST] (axi_vip_pkg.axi_transaction::set_cache) 105001.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 105001 ps  Iteration: 0  Process: /axi_vip_pkg/axi_mst_wr_driver(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::get_and_drive/GET_AND_DRIVE  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+Warning: [AXI_WMON0_2] (axi_vip_pkg.axi_transaction::set_cache) 125000.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 125 ns  Iteration: 1  Process: /axi_vip_pkg/axi_monitor(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::aw_channel/AW_LOOP  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+155000.0 ps : test_v1_0_tb.DUT.test_v1_0_bfm_1_i.master_0.inst.genblk1.PC.REP : BIT(         88) : WARNING : XILINX_AW_SUPPORTS_NARROW_CACHE. AW Non-modifiable burst issued from MASTER. Connection has been declared to NOT support narrow bursts.
+Warning: [WR_BURST] (axi_vip_pkg.axi_transaction::set_cache) 255000.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 255 ns  Iteration: 1  Process: /axi_vip_pkg/axi_mst_wr_driver(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::return_item_to_sequence  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+Sequential write transfers example similar to  AXI BFM WRITE_BURST method completes
+Sequential read transfers example similar to  AXI BFM READ_BURST method starts
+Warning: [RD_BURST] (axi_vip_pkg.axi_transaction::set_cache) 255000.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 255 ns  Iteration: 1  Process: /axi_vip_pkg/axi_mst_agent(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::AXI4_READ_BURST_BLOCKING  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+Warning: [RD_BURST] (axi_vip_pkg.axi_transaction::set_cache) 255000.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 255 ns  Iteration: 1  Process: /axi_vip_pkg/axi_mst_rd_driver(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::get_and_drive/GET_AND_DRIVE  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+Warning: [AXI_RMON0_6] (axi_vip_pkg.axi_transaction::set_cache) 285000.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 285 ns  Iteration: 1  Process: /axi_vip_pkg/axi_monitor(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::ar_channel/AR_LOOP  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+315000.0 ps : test_v1_0_tb.DUT.test_v1_0_bfm_1_i.master_0.inst.genblk1.PC.REP : BIT(         89) : WARNING : XILINX_AR_SUPPORTS_NARROW_CACHE. AR Non-modifiable burst issued from MASTER. Connection has been declared to NOT support narrow bursts.
+Warning: [RD_BURST] (axi_vip_pkg.axi_transaction::set_cache) 505000.0 ps : Attempted to send CACHE(0x0000) when SUPPORTS_NARROW is low. According to UG1037,AxCACHE[1] has to be 1 to ensure that any downstream upsizer can fully pack data up to wider widths
+Time: 505 ns  Iteration: 1  Process: /axi_vip_pkg/axi_mst_rd_driver(C_AXI_WID_WIDTH=1,C_AXI_RID_WIDTH=1,C_AXI_AWUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_SUPPORTS_NARROW=0)::return_item_to_sequence  File: /wrk/2017.4/nightly/2017_12_15_2086221/prep/rdi/vivado/data/xilinx_vip/hdl/axi_vip_pkg.sv
+Sequential read transfers example similar to  AXI BFM READ_BURST method completes
+TESTBENCH Passed! Data expected is equal to actual. expected = 0x0000000800000007000000060000000500000004000000030000000200000001 actual   = 0x0000000800000007000000060000000500000004000000030000000200000001
+Sequential read transfers example similar to  AXI VIP READ_BURST method completes
+---------------------------------------------------------
+EXAMPLE TEST S00_AXI: PTGEN_TEST_FINISHED!
+PTGEN_TEST: PASSED!
+---------------------------------------------------------
+$finish called at time : 506 ns : File "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/project_vbv3b.srcs/sim_1/imports/bfm_design/test_v1_0_tb.sv" Line 133

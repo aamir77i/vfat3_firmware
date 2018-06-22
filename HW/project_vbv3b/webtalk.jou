@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue May 22 13:42:32 2018
+# Process ID: 8400
+# Current directory: f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b
+# Command line: wbtcv.exe -mode batch -source f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b/webtalk.log
+# Journal file: f:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3b\webtalk.jou
+#-----------------------------------------------------------
+source f:/xapp1026/kc705_axieth_150mhz_64kb/vfat3_firmware/hw/project_vbv3_hw/vbv3_hw.tmp/rx_controller_v1_0_project/rx_controller_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace

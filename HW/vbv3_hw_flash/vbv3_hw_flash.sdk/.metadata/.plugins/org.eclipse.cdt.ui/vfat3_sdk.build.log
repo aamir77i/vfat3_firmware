@@ -1,0 +1,6 @@
+08:45:30 **** Auto Build of configuration Debug for project vfat3_sdk ****
+make all 
+make: Nothing to be done for `all'.
+
+08:45:30 Build Finished (took 223ms)
+

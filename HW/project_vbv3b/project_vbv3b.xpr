@@ -21,6 +21,10 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/test_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/test_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/test_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/test_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -33,7 +37,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="kc705"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="3"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -276,6 +280,42 @@
           <Attr Name="ScopedToCell" Val="mb_subsystem_mig_7series_0_0"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/test_v1_0_bfm_1/test_v1_0_bfm_1.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hdl/test_v1_0_bfm_1_wrapper.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/test_v1_0_bfm_1/hdl/test_v1_0_bfm_1_wrapper.v"/>
+          <Attr Name="ImportTime" Val="1526754335"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/test_v1_0_bfm_2/test_v1_0_bfm_2.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hdl/test_v1_0_bfm_2_wrapper.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/test_v1_0_bfm_2/hdl/test_v1_0_bfm_2_wrapper.v"/>
+          <Attr Name="ImportTime" Val="1526754406"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="mb_subsystem_wrapper"/>
@@ -299,6 +339,23 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/imports/test_v1_0_bfm_1/test_v1_0_tb_include.svh">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/test_v1_0_bfm_1/test_v1_0_tb_include.svh"/>
+          <Attr Name="ImportTime" Val="1526754335"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/bfm_design/test_v1_0_tb.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ip_repo/test_1.0/example_designs/bfm_design/test_v1_0_tb.sv"/>
+          <Attr Name="ImportTime" Val="1526754403"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../project_2.sdk/hello_world/Debug/hello_world.elf">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
@@ -322,14 +379,22 @@
           <Attr Name="IsVisible" Val="1"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sim_1/imports/test_v1_0_bfm_2/test_v1_0_tb_include.svh">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/test_v1_0_bfm_2/test_v1_0_tb_include.svh"/>
+          <Attr Name="ImportTime" Val="1526754406"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="mb_subsystem_wrapper"/>
-        <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="test_v1_0_tb"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.runtime" Val="100ms"/>
       </Config>
     </FileSet>
   </FileSets>

@@ -1,6 +1,48 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sat May 19 20:27:15 2018
+| Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'test_v1_0_bfm_2_test_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of test_v1_0_bfm_2_test_0_0 (cern.ch:user:test:1.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sat May 19 20:27:14 2018
+| Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'test_v1_0_bfm_1_test_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of test_v1_0_bfm_1_test_0_0 (cern.ch:user:test:1.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 | Date         : Sun Apr 22 20:54:28 2018
 | Host         : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
 | Command      : upgrade_ip
