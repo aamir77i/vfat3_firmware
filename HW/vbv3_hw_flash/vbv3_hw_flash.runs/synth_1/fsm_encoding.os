@@ -15,12 +15,12 @@
        {{0000 0000} {0001 0001} {0010 0010} {0011 0011} {0100 0100} {0101 0101} {0110 0110} {0111 0111} {1000 1000} }
 
  add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__2.src_state} \
+       {axi_clock_converter_v2_1_14_lite_async.src_state} \
        { }  \
        {{00 00} {01 01} {10 10} {11 11} }
 
  add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__2.dest_state} \
+       {axi_clock_converter_v2_1_14_lite_async.dest_state} \
        { }  \
        {{00 00} {01 01} {10 10} {11 11} }
 
@@ -222,7 +222,12 @@
  add_fsm_encoding \
        {MMU_UTLB.State} \
        { }  \
-       {{00000 00000} {00001 00001} {00010 00110} {00011 01001} {00100 00111} {00101 01011} {00110 01000} {00111 01010} {01000 00011} {01001 01100} {01010 01110} {01011 01101} {01100 01111} {01101 10000} {01110 00010} {01111 10001} {10000 00100} {10001 00101} {11111 10010} }
+       {{00000 00000} {00001 00110} {00010 00001} {00011 01001} {00100 01011} {00101 00111} {00110 01000} {00111 01010} {01000 00011} {01001 01100} {01010 01110} {01011 01101} {01100 01111} {01101 10000} {01110 00010} {01111 10001} {10000 00100} {10001 00101} {11111 10010} }
+
+ add_fsm_encoding \
+       {Icache.cache_state} \
+       { }  \
+       {{0000 000} {0001 001} {0010 010} {0011 011} {0100 100} }
 
  add_fsm_encoding \
        {mig_7series_v4_0_tempmon.xadc_supplied_temperature.tempmon_state} \
@@ -255,56 +260,6 @@
        {{00 11} {01 10} {10 00} {11 01} }
 
  add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__4.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__4.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__3.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__3.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized0__xdcDup__3.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized0__xdcDup__3.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized1__xdcDup__3.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized1__xdcDup__3.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized2__xdcDup__3.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized2__xdcDup__3.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
        {axi_clock_converter_v2_1_14_lite_async__parameterized3.src_state} \
        { }  \
        {{00 00} {01 01} {10 10} {11 11} }
@@ -321,106 +276,6 @@
 
  add_fsm_encoding \
        {axi_clock_converter_v2_1_14_lite_async__parameterized3__xdcDup__3.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized0__xdcDup__4.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized0__xdcDup__4.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized1__xdcDup__4.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized1__xdcDup__4.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized2__xdcDup__4.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized2__xdcDup__4.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__6.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__6.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__5.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__5.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized0__xdcDup__5.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized0__xdcDup__5.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized1__xdcDup__5.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized1__xdcDup__5.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized2__xdcDup__5.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__parameterized2__xdcDup__5.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async.dest_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__7.src_state} \
-       { }  \
-       {{00 00} {01 01} {10 10} {11 11} }
-
- add_fsm_encoding \
-       {axi_clock_converter_v2_1_14_lite_async__xdcDup__7.dest_state} \
        { }  \
        {{00 00} {01 01} {10 10} {11 11} }
 

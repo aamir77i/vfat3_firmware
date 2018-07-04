@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Wed May 23 11:13:42 2018
+//Date        : Sat Jun 23 10:08:49 2018
 //Host        : PCMICVFAT3 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target mb_subsystem_wrapper.bd
 //Design      : mb_subsystem_wrapper
@@ -52,6 +52,9 @@ module mb_subsystem_wrapper
     rs232_uart_txd,
     rxclk_320_n,
     rxclk_320_p,
+    spi_flash_io0_io,
+    spi_flash_io1_io,
+    spi_flash_ss_io,
     sys_clk_n,
     sys_clk_p,
     txd_n,
@@ -98,6 +101,9 @@ module mb_subsystem_wrapper
   output rs232_uart_txd;
   output rxclk_320_n;
   output rxclk_320_p;
+  inout spi_flash_io0_io;
+  inout spi_flash_io1_io;
+  inout [0:0]spi_flash_ss_io;
   input sys_clk_n;
   input sys_clk_p;
   output txd_n;
@@ -154,6 +160,18 @@ module mb_subsystem_wrapper
   wire rs232_uart_txd;
   wire rxclk_320_n;
   wire rxclk_320_p;
+  wire spi_flash_io0_i;
+  wire spi_flash_io0_io;
+  wire spi_flash_io0_o;
+  wire spi_flash_io0_t;
+  wire spi_flash_io1_i;
+  wire spi_flash_io1_io;
+  wire spi_flash_io1_o;
+  wire spi_flash_io1_t;
+  wire [0:0]spi_flash_ss_i_0;
+  wire [0:0]spi_flash_ss_io_0;
+  wire [0:0]spi_flash_ss_o_0;
+  wire spi_flash_ss_t;
   wire sys_clk_n;
   wire sys_clk_p;
   wire txd_n;
@@ -218,6 +236,15 @@ module mb_subsystem_wrapper
         .rs232_uart_txd(rs232_uart_txd),
         .rxclk_320_n(rxclk_320_n),
         .rxclk_320_p(rxclk_320_p),
+        .spi_flash_io0_i(spi_flash_io0_i),
+        .spi_flash_io0_o(spi_flash_io0_o),
+        .spi_flash_io0_t(spi_flash_io0_t),
+        .spi_flash_io1_i(spi_flash_io1_i),
+        .spi_flash_io1_o(spi_flash_io1_o),
+        .spi_flash_io1_t(spi_flash_io1_t),
+        .spi_flash_ss_i(spi_flash_ss_i_0),
+        .spi_flash_ss_o(spi_flash_ss_o_0),
+        .spi_flash_ss_t(spi_flash_ss_t),
         .sys_clk_n(sys_clk_n),
         .sys_clk_p(sys_clk_p),
         .txd_n(txd_n),
@@ -227,4 +254,19 @@ module mb_subsystem_wrapper
         .IO(mdio_mdc_mdio_io),
         .O(mdio_mdc_mdio_i),
         .T(mdio_mdc_mdio_t));
+  IOBUF spi_flash_io0_iobuf
+       (.I(spi_flash_io0_o),
+        .IO(spi_flash_io0_io),
+        .O(spi_flash_io0_i),
+        .T(spi_flash_io0_t));
+  IOBUF spi_flash_io1_iobuf
+       (.I(spi_flash_io1_o),
+        .IO(spi_flash_io1_io),
+        .O(spi_flash_io1_i),
+        .T(spi_flash_io1_t));
+  IOBUF spi_flash_ss_iobuf_0
+       (.I(spi_flash_ss_o_0),
+        .IO(spi_flash_ss_io[0]),
+        .O(spi_flash_ss_i_0),
+        .T(spi_flash_ss_t));
 endmodule

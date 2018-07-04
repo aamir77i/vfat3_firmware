@@ -48,21 +48,17 @@
 
 
 // IP VLNV: cern.ch:user:TX_CONTROLLER:1.0
-// IP Revision: 21
+// IP Revision: 22
 
 (* X_CORE_INFO = "AXI_TX_CONTROLLER_v1_0,Vivado 2017.4" *)
 (* CHECK_LICENSE_TYPE = "mb_subsystem_TX_CONTROLLER_0_0,AXI_TX_CONTROLLER_v1_0,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mb_subsystem_TX_CONTROLLER_0_0 (
-  clk_40MHz,
   data_out,
-  done,
   data_in,
   BIST_START,
   BIST_END,
   BIST_OK,
-  BIST_CYCLES_to_processor,
-  BIST_end_to_processor,
   PS_ADC_ADDR,
   CALIB_ADC_ADDR,
   INV_TX,
@@ -91,15 +87,11 @@ module mb_subsystem_TX_CONTROLLER_0_0 (
   s00_axi_rready
 );
 
-input wire clk_40MHz;
 output wire [7 : 0] data_out;
-output wire done;
 input wire [7 : 0] data_in;
 output wire BIST_START;
 input wire BIST_END;
 input wire BIST_OK;
-output wire [31 : 0] BIST_CYCLES_to_processor;
-output wire BIST_end_to_processor;
 output wire PS_ADC_ADDR;
 output wire CALIB_ADC_ADDR;
 output wire INV_TX;
@@ -157,15 +149,11 @@ input wire s00_axi_rready;
     .C_S00_AXI_DATA_WIDTH(32),
     .C_S00_AXI_ADDR_WIDTH(6)
   ) inst (
-    .clk_40MHz(clk_40MHz),
     .data_out(data_out),
-    .done(done),
     .data_in(data_in),
     .BIST_START(BIST_START),
     .BIST_END(BIST_END),
     .BIST_OK(BIST_OK),
-    .BIST_CYCLES_to_processor(BIST_CYCLES_to_processor),
-    .BIST_end_to_processor(BIST_end_to_processor),
     .PS_ADC_ADDR(PS_ADC_ADDR),
     .CALIB_ADC_ADDR(CALIB_ADC_ADDR),
     .INV_TX(INV_TX),

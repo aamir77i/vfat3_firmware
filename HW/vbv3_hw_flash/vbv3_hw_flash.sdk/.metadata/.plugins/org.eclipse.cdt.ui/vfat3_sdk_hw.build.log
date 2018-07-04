@@ -1,6 +1,487 @@
-08:45:43 **** Auto Build of configuration Debug for project vfat3_sdk_hw ****
+15:06:31 **** Incremental Build of configuration Debug for project vfat3_sdk_hw ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/echo.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g -c -fmessage-length=0 -MT"src/echo.o" -I../../vfat3_sdk_hw_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+../src/echo.c: In function 'BIST':
+../src/echo.c:253:20: warning: unknown escape sequence: '\s'
+         xil_printf("\n\starting test \n\r");
+                    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/echo.c:279:14: warning: unknown escape sequence: '\F'
+   xil_printf("\n\Final value BIST cycles  = %d , test finished\n\r", BIST_cnt);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/echo.c: In function 'ext_reset':
+../src/echo.c:320:15: warning: passing argument 2 of 'SendReply' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  SendReply(sd,DestinationBuffer,4);
+               ^~~~~~~~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:305:6: warning: variable 'ack' set but not used [-Wunused-but-set-variable]
+  u32 ack;
+      ^~~
+../src/echo.c: In function 'send_sync_command':
+../src/echo.c:545:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+     usleep(1000);usleep(1000);usleep(1000);
+     ^~~~~~
+../src/echo.c:575:39: warning: passing argument 2 of 'RxReceive' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    Rcv_len = RxReceive(&FifoInstance, DestinationBuffer,0);
+                                       ^~~~~~~~~~~~~~~~~
+../src/echo.c:120:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ u32 RxReceive(XLlFifo *InstancePtr, u32 *DestinationAddr,u8 verbose_mode);
+     ^~~~~~~~~
+../src/echo.c:604:17: warning: passing argument 2 of 'SendReply' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    SendReply(sd,DestinationBuffer,1);
+                 ^~~~~~~~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:509:8: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+    int Error;
+        ^~~~~
+../src/echo.c: In function 'Receive_fast_command':
+../src/echo.c:687:37: warning: passing argument 2 of 'RxReceive' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Rcv_len = RxReceive(&FifoInstance, DestinationBuffer,verbose_mode);
+                                     ^~~~~~~~~~~~~~~~~
+../src/echo.c:120:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ u32 RxReceive(XLlFifo *InstancePtr, u32 *DestinationAddr,u8 verbose_mode);
+     ^~~~~~~~~
+../src/echo.c:678:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+  u8 PKT_LEN=22;
+     ^~~~~~~
+../src/echo.c:677:5: warning: unused variable 'indexx' [-Wunused-variable]
+  u8 indexx;
+     ^~~~~~
+../src/echo.c:676:5: warning: unused variable 'loop' [-Wunused-variable]
+  u8 loop;
+     ^~~~
+../src/echo.c:675:5: warning: unused variable 'Header' [-Wunused-variable]
+  u8 Header;
+     ^~~~~~
+../src/echo.c:673:8: warning: unused variable 'j' [-Wunused-variable]
+  u32 i,j;
+        ^
+../src/echo.c:673:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i,j;
+      ^
+../src/echo.c: In function 'send_Calpulse_LV1As':
+../src/echo.c:840:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^~~~~~
+In file included from ../src/echo.c:45:0:
+../src/echo.c: In function 'Initialize_everything':
+../../vfat3_sdk_hw_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:907:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/echo.c:893:6: note: declared here
+ void Initialize_everything()
+      ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_hw_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
+ #define XST_SUCCESS                     0L
+                                         ^
+../src/echo.c:993:9: note: in expansion of macro 'XST_SUCCESS'
+  return XST_SUCCESS;
+         ^~~~~~~~~~~
+../src/echo.c:893:6: note: declared here
+ void Initialize_everything()
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/echo.c: In function 'decode_receive_packet':
+../src/echo.c:1054:17: warning: passing argument 1 of 'Print_Buffer' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   Print_Buffer( DestinationBuffer,Rcv_length, string );
+                 ^~~~~~~~~~~~~~~~~
+../src/echo.c:717:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ void Print_Buffer(u32 *Buffer , int length ,char *string)
+      ^~~~~~~~~~~~
+../src/echo.c:1055:16: warning: passing argument 2 of 'SendReply' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   SendReply(sd,DestinationBuffer,Rcv_length*4);
+                ^~~~~~~~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:1085:68: warning: passing argument 4 of 'read_SC' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   Read_data = read_SC( register_address, register_data, SourceAddr,DestinationBuffer, verbose_mode );
+                                                                    ^~~~~~~~~~~~~~~~~
+../src/echo.c:150:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ u32 read_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
+     ^~~~~~~
+../src/echo.c:1086:75: warning: passing argument 4 of 'write_SC' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   else if(mode ==1) write_SC( register_address, register_data, SourceAddr,DestinationBuffer,verbose_mode );
+                                                                           ^~~~~~~~~~~~~~~~~
+../src/echo.c:149:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ void write_SC( u32 address, u16 data, u32* SourceAddr,u32* DestinationBuffer, u8 verbose_mode );
+      ^~~~~~~~
+../src/echo.c:1133:28: warning: passing argument 2 of 'AdjustIref' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      AdjustIref(SourceAddr,DestinationBuffer,sd);
+                            ^~~~~~~~~~~~~~~~~
+../src/echo.c:136:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ u16 AdjustIref(u32 *SourceAddr,u32 *DestinationBuffer,int sd);
+     ^~~~~~~~~~
+../src/echo.c:1149:39: warning: passing argument 2 of 'CalibrateADC' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+               CalibrateADC(SourceAddr,DestinationBuffer,sd,start,step , stop,0);
+                                       ^~~~~~~~~~~~~~~~~
+../src/echo.c:128:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ int CalibrateADC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step , u8 stop,u8 calibration_mode);
+     ^~~~~~~~~~~~
+../src/echo.c:1171:36: warning: passing argument 2 of 'CalibrateCAL_DAC' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        CalibrateCAL_DAC(SourceAddr,DestinationBuffer,sd,start,step,stop,0);
+                                    ^~~~~~~~~~~~~~~~~
+../src/echo.c:130:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ int CalibrateCAL_DAC(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u8 start,u8 step , u8 stop,u8 calibration_mode);
+     ^~~~~~~~~~~~~~~~
+../src/echo.c:1195:30: warning: passing argument 2 of 'DAC_SCANS' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         DAC_SCANS(SourceAddr,DestinationBuffer,sd,mon_sel,start,step,stop);
+                              ^~~~~~~~~~~~~~~~~
+../src/echo.c:143:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ int DAC_SCANS(u32 *SourceAddr,u32 *DestinationBuffer,int sd,u32 Mon_sel, u8 start,u8 step , u8 stop);
+     ^~~~~~~~~
+../src/echo.c:1232:26: warning: passing argument 2 of 'Scurve' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+        Scurve(SourceAddr,DestinationBuffer,start_channel,stop_channel,step_channel,start_CALDAC,stop_CALDAC,step_CALDAC,Latency,num_of_triggers,sd,arm_dac,delay,D1,D2);
+                          ^~~~~~~~~~~~~~~~~
+../src/echo.c:140:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ int Scurve(u32 *SourceAddr,u32 *DestinationBuffer,u8 start_channel,u8 stop_channel, u8 step_channel,u8 start_CALDAC,u8 stop_CALDAC,u8 step_CALDAC,u16 Latency, u16 num_of_triggers,int sd,u8 arm_dac,u8 delay,u16 D1,u16 D2);
+     ^~~~~~
+../src/echo.c:1264:46: warning: passing argument 2 of 'CalibrateCAL_DAC_extended' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         CalibrateCAL_DAC_extended(SourceAddr,DestinationBuffer,sd,start,step,stop,0);
+                                              ^~~~~~~~~~~~~~~~~
+../src/echo.c:131:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ int CalibrateCAL_DAC_extended(u32 *SourceAddr,u32 *DestinationBuffer,int sd, u8 start,u8 step , u8 stop,u8 calibration_mode);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/echo.c:1310:36: warning: passing argument 2 of 'Scurve_extended' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         Scurve_extended(SourceAddr,DestinationBuffer,start_channel,stop_channel,step_channel,Latency,num_of_triggers,sd,arm_dac,delay,D1,D2,array_size,dac_arr,calpulse);
+                                    ^~~~~~~~~~~~~~~~~
+../src/echo.c:141:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ int Scurve_extended(u32 *SourceAddr,u32 *DestinationBuffer, u8 start_channel,u8 stop_channel, u8 step_channel,u16 Latency, u16 num_of_triggers,int sd,u8 arm_dac,u8 delay,u16 D1,u16 D2,u8 points,u8 *dac_arr,u8 calpulse);
+     ^~~~~~~~~~~~~~~
+../src/echo.c:1319:36: warning: passing argument 2 of 'Set_front_end_Nominal' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   Set_front_end_Nominal(SourceAddr,DestinationBuffer);
+                                    ^~~~~~~~~~~~~~~~~
+../src/echo.c:155:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ void Set_front_end_Nominal(u32 *SourceAddr,u32 *DestinationBuffer);
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/echo.c:1330:28: warning: passing argument 2 of 'Set_front_end' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   Set_front_end(SourceAddr,DestinationBuffer,*(recv_buf+3),*(recv_buf+4),*(recv_buf+5),*(recv_buf+6),*(recv_buf+7),*(recv_buf+2),*(recv_buf+2),*(recv_buf+2),*(recv_buf+2));
+                            ^~~~~~~~~~~~~~~~~
+../src/echo.c:156:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ void Set_front_end(u32 *SourceAddr,u32 *DestinationBuffer,u8 PRE_I_BLCC_reg,u8 PRE_VREF_reg,u8 PRE_I_BSF_reg,u8 PRE_I_BIT_reg,u8 SH_I_BFCAS_reg,u8 SH_I_BDIFF_reg,u8 SD_I_BDIFF_reg,u8 SD_I_BSF_reg,u8 SD_I_BFCAS_reg);
+      ^~~~~~~~~~~~~
+../src/echo.c:1015:16: warning: unused variable 'crc' [-Wunused-variable]
+   unsigned int crc;
+                ^~~
+../src/echo.c:1013:7: warning: unused variable 'data_crc' [-Wunused-variable]
+  char data_crc[]={0x00,0x03,0x1f,0x06,0x01,0x20,0x81,0x00,0x00,0x00,0x07,0x20,0x00,0x00};
+       ^~~~~~~~
+../src/echo.c: In function 'Initialize_fifo':
+../src/echo.c:1351:7: warning: unused variable 'Error' [-Wunused-variable]
+   int Error;
+       ^~~~~
+../src/echo.c:1350:7: warning: unused variable 'i' [-Wunused-variable]
+   int i;
+       ^
+../src/echo.c: In function 'RxReceive':
+../src/echo.c:1389:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/echo.c: In function 'XLlFifoPollingExample':
+../src/echo.c:1536:44: warning: passing argument 2 of 'RxReceive' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   ReceiveLength = RxReceive(&FifoInstance, DestinationBuffer,verbose_mode);
+                                            ^~~~~~~~~~~~~~~~~
+../src/echo.c:1385:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ u32 RxReceive (XLlFifo *InstancePtr, u32* DestinationAddr,u8 verbose_mode)
+     ^~~~~~~~~
+../src/echo.c:1475:6: warning: variable 'Error' set but not used [-Wunused-but-set-variable]
+  int Error;
+      ^~~~~
+../src/echo.c:1474:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/echo.c:1471:18: warning: unused variable 'Config' [-Wunused-variable]
+  XLlFifo_Config *Config;
+                  ^~~~~~
+../src/echo.c: In function 'TxSend':
+../src/echo.c:1584:6: warning: unused variable 'j' [-Wunused-variable]
+  u32 j;
+      ^
+../src/echo.c:1583:6: warning: unused variable 'i' [-Wunused-variable]
+  u32 i;
+      ^
+In file included from ../src/echo.c:45:0:
+../src/echo.c: In function 'check_fifo':
+../../vfat3_sdk_hw_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:1660:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/echo.c:1633:6: note: declared here
+ void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
+      ^~~~~~~~~~
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_hw_bsp/microblaze_0/include/xstatus.h:64:41: warning: 'return' with a value, in function returning void
+ #define XST_SUCCESS                     0L
+                                         ^
+../src/echo.c:1666:9: note: in expansion of macro 'XST_SUCCESS'
+  return XST_SUCCESS;
+         ^~~~~~~~~~~
+../src/echo.c:1633:6: note: declared here
+ void check_fifo(u32  *SourceAddr,u32 data_len,u8 verbose_mode)
+      ^~~~~~~~~~
+../src/echo.c:1636:5: warning: unused variable 'i' [-Wunused-variable]
+ u32 i;
+     ^
+../src/echo.c: At top level:
+../src/echo.c:1699:9: warning: type defaults to 'int' in declaration of 'crc_ok' [-Wimplicit-int]
+ extern  crc_ok;
+         ^~~~~~
+../src/echo.c: In function 'HDLC_Rx':
+../src/echo.c:1804:43: warning: passing argument 2 of 'RxReceive' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  ReceiveLength = RxReceive(&FifoInstance, DestinationBuffer,verbose_mode);
+                                           ^~~~~~~~~~~~~~~~~
+../src/echo.c:1385:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ u32 RxReceive (XLlFifo *InstancePtr, u32* DestinationAddr,u8 verbose_mode)
+     ^~~~~~~~~
+../src/echo.c:2239:49: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+                           crc_calculated= crc16(rcv_arr,k+1);
+                                                 ^~~~~~~
+../src/echo.c:1747:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:1791:4: warning: unused variable 'type_id' [-Wunused-variable]
+ u8 type_id=0xaa;
+    ^~~~~~~
+../src/echo.c:1785:5: warning: unused variable 'hdlc_control' [-Wunused-variable]
+  u8 hdlc_control = 0xff;
+     ^~~~~~~~~~~~
+../src/echo.c:1784:5: warning: unused variable 'hdlc_address' [-Wunused-variable]
+  u8 hdlc_address = 0xff;
+     ^~~~~~~~~~~~
+../src/echo.c: In function 'HDLC_Tx':
+../src/echo.c:2357:17: warning: pointer targets in passing argument 1 of 'crc16' differ in signedness [-Wpointer-sign]
+   ut1.crc=crc16(hdlc_tx, length);
+                 ^~~~~~~
+../src/echo.c:1747:14: note: expected 'char *' but argument is of type 'u8 * {aka unsigned char *}'
+ unsigned int crc16(char *data_p, unsigned short length)
+              ^~~~~
+../src/echo.c:2481:26: warning: array subscript has type 'char' [-Wchar-subscripts]
+    ZeroInsertion_location[j]=i;
+                          ^
+In file included from ../src/echo.c:45:0:
+../../vfat3_sdk_hw_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/echo.c:2573:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/echo.c:2307:6: note: declared here
+ void HDLC_Tx(u32 register_address, u16 register_data,u8 mode,u32* SourceAddr,u8 verbose_mode)
+      ^~~~~~~
+../src/echo.c: In function 'ReadADC':
+../src/echo.c:2626:12: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  unsigned  status;
+            ^~~~~~
+../src/echo.c: In function 'AdjustIref':
+../src/echo.c:2794:15: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+  SendReply(sd,LUT_CAL_DAC,4);
+               ^~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2804:16: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+   SendReply(sd,LUT_CAL_DAC,4);
+                ^~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2716:5: warning: unused variable 'mode' [-Wunused-variable]
+  u8 mode=0;
+     ^~~~
+../src/echo.c: In function 'CalibrateADC':
+../src/echo.c:2963:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,i*2);
+                   ^~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c: In function 'CalibrateCAL_DAC':
+../src/echo.c:3080:38: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+       register_data  =  (u32)(0xFC03 & read_data | ((u32)CAL_DAC<<2));
+                               ~~~~~~~^~~~~~~~~~~
+../src/echo.c:3088:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,BV,2);
+                   ^~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:3089:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,i*2);
+                   ^~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:2996:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:2996:23: warning: unused variable 'base_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:2996:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
+../src/echo.c: In function 'CalibrateCAL_DAC_extended':
+../src/echo.c:3188:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,BV,2);
+                   ^~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u16 * {aka short unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:3189:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,i*2);
+                   ^~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:3116:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:3116:23: warning: variable 'base_voltage' set but not used [-Wunused-but-set-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:3116:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
+../src/echo.c: In function 'DAC_SCANS':
+../src/echo.c:3462:19: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+      SendReply(sd,LUT_CAL_DAC,i*2);
+                   ^~~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'short int *'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:3219:36: warning: unused variable 'charge' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                                    ^~~~~~
+../src/echo.c:3219:23: warning: unused variable 'base_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+                       ^~~~~~~~~~~~
+../src/echo.c:3219:9: warning: unused variable 'step_voltage' [-Wunused-variable]
+  double step_voltage, base_voltage,charge = 0;
+         ^~~~~~~~~~~~
+../src/echo.c:3213:5: warning: unused variable 'mode' [-Wunused-variable]
+  u8 mode=0;
+     ^~~~
+../src/echo.c: In function 'Scurve':
+../src/echo.c:3658:29: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+                SendReply(sd,scurve_arr,length_scurve * 2);
+                             ^~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u16 * {aka volatile short unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:3483:5: warning: unused variable 'mode' [-Wunused-variable]
+  u8 mode=0;
+     ^~~~
+../src/echo.c:3480:6: warning: unused variable 'register_address' [-Wunused-variable]
+  u32 register_address;
+      ^~~~~~~~~~~~~~~~
+../src/echo.c: In function 'Scurve_extended':
+../src/echo.c:3828:29: warning: passing argument 2 of 'SendReply' from incompatible pointer type [-Wincompatible-pointer-types]
+                SendReply(sd,scurve_arr,indexx * 2);
+                             ^~~~~~~~~~
+../src/echo.c:147:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u16 * {aka volatile short unsigned int *}'
+ void SendReply(int sd,u32 *Buffer, u32 length);
+      ^~~~~~~~~
+../src/echo.c:3689:8: warning: unused variable 'v' [-Wunused-variable]
+  int u,v;
+        ^
+../src/echo.c:3689:6: warning: unused variable 'u' [-Wunused-variable]
+  int u,v;
+      ^
+../src/echo.c:3686:5: warning: unused variable 'mode' [-Wunused-variable]
+  u8 mode=0;
+     ^~~~
+../src/echo.c: In function 'DecodeDataPacket':
+../src/echo.c:3938:37: warning: passing argument 2 of 'RxReceive' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Rcv_len = RxReceive(&FifoInstance, DestinationBuffer,verbose_mode);
+                                     ^~~~~~~~~~~~~~~~~
+../src/echo.c:1385:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'volatile u32 * {aka volatile long unsigned int *}'
+ u32 RxReceive (XLlFifo *InstancePtr, u32* DestinationAddr,u8 verbose_mode)
+     ^~~~~~~~~
+../src/echo.c:3935:5: warning: unused variable 'PKT_LEN' [-Wunused-variable]
+  u8 PKT_LEN=22;
+     ^~~~~~~
+../src/echo.c:3933:5: warning: unused variable 'loop' [-Wunused-variable]
+  u8 loop;
+     ^~~~
+../src/echo.c:3932:5: warning: unused variable 'Header' [-Wunused-variable]
+  u8 Header;
+     ^~~~~~
+../src/echo.c: In function 'SendReply':
+../src/echo.c:4124:18: warning: implicit declaration of function 'write' [-Wimplicit-function-declaration]
+    if ((nwrote = write(sd, Buffer, length)) < 0) {
+                  ^~~~~
+../src/echo.c: In function 'process_echo_request':
+../src/echo.c:4145:12: warning: implicit declaration of function 'read' [-Wimplicit-function-declaration]
+   if ((n = read(sd, recv_buf, RECV_BUF_SIZE)) < 0) {
+            ^~~~
+../src/echo.c:4164:13: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   SourceAddr= SourceBuffer;
+             ^
+../src/echo.c:4195:2: warning: implicit declaration of function 'close' [-Wimplicit-function-declaration]
+  close(sd);
+  ^~~~~
+../src/echo.c: In function 'echo_application_thread':
+../src/echo.c:4202:21: error: storage size of 'address' isn't known
+  struct sockaddr_in address, remote;
+                     ^~~~~~~
+../src/echo.c:4202:30: error: storage size of 'remote' isn't known
+  struct sockaddr_in address, remote;
+                              ^~~~~~
+../src/echo.c:4205:14: warning: implicit declaration of function 'lwip_socket' [-Wimplicit-function-declaration]
+  if ((sock = lwip_socket(AF_INET, SOCK_STREAM, 0)) < 0)
+              ^~~~~~~~~~~
+../src/echo.c:4205:26: error: 'AF_INET' undeclared (first use in this function)
+  if ((sock = lwip_socket(AF_INET, SOCK_STREAM, 0)) < 0)
+                          ^~~~~~~
+../src/echo.c:4205:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/echo.c:4205:35: error: 'SOCK_STREAM' undeclared (first use in this function)
+  if ((sock = lwip_socket(AF_INET, SOCK_STREAM, 0)) < 0)
+                                   ^~~~~~~~~~~
+../src/echo.c:4210:28: error: 'INADDR_ANY' undeclared (first use in this function)
+  address.sin_addr.s_addr = INADDR_ANY;
+                            ^~~~~~~~~~
+../src/echo.c:4212:6: warning: implicit declaration of function 'lwip_bind' [-Wimplicit-function-declaration]
+  if (lwip_bind(sock, (struct sockaddr *)&address, sizeof (address)) < 0)
+      ^~~~~~~~~
+../src/echo.c:4215:2: warning: implicit declaration of function 'lwip_listen' [-Wimplicit-function-declaration]
+  lwip_listen(sock, 0);
+  ^~~~~~~~~~~
+../src/echo.c:4220:17: warning: implicit declaration of function 'lwip_accept' [-Wimplicit-function-declaration]
+   if ((new_sd = lwip_accept(sock, (struct sockaddr *)&remote, (socklen_t *)&size)) > 0) {
+                 ^~~~~~~~~~~
+../src/echo.c:4220:64: error: 'socklen_t' undeclared (first use in this function)
+   if ((new_sd = lwip_accept(sock, (struct sockaddr *)&remote, (socklen_t *)&size)) > 0) {
+                                                                ^~~~~~~~~
+../src/echo.c:4220:75: error: expected expression before ')' token
+   if ((new_sd = lwip_accept(sock, (struct sockaddr *)&remote, (socklen_t *)&size)) > 0) {
+                                                                           ^
+../src/echo.c:4221:4: warning: implicit declaration of function 'sys_thread_new' [-Wimplicit-function-declaration]
+    sys_thread_new("echos", process_echo_request,
+    ^~~~~~~~~~~~~~
+../src/echo.c:4203:6: warning: variable 'size' set but not used [-Wunused-but-set-variable]
+  int size;
+      ^~~~
+../src/echo.c:4202:30: warning: unused variable 'remote' [-Wunused-variable]
+  struct sockaddr_in address, remote;
+                              ^~~~~~
+../src/echo.c:4202:21: warning: unused variable 'address' [-Wunused-variable]
+  struct sockaddr_in address, remote;
+                     ^~~~~~~
+../src/echo.c: In function 'Initialize_FIFO':
+../src/echo.c:419:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/echo.o] Error 1
 
-08:45:43 Build Finished (took 579ms)
+15:06:31 Build Finished (took 273ms)
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1527067105">
+<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1529922042">
   <File Type="PA-TCL" Name="mb_subsystem_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="mb_subsystem_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="mb_subsystem_wrapper.vds"/>
@@ -211,39 +211,11 @@
         <Attr Name="IsVisible" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Debug/vfat3_sdk.elf">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../project_2.sdk/vfat3_sdk/Debug/vfat3_sdk.elf"/>
-        <Attr Name="ImportTime" Val="1523950237"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="ScopedToRef" Val="mb_subsystem"/>
-        <Attr Name="ScopedToCell" Val="microblaze_0"/>
-        <Attr Name="IsVisible" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mig_b.prj">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../project_vbv3b/project_vbv3b.srcs/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mig_b.prj"/>
-        <Attr Name="ImportTime" Val="1524869867"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="ScopedToCell" Val="mb_subsystem_mig_7series_0_0"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/test_v1_0_bfm_1/test_v1_0_bfm_1.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../project_vbv3b/project_vbv3b.srcs/sources_1/bd/test_v1_0_bfm_1/test_v1_0_bfm_1.bd"/>
         <Attr Name="ImportTime" Val="1526754434"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/hdl/test_v1_0_bfm_1_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../project_vbv3b/project_vbv3b.srcs/sources_1/bd/test_v1_0_bfm_1/hdl/test_v1_0_bfm_1_wrapper.v"/>
-        <Attr Name="ImportTime" Val="1526754335"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -259,14 +231,18 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/hdl/test_v1_0_bfm_2_wrapper.v">
+    <File Path="$PSDKDIR/vfat3_sdk_hw/Debug/vfat3_sdk_hw.elf">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../project_vbv3b/project_vbv3b.srcs/sources_1/bd/test_v1_0_bfm_2/hdl/test_v1_0_bfm_2_wrapper.v"/>
-        <Attr Name="ImportTime" Val="1526754406"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ScopedToRef" Val="mb_subsystem"/>
+        <Attr Name="ScopedToCell" Val="microblaze_0"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/mb_subsystem/ip/mb_subsystem_mig_7series_0_0/mig_b.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="mb_subsystem_mig_7series_0_0"/>
       </FileInfo>
     </File>
     <Config>
@@ -291,7 +267,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2013"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2013">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

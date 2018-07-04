@@ -673,3 +673,892 @@ java.net.SocketException: Connection reset
 08:46:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
 08:46:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
 08:46:55 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+11:07:20 INFO  : Registering command handlers for SDK TCF services
+11:07:20 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+11:07:26 INFO  : XSCT server has started successfully.
+11:07:26 INFO  : Successfully done setting XSCT server connection channel  
+11:07:28 INFO  : Successfully done setting SDK workspace  
+11:07:28 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+11:07:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:07:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+11:08:07 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+11:09:34 INFO  : Registering command handlers for SDK TCF services
+11:09:35 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+11:09:40 INFO  : XSCT server has started successfully.
+11:09:40 INFO  : Successfully done setting XSCT server connection channel  
+11:09:40 INFO  : Successfully done setting SDK workspace  
+11:09:40 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+11:10:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:10:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+11:11:06 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+11:11:12 WARN  : Given IPC port value is invalid. Using default port 2350
+11:11:12 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+11:11:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:18 INFO  : Processor reset is completed for microblaze_0
+11:11:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:11:21 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:18:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1529662155253,  Project:1527070132000
+12:18:11 INFO  : Project mb_subsystem_wrapper_hw_platform_0's source hardware specification located at F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+12:18:14 INFO  : Copied contents of F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf into \mb_subsystem_wrapper_hw_platform_0\system.hdf.
+12:18:16 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:18:24 INFO  : 
+12:18:25 INFO  : Updating hardware inferred compiler options for vfat3_sdk_hw.
+12:18:25 INFO  : Clearing existing target manager status.
+12:18:25 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:18:26 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:19:56 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:19:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:19:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:19:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:19:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:19:58 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:19:58 INFO  : Processor reset is completed for microblaze_0
+12:20:00 ERROR : Port COM4 is already in use.
+12:20:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:20:00 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:680)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+12:20:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:20:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:20:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:20:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:20:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+12:20:46 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+12:21:30 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:22:05 INFO  : Registering command handlers for SDK TCF services
+12:22:05 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+12:22:10 INFO  : XSCT server has started successfully.
+12:22:10 INFO  : Successfully done setting XSCT server connection channel  
+12:22:11 INFO  : Successfully done setting SDK workspace  
+12:22:11 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+12:22:11 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+12:22:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:22:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+12:22:46 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+12:23:04 WARN  : Given IPC port value is invalid. Using default port 2350
+12:23:04 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+12:23:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:09 INFO  : Processor reset is completed for microblaze_0
+12:23:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:11 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:11 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:11 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:23:11 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:07:19 INFO  : Inferring section assignments and sizes from elf file: F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_vbv3_HW\vbv3_hw.sdk\vfat3_sdk_hw\Debug\vfat3_sdk_hw.elf
+18:07:46 INFO  : Successfully generated F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_vbv3_HW\vbv3_hw.sdk\vfat3_sdk_hw\src\lscript.ld.
+18:07:46 INFO  : Applying linker script to all configurations of project vfat3_sdk_hw.
+18:07:46 INFO  : Setting rebuild state to true for all configurations of project vfat3_sdk_hw.
+18:07:54 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:07:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:07:55 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:07:56 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:07:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:07:57 INFO  : Processor reset is completed for microblaze_0
+18:07:59 ERROR : Port COM4 is already in use.
+18:07:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:07:59 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:680)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:07:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:07:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:08:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:08:04 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:08:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:08:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:08:16 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:08:48 INFO  : Registering command handlers for SDK TCF services
+18:08:48 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+18:08:55 INFO  : XSCT server has started successfully.
+18:08:56 INFO  : Successfully done setting XSCT server connection channel  
+18:08:56 INFO  : Successfully done setting SDK workspace  
+18:08:56 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+18:08:56 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+18:09:07 WARN  : Given IPC port value is invalid. Using default port 2350
+18:09:07 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+18:09:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:12 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:16 INFO  : Processor reset is completed for microblaze_0
+18:09:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:17 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:680)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:09:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:09:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:09:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+18:10:02 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+18:10:18 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:10:31 INFO  : Registering command handlers for SDK TCF services
+18:10:31 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+18:10:33 INFO  : XSCT server has started successfully.
+18:10:34 INFO  : Successfully done setting XSCT server connection channel  
+18:10:34 INFO  : Successfully done setting SDK workspace  
+18:10:34 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+18:10:34 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+18:11:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:11:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+18:11:22 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+18:11:33 WARN  : Given IPC port value is invalid. Using default port 2350
+18:11:33 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+18:11:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:38 INFO  : Processor reset is completed for microblaze_0
+18:11:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:11:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:02 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:02 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:15 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:15 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:16 INFO  : Processor reset is completed for microblaze_0
+18:12:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:17 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:12:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:12:39 INFO  : Inferring section assignments and sizes from elf file: F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_vbv3_HW\vbv3_hw.sdk\vfat3_sdk_hw\Debug\vfat3_sdk_hw.elf
+18:13:07 INFO  : Successfully generated F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_vbv3_HW\vbv3_hw.sdk\vfat3_sdk_hw\src\lscript.ld.
+18:13:07 INFO  : Applying linker script to all configurations of project vfat3_sdk_hw.
+18:13:07 INFO  : Setting rebuild state to true for all configurations of project vfat3_sdk_hw.
+18:13:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:39 INFO  : Processor reset is completed for microblaze_0
+18:13:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:13:40 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:38:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:38:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+18:38:45 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+18:38:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:38:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 INFO  : Processor reset is completed for microblaze_0
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:680)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:12 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:39:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:39:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+18:40:03 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+18:40:19 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:40:28 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+18:40:29 INFO  : XSCT server has started successfully.
+18:40:30 INFO  : Successfully done setting XSCT server connection channel  
+18:40:30 INFO  : Successfully done setting SDK workspace  
+18:40:42 INFO  : Registering command handlers for SDK TCF services
+18:40:42 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+18:40:42 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+18:40:51 WARN  : Given IPC port value is invalid. Using default port 2350
+18:40:51 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+18:40:54 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:40:54 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:40:56 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:01 INFO  : Processor reset is completed for microblaze_0
+18:41:01 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:01 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:01 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:01 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:01 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:01 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:04 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:04 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:27 INFO  : Processor reset is completed for microblaze_0
+18:41:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:27 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:680)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:41:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:41:33 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:41:46 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+18:41:48 INFO  : XSCT server has started successfully.
+18:41:49 INFO  : Successfully done setting XSCT server connection channel  
+18:41:49 INFO  : Successfully done setting SDK workspace  
+18:42:01 INFO  : Registering command handlers for SDK TCF services
+18:42:01 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+18:42:01 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+18:42:27 WARN  : Given IPC port value is invalid. Using default port 2350
+18:42:27 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+18:42:30 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:30 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:32 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:36 INFO  : System reset is completed.
+18:42:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:37 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:680)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:42:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:42:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:43:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:43:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+18:43:33 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+18:43:47 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:46:29 ERROR : (XSDB Server)bad option '-debug_sys': -processor -cores -dap -system -srst -jtag-timeout -timeout -help
+
+18:46:46 ERROR : (XSDB Server)invalid command name "rst-debug_sys"
+
+18:53:26 ERROR : (XSDB Server)invalid command name "cable"
+
+18:53:58 ERROR : (XSDB Server)child process exited abnormally
+
+18:54:55 ERROR : (XSDB Server)child process exited abnormally
+
+18:55:01 ERROR : (XSDB Server)child process exited abnormally
+
+18:55:06 ERROR : (XSDB Server)no target with id: reset
+
+18:55:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:17 INFO  : Processor reset is completed for microblaze_0
+18:55:19 ERROR : Port COM4 is already in use.
+18:55:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:31 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:31 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:55:37 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:55:49 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+18:55:50 INFO  : XSCT server has started successfully.
+18:55:50 INFO  : Successfully done setting XSCT server connection channel  
+18:55:50 INFO  : Successfully done setting SDK workspace  
+18:56:03 INFO  : Registering command handlers for SDK TCF services
+18:56:03 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+18:56:03 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+18:56:29 WARN  : Given IPC port value is invalid. Using default port 2350
+18:56:29 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+18:56:33 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:33 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 INFO  : Processor reset is completed for microblaze_0
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Cannot perform the Debug Command, Current Processor State is "Running"
+
+	at com.xilinx.sdk.targetmanager.internal.TM.continueExecution(TM.java:743)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:150)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:56:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+18:57:26 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+18:57:42 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:42 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:42 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:42 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:42 INFO  : System reset is completed.
+18:57:45 ERROR : Port COM4 is already in use.
+18:57:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:56 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:57:56 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:58:08 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:58:08 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+18:58:08 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:28:51 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+20:28:53 INFO  : XSCT server has started successfully.
+20:28:55 INFO  : Successfully done setting XSCT server connection channel  
+20:28:55 INFO  : Successfully done setting SDK workspace  
+20:29:07 INFO  : Registering command handlers for SDK TCF services
+20:29:07 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+20:29:08 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+20:29:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1529690124868,  Project:1529662155253
+20:29:08 INFO  : The hardware specification for project 'mb_subsystem_wrapper_hw_platform_0' is different from F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+20:29:08 INFO  : Copied contents of F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf into \mb_subsystem_wrapper_hw_platform_0\system.hdf.
+20:29:10 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:29:14 INFO  : 
+20:29:17 INFO  : 
+20:29:18 INFO  : Updating hardware inferred compiler options for hello_world.
+20:29:19 INFO  : Updating hardware inferred compiler options for vfat3_sdk_hw.
+20:29:19 INFO  : Clearing existing target manager status.
+20:29:19 WARN  : Given IPC port value is invalid. Using default port 2350
+20:29:19 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+20:29:22 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:29:22 INFO  : Closing and re-opening the MSS file of ther project hello_world_bsp
+20:29:23 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+20:29:25 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+20:30:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+20:30:16 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+20:30:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+20:30:52 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+20:31:04 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:07 INFO  : System reset is completed.
+20:31:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:20 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:34 INFO  : Processor reset is completed for microblaze_0
+20:31:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:34 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Command not supported in simulation or ISS flow.
+
+	at com.xilinx.sdk.targetmanager.internal.TM.setSafeMode(TM.java:600)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:136)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+20:31:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:43 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:31:54 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:32:07 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+20:32:08 INFO  : XSCT server has started successfully.
+20:32:08 INFO  : Successfully done setting XSCT server connection channel  
+20:32:08 INFO  : Successfully done setting SDK workspace  
+20:32:20 INFO  : Registering command handlers for SDK TCF services
+20:32:20 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+20:32:20 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+20:33:41 INFO  : Inferring section assignments and sizes from elf file: F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\project_vbv3_HW\vbv3_hw.sdk\vfat3_sdk_hw\Debug\vfat3_sdk_hw.elf
+20:37:43 WARN  : Given IPC port value is invalid. Using default port 2350
+20:37:43 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+20:37:46 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:46 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:48 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:52 INFO  : Processor reset is completed for microblaze_0
+20:37:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:53 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:53 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:53 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:53 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:37:53 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:29 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:30 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:38:31 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:31 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:33 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:33 INFO  : Processor reset is completed for microblaze_0
+20:38:33 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:53 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:53 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+20:38:53 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+23:58:52 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+23:58:54 INFO  : XSCT server has started successfully.
+23:58:57 INFO  : Successfully done setting XSCT server connection channel  
+23:58:57 INFO  : Successfully done setting SDK workspace  
+23:59:10 INFO  : Registering command handlers for SDK TCF services
+23:59:10 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+23:59:11 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+23:59:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1529743959885,  Project:1529690124868
+23:59:11 INFO  : The hardware specification for project 'mb_subsystem_wrapper_hw_platform_0' is different from F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+23:59:12 INFO  : Copied contents of F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf into \mb_subsystem_wrapper_hw_platform_0\system.hdf.
+23:59:13 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:59:17 INFO  : 
+23:59:20 INFO  : 
+23:59:21 INFO  : Updating hardware inferred compiler options for hello_world.
+23:59:22 INFO  : Updating hardware inferred compiler options for vfat3_sdk_hw.
+23:59:22 INFO  : Clearing existing target manager status.
+23:59:22 WARN  : Given IPC port value is invalid. Using default port 2350
+23:59:22 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+23:59:25 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+23:59:25 INFO  : Closing and re-opening the MSS file of ther project hello_world_bsp
+23:59:26 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:59:29 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+00:01:38 INFO  : No changes in MSS file content so not generating sources.
+00:02:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:02:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+00:02:35 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+00:16:42 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:44 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:44 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:44 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:44 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:44 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:44 INFO  : Processor reset is completed for microblaze_0
+00:16:45 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:46 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:46 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:46 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:46 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:16:47 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:27 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:30:32 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:32 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:32 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:33 INFO  : Processor reset is completed for microblaze_0
+00:30:33 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+00:30:35 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1529824992041,  Project:1529743959885
+11:27:29 INFO  : Project mb_subsystem_wrapper_hw_platform_0's source hardware specification located at F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+11:27:31 INFO  : Copied contents of F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf into \mb_subsystem_wrapper_hw_platform_0\system.hdf.
+11:27:32 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:27:36 INFO  : 
+11:27:40 INFO  : 
+11:27:41 INFO  : Updating hardware inferred compiler options for hello_world.
+11:27:42 INFO  : Updating hardware inferred compiler options for vfat3_sdk_hw.
+11:27:42 INFO  : Clearing existing target manager status.
+11:27:42 INFO  : Closing and re-opening the MSS file of ther project hello_world_bsp
+11:27:42 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+11:27:56 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+11:47:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:48:36 INFO  : Registering command handlers for SDK TCF services
+11:48:36 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+11:48:42 INFO  : XSCT server has started successfully.
+11:48:44 INFO  : Successfully done setting XSCT server connection channel  
+11:48:44 INFO  : Successfully done setting SDK workspace  
+11:48:44 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+11:51:34 INFO  : Refreshed build settings on project vfat3_sdk_hw
+11:57:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+11:57:44 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+11:57:57 WARN  : Given IPC port value is invalid. Using default port 2350
+11:57:57 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+11:58:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:01 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:02 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:02 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:02 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:02 INFO  : System reset is completed.
+11:58:02 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:02 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:58:03 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:59:30 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:00:02 INFO  : Registering command handlers for SDK TCF services
+12:00:02 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+12:00:07 INFO  : XSCT server has started successfully.
+12:00:07 INFO  : Successfully done setting XSCT server connection channel  
+12:00:08 INFO  : Successfully done setting SDK workspace  
+12:00:08 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+12:00:08 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+12:08:24 INFO  : No changes in MSS file content so not generating sources.
+12:13:00 INFO  : Refreshed build settings on project spi_srec_bootloader
+12:19:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:19:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+12:19:33 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+12:20:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:26:12 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\hello_world\Debug\hello_world.elf' into bootable SREC format.
+12:26:12 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\hello_world.elf.srec'.
+12:26:17 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+12:26:17 INFO  : Bootgen command execution is done.
+11:48:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:48:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+11:48:10 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+11:48:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:48:22 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\hello_world\Debug\hello_world.elf' into bootable SREC format.
+11:48:22 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\hello_world.elf.srec'.
+11:48:27 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+11:48:28 INFO  : Bootgen command execution is done.
+11:51:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+11:51:07 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+11:52:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:52:31 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_hw\Debug\vfat3_sdk_hw.elf' into bootable SREC format.
+11:52:31 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_hw.elf.srec'.
+11:52:34 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+11:52:35 INFO  : Bootgen command execution is done.
+11:55:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:55:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+11:55:16 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+13:51:05 INFO  : Registering command handlers for SDK TCF services
+13:51:05 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+13:51:08 INFO  : XSCT server has started successfully.
+13:51:10 INFO  : Successfully done setting XSCT server connection channel  
+13:51:10 INFO  : Successfully done setting SDK workspace  
+13:51:10 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+13:51:10 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+13:51:12 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1529923041525,  Project:1529824992041
+13:51:12 INFO  : The hardware specification for project 'mb_subsystem_wrapper_hw_platform_0' is different from F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+13:51:12 INFO  : Copied contents of F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf into \mb_subsystem_wrapper_hw_platform_0\system.hdf.
+13:51:14 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:51:17 INFO  : 
+13:51:19 INFO  : 
+13:51:23 INFO  : 
+13:51:24 INFO  : Updating hardware inferred compiler options for hello_world.
+13:51:25 INFO  : Updating hardware inferred compiler options for spi_srec_bootloader.
+13:51:25 INFO  : Updating hardware inferred compiler options for vfat3_sdk_hw.
+13:51:25 INFO  : Clearing existing target manager status.
+13:51:26 WARN  : Given IPC port value is invalid. Using default port 2350
+13:51:26 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+13:51:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+13:57:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:57:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+13:57:48 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+13:57:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:58:28 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+13:58:28 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+13:58:32 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+13:58:33 INFO  : Bootgen command execution is done.
+14:00:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:00:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+14:00:11 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+14:00:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:01:05 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:01:05 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:05:38 INFO  : Refreshed build settings on project vfat3_sdk_flash
+14:06:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:06:17 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:06:17 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:06:18 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:06:19 INFO  : Bootgen command execution is done.
+14:07:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:07:43 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:07:43 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:07:44 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:07:45 INFO  : Bootgen command execution is done.
+14:08:41 INFO  : Refreshed build settings on project vfat3_sdk_flash
+14:09:27 INFO  : Inferring section assignments and sizes from elf file: F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf
+14:09:40 INFO  : Successfully generated F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\src\lscript.ld.
+14:09:40 INFO  : Applying linker script to all configurations of project vfat3_sdk_flash.
+14:09:40 INFO  : Setting rebuild state to true for all configurations of project vfat3_sdk_flash.
+14:09:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:09:48 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:09:48 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:09:49 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:09:50 INFO  : Bootgen command execution is done.
+14:11:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:11:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+14:11:53 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+14:12:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:12:33 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:12:34 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:12:44 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:12:44 INFO  : Bootgen command execution is done.
+14:14:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:17:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:17:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+14:17:45 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+14:17:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:17:56 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:17:56 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:18:03 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:18:04 INFO  : Bootgen command execution is done.
+14:18:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:22 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:19:24 INFO  : Bootgen command execution is done.
+14:28:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:28:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+14:28:29 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+14:28:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:29:08 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:29:08 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:29:16 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:29:17 INFO  : Bootgen command execution is done.
+14:29:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:30:19 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:30:20 INFO  : Bootgen command execution is done.
+14:35:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:35:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+14:35:43 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+14:36:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:33 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:36:33 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:36:36 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:36:37 INFO  : Bootgen command execution is done.
+14:37:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:38:05 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:38:07 INFO  : Bootgen command execution is done.
+14:43:38 INFO  : Inferring section assignments and sizes from elf file: F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\spi_srec_bootloader\Debug\spi_srec_bootloader.elf
+14:44:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:44:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+14:44:20 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+14:44:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:44:47 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:44:47 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:45:13 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:45:13 INFO  : Bootgen command execution is done.
+14:45:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:45:48 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+14:45:49 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+14:46:02 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:46:02 INFO  : Bootgen command execution is done.
+14:46:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:49 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+14:46:50 INFO  : Bootgen command execution is done.
+14:53:25 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:28 INFO  : Processor reset is completed for microblaze_0
+14:53:28 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:29 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:29 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:29 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:29 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:53:29 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:11 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:11 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:55:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:17 INFO  : Processor reset is completed for microblaze_0
+14:55:17 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:55:19 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:10 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:59:12 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:12 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:12 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:12 INFO  : Processor reset is completed for microblaze_0
+14:59:12 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:14 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:14 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:14 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:14 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:59:14 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:48 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:01:50 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:50 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:50 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:50 INFO  : Processor reset is completed for microblaze_0
+15:01:50 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:01:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:31 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:31 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:06:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:34 INFO  : Processor reset is completed for microblaze_0
+15:06:34 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:06:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:19:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:19:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+15:19:05 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+15:19:05 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:19:05 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:19:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:20:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:20:21 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+15:20:21 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+15:20:23 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+15:20:24 INFO  : Bootgen command execution is done.
+15:21:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:21:31 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+15:21:32 INFO  : Bootgen command execution is done.
+15:57:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:57:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+15:57:33 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+15:57:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:08 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+15:58:08 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+15:58:11 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+15:58:12 INFO  : Bootgen command execution is done.
+15:58:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:59:09 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+15:59:10 INFO  : Bootgen command execution is done.
+16:14:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A62FE3A" && level==0} -index 0' command is executed.
+16:14:17 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+16:14:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:15:00 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+16:15:00 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+16:15:03 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+16:15:04 INFO  : Bootgen command execution is done.
+16:15:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:16:01 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+16:16:02 INFO  : Bootgen command execution is done.
+14:37:32 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:46:06 INFO  : Registering command handlers for SDK TCF services
+16:46:07 INFO  : Launching XSCT server: xsct.bat -interactive F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\temp_xsdb_launch_script.tcl
+16:46:13 INFO  : XSCT server has started successfully.
+16:46:14 INFO  : Successfully done setting XSCT server connection channel  
+16:46:14 INFO  : Successfully done setting SDK workspace  
+16:46:14 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
+16:46:14 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.

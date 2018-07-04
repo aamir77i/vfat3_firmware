@@ -66,14 +66,12 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7k325tffg900-2
   set_property board_part xilinx.com:kc705:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.cache/wt [current_project]
-  set_property parent.project_path F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.xpr [current_project]
+  set_property webtalk.parent_dir F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.cache/wt [current_project]
+  set_property parent.project_path F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.xpr [current_project]
   set_property ip_repo_paths {
   F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0
   F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0
@@ -81,18 +79,18 @@ set rc [catch {
   F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/ip_repo/test_1.0
   F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/repo
 } [current_project]
-  set_property ip_output_repo F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.cache/ip [current_project]
+  set_property ip_output_repo F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.runs/synth_1/mb_subsystem_wrapper.dcp
+  add_files -quiet F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.runs/synth_1/mb_subsystem_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd
+  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.srcs/sources_1/bd/mb_subsystem/mb_subsystem.bd
   set_param project.isImplRun false
-  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/imports/Debug/vfat3_sdk.elf
-  set_property SCOPED_TO_REF mb_subsystem [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/imports/Debug/vfat3_sdk.elf]
-  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/sources_1/imports/Debug/vfat3_sdk.elf]
-  read_xdc F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/project_vbv3_HW/vbv3_hw.srcs/constrs_1/new/system.xdc
+  add_files F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_hw/Debug/vfat3_sdk_hw.elf
+  set_property SCOPED_TO_REF mb_subsystem [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_hw/Debug/vfat3_sdk_hw.elf]
+  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_hw/Debug/vfat3_sdk_hw.elf]
+  read_xdc F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.srcs/constrs_1/new/system.xdc
   set_param project.isImplRun true
   link_design -top mb_subsystem_wrapper -part xc7k325tffg900-2
   set_param project.isImplRun false
@@ -175,7 +173,7 @@ set rc [catch {
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force mb_subsystem_wrapper.mmi }
   catch { write_bmm -force mb_subsystem_wrapper_bd.bmm }
-  write_bitstream -force mb_subsystem_wrapper.bit 
+  write_bitstream -force mb_subsystem_wrapper.bit -bin_file
   catch { write_sysdef -hwdef mb_subsystem_wrapper.hwdef -bitfile mb_subsystem_wrapper.bit -meminfo mb_subsystem_wrapper.mmi -file mb_subsystem_wrapper.sysdef }
   catch {write_debug_probes -quiet -force mb_subsystem_wrapper}
   catch {file copy -force mb_subsystem_wrapper.ltx debug_nets.ltx}
