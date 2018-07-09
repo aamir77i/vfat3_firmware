@@ -7493,3 +7493,736 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data F:/XAPP1026/KC70
 
 !ENTRY com.xilinx.sdk.utils 0 0 2018-06-26 16:46:17.293
 !MESSAGE XSCT command with result: [::hsi::utils::openhw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:28.390
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:28.518
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Result: [null, {"microblaze_0": "mb_subsystem_i/microblaze_0:mb_subsystem_i/microblaze_0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:28.521
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:28.552
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf], Result: [null, {"AP_Generator_0": {"hier_name": "AP_Generator_0",
+"type": "AP_Generator",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"DIFF_To_single_0": {"hier_name": "DIFF_To_single_0",
+"type": "DIFF_To_single",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"F1_F2_FILTER_0": {"hier_name": "F1_F2_FILTER_0",
+"type": "F1_F2_FILTER",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"FIFO": {"hier_name": "FIFO",
+"type": "axi_fifo_mm_s",
+"version": "4.1",
+"ip_type": "PERIPHERAL",
+},
+"RX_deSERIALIZER": {"hier_name": "RX_deSERIALIZER",
+"type": "selectio_wiz",
+"version": "5.1",
+"ip_type": "PERIPHERAL",
+},
+"S_to_diff_0": {"hier_name": "S_to_diff_0",
+"type": "S_to_diff",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"S_to_diff_1": {"hier_name": "S_to_diff_1",
+"type": "S_to_diff",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"TX_SERIALIZER": {"hier_name": "TX_SERIALIZER",
+"type": "selectio_wiz",
+"version": "5.1",
+"ip_type": "PERIPHERAL",
+},
+"axi_bram_ctrl_0": {"hier_name": "axi_bram_ctrl_0",
+"type": "axi_bram_ctrl",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_clock_converter_0": {"hier_name": "axi_clock_converter_0",
+"type": "axi_clock_converter",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"axi_clock_converter_1": {"hier_name": "axi_clock_converter_1",
+"type": "axi_clock_converter",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"axi_ethernet_0": {"hier_name": "axi_ethernet_0",
+"type": "axi_ethernet",
+"version": "7.1",
+"ip_type": "PERIPHERAL",
+},
+"axi_ethernet_0_dma": {"hier_name": "axi_ethernet_0_dma",
+"type": "axi_dma",
+"version": "7.1",
+"ip_type": "PERIPHERAL",
+},
+"axi_iic_0": {"hier_name": "axi_iic_0",
+"type": "axi_iic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_mem_intercon": {"hier_name": "axi_mem_intercon",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"axi_quad_spi_0": {"hier_name": "axi_quad_spi_0",
+"type": "axi_quad_spi",
+"version": "3.2",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_timer_0": {"hier_name": "axi_timer_0",
+"type": "axi_timer",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_clock_converter_0": {"hier_name": "axis_clock_converter_0",
+"type": "axis_clock_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"axis_clock_converter_1": {"hier_name": "axis_clock_converter_1",
+"type": "axis_clock_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"bit_slip": {"hier_name": "bit_slip",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"bitslip_Generator_0": {"hier_name": "bitslip_Generator_0",
+"type": "bitslip_Generator",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"blk_mem_gen_0": {"hier_name": "blk_mem_gen_0",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "5.4",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "5.4",
+"ip_type": "PERIPHERAL",
+},
+"ila_0": {"hier_name": "ila_0",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+"inverse_reverse_RX": {"hier_name": "inverse_reverse_RX",
+"type": "inverse_reverse",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"inverse_reverse_TX": {"hier_name": "inverse_reverse_TX",
+"type": "inverse_reverse",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "10.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_intc": {"hier_name": "microblaze_0_axi_intc",
+"type": "axi_intc",
+"version": "4.1",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"microblaze_0_xlconcat": {"hier_name": "microblaze_0_xlconcat",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"mig_7series_0": {"hier_name": "mig_7series_0",
+"type": "mig_7series",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"proc_sys_reset_1": {"hier_name": "proc_sys_reset_1",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rx_controller_0": {"hier_name": "rx_controller_0",
+"type": "rx_controller",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"success": {"hier_name": "success",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"tx_controller_hier_TX_CONTROLLER_0": {"hier_name": "tx_controller_hier_TX_CONTROLLER_0",
+"type": "TX_CONTROLLER",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"tx_controller_hier_axi_clock_converter_1": {"hier_name": "tx_controller_hier_axi_clock_converter_1",
+"type": "axi_clock_converter",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"xlconstant_0": {"hier_name": "xlconstant_0",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_1": {"hier_name": "xlconstant_1",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_3": {"hier_name": "xlconstant_3",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_0": {"hier_name": "xlslice_0",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:28.615
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:28.620
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf], Result: [null, {"device": "7k325t",
+"family": "kintex7",
+"timestamp": "Sat Jun 23 10:09:16 2018",
+"vivado_version": "2017.4",
+"part": "xc7k325tffg900-2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:40.047
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:40.068
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Result: [null, axi_bram_ctrl_0 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:40.071
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf microblaze_0 C_BASE_VECTORS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:53:40.076
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf microblaze_0 C_BASE_VECTORS], Result: [null, 0x0000000000000000]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:09.296
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:10.545
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:10.550
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:12.386
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:12.388
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:12.394
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:12.396
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:12.416
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:12.418
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:13.339
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:13.340
+!MESSAGE XSCT Command: [fpga -file F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:17.169
+!MESSAGE XSCT command with result: [fpga -file F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:17.970
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:17.978
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Result: [null, axi_bram_ctrl_0 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.737
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.739
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.740
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.747
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.748
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.755
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.757
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:54:37.777
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-07-04 16:59:25.725
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.debug.ui 4 0 2018-07-04 16:59:51.409
+!MESSAGE Launch shortcut 'com.xilinx.sdk.launch.remote.shortcut' enablement expression caused exception. Shortcut was removed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableConfigurationTypes(LaunchConfigurationManager.java:736)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:773)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:507)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:324)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:244)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2018-07-04 16:59:51.411
+!MESSAGE No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.526
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.528
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.529
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.541
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.542
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.549
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.550
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 16:59:55.567
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.036
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.038
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.039
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.046
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.047
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.054
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.055
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-04 17:00:49.073
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-07-04 17:01:57.657
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 11:27:04.026
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 11:27:04.053
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 11:27:04.055
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 11:27:04.061
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 11:27:04.062
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 11:27:04.064
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 12:00:29.299
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 12:00:29.314
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 12:00:29.315
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 12:00:29.317
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 12:00:29.318
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 12:00:29.320
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 16:54:18.977
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 16:54:18.989
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 16:54:18.990
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 16:54:18.993
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 16:54:18.994
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-06 16:54:18.995
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:10.496
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:10.509
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:10.511
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:10.514
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:10.516
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:10.518
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:22.692
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:22.710
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Result: [null, axi_bram_ctrl_0 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.230
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.232
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.233
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.245
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.246
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.252
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.253
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.269
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.270
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.293
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:50.294
+!MESSAGE XSCT Command: [fpga -file F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:53.241
+!MESSAGE XSCT command with result: [fpga -file F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:54.042
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:55:54.045
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf ], Result: [null, axi_bram_ctrl_0 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.758
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.760
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.761
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.772
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.773
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.780
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.781
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:56:37.799
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-07-09 10:57:10.406
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.174
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.176
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.177
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.189
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.190
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.197
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT1 210203A25484A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.198
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 10:58:41.216
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==1}], Result: [null,      2  xc7k325t (idcode 43651093 irlen 6 fpga)]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-07-09 10:58:54.668
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:26.383
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:26.396
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:26.397
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:26.400
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:26.401
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:26.402
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:52.755
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:52.760
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:52.761
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:52.763
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:52.764
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:02:52.766
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:05:02.053
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:05:02.060
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:05:02.062
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:05:02.065
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:05:02.066
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:05:02.068
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:10:13.907
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:10:13.912
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:10:13.912
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:10:13.915
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:10:13.915
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:10:13.917
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:11:02.576
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:11:02.581
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:11:02.582
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:11:02.586
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:11:02.591
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:11:02.594
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:12:50.800
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:12:50.805
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:12:50.806
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:12:50.808
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/system.hdf F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos901_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:12:50.809
+!MESSAGE XSCT Command: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-07-09 12:12:50.811
+!MESSAGE XSCT command with result: [::hsi::utils::closesw F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/vfat3_sdk_flash_bsp/system.mss], Result: [null, ]. Thread: main

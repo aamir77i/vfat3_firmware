@@ -1562,3 +1562,118 @@ java.lang.RuntimeException: Command not supported in simulation or ISS flow.
 16:46:14 INFO  : Successfully done setting SDK workspace  
 16:46:14 INFO  : Processing command line option -hwspec F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper.hdf.
 16:46:14 INFO  : Checking for hwspec changes in the project mb_subsystem_wrapper_hw_platform_0.
+16:54:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:54:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==0} -index 0' command is executed.
+16:54:17 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+16:54:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:57:34 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+16:57:34 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+16:59:25 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+16:59:26 INFO  : Bootgen command execution is done.
+16:59:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:59:56 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+16:59:57 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+17:00:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:01:57 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+17:01:58 INFO  : Bootgen command execution is done.
+11:27:09 WARN  : Given IPC port value is invalid. Using default port 2350
+11:27:09 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+11:27:11 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:11 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:16 INFO  : Processor reset is completed for microblaze_0
+11:27:16 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+11:27:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:36 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:36 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:00:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:37 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:38 INFO  : Processor reset is completed for microblaze_0
+12:00:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:00:39 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:24 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:24 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:54:26 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:26 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:26 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:26 INFO  : Processor reset is completed for microblaze_0
+16:54:26 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:27 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+16:54:28 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+17:17:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+17:17:18 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+10:55:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:55:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT1 210203A25484A" && level==0} -index 0' command is executed.
+10:55:53 INFO  : FPGA configured successfully with bitstream "F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/download.bit"
+10:56:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:57:07 INFO  : Converting 'microblaze' ELF file 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\vfat3_sdk_flash\Debug\vfat3_sdk_flash.elf' into bootable SREC format.
+10:57:07 INFO  : Caching converted image as 'F:\XAPP1026\KC705_AxiEth_150MHZ_64KB\vfat3_firmware\HW\vbv3_hw_flash\vbv3_hw_flash.sdk\mb_subsystem_wrapper_hw_platform_0\cache\vfat3_sdk_flash.elf.srec'.
+10:57:10 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+10:57:10 INFO  : Bootgen command execution is done.
+10:58:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:58:54 INFO  : Invoking Bootgen: bootgen -arch fpga -image F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/bootimage.bif -w -o F:/XAPP1026/KC705_AxiEth_150MHZ_64KB/vfat3_firmware/HW/vbv3_hw_flash/vbv3_hw_flash.sdk/mb_subsystem_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+10:58:55 INFO  : Bootgen command execution is done.
+12:02:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:57 INFO  : Processor reset is completed for microblaze_0
+12:02:57 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:02:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:06 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:05:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:07 INFO  : Processor reset is completed for microblaze_0
+12:05:07 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:05:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:06 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:06 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:11:08 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:08 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:09 INFO  : Processor reset is completed for microblaze_0
+12:11:09 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:11:10 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:12:55 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:12:55 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:12:58 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:12:58 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:12:58 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:12:58 INFO  : Processor reset is completed for microblaze_0
+12:12:58 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:12:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:12:59 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:13:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:13:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+12:13:00 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
